@@ -80,9 +80,9 @@ $(function() {
 <div class="title">printf.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="printf_8h_source.html">MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="printf_8h_source.html">MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf.h</a>&quot;</code><br />
 <code>#include &quot;asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/sprintf.s&quot;</code><br />
 <code>#include &quot;asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/snprintf.s&quot;</code><br />
 <code>#include &quot;asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/vsnprintf.s&quot;</code><br />
@@ -170,8 +170,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a1ecb964bb2ab78c1854dc9f6423cc873"><td class="memItemLeft" align="right" valign="top">char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="printf_8cpp.html#a1ecb964bb2ab78c1854dc9f6423cc873">MSL_Common_Src_printf__stringBase0</a></td></tr>
-<tr class="separator:a1ecb964bb2ab78c1854dc9f6423cc873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c162cd050cebe3bbfe4d590003b995"><td class="memItemLeft" align="right" valign="top">char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="printf_8cpp.html#a66c162cd050cebe3bbfe4d590003b995">MSL_Common_Src_printf__stringBase0</a></td></tr>
+<tr class="separator:a66c162cd050cebe3bbfe4d590003b995"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e16ab235a21aeb54eed4c251ceb8267"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="printf_8cpp.html#a8e16ab235a21aeb54eed4c251ceb8267">__files</a> [80]</td></tr>
 <tr class="separator:a8e16ab235a21aeb54eed4c251ceb8267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab800a94d67839d64e63bb987ac6189e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="printf_8cpp.html#ab800a94d67839d64e63bb987ac6189e8">__ctype_map</a> [256]</td></tr>
@@ -840,9 +840,15 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -891,7 +897,27 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0xF8),  (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x98),  (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x98),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0xD0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0xE4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a>) + 0xF8),</div>
+<div class="line">}</div>
+<div class="ttc" id="aprintf_8cpp_html_a9569ad17995c78215ab4f819b67ffdfe"><div class="ttname"><a href="printf_8cpp.html#a9569ad17995c78215ab4f819b67ffdfe">longlong2str</a></div><div class="ttdeci">static void longlong2str()</div><div class="ttdef"><b>Definition:</b> printf.cpp:244</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1d017195337e10b28b4978a6d87096b1"></a>
@@ -913,7 +939,27 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xA8), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0x70), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0x70),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0x88),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0x98),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xB4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a>) + 0xA8),</div>
+<div class="line">}</div>
+<div class="ttc" id="aprintf_8cpp_html_ac8f83557c3e0749c126a44d9160379c0"><div class="ttname"><a href="printf_8cpp.html#ac8f83557c3e0749c126a44d9160379c0">long2str</a></div><div class="ttdeci">static void long2str()</div><div class="ttdef"><b>Definition:</b> printf.cpp:276</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a011f7720c81153d071094218b1f01d6a"></a>
@@ -936,27 +982,27 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xBC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xF8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xF8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xD4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xF8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xF8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xF8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xF8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xF8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xF8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xF8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xB0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xF8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xA4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xF8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xF8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>)+0xE0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xBC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xF8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xF8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xD4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xF8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xF8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xF8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xF8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xF8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xF8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xF8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xB0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xF8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xA4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xF8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xF8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0xE0),</div>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aprintf_8cpp_html_a5a57ea51d2b7cac9fb323682c4b60f98"><div class="ttname"><a href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a></div><div class="ttdeci">static void parse_format()</div><div class="ttdef"><b>Definition:</b> printf.cpp:407</div></div>
+<div class="ttc" id="aprintf_8cpp_html_a5a57ea51d2b7cac9fb323682c4b60f98"><div class="ttname"><a href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a></div><div class="ttdeci">static void parse_format()</div><div class="ttdef"><b>Definition:</b> printf.cpp:342</div></div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 </div><!-- fragment -->
 </div>
@@ -980,11 +1026,41 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x38C), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x3DC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x354),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x3C8), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x30C),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x38C), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x440), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x30C),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x3DC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x354),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x3C8), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x30C), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4A4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x30C), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x41C),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x478), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x30C), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x4BC), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="printf_8cpp.html#a5a57ea51d2b7cac9fb323682c4b60f98">parse_format</a>) + 0x30C),</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a1ecb964bb2ab78c1854dc9f6423cc873"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ecb964bb2ab78c1854dc9f6423cc873">&#9670;&nbsp;</a></span>MSL_Common_Src_printf__stringBase0</h2>
+<a id="a66c162cd050cebe3bbfe4d590003b995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66c162cd050cebe3bbfe4d590003b995">&#9670;&nbsp;</a></span>MSL_Common_Src_printf__stringBase0</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -993,7 +1069,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char const* const MSL_Common_Src_printf__stringBase0</td>
+          <td class="memname">char const  *const MSL_Common_Src_printf__stringBase0</td>
         </tr>
       </table>
   </td>

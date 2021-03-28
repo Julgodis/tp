@@ -1,8 +1,8 @@
 <map id="libs/dolphin/os/OSCache.cpp" name="libs/dolphin/os/OSCache.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="1789,5,1978,32"/>
-<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,87,87,114"/>
-<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="127,169,235,196"/>
-<area shape="rect" id="node4" href="$OSCache_8h.html" title=" " alt="" coords="163,87,313,114"/>
+<area shape="rect" id="node2" href="$OSCache_8h.html" title=" " alt="" coords="5,87,156,114"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="83,169,191,196"/>
+<area shape="rect" id="node4" href="$dol2asm_8h.html" title=" " alt="" coords="232,87,313,114"/>
 <area shape="rect" id="node5" title=" " alt="" coords="338,80,509,121"/>
 <area shape="rect" id="node6" title=" " alt="" coords="533,80,703,121"/>
 <area shape="rect" id="node7" title=" " alt="" coords="727,80,898,121"/>

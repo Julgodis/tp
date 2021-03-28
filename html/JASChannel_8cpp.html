@@ -81,9 +81,9 @@ $(function() {
 <div class="title">JASChannel.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="JASChannel_8h_source.html">JSystem/JAudio2/JASChannel.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="JASChannel_8h_source.html">JSystem/JAudio2/JASChannel.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASChannel/__ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASChannel/__dt__10JASChannelFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASChannel/play__10JASChannelFv.s&quot;</code><br />
@@ -1514,7 +1514,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1605,13 +1608,13 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a>)+0x68),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a>)+0x58),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a>)+0x78),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a>)+0x94),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a>)+0xA4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a>)+0xB4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a>)+0xC4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a>) + 0x68),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a>) + 0x58),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a>) + 0x78),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a>) + 0x94),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a>) + 0xA4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a>) + 0xB4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a>) + 0xC4),</div>
 <div class="line">}</div>
 <div class="ttc" id="aJASChannel_8cpp_html_ad41096b4076eec784b8d91c2d091bc85"><div class="ttname"><a href="JASChannel_8cpp.html#ad41096b4076eec784b8d91c2d091bc85">effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams</a></div><div class="ttdeci">void effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams()</div></div>
 </div><!-- fragment -->
@@ -1961,14 +1964,14 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0x114),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0xE8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0xF0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0xF8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0x114),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0x100),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0x108),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0x110),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0x114),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0xE8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0xF0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0xF8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0x114),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0x100),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0x110),</div>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
@@ -1997,14 +2000,14 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0x210),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0x1E4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0x1EC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0x1F4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0x210),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0x1FC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0x204),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>)+0x20C),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0x210),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0x1E4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0x1EC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0x1F4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0x210),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0x1FC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0x204),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASChannel_8cpp.html#a8c1438a018c51f6a1895573784ee6fcc">updateMixer__10JASChannelFffffPUs</a>) + 0x20C),</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>

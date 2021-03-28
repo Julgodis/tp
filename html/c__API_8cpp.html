@@ -80,9 +80,9 @@ $(function() {
 <div class="title">c_API.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="c__API_8h_source.html">SSystem/SComponent/c_API.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="c__API_8h_source.html">SSystem/SComponent/c_API.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for c_API.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -121,8 +121,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a3f2d59021a1d5fe516251ce8b2056685"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__API_8cpp.html#a3f2d59021a1d5fe516251ce8b2056685">g_cAPI_Interface</a> [6]</td></tr>
-<tr class="separator:a3f2d59021a1d5fe516251ce8b2056685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68d0c54aa14b0b17e4ca585b0b032a3a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__API_8cpp.html#a68d0c54aa14b0b17e4ca585b0b032a3a">g_cAPI_Interface</a> [6]</td></tr>
+<tr class="separator:a68d0c54aa14b0b17e4ca585b0b032a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ae63f39e31f45a4b667794e52450d466e"></a>
@@ -330,24 +330,20 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a3f2d59021a1d5fe516251ce8b2056685"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f2d59021a1d5fe516251ce8b2056685">&#9670;&nbsp;</a></span>g_cAPI_Interface</h2>
+<a id="a68d0c54aa14b0b17e4ca585b0b032a3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68d0c54aa14b0b17e4ca585b0b032a3a">&#9670;&nbsp;</a></span>g_cAPI_Interface</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void * g_cAPI_Interface</td>
+          <td class="memname">void * g_cAPI_Interface</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="c__API_8cpp.html#aee105ca6ab0625849eb35311de9a227f">mDoGph_Create__Fv</a>,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="c__API_8cpp.html#a356e2eee695613bf0dab784088ba5ba1">mDoGph_BeforeOfDraw__Fv</a>,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="c__API_8cpp.html#a266c44736768c17012f049544e9deca3">mDoGph_AfterOfDraw__Fv</a>,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="c__API_8cpp.html#adf457b2cc0d3130fe0d6daba1536d621">mDoGph_Painter__Fv</a>,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="c__API_8cpp.html#a8aced0d582f65f447a6c11b3de1e1a64">mDoGph_BlankingON__Fv</a>,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="c__API_8cpp.html#a36ce5d64fc1c2aa817568bcd29a25813">mDoGph_BlankingOFF__Fv</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="c__API_8cpp.html#aee105ca6ab0625849eb35311de9a227f">mDoGph_Create__Fv</a>,  (<span class="keywordtype">void</span>*)<a class="code" href="c__API_8cpp.html#a356e2eee695613bf0dab784088ba5ba1">mDoGph_BeforeOfDraw__Fv</a>, (<span class="keywordtype">void</span>*)<a class="code" href="c__API_8cpp.html#a266c44736768c17012f049544e9deca3">mDoGph_AfterOfDraw__Fv</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="c__API_8cpp.html#adf457b2cc0d3130fe0d6daba1536d621">mDoGph_Painter__Fv</a>, (<span class="keywordtype">void</span>*)<a class="code" href="c__API_8cpp.html#a8aced0d582f65f447a6c11b3de1e1a64">mDoGph_BlankingON__Fv</a>,   (<span class="keywordtype">void</span>*)<a class="code" href="c__API_8cpp.html#a36ce5d64fc1c2aa817568bcd29a25813">mDoGph_BlankingOFF__Fv</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="ac__API_8cpp_html_a266c44736768c17012f049544e9deca3"><div class="ttname"><a href="c__API_8cpp.html#a266c44736768c17012f049544e9deca3">mDoGph_AfterOfDraw__Fv</a></div><div class="ttdeci">void mDoGph_AfterOfDraw__Fv()</div></div>
 <div class="ttc" id="ac__API_8cpp_html_a356e2eee695613bf0dab784088ba5ba1"><div class="ttname"><a href="c__API_8cpp.html#a356e2eee695613bf0dab784088ba5ba1">mDoGph_BeforeOfDraw__Fv</a></div><div class="ttdeci">void mDoGph_BeforeOfDraw__Fv()</div></div>

@@ -80,9 +80,9 @@ $(function() {
 <div class="title">GXLight.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="GXLight_8h_source.html">dolphin/gx/GXLight.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="GXLight_8h_source.html">dolphin/gx/GXLight.h</a>&quot;</code><br />
 <code>#include &quot;asm/dolphin/gx/GXLight/GXInitLightAttn.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/gx/GXLight/GXInitLightSpot.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/gx/GXLight/GXInitLightDistAttn.s&quot;</code><br />
@@ -409,7 +409,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -654,17 +657,17 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a>)+0x160),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a>)+0x70),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a>)+0x84),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a>)+0xA4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a>)+0xC4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a>)+0xF0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a>)+0x124),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a>) + 0x160),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a>) + 0x70),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a>) + 0x84),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a>) + 0xA4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a>) + 0xC4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a>) + 0xF0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a>) + 0x124),</div>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aGXLight_8cpp_html_a84d13a15150d5cc9699c45d953e65d7d"><div class="ttname"><a href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a></div><div class="ttdeci">void GXInitLightSpot()</div><div class="ttdef"><b>Definition:</b> GXLight.cpp:103</div></div>
+<div class="ttc" id="aGXLight_8cpp_html_a84d13a15150d5cc9699c45d953e65d7d"><div class="ttname"><a href="GXLight_8cpp.html#a84d13a15150d5cc9699c45d953e65d7d">GXInitLightSpot</a></div><div class="ttdeci">void GXInitLightSpot()</div><div class="ttdef"><b>Definition:</b> GXLight.cpp:105</div></div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 </div><!-- fragment -->
 </div>

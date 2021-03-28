@@ -80,9 +80,9 @@ $(function() {
 <div class="title">OSError.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="OSError_8h_source.html">dolphin/os/OSError.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="OSError_8h_source.html">dolphin/os/OSError.h</a>&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSError/OSSetErrorHandler.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSError/__OSUnhandledException.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -151,8 +151,8 @@ Variables</h2></td></tr>
 <tr class="separator:a0a82a57ca9c95c6982653e2e4f2f2de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57daa105a7241edd58f977ffaccb0282"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSError_8cpp.html#a57daa105a7241edd58f977ffaccb0282">__OSErrorTable</a> [68+12]</td></tr>
 <tr class="separator:a57daa105a7241edd58f977ffaccb0282"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86983478223a666c57f2b344898e5489"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSError_8cpp.html#a86983478223a666c57f2b344898e5489">__OSFpscrEnableBits</a> = 0x000000F8</td></tr>
-<tr class="separator:a86983478223a666c57f2b344898e5489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f43d21cbf11269deabbaed0e6fcad4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSError_8cpp.html#a9f43d21cbf11269deabbaed0e6fcad4a">__OSFpscrEnableBits</a> = 0x000000F8</td></tr>
+<tr class="separator:a9f43d21cbf11269deabbaed0e6fcad4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fdb911c5613a2f5594631e4587a61fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSError_8cpp.html#a9fdb911c5613a2f5594631e4587a61fe">__OSLastInterruptSrr0</a> [4]</td></tr>
 <tr class="separator:a9fdb911c5613a2f5594631e4587a61fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeda3cd75a334b41002e837e0f063d195"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSError_8cpp.html#aeda3cd75a334b41002e837e0f063d195">__OSLastInterrupt</a> [2+6]</td></tr>
@@ -485,14 +485,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a86983478223a666c57f2b344898e5489"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86983478223a666c57f2b344898e5489">&#9670;&nbsp;</a></span>__OSFpscrEnableBits</h2>
+<a id="a9f43d21cbf11269deabbaed0e6fcad4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f43d21cbf11269deabbaed0e6fcad4a">&#9670;&nbsp;</a></span>__OSFpscrEnableBits</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> __OSFpscrEnableBits = 0x000000F8</td>
+          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> __OSFpscrEnableBits = 0x000000F8</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -607,10 +607,31 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x20, 0x69, 0x6E, 0x20, 0x22, 0x25, 0x73, 0x22, 0x20, 0x6F, 0x6E, 0x20, 0x6C, 0x69, 0x6E, 0x65,</div>
-<div class="line">    0x20, 0x25, 0x64, 0x2E, 0x0A, 0x00,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x69,</div>
+<div class="line">    0x6E,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x22,</div>
+<div class="line">    0x25,</div>
+<div class="line">    0x73,</div>
+<div class="line">    0x22,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x6F,</div>
+<div class="line">    0x6E,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x6C,</div>
+<div class="line">    0x69,</div>
+<div class="line">    0x6E,</div>
+<div class="line">    0x65,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x25,</div>
+<div class="line">    0x64,</div>
+<div class="line">    0x2E,</div>
+<div class="line">    0x0A,</div>
+<div class="line">    0x00,</div>
 <div class="line">    </div>
-<div class="line">    0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -626,14 +647,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x0A, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x3A, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x42,</div>
-<div class="line">    0x61, 0x63, 0x6B, 0x20, 0x43, 0x68, 0x61, 0x69, 0x6E, 0x20, 0x20, 0x20, 0x20, 0x4C, 0x52, 0x20,</div>
-<div class="line">    0x53, 0x61, 0x76, 0x65, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a219a918564390c055f6c0a0b57d024d1"></a>
@@ -648,8 +662,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x3A, 0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78,</div>
-<div class="line">    0x20, 0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,</div>
+<div class="line">    0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x3A, 0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30,</div>
+<div class="line">    0x38, 0x78, 0x20, 0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -673,13 +687,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x4E, 0x6F, 0x6E, 0x2D, 0x72, 0x65, 0x63, 0x6F, 0x76, 0x65, 0x72, 0x61, 0x62, 0x6C, 0x65, 0x20,</div>
-<div class="line">    0x45, 0x78, 0x63, 0x65, 0x70, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x25, 0x64, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a40f8ee3c43ae87c26e646b2baba02cbf"></a>
@@ -702,8 +710,29 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x55, 0x6E, 0x68, 0x61, 0x6E, 0x64, 0x6C, 0x65, 0x64, 0x20, 0x45, 0x78, 0x63, 0x65, 0x70, 0x74,</div>
-<div class="line">    0x69, 0x6F, 0x6E, 0x20, 0x25, 0x64, 0x00,</div>
+<div class="line">    0x55,</div>
+<div class="line">    0x6E,</div>
+<div class="line">    0x68,</div>
+<div class="line">    0x61,</div>
+<div class="line">    0x6E,</div>
+<div class="line">    0x64,</div>
+<div class="line">    0x6C,</div>
+<div class="line">    0x65,</div>
+<div class="line">    0x64,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x45,</div>
+<div class="line">    0x78,</div>
+<div class="line">    0x63,</div>
+<div class="line">    0x65,</div>
+<div class="line">    0x70,</div>
+<div class="line">    0x74,</div>
+<div class="line">    0x69,</div>
+<div class="line">    0x6F,</div>
+<div class="line">    0x6E,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x25,</div>
+<div class="line">    0x64,</div>
+<div class="line">    0x00,</div>
 <div class="line">    </div>
 <div class="line">    0x00,</div>
 <div class="line">}</div>
@@ -756,15 +785,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x0A, 0x44, 0x53, 0x49, 0x53, 0x52, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20,</div>
-<div class="line">    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,</div>
-<div class="line">    0x20, 0x20, 0x44, 0x41, 0x52, 0x20, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A,</div>
-<div class="line">    0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5863294d983bfd5c729176874c5c4a18"></a>
@@ -854,18 +875,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x0A, 0x49, 0x6E, 0x73, 0x74, 0x72, 0x75, 0x63, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x61, 0x74, 0x20,</div>
-<div class="line">    0x30, 0x78, 0x25, 0x78, 0x20, 0x28, 0x72, 0x65, 0x61, 0x64, 0x20, 0x66, 0x72, 0x6F, 0x6D, 0x20,</div>
-<div class="line">    0x53, 0x52, 0x52, 0x30, 0x29, 0x20, 0x61, 0x74, 0x74, 0x65, 0x6D, 0x70, 0x74, 0x65, 0x64, 0x20,</div>
-<div class="line">    0x74, 0x6F, 0x20, 0x61, 0x63, 0x63, 0x65, 0x73, 0x73, 0x20, 0x75, 0x6E, 0x61, 0x6C, 0x69, 0x67,</div>
-<div class="line">    0x6E, 0x65, 0x64, 0x20, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x20, 0x30, 0x78, 0x25, 0x78,</div>
-<div class="line">    0x20, 0x28, 0x72, 0x65, 0x61, 0x64, 0x20, 0x66, 0x72, 0x6F, 0x6D, 0x20, 0x44, 0x41, 0x52, 0x29,</div>
-<div class="line">    0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aaffb6c338e48b318a3ec27f93b97b1e1"></a>
@@ -901,13 +911,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x41, 0x49, 0x20, 0x44, 0x4D, 0x41, 0x20, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x20, 0x3D,</div>
-<div class="line">    0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30, 0x34, 0x78, 0x25, 0x30, 0x34, 0x78, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a70f4986fd4e546ea4ef8cf391fa517fb"></a>
@@ -921,13 +925,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x41, 0x52, 0x41, 0x4D, 0x20, 0x44, 0x4D, 0x41, 0x20, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73,</div>
-<div class="line">    0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x30, 0x34, 0x78, 0x25, 0x30, 0x34, 0x78, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0a82a57ca9c95c6982653e2e4f2f2de0"></a>
@@ -941,13 +939,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x44, 0x49, 0x20, 0x44, 0x4D, 0x41, 0x20, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x20, 0x3D,</div>
-<div class="line">    0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae99a9299189d69d4f0485a795a071f02"></a>
@@ -969,15 +961,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x0A, 0x4C, 0x61, 0x73, 0x74, 0x20, 0x69, 0x6E, 0x74, 0x65, 0x72, 0x72, 0x75, 0x70, 0x74, 0x20,</div>
-<div class="line">    0x28, 0x25, 0x64, 0x29, 0x3A, 0x20, 0x53, 0x52, 0x52, 0x30, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25,</div>
-<div class="line">    0x30, 0x38, 0x78, 0x20, 0x20, 0x54, 0x42, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x30, 0x31, 0x36,</div>
-<div class="line">    0x6C, 0x6C, 0x78, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8ecc5556c99501d3411bb7f4b3de6b1f"></a>
@@ -1000,26 +984,26 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x2B4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x2B4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x20C),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x224),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x2B4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x238),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x250),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x2B4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x2B4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x2B4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x2B4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x2B4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x2B4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x2B4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x2B4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>)+0x268),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x2B4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x2B4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x20C),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x224),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x2B4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x238),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x250),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x2B4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x2B4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x2B4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x2B4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x2B4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x2B4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x2B4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x2B4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a>) + 0x268),</div>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aOSError_8cpp_html_a2794f652f2183164909513ca32ffa873"><div class="ttname"><a href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a></div><div class="ttdeci">void __OSUnhandledException()</div><div class="ttdef"><b>Definition:</b> OSError.cpp:239</div></div>
+<div class="ttc" id="aOSError_8cpp_html_a2794f652f2183164909513ca32ffa873"><div class="ttname"><a href="OSError_8cpp.html#a2794f652f2183164909513ca32ffa873">__OSUnhandledException</a></div><div class="ttdeci">void __OSUnhandledException()</div><div class="ttdef"><b>Definition:</b> OSError.cpp:632</div></div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 </div><!-- fragment -->
 </div>

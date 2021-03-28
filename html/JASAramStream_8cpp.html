@@ -81,9 +81,9 @@ $(function() {
 <div class="title">JASAramStream.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="JASAramStream_8h_source.html">JSystem/JAudio2/JASAramStream.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="JASAramStream_8h_source.html">JSystem/JAudio2/JASAramStream.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASAramStream/initSystem__13JASAramStreamFUlUl.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASAramStream/__ct__13JASAramStreamFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASAramStream/init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv.s&quot;</code><br />
@@ -1448,7 +1448,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1586,19 +1589,19 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>)+0x40),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>)+0x34),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>)+0x48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>)+0x40),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>)+0x40),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>)+0x40),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>)+0x40),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>)+0x40),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>)+0x40),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>)+0x40),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>)+0x40),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>)+0x40),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>)+0x40),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>) + 0x40),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>) + 0x34),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>) + 0x48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>) + 0x40),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>) + 0x40),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>) + 0x40),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>) + 0x40),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>) + 0x40),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>) + 0x40),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>) + 0x40),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>) + 0x40),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>) + 0x40),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JASAramStream_8cpp.html#afd03d6b79a6b0d712565b4ff92165434">dvdErrorCheck__13JASAramStreamFPv</a>) + 0x40),</div>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
@@ -1649,9 +1652,15 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x01,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x01,</div>
 <div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1685,7 +1694,7 @@ Variables</h2></td></tr>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aJASAramStream_8cpp_html_ac89759ba4b035c40e0ed6cdd0d8c09b0"><div class="ttname"><a href="JASAramStream_8cpp.html#ac89759ba4b035c40e0ed6cdd0d8c09b0">OSC_RELEASE_TABLE</a></div><div class="ttdeci">static SECTION_RODATA u8 const OSC_RELEASE_TABLE[12]</div><div class="ttdef"><b>Definition:</b> JASAramStream.cpp:472</div></div>
+<div class="ttc" id="aJASAramStream_8cpp_html_ac89759ba4b035c40e0ed6cdd0d8c09b0"><div class="ttname"><a href="JASAramStream_8cpp.html#ac89759ba4b035c40e0ed6cdd0d8c09b0">OSC_RELEASE_TABLE</a></div><div class="ttdeci">static SECTION_RODATA u8 const OSC_RELEASE_TABLE[12]</div><div class="ttdef"><b>Definition:</b> JASAramStream.cpp:459</div></div>
 </div><!-- fragment -->
 </div>
 </div>

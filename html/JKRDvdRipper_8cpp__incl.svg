@@ -68,47 +68,47 @@ var sectionId = 'dynsection-0';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="dol2asm_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="0,-73 0,-92 61,-92 61,-73 0,-73"/>
-<text text-anchor="middle" x="30.5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">dol2asm.h</text>
+<g id="a_node2"><a xlink:href="JKRDvdRipper_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="0,-73 0,-92 165,-92 165,-73 0,-73"/>
+<text text-anchor="middle" x="82.5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">JSystem/JKernel/JKRDvdRipper.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M882.78,-159.52C717.88,-159.08 227.72,-153.93 75.5,-109 66.9,-106.46 58.16,-102.02 50.71,-97.56"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="52.36,-94.46 42.05,-92.02 48.59,-100.36 52.36,-94.46"/>
+<path fill="none" stroke="midnightblue" d="M882.87,-159.42C757.62,-158.45 440.48,-151.6 179.5,-109 159.29,-105.7 137.19,-100.05 119.19,-94.91"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="119.96,-91.49 109.38,-92.04 118,-98.21 119.96,-91.49"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="types_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="104,-0.5 104,-19.5 185,-19.5 185,-0.5 104,-0.5"/>
-<text text-anchor="middle" x="144.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/types.h</text>
+<polygon fill="white" stroke="black" points="97,-0.5 97,-19.5 178,-19.5 178,-0.5 97,-0.5"/>
+<text text-anchor="middle" x="137.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/types.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge4" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M882.94,-158.21C702.67,-153.67 136.04,-137.21 109.5,-109 93.36,-91.84 101.86,-78.28 109.5,-56 113.22,-45.16 120.73,-34.92 127.85,-26.96"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="130.55,-29.19 134.94,-19.55 125.5,-24.35 130.55,-29.19"/>
+<path fill="none" stroke="midnightblue" d="M882.81,-158.32C724.2,-154.52 271.63,-140.98 213.5,-109 187.88,-94.9 192.46,-79.08 174.5,-56 166.95,-46.3 158.24,-35.67 151.16,-27.18"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="153.84,-24.93 144.73,-19.52 148.47,-29.43 153.84,-24.93"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="JKRDvdRipper_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="118,-73 118,-92 283,-92 283,-73 118,-73"/>
-<text text-anchor="middle" x="200.5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">JSystem/JKernel/JKRDvdRipper.h</text>
+<g id="a_node4"><a xlink:href="dol2asm_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="222,-73 222,-92 283,-92 283,-73 222,-73"/>
+<text text-anchor="middle" x="252.5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">dol2asm.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M882.69,-158.75C770.88,-156.45 508.76,-147.07 292.5,-109 273.71,-105.69 253.22,-100.2 236.35,-95.16"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="236.95,-91.69 226.37,-92.11 234.9,-98.38 236.95,-91.69"/>
+<path fill="none" stroke="midnightblue" d="M882.92,-158.61C747.91,-155.89 401.42,-145.44 292.5,-109 285.15,-106.54 277.81,-102.45 271.45,-98.25"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="273.14,-95.16 262.96,-92.21 269.08,-100.86 273.14,-95.16"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
@@ -276,11 +276,11 @@ var sectionId = 'dynsection-0';
 <path fill="none" stroke="midnightblue" d="M992.29,-157.98C1160.5,-153.06 1667.88,-136.29 1830.5,-109 1843.01,-106.9 1856.27,-103.71 1868.65,-100.28"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1869.71,-103.62 1878.36,-97.51 1867.78,-96.89 1869.71,-103.62"/>
 </g>
-<!-- Node4&#45;&gt;Node3 -->
-<g id="edge4" class="edge">
-<title>Node4&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M193.63,-72.86C184.73,-61.65 169.02,-41.87 157.76,-27.69"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="160.38,-25.37 151.42,-19.72 154.9,-29.72 160.38,-25.37"/>
+<!-- Node2&#45;&gt;Node3 -->
+<g id="edge2" class="edge">
+<title>Node2&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M89.24,-72.86C97.99,-61.65 113.42,-41.87 124.48,-27.69"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="127.31,-29.75 130.7,-19.72 121.79,-25.45 127.31,-29.75"/>
 </g>
 </g>
 </svg>

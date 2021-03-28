@@ -80,9 +80,9 @@ $(function() {
 <div class="title">abort_exit.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="abort__exit_8h_source.html">MSL_C.PPCEABI.bare.H/MSL_Common/Src/abort_exit.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="abort__exit_8h_source.html">MSL_C.PPCEABI.bare.H/MSL_Common/Src/abort_exit.h</a>&quot;</code><br />
 <code>#include &quot;asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/abort_exit/exit.s&quot;</code><br />
 <code>#include &quot;asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/abort_exit/abort.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -100,6 +100,10 @@ Functions</h2></td></tr>
 <tr class="separator:a358d2e2397ca11ccd17553e3c40e7901"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac54f53dc342019e8db34f4aa581a5792"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="abort__exit_8cpp.html#ac54f53dc342019e8db34f4aa581a5792">abort</a> ()</td></tr>
 <tr class="separator:ac54f53dc342019e8db34f4aa581a5792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e3bd767bb1cff976a4e8874d01c81f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="abort__exit_8cpp.html#a9e3bd767bb1cff976a4e8874d01c81f6">__declspec</a> (section &quot;.dtors$10&quot;) extern void *const __destroy_global_chain_reference</td></tr>
+<tr class="separator:a9e3bd767bb1cff976a4e8874d01c81f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ac99ff70a6b833df548b260fa09358"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="abort__exit_8cpp.html#a31ac99ff70a6b833df548b260fa09358">__declspec</a> (section &quot;.dtors$15&quot;) extern void *const __fini_cpp_exceptions_reference = (void*)<a class="el" href="____init__cpp__exceptions_8cpp.html#a650a02cb5a76c6c3713fc7621d050c3f">__fini_cpp_exceptions</a></td></tr>
+<tr class="separator:a31ac99ff70a6b833df548b260fa09358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d2535b88ff02f08eb7211e0eaf2b180"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="abort__exit_8cpp.html#a6d2535b88ff02f08eb7211e0eaf2b180">_ExitProcess</a> ()</td></tr>
 <tr class="separator:a6d2535b88ff02f08eb7211e0eaf2b180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a709e235e919060e0ebb86ebda15a7ff2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="abort__exit_8cpp.html#a709e235e919060e0ebb86ebda15a7ff2">__destroy_global_chain</a> ()</td></tr>
@@ -112,10 +116,6 @@ Functions</h2></td></tr>
 <tr class="separator:ac5db1fcd7bfbdd778fdf5313871a41d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add2606e85e4e73d7a937d91bd9bca2dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="abort__exit_8cpp.html#add2606e85e4e73d7a937d91bd9bca2dc">raise</a> ()</td></tr>
 <tr class="separator:add2606e85e4e73d7a937d91bd9bca2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e3bd767bb1cff976a4e8874d01c81f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="abort__exit_8cpp.html#a9e3bd767bb1cff976a4e8874d01c81f6">__declspec</a> (section &quot;.dtors$10&quot;) extern void *const __destroy_global_chain_reference = (void*)<a class="el" href="global__destructor__chain_8cpp.html#ae53c3dbbdc700f14fcfe7920350cc8cf">__destroy_global_chain</a></td></tr>
-<tr class="separator:a9e3bd767bb1cff976a4e8874d01c81f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31ac99ff70a6b833df548b260fa09358"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="abort__exit_8cpp.html#a31ac99ff70a6b833df548b260fa09358">__declspec</a> (section &quot;.dtors$15&quot;) extern void *const __fini_cpp_exceptions_reference = (void*)<a class="el" href="____init__cpp__exceptions_8cpp.html#a650a02cb5a76c6c3713fc7621d050c3f">__fini_cpp_exceptions</a></td></tr>
-<tr class="separator:a31ac99ff70a6b833df548b260fa09358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -161,11 +161,14 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype">section &quot;.dtors$10&quot;&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td> const = (void*)<a class="el" href="global__destructor__chain_8cpp.html#ae53c3dbbdc700f14fcfe7920350cc8cf">__destroy_global_chain</a></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= (<span class="keywordtype">void</span>*)</div>
+<div class="line">    <a class="code" href="abort__exit_8cpp.html#a709e235e919060e0ebb86ebda15a7ff2">__destroy_global_chain</a></div>
+<div class="ttc" id="aabort__exit_8cpp_html_a709e235e919060e0ebb86ebda15a7ff2"><div class="ttname"><a href="abort__exit_8cpp.html#a709e235e919060e0ebb86ebda15a7ff2">__destroy_global_chain</a></div><div class="ttdeci">void __destroy_global_chain()</div><div class="ttdef"><b>Definition:</b> global_destructor_chain.cpp:33</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a31ac99ff70a6b833df548b260fa09358"></a>

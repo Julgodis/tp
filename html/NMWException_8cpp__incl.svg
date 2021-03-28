@@ -68,47 +68,47 @@ var sectionId = 'dynsection-0';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="dol2asm_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="0,-67.5 0,-86.5 61,-86.5 61,-67.5 0,-67.5"/>
-<text text-anchor="middle" x="30.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">dol2asm.h</text>
+<g id="a_node2"><a xlink:href="NMWException_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="0,-67.5 0,-86.5 185,-86.5 185,-67.5 0,-67.5"/>
+<text text-anchor="middle" x="92.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">Runtime.PPCEABI.H/NMWException.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M402.93,-145.96C324.95,-141.54 188.24,-129.63 75.5,-98 69.02,-96.18 62.27,-93.59 56.02,-90.87"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="57.29,-87.6 46.74,-86.59 54.36,-93.96 57.29,-87.6"/>
+<path fill="none" stroke="midnightblue" d="M402.65,-136.62C331.26,-123.13 215.87,-101.32 147.78,-88.45"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="148.16,-84.96 137.68,-86.54 146.86,-91.84 148.16,-84.96"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="types_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="109,-0.5 109,-19.5 190,-19.5 190,-0.5 109,-0.5"/>
-<text text-anchor="middle" x="149.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/types.h</text>
+<polygon fill="white" stroke="black" points="112,-0.5 112,-19.5 193,-19.5 193,-0.5 112,-0.5"/>
+<text text-anchor="middle" x="152.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/types.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge4" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M403,-149.06C310.99,-148.41 145.9,-141.07 108.5,-98 96.26,-83.91 101.76,-73.41 108.5,-56 112.95,-44.5 121.87,-34.13 130.25,-26.25"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="132.74,-28.73 137.96,-19.51 128.13,-23.46 132.74,-28.73"/>
+<path fill="none" stroke="midnightblue" d="M402.96,-145.23C353.81,-140.33 285.11,-128.15 232.5,-98 231.47,-97.41 190.12,-52.2 167.28,-27.2"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="169.66,-24.61 160.33,-19.58 164.49,-29.33 169.66,-24.61"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="NMWException_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="117,-67.5 117,-86.5 302,-86.5 302,-67.5 117,-67.5"/>
-<text text-anchor="middle" x="209.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">Runtime.PPCEABI.H/NMWException.h</text>
+<g id="a_node4"><a xlink:href="dol2asm_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="241,-67.5 241,-86.5 302,-86.5 302,-67.5 241,-67.5"/>
+<text text-anchor="middle" x="271.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">dol2asm.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M414.62,-134.49C366.46,-121.22 295.08,-101.57 250.48,-89.28"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="251.14,-85.84 240.56,-86.55 249.28,-92.58 251.14,-85.84"/>
+<path fill="none" stroke="midnightblue" d="M416.63,-134.48C386.02,-125.21 345.98,-112.18 311.5,-98 306.51,-95.95 301.29,-93.54 296.32,-91.11"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="297.72,-87.9 287.21,-86.53 294.57,-94.15 297.72,-87.9"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
@@ -194,11 +194,11 @@ var sectionId = 'dynsection-0';
 <path fill="none" stroke="midnightblue" d="M528.04,-145.01C619.96,-139.23 797.01,-125.65 956.42,-98.06"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="957.16,-101.48 966.4,-96.31 955.95,-94.59 957.16,-101.48"/>
 </g>
-<!-- Node4&#45;&gt;Node3 -->
-<g id="edge4" class="edge">
-<title>Node4&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M201.41,-67.23C191.96,-57 176.14,-39.86 164.45,-27.19"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="166.82,-24.6 157.46,-19.63 161.67,-29.35 166.82,-24.6"/>
+<!-- Node2&#45;&gt;Node3 -->
+<g id="edge2" class="edge">
+<title>Node2&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M100.59,-67.23C110.04,-57 125.86,-39.86 137.55,-27.19"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="140.33,-29.35 144.54,-19.63 135.18,-24.6 140.33,-29.35"/>
 </g>
 </g>
 </svg>

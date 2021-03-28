@@ -1,8 +1,8 @@
 <map id="src/msg/scrn/d_msg_scrn_item.cpp" name="src/msg/scrn/d_msg_scrn_item.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="2189,5,2330,47"/>
-<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,117,87,143"/>
-<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="127,213,235,240"/>
-<area shape="rect" id="node4" href="$d__msg__scrn__item_8h.html" title=" " alt="" coords="163,109,313,151"/>
+<area shape="rect" id="node2" href="$d__msg__scrn__item_8h.html" title=" " alt="" coords="5,109,156,151"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="83,213,191,240"/>
+<area shape="rect" id="node4" href="$dol2asm_8h.html" title=" " alt="" coords="232,117,313,143"/>
 <area shape="rect" id="node5" title=" " alt="" coords="337,102,552,158"/>
 <area shape="rect" id="node6" title=" " alt="" coords="577,102,779,158"/>
 <area shape="rect" id="node7" title=" " alt="" coords="804,102,1008,158"/>

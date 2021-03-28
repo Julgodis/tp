@@ -81,9 +81,9 @@ $(function() {
 <div class="title">J3DTevs.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="J3DTevs_8h_source.html">JSystem/J3DGraphBase/J3DTevs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="J3DTevs_8h_source.html">JSystem/J3DGraphBase/J3DTevs.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DTevs/load__11J3DLightObjCFUl.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DTevs/loadTexCoordGens__FUlP11J3DTexCoord.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DTevs/load__9J3DTexMtxCFUl.s&quot;</code><br />
@@ -336,8 +336,8 @@ Variables</h2></td></tr>
 <tr class="separator:acb5fca02a206c81e0fc05126f1b76161"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a048749c1e11eb3db996d5e67b9246d6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DTevs_8cpp.html#a048749c1e11eb3db996d5e67b9246d6d">j3dDefaultTevSwapMode</a> [4]</td></tr>
 <tr class="separator:a048749c1e11eb3db996d5e67b9246d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a804263005e314abcf4ac49f590696e8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DTevs_8cpp.html#a804263005e314abcf4ac49f590696e8c">j3dDefaultTevSwapModeTable</a> = 0x00010203</td></tr>
-<tr class="separator:a804263005e314abcf4ac49f590696e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60288704152075f879e5ab26dccb1a0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DTevs_8cpp.html#a60288704152075f879e5ab26dccb1a0c">j3dDefaultTevSwapModeTable</a> = 0x00010203</td></tr>
+<tr class="separator:a60288704152075f879e5ab26dccb1a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38a5b3e6d41174d870ded641a57676ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DTevs_8cpp.html#a38a5b3e6d41174d870ded641a57676ba">j3dDefaultBlendInfo</a> = 0x01040505</td></tr>
 <tr class="separator:a38a5b3e6d41174d870ded641a57676ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada2f855c3fd862fb333afa3a8b175090"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DTevs_8cpp.html#ada2f855c3fd862fb333afa3a8b175090">j3dDefaultColorChanInfo</a> [8]</td></tr>
@@ -2107,9 +2107,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x01, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3D, 0xCC, 0xCC, 0xCD,</div>
-<div class="line">    0x46, 0x1C, 0x40, 0x00, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x01, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3D, 0xCC, 0xCC,</div>
+<div class="line">    0xCD, 0x46, 0x1C, 0x40, 0x00, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2143,7 +2143,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2160,8 +2163,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">    0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2192,10 +2195,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">    0xBF, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x3F, 0x80, 0x00, 0x00,</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0xBF, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF,</div>
+<div class="line">    0xFF, 0xFF, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2271,8 +2274,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x04, 0x0A, 0x0F, 0x0F, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x05, 0x07, 0x07, 0x00, 0x00, 0x00,</div>
-<div class="line">    0x00, 0x01, 0x00, 0x00,</div>
+<div class="line">    0x04, 0x0A, 0x0F, 0x0F, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00,</div>
+<div class="line">    0x05, 0x07, 0x07, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2289,19 +2292,22 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a804263005e314abcf4ac49f590696e8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a804263005e314abcf4ac49f590696e8c">&#9670;&nbsp;</a></span>j3dDefaultTevSwapModeTable</h2>
+<a id="a60288704152075f879e5ab26dccb1a0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60288704152075f879e5ab26dccb1a0c">&#9670;&nbsp;</a></span>j3dDefaultTevSwapModeTable</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> j3dDefaultTevSwapModeTable = 0x00010203</td>
+          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> j3dDefaultTevSwapModeTable = 0x00010203</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2338,13 +2344,13 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x01, 0x00, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">    0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">    0x3F, 0x80, 0x00, 0x00,</div>
+<div class="line">    0x01, 0x00, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2460,18 +2466,18 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x2A4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x1C8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x20C),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x20C),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x260),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x20C),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x170),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>)+0xB0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x108),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x2A4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x1C8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x20C),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x20C),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x260),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x20C),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x170),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0xB0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x48),</div>
 <div class="line">}</div>
 <div class="ttc" id="aJ3DTevs_8cpp_html_a33a20e80ff4882d9957d6ecaa01c12ab"><div class="ttname"><a href="J3DTevs_8cpp.html#a33a20e80ff4882d9957d6ecaa01c12ab">calcTexMtx__9J3DTexMtxFPA4_Cf</a></div><div class="ttdeci">void calcTexMtx__9J3DTexMtxFPA4_Cf()</div></div>
 </div><!-- fragment -->
@@ -2497,18 +2503,18 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x310),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x200),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x234),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x288),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x2CC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x234),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x1B8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x108),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>)+0xB0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x150),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>)+0x48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x310),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x200),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x234),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x288),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x2CC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x234),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x1B8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x108),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0xB0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x150),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a>) + 0x48),</div>
 <div class="line">}</div>
 <div class="ttc" id="aJ3DTevs_8cpp_html_a475ac1d1296807171529540c0255b808"><div class="ttname"><a href="J3DTevs_8cpp.html#a475ac1d1296807171529540c0255b808">calcPostTexMtx__9J3DTexMtxFPA4_Cf</a></div><div class="ttdeci">void calcPostTexMtx__9J3DTexMtxFPA4_Cf()</div></div>
 </div><!-- fragment -->
@@ -2603,9 +2609,23 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x1E, 0x21, 0x24, 0x27, 0x2A, 0x2D, 0x30, 0x33, 0x36, 0x39, 0x3C,</div>
+<div class="line">    0x1E,</div>
+<div class="line">    0x21,</div>
+<div class="line">    0x24,</div>
+<div class="line">    0x27,</div>
+<div class="line">    0x2A,</div>
+<div class="line">    0x2D,</div>
+<div class="line">    0x30,</div>
+<div class="line">    0x33,</div>
+<div class="line">    0x36,</div>
+<div class="line">    0x39,</div>
+<div class="line">    0x3C,</div>
 <div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2753,9 +2773,11 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    </div>
-<div class="line">    0x1B, 0x00,</div>
+<div class="line">    0x1B,</div>
+<div class="line">    0x00,</div>
 <div class="line">    </div>
-<div class="line">    0x00, 0xE7,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0xE7,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>

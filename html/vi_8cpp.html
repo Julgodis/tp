@@ -80,9 +80,9 @@ $(function() {
 <div class="title">vi.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="vi_8h_source.html">dolphin/vi/vi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="vi_8h_source.html">dolphin/vi/vi.h</a>&quot;</code><br />
 <code>#include &quot;asm/dolphin/vi/vi/__VIRetraceHandler.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/vi/vi/VISetPreRetraceCallback.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/vi/vi/VISetPostRetraceCallback.s&quot;</code><br />
@@ -1361,11 +1361,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,</div>
-<div class="line">    0x20, 0x56, 0x49, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,</div>
-<div class="line">    0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x37, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,</div>
-<div class="line">    0x34, 0x3A, 0x31, 0x33, 0x3A, 0x35, 0x39, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31, 0x29,</div>
-<div class="line">    0x20, 0x3E, 0x3E, 0x00,</div>
+<div class="line">    0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B,</div>
+<div class="line">    0x20, 0x2D, 0x20, 0x56, 0x49, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20,</div>
+<div class="line">    0x62, 0x75, 0x69, 0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x37, 0x20,</div>
+<div class="line">    0x32, 0x30, 0x30, 0x34, 0x20, 0x30, 0x34, 0x3A, 0x31, 0x33, 0x3A, 0x35, 0x39, 0x20,</div>
+<div class="line">    0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31, 0x29, 0x20, 0x3E, 0x3E, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1389,7 +1389,26 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x28), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x30),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x68), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x70),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x38), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x40),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0xA0), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0xA0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x58), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x60),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0xA0), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0xA0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0xA0), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0xA0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0xA0), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0xA0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x78), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x80),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0xA0), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0xA0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x48), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x50),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0xA0), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0xA0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x88), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0xA0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x90), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0xA0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x98), (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x98),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a>) + 0x98),</div>
+<div class="line">}</div>
+<div class="ttc" id="avi_8cpp_html_a15e6db66259c5d0c4069a3076179ba8b"><div class="ttname"><a href="vi_8cpp.html#a15e6db66259c5d0c4069a3076179ba8b">getTiming</a></div><div class="ttdeci">static void getTiming()</div><div class="ttdef"><b>Definition:</b> vi.cpp:286</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae30536cc8fffb70b0e6bda2e4a7dd788"></a>
@@ -1411,14 +1430,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A,</div>
-<div class="line">    0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A,</div>
-<div class="line">    0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aff156c3b131381a6e247e5e0da78aad9"></a>
@@ -1440,14 +1452,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x20, 0x21, 0x20, 0x21, 0x20, 0x21, 0x20, 0x43, 0x20, 0x41, 0x20, 0x55, 0x20, 0x54, 0x20, 0x49,</div>
-<div class="line">    0x20, 0x4F, 0x20, 0x4E, 0x20, 0x21, 0x20, 0x21, 0x20, 0x21, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,</div>
-<div class="line">    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7c708cbcab6c94d871cc97d5d1273e76"></a>
@@ -1469,14 +1474,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x54, 0x68, 0x69, 0x73, 0x20, 0x54, 0x56, 0x20, 0x66, 0x6F, 0x72, 0x6D, 0x61, 0x74, 0x20, 0x22,</div>
-<div class="line">    0x44, 0x45, 0x42, 0x55, 0x47, 0x5F, 0x50, 0x41, 0x4C, 0x22, 0x20, 0x69, 0x73, 0x20, 0x6F, 0x6E,</div>
-<div class="line">    0x6C, 0x79, 0x20, 0x66, 0x6F, 0x72, 0x20, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a932870e077b41a9aabf4ad811e6543da"></a>
@@ -1498,14 +1496,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x74, 0x65, 0x6D, 0x70, 0x6F, 0x72, 0x61, 0x72, 0x79, 0x20, 0x73, 0x6F, 0x6C, 0x75, 0x74, 0x69,</div>
-<div class="line">    0x6F, 0x6E, 0x20, 0x75, 0x6E, 0x74, 0x69, 0x6C, 0x20, 0x50, 0x41, 0x4C, 0x20, 0x44, 0x41, 0x43,</div>
-<div class="line">    0x20, 0x62, 0x6F, 0x61, 0x72, 0x64, 0x20, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9b870805965232a81e0a2a37b056e537"></a>
@@ -1527,14 +1518,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x69, 0x73, 0x20, 0x61, 0x76, 0x61, 0x69, 0x6C, 0x61, 0x62, 0x6C, 0x65, 0x2E, 0x20, 0x50, 0x6C,</div>
-<div class="line">    0x65, 0x61, 0x73, 0x65, 0x20, 0x64, 0x6F, 0x20, 0x4E, 0x4F, 0x54, 0x20, 0x75, 0x73, 0x65, 0x20,</div>
-<div class="line">    0x74, 0x68, 0x69, 0x73, 0x20, 0x20, 0x20, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a372b8d4172c9d0946007091a2e66c40a"></a>
@@ -1556,14 +1540,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x6D, 0x6F, 0x64, 0x65, 0x20, 0x69, 0x6E, 0x20, 0x72, 0x65, 0x61, 0x6C, 0x20, 0x67, 0x61, 0x6D,</div>
-<div class="line">    0x65, 0x73, 0x21, 0x21, 0x21, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,</div>
-<div class="line">    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1b64b83a356e9181f48adbb86cbd682e"></a>
@@ -1586,9 +1563,15 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x76, 0x69, 0x2E, 0x63, 0x00,</div>
+<div class="line">    0x76,</div>
+<div class="line">    0x69,</div>
+<div class="line">    0x2E,</div>
+<div class="line">    0x63,</div>
+<div class="line">    0x00,</div>
 <div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1612,16 +1595,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x56, 0x49, 0x43, 0x6F, 0x6E, 0x66, 0x69, 0x67, 0x75, 0x72, 0x65, 0x28, 0x29, 0x3A, 0x20, 0x54,</div>
-<div class="line">    0x72, 0x69, 0x65, 0x64, 0x20, 0x74, 0x6F, 0x20, 0x63, 0x68, 0x61, 0x6E, 0x67, 0x65, 0x20, 0x6D,</div>
-<div class="line">    0x6F, 0x64, 0x65, 0x20, 0x66, 0x72, 0x6F, 0x6D, 0x20, 0x28, 0x25, 0x64, 0x29, 0x20, 0x74, 0x6F,</div>
-<div class="line">    0x20, 0x28, 0x25, 0x64, 0x29, 0x2C, 0x20, 0x77, 0x68, 0x69, 0x63, 0x68, 0x20, 0x69, 0x73, 0x20,</div>
-<div class="line">    0x66, 0x6F, 0x72, 0x62, 0x69, 0x64, 0x64, 0x65, 0x6E, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a69036e4b51374d52cd496dd09b704874"></a>
@@ -1644,19 +1618,19 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>)+0x38),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>)+0x40),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>)+0x48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>)+0x38),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>)+0x40),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>)+0x48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>)+0x38),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>)+0x38),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>) + 0x38),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>) + 0x40),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>) + 0x48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>) + 0x38),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>) + 0x40),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>) + 0x48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>) + 0x38),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a>) + 0x38),</div>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
-<div class="ttc" id="avi_8cpp_html_a62a61d7c502b5613eba340681938301a"><div class="ttname"><a href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a></div><div class="ttdeci">void VIGetTvFormat()</div><div class="ttdef"><b>Definition:</b> vi.cpp:544</div></div>
+<div class="ttc" id="avi_8cpp_html_a62a61d7c502b5613eba340681938301a"><div class="ttname"><a href="vi_8cpp.html#a62a61d7c502b5613eba340681938301a">VIGetTvFormat</a></div><div class="ttdeci">void VIGetTvFormat()</div><div class="ttdef"><b>Definition:</b> vi.cpp:873</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1716,7 +1690,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1952,15 +1929,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x01, 0xF0, 0x01, 0xDC, 0x01, 0xAE, 0x01, 0x74, 0x01, 0x29, 0x00, 0xDB, 0x00, 0x8E, 0x00, 0x46,</div>
-<div class="line">    0x00, 0x0C, 0x00, 0xE2, 0x00, 0xCB, 0x00, 0xC0, 0x00, 0xC4, 0x00, 0xCF, 0x00, 0xDE, 0x00, 0xEC,</div>
-<div class="line">    0x00, 0xFC, 0x00, 0x08, 0x00, 0x0F, 0x00, 0x13, 0x00, 0x13, 0x00, 0x0F, 0x00, 0x0C, 0x00, 0x08,</div>
-<div class="line">    0x00, 0x01,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a221ac8a2b17037655bd3a9de4e56eaf6"></a>

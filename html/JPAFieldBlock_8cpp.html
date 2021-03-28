@@ -81,9 +81,9 @@ $(function() {
 <div class="title">JPAFieldBlock.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="JPAFieldBlock_8h_source.html">JSystem/JParticle/JPAFieldBlock.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="JPAFieldBlock_8h_source.html">JSystem/JParticle/JPAFieldBlock.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/JParticle/JPAFieldBlock/calcAffect__12JPAFieldBaseFP13JPAFieldBlockP15JPABaseParticle.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JParticle/JPAFieldBlock/calcFadeAffect__12JPAFieldBaseCFP13JPAFieldBlockf.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JParticle/JPAFieldBlock/prepare__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlock.s&quot;</code><br />
@@ -125,13 +125,13 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap.html">JKRHeap</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPAFieldBlock.html">JPAFieldBlock</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPAFieldVortex.html">JPAFieldVortex</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1379,7 +1379,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1492,15 +1495,15 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0xFC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x130),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x164),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x198),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x1CC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x200),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x234),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x268),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x29C),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0xFC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x130),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x164),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x198),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x1CC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x200),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x234),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x268),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x29C),</div>
 <div class="line">}</div>
 <div class="ttc" id="aJPAFieldBlock_8cpp_html_a9627195f3cccdc33dcba746a61b2b085"><div class="ttname"><a href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a></div><div class="ttdeci">void init__13JPAFieldBlockFP7JKRHeap()</div></div>
 </div><!-- fragment -->

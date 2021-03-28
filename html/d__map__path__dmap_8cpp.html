@@ -81,9 +81,9 @@ $(function() {
 <div class="title">d_map_path_dmap.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="d__map__path__dmap_8h_source.html">d/map/d_map_path_dmap.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="d__map__path__dmap_8h_source.html">d/map/d_map_path_dmap.h</a>&quot;</code><br />
 <code>#include &quot;asm/d/map/d_map_path_dmap/chkGetCompass__10dMapInfo_nFv.s&quot;</code><br />
 <code>#include &quot;asm/d/map/d_map_path_dmap/chkGetMap__10dMapInfo_nFv.s&quot;</code><br />
 <code>#include &quot;asm/d/map/d_map_path_dmap/isVisitedRoom__10dMapInfo_nFi.s&quot;</code><br />
@@ -3212,9 +3212,15 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x78, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x78,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -3445,7 +3451,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x04, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x04,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -3536,9 +3545,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0xC8, 0x00, 0x00, 0xC3, 0x48, 0x00, 0x00,</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0xC3, 0x70, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">    0xC3, 0x70, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0xC8, 0x00, 0x00,</div>
+<div class="line">    0xC3, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC3, 0x70, 0x00, 0x00,</div>
+<div class="line">    0x43, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC3, 0x70, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -3632,23 +3641,15 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)0x01000000,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)0x00000002,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#ab3d418ff47731fc77bdb2bb3d669226c">l_entranceStartColor</a>,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)0x08000000,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)0x00000005,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#a801621f5c3aa20d43e75e8b78008bcf6">l_entranceLv8StartColor</a>,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)0x00000001,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#ab5b2df3db419f45db1b2139ca42774eb">l_treasureStartColor</a>,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)0x05000000,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)0x00000003,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#a00be8f0d678cbc5047227155c4166ed8">l_destinationStartColor</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x01000000, (<span class="keywordtype">void</span>*)0x00000002, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#ab3d418ff47731fc77bdb2bb3d669226c">l_entranceStartColor</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x08000000, (<span class="keywordtype">void</span>*)0x00000005, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#a801621f5c3aa20d43e75e8b78008bcf6">l_entranceLv8StartColor</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,       (<span class="keywordtype">void</span>*)0x00000001, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#ab5b2df3db419f45db1b2139ca42774eb">l_treasureStartColor</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x05000000, (<span class="keywordtype">void</span>*)0x00000003, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#a00be8f0d678cbc5047227155c4166ed8">l_destinationStartColor</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="ad__map__path__dmap_8cpp_html_a00be8f0d678cbc5047227155c4166ed8"><div class="ttname"><a href="d__map__path__dmap_8cpp.html#a00be8f0d678cbc5047227155c4166ed8">l_destinationStartColor</a></div><div class="ttdeci">u32 l_destinationStartColor</div><div class="ttdef"><b>Definition:</b> d_map_path_dmap.cpp:1155</div></div>
-<div class="ttc" id="ad__map__path__dmap_8cpp_html_a801621f5c3aa20d43e75e8b78008bcf6"><div class="ttname"><a href="d__map__path__dmap_8cpp.html#a801621f5c3aa20d43e75e8b78008bcf6">l_entranceLv8StartColor</a></div><div class="ttdeci">u32 l_entranceLv8StartColor</div><div class="ttdef"><b>Definition:</b> d_map_path_dmap.cpp:1149</div></div>
-<div class="ttc" id="ad__map__path__dmap_8cpp_html_ab3d418ff47731fc77bdb2bb3d669226c"><div class="ttname"><a href="d__map__path__dmap_8cpp.html#ab3d418ff47731fc77bdb2bb3d669226c">l_entranceStartColor</a></div><div class="ttdeci">u32 l_entranceStartColor</div><div class="ttdef"><b>Definition:</b> d_map_path_dmap.cpp:1146</div></div>
-<div class="ttc" id="ad__map__path__dmap_8cpp_html_ab5b2df3db419f45db1b2139ca42774eb"><div class="ttname"><a href="d__map__path__dmap_8cpp.html#ab5b2df3db419f45db1b2139ca42774eb">l_treasureStartColor</a></div><div class="ttdeci">u32 l_treasureStartColor</div><div class="ttdef"><b>Definition:</b> d_map_path_dmap.cpp:1152</div></div>
+<div class="ttc" id="ad__map__path__dmap_8cpp_html_a00be8f0d678cbc5047227155c4166ed8"><div class="ttname"><a href="d__map__path__dmap_8cpp.html#a00be8f0d678cbc5047227155c4166ed8">l_destinationStartColor</a></div><div class="ttdeci">u32 l_destinationStartColor</div><div class="ttdef"><b>Definition:</b> d_map_path_dmap.cpp:1143</div></div>
+<div class="ttc" id="ad__map__path__dmap_8cpp_html_a801621f5c3aa20d43e75e8b78008bcf6"><div class="ttname"><a href="d__map__path__dmap_8cpp.html#a801621f5c3aa20d43e75e8b78008bcf6">l_entranceLv8StartColor</a></div><div class="ttdeci">u32 l_entranceLv8StartColor</div><div class="ttdef"><b>Definition:</b> d_map_path_dmap.cpp:1137</div></div>
+<div class="ttc" id="ad__map__path__dmap_8cpp_html_ab3d418ff47731fc77bdb2bb3d669226c"><div class="ttname"><a href="d__map__path__dmap_8cpp.html#ab3d418ff47731fc77bdb2bb3d669226c">l_entranceStartColor</a></div><div class="ttdeci">u32 l_entranceStartColor</div><div class="ttdef"><b>Definition:</b> d_map_path_dmap.cpp:1134</div></div>
+<div class="ttc" id="ad__map__path__dmap_8cpp_html_ab5b2df3db419f45db1b2139ca42774eb"><div class="ttname"><a href="d__map__path__dmap_8cpp.html#ab5b2df3db419f45db1b2139ca42774eb">l_treasureStartColor</a></div><div class="ttdeci">u32 l_treasureStartColor</div><div class="ttdef"><b>Definition:</b> d_map_path_dmap.cpp:1140</div></div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 </div><!-- fragment -->
 </div>
@@ -3672,7 +3673,26 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x10000000, (<span class="keywordtype">void</span>*)0x00000004, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#a96abceb23be15bb400f7e4a461dbb50c">l_tksStartColor</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x02000000, (<span class="keywordtype">void</span>*)0x00000004, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#a933628e011114c53a9f13004706ecf69">l_smallKeyStartColor</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x0A000000, (<span class="keywordtype">void</span>*)0x00000004, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#abedb88f2fa6aef530b4c90fb36761f00">l_npc0StartColor</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x09000000, (<span class="keywordtype">void</span>*)0x00000004, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#abedb88f2fa6aef530b4c90fb36761f00">l_npc0StartColor</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x0E000000, (<span class="keywordtype">void</span>*)0x00000004, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#aedb2714645e3a78efe49d4604e4d8f2a">l_npcYkwStartColor</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x0D000000, (<span class="keywordtype">void</span>*)0x00000004, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#a4a82ba6378a105051816c532ff01b07b">l_npcYkmStartColor</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x0F000000, (<span class="keywordtype">void</span>*)0x00000004, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#abedb88f2fa6aef530b4c90fb36761f00">l_npc0StartColor</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x0B000000, (<span class="keywordtype">void</span>*)0x00000004, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#abedb88f2fa6aef530b4c90fb36761f00">l_npc0StartColor</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x0C000000, (<span class="keywordtype">void</span>*)0x00000004, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#abedb88f2fa6aef530b4c90fb36761f00">l_npc0StartColor</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x04000000, (<span class="keywordtype">void</span>*)0x00000004, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#a933628e011114c53a9f13004706ecf69">l_smallKeyStartColor</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x03000000, (<span class="keywordtype">void</span>*)0x00000004, (<span class="keywordtype">void</span>*)&amp;<a class="code" href="d__map__path__dmap_8cpp.html#a8f2b5ada54b49dc01fe44a83cbe04ec6">l_bossStartColor</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ad__map__path__dmap_8cpp_html_a4a82ba6378a105051816c532ff01b07b"><div class="ttname"><a href="d__map__path__dmap_8cpp.html#a4a82ba6378a105051816c532ff01b07b">l_npcYkmStartColor</a></div><div class="ttdeci">static SECTION_SDATA2 u32 l_npcYkmStartColor</div><div class="ttdef"><b>Definition:</b> d_map_path_dmap.cpp:1175</div></div>
+<div class="ttc" id="ad__map__path__dmap_8cpp_html_a8f2b5ada54b49dc01fe44a83cbe04ec6"><div class="ttname"><a href="d__map__path__dmap_8cpp.html#a8f2b5ada54b49dc01fe44a83cbe04ec6">l_bossStartColor</a></div><div class="ttdeci">static SECTION_SDATA2 u32 l_bossStartColor</div><div class="ttdef"><b>Definition:</b> d_map_path_dmap.cpp:1166</div></div>
+<div class="ttc" id="ad__map__path__dmap_8cpp_html_a933628e011114c53a9f13004706ecf69"><div class="ttname"><a href="d__map__path__dmap_8cpp.html#a933628e011114c53a9f13004706ecf69">l_smallKeyStartColor</a></div><div class="ttdeci">static SECTION_SDATA2 u32 l_smallKeyStartColor</div><div class="ttdef"><b>Definition:</b> d_map_path_dmap.cpp:1163</div></div>
+<div class="ttc" id="ad__map__path__dmap_8cpp_html_a96abceb23be15bb400f7e4a461dbb50c"><div class="ttname"><a href="d__map__path__dmap_8cpp.html#a96abceb23be15bb400f7e4a461dbb50c">l_tksStartColor</a></div><div class="ttdeci">static SECTION_SDATA2 u32 l_tksStartColor</div><div class="ttdef"><b>Definition:</b> d_map_path_dmap.cpp:1181</div></div>
+<div class="ttc" id="ad__map__path__dmap_8cpp_html_abedb88f2fa6aef530b4c90fb36761f00"><div class="ttname"><a href="d__map__path__dmap_8cpp.html#abedb88f2fa6aef530b4c90fb36761f00">l_npc0StartColor</a></div><div class="ttdeci">static SECTION_SDATA2 u32 l_npc0StartColor</div><div class="ttdef"><b>Definition:</b> d_map_path_dmap.cpp:1169</div></div>
+<div class="ttc" id="ad__map__path__dmap_8cpp_html_aedb2714645e3a78efe49d4604e4d8f2a"><div class="ttname"><a href="d__map__path__dmap_8cpp.html#aedb2714645e3a78efe49d4604e4d8f2a">l_npcYkwStartColor</a></div><div class="ttdeci">static SECTION_SDATA2 u32 l_npcYkwStartColor</div><div class="ttdef"><b>Definition:</b> d_map_path_dmap.cpp:1178</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab5b2df3db419f45db1b2139ca42774eb"></a>
@@ -3709,7 +3729,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -4225,7 +4248,8 @@ Variables</h2></td></tr>
 <div class="line">    </div>
 <div class="line">    0x80,</div>
 <div class="line">    </div>
-<div class="line">    0x01, 0x00,</div>
+<div class="line">    0x01,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -4272,7 +4296,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x80, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x80,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -4297,7 +4324,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x80, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x80,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>

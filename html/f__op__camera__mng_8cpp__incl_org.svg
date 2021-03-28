@@ -5,104 +5,104 @@
  -->
 <!-- Title: src/f_op/f_op_camera_mng.cpp Pages: 1 -->
 <svg width="548pt" height="173pt"
- viewBox="0.00 0.00 548.00 173.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ viewBox="0.00 0.00 547.50 173.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 169)">
 <title>src/f_op/f_op_camera_mng.cpp</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-169 544,-169 544,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-169 543.5,-169 543.5,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="125,-134.5 125,-164.5 236,-164.5 236,-134.5 125,-134.5"/>
-<text text-anchor="start" x="133" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/f_op/f_op_camera</text>
-<text text-anchor="middle" x="180.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">_mng.cpp</text>
+<polygon fill="#bfbfbf" stroke="black" points="157.5,-134.5 157.5,-164.5 268.5,-164.5 268.5,-134.5 157.5,-134.5"/>
+<text text-anchor="start" x="165.5" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/f_op/f_op_camera</text>
+<text text-anchor="middle" x="213" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">_mng.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="dol2asm_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="0,-67.5 0,-86.5 61,-86.5 61,-67.5 0,-67.5"/>
-<text text-anchor="middle" x="30.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">dol2asm.h</text>
+<g id="a_node2"><a xlink:href="f__op__camera__mng_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="0,-67.5 0,-86.5 126,-86.5 126,-67.5 0,-67.5"/>
+<text text-anchor="middle" x="63" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">f_op/f_op_camera_mng.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M150.51,-134.4C123.52,-121.72 84.19,-103.23 58,-90.92"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="59.2,-87.62 48.66,-86.53 56.22,-93.95 59.2,-87.62"/>
+<path fill="none" stroke="midnightblue" d="M183.01,-134.4C156.02,-121.72 116.69,-103.23 90.5,-90.92"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="91.7,-87.62 81.16,-86.53 88.72,-93.95 91.7,-87.62"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="types_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="94,-0.5 94,-19.5 175,-19.5 175,-0.5 94,-0.5"/>
-<text text-anchor="middle" x="134.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/types.h</text>
+<polygon fill="white" stroke="black" points="67.5,-0.5 67.5,-19.5 148.5,-19.5 148.5,-0.5 67.5,-0.5"/>
+<text text-anchor="middle" x="108" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/types.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge4" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M147.91,-134.44C133.03,-126.16 116.88,-114.12 108.5,-98 96.61,-75.13 110.51,-45.99 122.11,-27.91"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="125.07,-29.79 127.82,-19.56 119.29,-25.84 125.07,-29.79"/>
+<path fill="none" stroke="midnightblue" d="M202.04,-134.38C194.21,-124.26 183.43,-110.32 174,-98 155.36,-73.64 133.91,-45.32 120.66,-27.78"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="123.35,-25.53 114.53,-19.66 117.77,-29.75 123.35,-25.53"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="f__op__camera__mng_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="117.5,-67.5 117.5,-86.5 243.5,-86.5 243.5,-67.5 117.5,-67.5"/>
-<text text-anchor="middle" x="180.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">f_op/f_op_camera_mng.h</text>
+<g id="a_node4"><a xlink:href="dol2asm_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="182.5,-67.5 182.5,-86.5 243.5,-86.5 243.5,-67.5 182.5,-67.5"/>
+<text text-anchor="middle" x="213" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">dol2asm.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M180.5,-134.23C180.5,-123.5 180.5,-108.69 180.5,-96.96"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="184,-96.89 180.5,-86.89 177,-96.89 184,-96.89"/>
+<path fill="none" stroke="midnightblue" d="M213,-134.23C213,-123.5 213,-108.69 213,-96.96"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="216.5,-96.89 213,-86.89 209.5,-96.89 216.5,-96.89"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
 <g id="a_node5"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="262,-56.5 262,-97.5 397,-97.5 397,-56.5 262,-56.5"/>
-<text text-anchor="start" x="270" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/f_op/f_op_camera</text>
-<text text-anchor="start" x="270" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_mng/fopCamM_GetParam</text>
-<text text-anchor="middle" x="329.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__FP12camera_class.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="261.5,-56.5 261.5,-97.5 396.5,-97.5 396.5,-56.5 261.5,-56.5"/>
+<text text-anchor="start" x="269.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/f_op/f_op_camera</text>
+<text text-anchor="start" x="269.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_mng/fopCamM_GetParam</text>
+<text text-anchor="middle" x="329" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__FP12camera_class.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M210.29,-134.4C229.93,-125.11 256.13,-112.72 278.97,-101.91"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="280.65,-104.99 288.19,-97.55 277.65,-98.66 280.65,-104.99"/>
+<path fill="none" stroke="midnightblue" d="M236.2,-134.4C250.95,-125.44 270.46,-113.58 287.79,-103.04"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="289.89,-105.86 296.62,-97.68 286.26,-99.88 289.89,-105.86"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
 <g id="a_node6"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="415,-56.5 415,-97.5 540,-97.5 540,-56.5 415,-56.5"/>
-<text text-anchor="start" x="423" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/f_op/f_op_camera</text>
-<text text-anchor="start" x="423" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_mng/fopCamM_Create_</text>
-<text text-anchor="middle" x="477.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">_FisPv.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="414.5,-56.5 414.5,-97.5 539.5,-97.5 539.5,-56.5 414.5,-56.5"/>
+<text text-anchor="start" x="422.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/f_op/f_op_camera</text>
+<text text-anchor="start" x="422.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_mng/fopCamM_Create_</text>
+<text text-anchor="middle" x="477" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">_FisPv.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M236.43,-136.89C279.96,-127.66 342.1,-114.03 404.77,-98.38"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="405.98,-101.69 414.83,-95.85 404.28,-94.9 405.98,-101.69"/>
+<path fill="none" stroke="midnightblue" d="M267.98,-134.41C304.29,-125.03 353.19,-112.28 404.37,-98.42"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="405.56,-101.73 414.3,-95.73 403.73,-94.97 405.56,-101.73"/>
 </g>
-<!-- Node4&#45;&gt;Node3 -->
-<g id="edge4" class="edge">
-<title>Node4&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M174.3,-67.23C167.19,-57.2 155.39,-40.51 146.48,-27.92"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="149.24,-25.77 140.61,-19.63 143.53,-29.81 149.24,-25.77"/>
+<!-- Node2&#45;&gt;Node3 -->
+<g id="edge2" class="edge">
+<title>Node2&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M69.07,-67.23C76.02,-57.2 87.57,-40.51 96.29,-27.92"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="99.21,-29.84 102.03,-19.63 93.46,-25.86 99.21,-29.84"/>
 </g>
 </g>
 </svg>

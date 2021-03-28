@@ -81,9 +81,9 @@ $(function() {
 <div class="title">Z2SceneMgr.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="Z2SceneMgr_8h_source.html">Z2AudioLib/Z2SceneMgr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Z2SceneMgr_8h_source.html">Z2AudioLib/Z2SceneMgr.h</a>&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2SceneMgr/__ct__10Z2SceneMgrFv.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2SceneMgr/setInDarkness__10Z2SceneMgrFb.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2SceneMgr/setSceneExist__10Z2SceneMgrFb.s&quot;</code><br />
@@ -333,8 +333,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a9e0eb65b8402a76e6df6879dda193032"><td class="memItemLeft" align="right" valign="top">char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SceneMgr_8cpp.html#a9e0eb65b8402a76e6df6879dda193032">Z2SceneMgr__stringBase0</a></td></tr>
-<tr class="separator:a9e0eb65b8402a76e6df6879dda193032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9921fa3cdf189a9b7a33364a46837d85"><td class="memItemLeft" align="right" valign="top">char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SceneMgr_8cpp.html#a9921fa3cdf189a9b7a33364a46837d85">Z2SceneMgr__stringBase0</a></td></tr>
+<tr class="separator:a9921fa3cdf189a9b7a33364a46837d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe0150b36f8791cccf8ed8cf4dad23c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SceneMgr_8cpp.html#abe0150b36f8791cccf8ed8cf4dad23c4">saveBitLabels__16dSv_event_flag_c</a> [1644+4]</td></tr>
 <tr class="separator:abe0150b36f8791cccf8ed8cf4dad23c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50ad47c26bcc2867f2c14d349753f58e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SceneMgr_8cpp.html#a50ad47c26bcc2867f2c14d349753f58e">g_dComIfG_gameInfo</a> [122384]</td></tr>
@@ -2220,7 +2220,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2473,19 +2476,19 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x3E4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x2E0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x3E4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x364),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x378),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x338),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x3E4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x3E4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x338),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x35C),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x3E4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x3E4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x328),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x3E4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x2E0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x3E4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x364),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x378),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x338),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x3E4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x3E4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x338),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x35C),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x3E4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x3E4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x328),</div>
 <div class="line">}</div>
 <div class="ttc" id="aZ2SceneMgr_8cpp_html_aa949d0bb4f30d304a5f2ba97f634a133"><div class="ttname"><a href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a></div><div class="ttdeci">void setSceneName__10Z2SceneMgrFPcll()</div></div>
 </div><!-- fragment -->
@@ -2511,14 +2514,14 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x430),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x45C),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x52C),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x604),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x604),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x628),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x6F4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x604),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x430),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x45C),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x52C),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x604),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x604),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x628),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x6F4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x604),</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2543,18 +2546,18 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x7B0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x72C),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x804),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x804),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x778),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x788),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x798),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x790),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x798),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x7A0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x7A8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x7A8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x7B0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x72C),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x804),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x804),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x778),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x788),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x798),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x790),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x798),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x7A0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x7A8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x7A8),</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2579,20 +2582,20 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xB48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xAF4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xB48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xB48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xADC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xB48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xADC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xB48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xB48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xB48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xB48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xB48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xADC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xAEC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xB48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xAF4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xB48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xB48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xADC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xB48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xADC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xB48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xB48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xB48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xB48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xB48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xADC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xAEC),</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2617,20 +2620,20 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xC48),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xC78),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xCC8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xCC8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xCA0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xCC8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xC08),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xC08),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xCC8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xC18),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xC20),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xC28),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xC34),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0xC3C),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xC48),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xC78),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xCC8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xCC8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xCA0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xCC8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xC08),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xC08),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xCC8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xC18),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xC20),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xC28),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xC34),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0xC3C),</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2655,22 +2658,22 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BA0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BB8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1B98),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1B98),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1B98),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BA0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BB8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BA0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BBC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BA8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BA8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BA8),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BB0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BB0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BB0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BB8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BA0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BB8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1B98),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1B98),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1B98),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BA0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BB8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BA0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BBC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BA8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BA8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BA8),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BB0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BB0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BB0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BB8),</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2695,22 +2698,22 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BDC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BE4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BE4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BDC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BE4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BE4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BDC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BEC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x2BC0),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BEC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BDC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BEC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BEC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BDC),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BE4),</div>
-<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>)+0x1BE4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BDC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BE4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BE4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BDC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BE4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BE4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BDC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BEC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x2BC0),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BEC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BDC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BEC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BEC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BDC),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BE4),</div>
+<div class="line">    (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SceneMgr_8cpp.html#aa949d0bb4f30d304a5f2ba97f634a133">setSceneName__10Z2SceneMgrFPcll</a>) + 0x1BE4),</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -3973,8 +3976,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a9e0eb65b8402a76e6df6879dda193032"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e0eb65b8402a76e6df6879dda193032">&#9670;&nbsp;</a></span>Z2SceneMgr__stringBase0</h2>
+<a id="a9921fa3cdf189a9b7a33364a46837d85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9921fa3cdf189a9b7a33364a46837d85">&#9670;&nbsp;</a></span>Z2SceneMgr__stringBase0</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3983,7 +3986,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char const* const Z2SceneMgr__stringBase0</td>
+          <td class="memname">char const  *const Z2SceneMgr__stringBase0</td>
         </tr>
       </table>
   </td>

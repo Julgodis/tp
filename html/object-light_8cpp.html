@@ -82,9 +82,9 @@ $(function() {
 <div class="title">object-light.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="object-light_8h_source.html">JSystem/JStudio/JStudio_JStage/object-light.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="object-light_8h_source.html">JSystem/JStudio/JStudio_JStage/object-light.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/JStudio/JStudio_JStage/object-light/func_8028CB50.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JStudio/JStudio_JStage/object-light/__dt__Q214JStudio_JStage14TAdaptor_lightFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JStudio/JStudio_JStage/object-light/adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_lightFv.s&quot;</code><br />
@@ -112,12 +112,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVec.html">Vec</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStage.html">JStage</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStage_1_1TSystem.html">JStage::TSystem</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStage_1_1TLight.html">JStage::TLight</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStudio_1_1data.html">JStudio::data</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStudio_1_1data_1_1TEOperationData.html">JStudio::data::TEOperationData</a></td></tr>
@@ -129,6 +123,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStudio_1_1TVariableValue_1_1TOutput.html">JStudio::TVariableValue::TOutput</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStudio_1_1TAdaptor__light.html">JStudio::TAdaptor_light</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStage.html">JStage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStage_1_1TSystem.html">JStage::TSystem</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStage_1_1TLight.html">JStage::TLight</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStudio__JStage.html">JStudio_JStage</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -914,8 +914,10 @@ Variables</h2></td></tr>
 <div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="object-light_8cpp.html#ae7def3eb817aa3e920e923cda9b6e00a">adaptor_do_end__Q214JStudio_JStage14TAdaptor_lightFv</a>,</div>
 <div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="object-light_8cpp.html#aa21c03f2be59064aff97ccae8a595d53">adaptor_do_update__Q214JStudio_JStage14TAdaptor_lightFUl</a>,</div>
 <div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="object-light_8cpp.html#a8a4935e7f6559c3ab4b25bb141f58aa2">adaptor_do_data__Q214JStudio_JStage14TAdaptor_lightFPCvUlPCvUl</a>,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="object-light_8cpp.html#a20eedc61a73fa0aa27205918121dcba2">adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl</a>,</div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="object-light_8cpp.html#a25c82508584fd73e708c1fa9f4a84639">adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)</div>
+<div class="line">        <a class="code" href="object-light_8cpp.html#a20eedc61a73fa0aa27205918121dcba2">adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)</div>
+<div class="line">        <a class="code" href="object-light_8cpp.html#a25c82508584fd73e708c1fa9f4a84639">adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="aobject-light_8cpp_html_a00c10f2ac5048afddd233f4af3d0a5a8"><div class="ttname"><a href="object-light_8cpp.html#a00c10f2ac5048afddd233f4af3d0a5a8">__dt__Q214JStudio_JStage14TAdaptor_lightFv</a></div><div class="ttdeci">void __dt__Q214JStudio_JStage14TAdaptor_lightFv()</div></div>
 <div class="ttc" id="aobject-light_8cpp_html_a20eedc61a73fa0aa27205918121dcba2"><div class="ttname"><a href="object-light_8cpp.html#a20eedc61a73fa0aa27205918121dcba2">adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl</a></div><div class="ttdeci">void adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl()</div></div>
@@ -1045,9 +1047,15 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>

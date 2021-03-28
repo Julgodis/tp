@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['f_5fop_5ff_5fop_5factor_5f_5fstringbase0_74091',['f_op_f_op_actor__stringBase0',['../f__op__actor_8cpp.html#ab49f6bf13daa6feebb980744f22ba151',1,'f_op_actor.cpp']]],
-  ['f_5fop_5ff_5fop_5factor_5fmng_5f_5fstringbase0_74092',['f_op_f_op_actor_mng__stringBase0',['../f__op__actor__mng_8cpp.html#acfa81d36bd0ebb4ee63a49a2fe788700',1,'f_op_actor_mng.cpp']]],
+  ['f_5fop_5ff_5fop_5factor_5f_5fstringbase0_74091',['f_op_f_op_actor__stringBase0',['../f__op__actor_8cpp.html#ad2b246a8206f217cc433289c436d9830',1,'f_op_actor.cpp']]],
+  ['f_5fop_5ff_5fop_5factor_5fmng_5f_5fstringbase0_74092',['f_op_f_op_actor_mng__stringBase0',['../f__op__actor__mng_8cpp.html#a80de86022d066d3638c210f59f3fa93e',1,'f_op_actor_mng.cpp']]],
   ['fadefase_74093',['fadeFase',['../f__op__scene__req_8cpp.html#a9a6442223d857dae9dc371568e33c6fe',1,'f_op_scene_req.cpp']]],
   ['fairyscale_74094',['fairyScale',['../d__a__alink_8cpp.html#a6cbd2c50cc7bafc622285963f50272bf',1,'d_a_alink.cpp']]],
   ['fame_5ftag_74095',['fame_tag',['../d__menu__skill_8cpp.html#abb1ac277bae3a53c523a1c8721a5126b',1,'fame_tag():&#160;d_menu_skill.cpp'],['../d__menu__item__explain_8cpp.html#abb1ac277bae3a53c523a1c8721a5126b',1,'fame_tag():&#160;d_menu_item_explain.cpp']]],
@@ -26,8 +26,8 @@ var searchData=
   ['ffont_5fname_5f5822_74114',['ffont_name_5822',['../d__menu__fmap2D_8cpp.html#a68454fd764a252d7b135e52575fb5317',1,'d_menu_fmap2D.cpp']]],
   ['ffont_5fname_5f6110_74115',['ffont_name_6110',['../d__menu__fmap2D_8cpp.html#a10536b43f4cf673fa219204c5f59515a',1,'d_menu_fmap2D.cpp']]],
   ['ffootjoint_74116',['fFootJoint',['../d__a__alink_8cpp.html#a61ac327629faade4eb5fd8f80ac42bb5',1,'d_a_alink.cpp']]],
-  ['field_5fitem_5fres_5f_5f10ditem_5fdata_74117',['field_item_res__10dItem_data',['../d__a__obj__item_8cpp.html#a2eb5af91197741b3afb1238023504cc7',1,'field_item_res__10dItem_data():&#160;d_item_data.cpp'],['../d__a__itembase__static_8cpp.html#adbb6937db3140d3c07cfe69d8d2262c0',1,'field_item_res__10dItem_data():&#160;d_item_data.cpp'],['../d__item__data_8cpp.html#a4d6721583afc1f383035181dfddfb2fa',1,'field_item_res__10dItem_data():&#160;d_item_data.cpp']]],
-  ['fifobufsize_5f_5fq29jfwsystem11csetupparam_74118',['fifoBufSize__Q29JFWSystem11CSetUpParam',['../m__Do__machine_8cpp.html#a5b0a126b5264ab9d506d0685e1ac3952',1,'fifoBufSize__Q29JFWSystem11CSetUpParam():&#160;JFWSystem.cpp'],['../JFWSystem_8cpp.html#a5b0a126b5264ab9d506d0685e1ac3952',1,'fifoBufSize__Q29JFWSystem11CSetUpParam():&#160;JFWSystem.cpp']]],
+  ['field_5fitem_5fres_5f_5f10ditem_5fdata_74117',['field_item_res__10dItem_data',['../d__a__obj__item_8cpp.html#a2eb5af91197741b3afb1238023504cc7',1,'field_item_res__10dItem_data():&#160;d_a_obj_item.cpp'],['../d__a__itembase__static_8cpp.html#adbb6937db3140d3c07cfe69d8d2262c0',1,'field_item_res__10dItem_data():&#160;d_a_itembase_static.cpp'],['../d__item__data_8cpp.html#a4d6721583afc1f383035181dfddfb2fa',1,'field_item_res__10dItem_data():&#160;d_item_data.cpp']]],
+  ['fifobufsize_5f_5fq29jfwsystem11csetupparam_74118',['fifoBufSize__Q29JFWSystem11CSetUpParam',['../m__Do__machine_8cpp.html#a5b0a126b5264ab9d506d0685e1ac3952',1,'fifoBufSize__Q29JFWSystem11CSetUpParam():&#160;m_Do_machine.cpp'],['../JFWSystem_8cpp.html#a5b0a126b5264ab9d506d0685e1ac3952',1,'fifoBufSize__Q29JFWSystem11CSetUpParam():&#160;JFWSystem.cpp']]],
   ['fifoobj_74119',['FifoObj',['../GXInit_8cpp.html#a04b59d1b31e930285249163650871117',1,'GXInit.cpp']]],
   ['fileoffset_74120',['fileOffset',['../JKRDvdAramRipper_8cpp.html#a13732a83b3549e4da7c77f0acc21ec33',1,'fileOffset():&#160;JKRDvdAramRipper.cpp'],['../JKRDvdRipper_8cpp.html#a13732a83b3549e4da7c77f0acc21ec33',1,'fileOffset():&#160;JKRDvdRipper.cpp'],['../JKRAram_8cpp.html#a13732a83b3549e4da7c77f0acc21ec33',1,'fileOffset():&#160;JKRAram.cpp']]],
   ['filewarningproc_74121',['fileWarningProc',['../d__file__sel__info_8cpp.html#a5e14dd0db484979e9d1cf988cb22590a',1,'fileWarningProc():&#160;d_file_sel_info.cpp'],['../d__file__sel__warning_8cpp.html#a5e14dd0db484979e9d1cf988cb22590a',1,'fileWarningProc():&#160;d_file_sel_warning.cpp']]],
