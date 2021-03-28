@@ -311,7 +311,7 @@ class Dol2AsmSplitter:
 
                             values = Integer.u32_from(symbol.data)
                             is_symbols = [
-                                self.symbol_table.has_symbol(module.index, x) 
+                                self.symbol_table.has_symbol(module.index, x)
                                 for x in values
                             ]
 
@@ -470,10 +470,12 @@ class Dol2AsmSplitter:
                                         P=location,
                                         S=key_addr,
                                         A=0):
-                                    error(f"unsupport relocation (type {relocation.type})")
+                                    error(
+                                        f"unsupport relocation (type {relocation.type})")
                                     fatal_exit()
                             else:
-                                error(f"relocation for unsupported symbol {symbol.label} (symbol type {type(symbol).__name__})")
+                                error(
+                                    f"relocation for unsupported symbol {symbol.label} (symbol type {type(symbol).__name__})")
                                 fatal_exit()
 
     def reference_count(self):
@@ -492,6 +494,7 @@ class Dol2AsmSplitter:
         __fini_cpp_exceptions.add_reference(None)
         __init_cpp_exceptions.add_reference(None)
 
+        # TODO: Use multiprocessing to speed this up
         total_rc_step_count = 0
         for module in self.modules:
             if not module.index in self.gen_modules:
@@ -512,8 +515,10 @@ class Dol2AsmSplitter:
                         count = 0
                         for section in tu.sections.values():
                             for symbol in section.symbols:
-                                symbol.gather_references(self.context, valid_range)
-                                references = self.symbol_table.all(symbol.references)
+                                symbol.gather_references(
+                                    self.context, valid_range)
+                                references = self.symbol_table.all(
+                                    symbol.references)
                                 for reference in references:
                                     reference.add_reference(symbol)
                             count += len(section.symbols)
@@ -567,16 +572,12 @@ class Dol2AsmSplitter:
         self.ref_gen = True
         self.no_file_generation = False
         self.cpp_group_count = 4
-        self.asm_group_count = 64
+        self.asm_group_count = 128
         self.step_count = 1
 
         print(f"dol2asm {VERSION} for '{settings.GAME_NAME}'")
 
         self.context = MainContext(0, None)
-
-        if self.process_count < 4:
-            warning(
-                f"running with process count less than 4! use '-j X' to run the script with X processes.\ncurrent '-j {self.process_count}'")
 
         if self.debug_logging:
             enable_debug_logging()
@@ -729,7 +730,6 @@ class Dol2AsmSplitter:
             self.step_count += 1
 
             start_time = time.time()
-            # [ (x,) for x in util.chunks(asm_tasks, self.asm_group_count) ]
             tasks = asm_tasks
             debug(len(tasks))
             mp.progress(self.process_count, cpp.export_function, tasks, shared={

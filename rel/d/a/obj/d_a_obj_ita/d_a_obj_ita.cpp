@@ -11,6 +11,23 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct cXyz {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+};
+
+struct fopAc_ac_c {
+};
+
+struct fopAcM_wt_c {
+	/* 8001DD84 */ void waterCheck(cXyz const*);
+};
+
 struct daObj_ITA_HIO_c {
 	/* 80C2836C */ daObj_ITA_HIO_c();
 	/* 80C29184 */ ~daObj_ITA_HIO_c();
@@ -29,44 +46,24 @@ struct daObjIta_c {
 	/* 80C29150 */ void Delete();
 };
 
-struct dBgW {
+struct daE_YMB_c {
+	/* 808172F8 */ void setHitBoardSe();
 };
 
-struct fopAc_ac_c {
+struct dVibration_c {
+	/* 8006FC0C */ void StartQuake(u8 const*, int, int, cXyz);
+	/* 8006FD94 */ void StopQuake(int);
 };
 
-struct dBgS_ObjAcch {
-	/* 80C28B40 */ ~dBgS_ObjAcch();
-};
-
-struct JMath {
-	template <typename A1, typename B1>
-	struct TSinCosTable { };
-	/* TSinCosTable<13, f32> */
-	struct TSinCosTable__template0 {
-		/* 80C291CC */ void sinShort(s16) const;
-	};
-
-};
-
-struct cXyz {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-};
-
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct fopAcM_wt_c {
-	/* 8001DD84 */ void waterCheck(cXyz const*);
-};
-
-struct request_of_phase_process_class {
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -77,15 +74,35 @@ struct dRes_control_c {
 	/* 8003C6B8 */ void getObjectResName2Index(char const*, char const*);
 };
 
-struct dVibration_c {
-	/* 8006FC0C */ void StartQuake(u8 const*, int, int, cXyz);
-	/* 8006FD94 */ void StopQuake(int);
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+};
+
+struct dBgW {
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80C28B40 */ ~dBgS_ObjAcch();
 };
 
 struct cBgS_PolyInfo {
 };
 
 struct csXyz {
+};
+
+struct dBgS_MoveBgActor {
+	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
+	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
+	/* 800788DC */ void MoveBGDelete();
+	/* 80078950 */ void MoveBGExecute();
 };
 
 struct dBgS_AcchCir {
@@ -103,32 +120,6 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_MoveBgActor {
-	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
-	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
-	/* 800788DC */ void MoveBGDelete();
-	/* 80078950 */ void MoveBGExecute();
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
 struct JAISoundID {
 };
 
@@ -144,8 +135,17 @@ struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 };
 
-struct daE_YMB_c {
-	/* 808172F8 */ void setHitBoardSe();
+struct JMath {
+	template <typename A1, typename B1>
+	struct TSinCosTable { };
+	/* TSinCosTable<13, f32> */
+	struct TSinCosTable__template0 {
+		/* 80C291CC */ void sinShort(s16) const;
+	};
+
+};
+
+struct J3DModel {
 };
 
 // 

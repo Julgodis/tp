@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daTagSmkEmt_c {
 	/* 80D612D8 */ daTagSmkEmt_c();
 	/* 80D61324 */ ~daTagSmkEmt_c();
@@ -22,12 +27,11 @@ struct daTagSmkEmt_c {
 	/* 80D61500 */ void deleteSmkEmt();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct dPa_levelEcallBack {
 };
 
-struct cXyz {
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct dKy_tevstr_c {
@@ -36,11 +40,7 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
-};
-
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
+struct cXyz {
 };
 
 struct dPa_control_c {

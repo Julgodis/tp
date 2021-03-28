@@ -11,6 +11,55 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct cXyz {
+};
+
+struct csXyz {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CE70 */ void scaleM(cXyz const&);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+};
+
+struct J3DAnmColor {
+};
+
+struct J3DAnmTextureSRTKey {
+};
+
+struct J3DAnmTevRegKey {
+};
+
+struct J3DMaterialTable {
+	/* 8032F64C */ void removeMatColorAnimator(J3DAnmColor*);
+	/* 8032F7B4 */ void removeTexMtxAnimator(J3DAnmTextureSRTKey*);
+	/* 8032F880 */ void removeTevRegAnimator(J3DAnmTevRegKey*);
+};
+
+struct mDoExt_btkAnm {
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
+	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct mDoExt_brkAnm {
+	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
+	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct mDoExt_bpkAnm {
+	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, int, int, f32, s16, s16);
+	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
@@ -70,11 +119,6 @@ struct daObjSwpush2 {
 
 };
 
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80CFE690 */ ~J3DFrameCtrl();
-};
-
 struct daObj {
 	/*          */ template <typename A1>
 	/*          */ void PrmAbstract(/* fopAc_ac_c const*, daObjSwpush2::Act_c::Prm_e, daObjSwpush2::Act_c::Prm_e */);
@@ -83,59 +127,8 @@ struct daObj {
 
 };
 
-struct cXyz {
-};
-
-struct csXyz {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CE70 */ void scaleM(cXyz const&);
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
-};
-
-struct J3DAnmTextureSRTKey {
-};
-
-struct J3DAnmTevRegKey {
-};
-
-struct J3DAnmColor {
-};
-
-struct J3DMaterialTable {
-	/* 8032F64C */ void removeMatColorAnimator(J3DAnmColor*);
-	/* 8032F7B4 */ void removeTexMtxAnimator(J3DAnmTextureSRTKey*);
-	/* 8032F880 */ void removeTevRegAnimator(J3DAnmTevRegKey*);
-};
-
-struct mDoExt_bpkAnm {
-	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, int, int, f32, s16, s16);
-	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct mDoExt_btkAnm {
-	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
-	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct mDoExt_brkAnm {
-	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
-	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct J3DModel {
-};
-
-struct J3DModelData {
-};
-
-struct request_of_phase_process_class {
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
 struct dSv_info_c {
@@ -143,6 +136,17 @@ struct dSv_info_c {
 	/* 800352B0 */ void offSwitch(int, int);
 	/* 80035360 */ void isSwitch(int, int) const;
 	/* 8003542C */ void revSwitch(int, int);
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -162,34 +166,22 @@ struct dEvent_manager_c {
 	/* 80047A78 */ void endCheck(s16);
 };
 
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
-};
-
 struct dBgW_Base {
-};
-
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
 };
 
 struct dBgS {
 	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
 };
 
-struct cBgD_t {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
 struct cBgW_BgId {
 	/* 802681D4 */ void ChkUsed() const;
+};
+
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
+};
+
+struct cBgD_t {
 };
 
 struct JAISoundID {
@@ -200,6 +192,14 @@ struct Vec {
 
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80CFE690 */ ~J3DFrameCtrl();
 };
 
 // 

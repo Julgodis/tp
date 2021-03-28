@@ -11,7 +11,20 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
 struct cXyz {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CD9C */ void transM(f32, f32, f32);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daObjKazeNeko_c {
@@ -24,9 +37,52 @@ struct daObjKazeNeko_c {
 	/* 80C3CC40 */ void getFirstVec(cXyz*, int);
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct daNPC_TK_c {
+	/* 80B0A568 */ void endHawkCamera();
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80C3D330 */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 80084460 */ void ChkTgHit();
+};
+
+struct dCcD_GAtTgCoCommonBase {
+	/* 80083688 */ void GetAc();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
 };
 
 struct cM3dGCyl {
@@ -40,70 +96,15 @@ struct cM3dGAab {
 	/* 80C3D2E8 */ ~cM3dGAab();
 };
 
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80C3D330 */ ~dCcD_GStts();
-};
-
-struct cCcD_GStts {
-	/* 80C3D38C */ ~cCcD_GStts();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CD9C */ void transM(f32, f32, f32);
-};
-
-struct J3DModel {
-};
-
-struct J3DModelData {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
-};
-
-struct dCcD_GAtTgCoCommonBase {
-	/* 80083688 */ void GetAc();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 80084460 */ void ChkTgHit();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
 struct cCcD_Obj {
 };
 
 struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
+};
+
+struct cCcD_GStts {
+	/* 80C3D38C */ ~cCcD_GStts();
 };
 
 struct JAISoundID {
@@ -116,8 +117,7 @@ struct Z2SeMgr {
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-struct daNPC_TK_c {
-	/* 80B0A568 */ void endHawkCamera();
+struct J3DModel {
 };
 
 // 

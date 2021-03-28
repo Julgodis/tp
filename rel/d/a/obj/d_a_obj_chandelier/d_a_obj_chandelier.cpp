@@ -11,6 +11,29 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266AE4 */ void operator+(Vec const&) const;
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct csXyz {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+};
+
+struct fopAc_ac_c {
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daObjChandelier_c {
 	/* 80BC7F38 */ daObjChandelier_c();
 	/* 80BC7F74 */ ~daObjChandelier_c();
@@ -31,37 +54,19 @@ struct daObjChandelier_c {
 	/* 80BC8B20 */ void hookSwingInitParm();
 };
 
-struct Vec {
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct cXyz {
-	/* 80266AE4 */ void operator+(Vec const&) const;
-	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct csXyz {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
-};
-
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct fopAc_ac_c {
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -88,20 +93,15 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
 struct JAISoundID {
 };
 
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DModel {
 };
 
 // 

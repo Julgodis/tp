@@ -11,6 +11,40 @@
 // Types:
 // 
 
+struct cXyz {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CCC8 */ void push();
+	/* 8000CD14 */ void pop();
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CD9C */ void transM(f32, f32, f32);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct fopAcM_gc_c {
+	/* 8001DCBC */ void gndCheck(cXyz const*);
+};
+
+struct Vec {
+};
+
+struct daNpcFgd_c {
+	/* 809BA53C */ void initPosAngle(Vec&, s16);
+};
+
+struct J3DAnmTransformKey {
+};
+
+struct daNpcCd2_c {
+	/* 801580F0 */ void getAnmP(int, int);
+	/* 80158F00 */ void setAnm(J3DAnmTransformKey*, f32, f32, int, int, int);
+};
+
 struct FmtPos_c {
 	/* 80836C24 */ ~FmtPos_c();
 	/* 80836C60 */ FmtPos_c();
@@ -33,36 +67,9 @@ struct daFmtMng_c {
 	/* 8083750C */ void create_init();
 };
 
-struct cXyz {
-};
-
 struct daFmtMng_Path_c {
 	/* 808365B0 */ void checkPathEnd(cXyz, f32);
 	/* 8083665C */ void checkPoint(cXyz, f32);
-};
-
-struct FmtMember_c {
-	/* 80837458 */ ~FmtMember_c();
-	/* 80837798 */ FmtMember_c();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CCC8 */ void push();
-	/* 8000CD14 */ void pop();
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CD9C */ void transM(f32, f32, f32);
-};
-
-struct csXyz {
-};
-
-struct fopAcM_gc_c {
-	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
 struct dSv_danBit_c {
@@ -72,19 +79,12 @@ struct dSv_danBit_c {
 struct dPath {
 };
 
-struct J3DAnmTransformKey {
+struct csXyz {
 };
 
-struct daNpcCd2_c {
-	/* 801580F0 */ void getAnmP(int, int);
-	/* 80158F00 */ void setAnm(J3DAnmTransformKey*, f32, f32, int, int, int);
-};
-
-struct Vec {
-};
-
-struct daNpcFgd_c {
-	/* 809BA53C */ void initPosAngle(Vec&, s16);
+struct FmtMember_c {
+	/* 80837458 */ ~FmtMember_c();
+	/* 80837798 */ FmtMember_c();
 };
 
 // 

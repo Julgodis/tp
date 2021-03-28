@@ -11,6 +11,40 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CE38 */ void scaleM(f32, f32, f32);
+};
+
+struct J3DAnmTextureSRTKey {
+};
+
+struct J3DMaterialTable {
+	/* 8032F7B4 */ void removeTexMtxAnimator(J3DAnmTextureSRTKey*);
+};
+
+struct mDoExt_btkAnm {
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
+	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 	/* 80018C8C */ ~fopAc_ac_c();
@@ -61,78 +95,14 @@ struct daSCannon_c {
 	/* 80CC8DDC */ void setCannonRepair();
 };
 
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 8032842C */ void checkPass(f32);
-	/* 80CC6BC8 */ ~J3DFrameCtrl();
-};
-
-struct dBgS_ObjAcch {
-	/* 80CC7124 */ ~dBgS_ObjAcch();
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 80CC7194 */ ~dBgS_AcchCir();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CE38 */ void scaleM(f32, f32, f32);
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
-};
-
-struct J3DAnmTextureSRTKey {
-};
-
-struct J3DMaterialTable {
-	/* 8032F7B4 */ void removeTexMtxAnimator(J3DAnmTextureSRTKey*);
-};
-
-struct mDoExt_btkAnm {
-	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
-	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
-};
-
-struct J3DModel {
-};
-
 struct cXyz {
 };
 
-struct csXyz {
-};
-
-struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(int);
-};
-
-struct request_of_phase_process_class {
-};
-
-struct cBgS_PolyInfo {
-	/* 80268074 */ cBgS_PolyInfo();
-	/* 802680B0 */ ~cBgS_PolyInfo();
-};
-
-struct dKy_tevstr_c {
-};
-
-struct _GXTexObj {
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
+	/* 8006FB10 */ void StartQuake(int, int, cXyz);
+	/* 8006FD94 */ void StopQuake(int);
+	/* 8006FE5C */ void CheckQuake();
 };
 
 struct dSv_memBit_c {
@@ -145,11 +115,32 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
 struct dRes_info_c {
 };
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dPa_levelEcallBack {
+};
+
+struct csXyz {
+};
+
+struct _GXColor {
+};
+
+struct dPa_control_c {
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 struct dEvt_control_c {
@@ -167,28 +158,29 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
-};
-
-struct dPa_control_c {
-	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
-	/* 8006FB10 */ void StartQuake(int, int, cXyz);
-	/* 8006FD94 */ void StopQuake(int);
-	/* 8006FE5C */ void CheckQuake();
+struct dComIfG_play_c {
+	/* 8002C97C */ void getLayerNo(int);
 };
 
 struct dBgW_Base {
 };
 
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
+struct dBgW {
+	/* 8007B970 */ dBgW();
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80CC7124 */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 80CC7194 */ ~dBgS_AcchCir();
 };
 
 struct dBgS {
@@ -202,8 +194,15 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct camera_class {
+};
+
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
+};
+
+struct cBgW_BgId {
+	/* 802681D4 */ void ChkUsed() const;
 };
 
 struct cBgD_t {
@@ -213,33 +212,16 @@ struct cBgW {
 	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
 };
 
-struct dBgW {
-	/* 8007B970 */ dBgW();
+struct cBgS_PolyInfo {
+	/* 80268074 */ cBgS_PolyInfo();
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
-struct camera_class {
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct cBgW_BgId {
-	/* 802681D4 */ void ChkUsed() const;
-};
-
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
+struct _GXTexObj {
 };
 
 struct JAISoundID {
@@ -254,6 +236,24 @@ struct Z2SeMgr {
 
 struct JUTNameTab {
 	/* 802DEAF8 */ void getName(u16) const;
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 8032842C */ void checkPass(f32);
+	/* 80CC6BC8 */ ~J3DFrameCtrl();
 };
 
 // 

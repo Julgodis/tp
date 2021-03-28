@@ -11,12 +11,20 @@
 // Types:
 // 
 
-struct daObj_Key_HIO_c {
-	/* 80C3F40C */ daObj_Key_HIO_c();
-	/* 80C40F28 */ ~daObj_Key_HIO_c();
+struct standard_create_request_class {
+};
+
+struct request_of_phase_process_class {
 };
 
 struct obj_key_class {
+};
+
+struct layer_class {
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct Vec {
@@ -28,37 +36,6 @@ struct cXyz {
 	/* 80C40F24 */ cXyz();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct cM3dGSph {
-	/* 80C40DE4 */ ~cM3dGSph();
-};
-
-struct cM3dGAab {
-	/* 80C40E2C */ ~cM3dGAab();
-};
-
-struct dBgS_ObjAcch {
-	/* 80C40E74 */ ~dBgS_ObjAcch();
-};
-
-struct csXyz {
-	/* 80C40EE4 */ ~csXyz();
-	/* 80C40F20 */ csXyz();
-};
-
-struct daKey_c {
-	/* 80C40FBC */ void setPos(cXyz);
-};
-
-struct J3DModel {
-};
-
-struct J3DModelData {
-};
-
 struct fopAcM_gc_c {
 	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
@@ -66,20 +43,13 @@ struct fopAcM_gc_c {
 struct fast_create_request {
 };
 
-struct layer_class {
+struct daObj_Key_HIO_c {
+	/* 80C3F40C */ daObj_Key_HIO_c();
+	/* 80C40F28 */ ~daObj_Key_HIO_c();
 };
 
-struct standard_create_request_class {
-};
-
-struct dStage_dt_c {
-};
-
-struct dStage_roomControl_c {
-	/* 8002451C */ void loadRoom(int, u8*, bool);
-};
-
-struct request_of_phase_process_class {
+struct daKey_c {
+	/* 80C40FBC */ void setPos(cXyz);
 };
 
 struct dSv_memBit_c {
@@ -90,6 +60,24 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct dStage_roomControl_c {
+	/* 8002451C */ void loadRoom(int, u8*, bool);
+};
+
+struct dStage_dt_c {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
 struct dRes_info_c {
 };
 
@@ -97,25 +85,40 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct dPa_levelEcallBack {
+};
+
+struct csXyz {
+	/* 80C40EE4 */ ~csXyz();
+	/* 80C40F20 */ csXyz();
 };
 
 struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct cBgS_GndChk {
-	/* 80267D0C */ void SetPos(Vec const*);
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
 };
 
-struct cBgS {
-	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80C40E74 */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
 };
 
 struct dBgS_AcchCir {
@@ -133,26 +136,28 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
+struct cM3dGSph {
+	/* 80C40DE4 */ ~cM3dGSph();
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct cM3dGAab {
+	/* 80C40E2C */ ~cM3dGAab();
 };
 
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
+struct cBgS_GndChk {
+	/* 80267D0C */ void SetPos(Vec const*);
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
+struct cBgS {
+	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct Z2SoundObjSimple {
+	/* 802BE844 */ Z2SoundObjSimple();
+};
+
+struct Z2SoundObjBase {
+	/* 802BDFF8 */ void deleteObject();
 };
 
 struct JAISoundID {
@@ -162,12 +167,7 @@ struct Z2SeMgr {
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-struct Z2SoundObjBase {
-	/* 802BDFF8 */ void deleteObject();
-};
-
-struct Z2SoundObjSimple {
-	/* 802BE844 */ Z2SoundObjSimple();
+struct J3DModel {
 };
 
 // 

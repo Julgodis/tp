@@ -11,32 +11,11 @@
 // Types:
 // 
 
-struct daMP_THPReadBuffer {
-};
-
-struct _GXRenderModeObj {
-};
-
 struct mDoGph_gInf_c {
 	/* 800080D0 */ void fadeOut(f32);
 	/* 80878534 */ void fadeIn(f32);
 	/* 80878558 */ void isFade();
 	/* 80878D10 */ void setFrameRate(u16);
-};
-
-struct THPVideoInfo {
-};
-
-struct THPAudioInfo {
-};
-
-struct JUTVideo {
-	/* 808788BC */ void getRenderMode() const;
-	/* 808788C4 */ void getManager();
-};
-
-struct dComIfG_play_c {
-	/* 80878A64 */ void getEvent();
 };
 
 struct fopAc_ac_c {
@@ -59,14 +38,16 @@ struct daMP_c {
 	/* 80878F70 */ void daMP_c_Callback_Draw(daMP_c*);
 };
 
-struct JFWDisplay {
-	/* 80878D44 */ void setFrameRate(u16);
-	/* 80878D54 */ void getManager();
+struct daMP_THPReadBuffer {
 };
 
 struct daMP_Dlst_base_c {
 	/* 80878DB8 */ void draw();
 	/* 80878FD8 */ daMP_Dlst_base_c();
+};
+
+struct dEvt_control_c {
+	/* 80042468 */ void reset();
 };
 
 struct dDlst_base_c {
@@ -79,8 +60,32 @@ struct dDlst_list_c {
 	/* 80878E34 */ void set2DOpa(dDlst_base_c*);
 };
 
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
+struct dComIfG_play_c {
+	/* 80878A64 */ void getEvent();
+};
+
+struct _GXRenderModeObj {
+};
+
+struct THPVideoInfo {
+};
+
+struct THPAudioInfo {
+};
+
+struct JUTVideo {
+	/* 808788BC */ void getRenderMode() const;
+	/* 808788C4 */ void getManager();
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
+struct JFWDisplay {
+	/* 80878D44 */ void setFrameRate(u16);
+	/* 80878D54 */ void getManager();
 };
 
 struct JASMixMode {
@@ -89,11 +94,6 @@ struct JASMixMode {
 struct JASDriver {
 	/* 8029C9DC */ void registerMixCallback(s16* (*)(s32), JASMixMode);
 	/* 8029E180 */ void getOutputMode();
-};
-
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 // 

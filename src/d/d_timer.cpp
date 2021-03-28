@@ -80,12 +80,12 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
+struct JKRArchive {
+};
+
 struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 	/* 802F7FCC */ void animationTransform();
-};
-
-struct JKRArchive {
 };
 
 struct dDlst_TimerScrnDraw_c {
@@ -130,10 +130,10 @@ struct dComIfG_play_c {
 	/* 8002CBDC */ void getTimerPtr();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -550,7 +550,7 @@ asm void dTimer_c::getLimitTimeMs() {
 #pragma pop
 
 
-/* 8025DA9C-8025DB10 0074+00 s=2 e=0 z=0  None .text      getRestTimeMs__8dTimer_cFv                                   */
+/* 8025DA9C-8025DB10 0074+00 s=2 e=0 z=1  None .text      getRestTimeMs__8dTimer_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -561,7 +561,7 @@ asm void dTimer_c::getRestTimeMs() {
 #pragma pop
 
 
-/* 8025DB10-8025DB38 0028+00 s=1 e=0 z=0  None .text      isStart__8dTimer_cFv                                         */
+/* 8025DB10-8025DB38 0028+00 s=1 e=0 z=4  None .text      isStart__8dTimer_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -595,7 +595,7 @@ SECTION_DATA static void* l_dTimer_Method[5] = {
 	(void*)dTimer_Draw__FP8dTimer_c,
 };
 
-/* 803C33F8-803C3420 0028+00 s=0 e=0 z=0  None .data      g_profile_TIMER                                              */
+/* 803C33F8-803C3420 0028+00 s=0 e=0 z=1  None .data      g_profile_TIMER                                              */
 SECTION_DATA void* g_profile_TIMER[10] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,
@@ -1011,7 +1011,7 @@ asm static void dTimer_Create(msg_class* param_0) {
 #pragma pop
 
 
-/* 80260F8C-80261034 00A8+00 s=0 e=1 z=0  None .text      dTimer_createTimer__FlUlUcUcffff                             */
+/* 80260F8C-80261034 00A8+00 s=0 e=1 z=9  None .text      dTimer_createTimer__FlUlUcUcffff                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1046,7 +1046,7 @@ asm void dTimer_createStockTimer() {
 #pragma pop
 
 
-/* 80261100-80261188 0088+00 s=0 e=0 z=0  None .text      dTimer_createGetIn2D__Fl4cXyz                                */
+/* 80261100-80261188 0088+00 s=0 e=0 z=1  None .text      dTimer_createGetIn2D__Fl4cXyz                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1068,7 +1068,7 @@ asm static void dTimer_createStart2D(s32 param_0, u16 param_1) {
 #pragma pop
 
 
-/* 802611F0-80261244 0054+00 s=0 e=0 z=0  None .text      dTimer_isStart__Fv                                           */
+/* 802611F0-80261244 0054+00 s=0 e=0 z=5  None .text      dTimer_isStart__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1079,7 +1079,7 @@ asm void dTimer_isStart() {
 #pragma pop
 
 
-/* 80261244-80261298 0054+00 s=0 e=0 z=0  None .text      dTimer_getRestTimeMs__Fv                                     */
+/* 80261244-80261298 0054+00 s=0 e=0 z=2  None .text      dTimer_getRestTimeMs__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1090,7 +1090,7 @@ asm void dTimer_getRestTimeMs() {
 #pragma pop
 
 
-/* 80261298-802612EC 0054+00 s=0 e=0 z=0  None .text      dTimer_show__Fv                                              */
+/* 80261298-802612EC 0054+00 s=0 e=0 z=2  None .text      dTimer_show__Fv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1101,7 +1101,7 @@ asm void dTimer_show() {
 #pragma pop
 
 
-/* 802612EC-80261340 0054+00 s=0 e=0 z=0  None .text      dTimer_hide__Fv                                              */
+/* 802612EC-80261340 0054+00 s=0 e=0 z=2  None .text      dTimer_hide__Fv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1112,7 +1112,7 @@ asm void dTimer_hide() {
 #pragma pop
 
 
-/* 80261340-80261394 0054+00 s=0 e=0 z=0  None .text      dTimer_isReadyFlag__Fv                                       */
+/* 80261340-80261394 0054+00 s=0 e=0 z=1  None .text      dTimer_isReadyFlag__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

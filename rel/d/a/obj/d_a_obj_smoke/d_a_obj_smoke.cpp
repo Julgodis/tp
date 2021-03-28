@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daObjSmoke_c {
 	/* 80CDCE78 */ void initBaseMtx();
 	/* 80CDCE98 */ void setBaseMtx();
@@ -20,15 +24,14 @@ struct daObjSmoke_c {
 	/* 80CDD0B8 */ void _delete();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct cXyz {
+struct dPa_levelEcallBack {
+};
+
+struct csXyz {
 };
 
 struct dKy_tevstr_c {
@@ -37,10 +40,7 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
-};
-
-struct csXyz {
+struct cXyz {
 };
 
 struct dPa_control_c {

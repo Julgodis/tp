@@ -11,20 +11,7 @@
 // Types:
 // 
 
-struct daObjGWall2_c {
-	/* 80BF57D8 */ void initBaseMtx();
-	/* 80BF5814 */ void setBaseMtx();
-	/* 80BF5878 */ void Create();
-	/* 80BF5950 */ void CreateHeap();
-	/* 80BF5AB4 */ void create1st();
-	/* 80BF5B74 */ void Execute(f32 (** )[3][4]);
-	/* 80BF5C0C */ void Draw();
-	/* 80BF6004 */ void Delete();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80BF5A6C */ ~J3DFrameCtrl();
+struct request_of_phase_process_class {
 };
 
 struct cXyz {
@@ -32,10 +19,6 @@ struct cXyz {
 
 struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
 };
 
 struct J3DMaterialTable {
@@ -49,20 +32,37 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModel {
-};
-
-struct J3DModelData {
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
 };
 
 struct fopAc_ac_c {
 };
 
-struct request_of_phase_process_class {
+struct daObjGWall2_c {
+	/* 80BF57D8 */ void initBaseMtx();
+	/* 80BF5814 */ void setBaseMtx();
+	/* 80BF5878 */ void Create();
+	/* 80BF5950 */ void CreateHeap();
+	/* 80BF5AB4 */ void create1st();
+	/* 80BF5B74 */ void Execute(f32 (** )[3][4]);
+	/* 80BF5C0C */ void Draw();
+	/* 80BF6004 */ void Delete();
 };
 
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -72,13 +72,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct dBgW {
+};
+
 struct cBgS_PolyInfo {
 };
 
 struct csXyz {
-};
-
-struct dBgW {
 };
 
 struct dBgS_MoveBgActor {
@@ -89,14 +89,6 @@ struct dBgS_MoveBgActor {
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct JAISoundID {
@@ -111,6 +103,14 @@ struct Z2SeMgr {
 
 struct JUTNameTab {
 	/* 802DEAF8 */ void getName(u16) const;
+};
+
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80BF5A6C */ ~J3DFrameCtrl();
 };
 
 // 

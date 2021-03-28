@@ -11,21 +11,17 @@
 // Types:
 // 
 
-struct J3DJoint {
+struct request_of_phase_process_class {
 };
 
 struct npc_inko_class {
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DAnmTransform {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -34,7 +30,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DModelData {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -48,18 +44,8 @@ struct mDoExt_McaMorf {
 	/* 800106AC */ void modelCalc();
 };
 
-struct request_of_phase_process_class {
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-};
-
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct cXyz {
@@ -78,18 +64,32 @@ struct dScnKy_env_light_c {
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
 struct dMsgFlow_c {
 	/* 80249F00 */ dMsgFlow_c();
 	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
-struct Z2SoundObjBase {
-	/* 802BDFF8 */ void deleteObject();
+struct dEvt_control_c {
+	/* 80042468 */ void reset();
 };
 
 struct Z2SoundObjSimple {
 	/* 802BE844 */ Z2SoundObjSimple();
+};
+
+struct Z2SoundObjBase {
+	/* 802BDFF8 */ void deleteObject();
+};
+
+struct J3DJoint {
 };
 
 // 

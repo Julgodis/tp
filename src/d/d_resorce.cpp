@@ -922,7 +922,7 @@ asm void dRes_control_c::setRes(char const* param_0, dRes_info_c* param_1, int p
 #pragma pop
 
 
-/* 8003C160-8003C194 0034+00 s=0 e=10 z=0  None .text      syncRes__14dRes_control_cFPCcP11dRes_info_ci                 */
+/* 8003C160-8003C194 0034+00 s=0 e=10 z=1  None .text      syncRes__14dRes_control_cFPCcP11dRes_info_ci                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -944,7 +944,7 @@ asm void dRes_control_c::deleteRes(char const* param_0, dRes_info_c* param_1, in
 #pragma pop
 
 
-/* 8003C1E4-8003C260 007C+00 s=5 e=5 z=0  None .text      getResInfo__14dRes_control_cFPCcP11dRes_info_ci              */
+/* 8003C1E4-8003C260 007C+00 s=5 e=5 z=3  None .text      getResInfo__14dRes_control_cFPCcP11dRes_info_ci              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -977,7 +977,7 @@ asm void dRes_control_c::getResInfoLoaded(char const* param_0, dRes_info_c* para
 #pragma pop
 
 
-/* 8003C2EC-8003C37C 0090+00 s=1 e=54 z=0  None .text      getRes__14dRes_control_cFPCclP11dRes_info_ci                 */
+/* 8003C2EC-8003C37C 0090+00 s=1 e=54 z=894  None .text      getRes__14dRes_control_cFPCclP11dRes_info_ci                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -988,7 +988,7 @@ asm void dRes_control_c::getRes(char const* param_0, s32 param_1, dRes_info_c* p
 #pragma pop
 
 
-/* 8003C37C-8003C400 0084+00 s=0 e=18 z=0  None .text      getRes__14dRes_control_cFPCcPCcP11dRes_info_ci               */
+/* 8003C37C-8003C400 0084+00 s=0 e=18 z=109  None .text      getRes__14dRes_control_cFPCcPCcP11dRes_info_ci               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -999,7 +999,7 @@ asm void dRes_control_c::getRes(char const* param_0, char const* param_1, dRes_i
 #pragma pop
 
 
-/* 8003C400-8003C470 0070+00 s=0 e=7 z=0  None .text      getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci              */
+/* 8003C400-8003C470 0070+00 s=0 e=7 z=4  None .text      getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1054,7 +1054,7 @@ asm void dRes_control_c::dump() {
 #pragma pop
 
 
-/* 8003C6B8-8003C734 007C+00 s=0 e=0 z=0  None .text      getObjectResName2Index__14dRes_control_cFPCcPCc              */
+/* 8003C6B8-8003C734 007C+00 s=0 e=0 z=32  None .text      getObjectResName2Index__14dRes_control_cFPCcPCc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

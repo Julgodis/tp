@@ -12,4 +12,18 @@
 // 
 
 
-extern 
+extern void* const data_805BA574[2];
+
+// 
+// External References:
+// 
+
+
+extern "C" void __sinit_d_a_b_bq_cpp(); // 1
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".ctors$10"

@@ -185,7 +185,7 @@ asm void JUTDbPrint::drawString(int param_0, int param_1, int param_2, u8 const*
 #pragma pop
 
 
-/* 802E0530-802E0600 00D0+00 s=0 e=2 z=0  None .text      JUTReport__FiiPCce                                           */
+/* 802E0530-802E0600 00D0+00 s=0 e=2 z=2  None .text      JUTReport__FiiPCce                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

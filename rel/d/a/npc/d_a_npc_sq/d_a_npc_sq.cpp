@@ -11,38 +11,10 @@
 // Types:
 // 
 
-struct daNpc_Sq_HIO_c {
-	/* 80AF5FEC */ daNpc_Sq_HIO_c();
-	/* 80AF7360 */ ~daNpc_Sq_HIO_c();
+struct request_of_phase_process_class {
 };
 
 struct npc_sq_class {
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80AF6F50 */ ~J3DFrameCtrl();
-};
-
-struct cXyz {
-};
-
-struct cM3dGSph {
-	/* 8026F648 */ void SetC(cXyz const&);
-	/* 8026F708 */ void SetR(f32);
-	/* 80AF7260 */ ~cM3dGSph();
-};
-
-struct cM3dGAab {
-	/* 80AF72A8 */ ~cM3dGAab();
-};
-
-struct dBgS_ObjAcch {
-	/* 80AF72F0 */ ~dBgS_ObjAcch();
 };
 
 struct mDoMtx_stack_c {
@@ -60,7 +32,7 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -69,7 +41,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DModelData {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -83,23 +55,28 @@ struct mDoExt_McaMorf {
 	/* 800106AC */ void modelCalc();
 };
 
-struct request_of_phase_process_class {
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct J3DModel {
+struct daNpc_Sq_HIO_c {
+	/* 80AF5FEC */ daNpc_Sq_HIO_c();
+	/* 80AF7360 */ ~daNpc_Sq_HIO_c();
 };
 
-struct cBgS_PolyInfo {
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
 };
 
 struct dKy_tevstr_c {
 };
 
-struct _GXTexObj {
+struct cXyz {
 };
 
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -109,8 +86,49 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+	/* 8024A540 */ void getNowMsgNo();
+};
+
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcSph {
+};
+
+struct dCcD_Sph {
+	/* 80084A34 */ void Set(dCcD_SrcSph const&);
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+};
+
+struct dCamera_c {
+	/* 801614AC */ void Start();
+	/* 801614D0 */ void Stop();
+	/* 8016300C */ void SetTrimSize(s32);
+	/* 80180AE0 */ void Set(cXyz, cXyz, f32, s16);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80AF72F0 */ ~dBgS_ObjAcch();
 };
 
 struct dBgS_AcchCir {
@@ -131,46 +149,14 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct cM3dGSph {
+	/* 8026F648 */ void SetC(cXyz const&);
+	/* 8026F708 */ void SetR(f32);
+	/* 80AF7260 */ ~cM3dGSph();
 };
 
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-};
-
-struct dCcD_SrcSph {
-};
-
-struct dCcD_Sph {
-	/* 80084A34 */ void Set(dCcD_SrcSph const&);
-};
-
-struct dCamera_c {
-	/* 801614AC */ void Start();
-	/* 801614D0 */ void Stop();
-	/* 8016300C */ void SetTrimSize(s32);
-	/* 80180AE0 */ void Set(cXyz, cXyz, f32, s16);
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
-	/* 8024A540 */ void getNowMsgNo();
+struct cM3dGAab {
+	/* 80AF72A8 */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -178,6 +164,20 @@ struct cCcD_Obj {
 
 struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct _GXTexObj {
+};
+
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80AF6F50 */ ~J3DFrameCtrl();
 };
 
 // 

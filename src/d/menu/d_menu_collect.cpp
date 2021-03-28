@@ -11,14 +11,14 @@
 // Types:
 // 
 
+struct J3DMaterialTable {
+};
+
 struct J3DModelData {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
-struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -66,10 +66,10 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct J2DPane {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
 struct dSelect_cursor_c {
@@ -114,9 +114,6 @@ struct dMenu_save_c {
 	/* 801F69B8 */ void _draw();
 };
 
-struct CSTControl {
-};
-
 struct JKRHeap {
 	/* 802CE5CC */ void freeAll();
 	/* 802CE784 */ void getTotalFreeSize();
@@ -124,6 +121,9 @@ struct JKRHeap {
 
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+struct CSTControl {
 };
 
 struct STControl {
@@ -300,10 +300,10 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -523,6 +523,7 @@ extern "C" void __sinit_d_menu_collect_cpp(); // 1
 extern "C" void __dt__20dMenu_Collect2DTop_cFv(); // 1
 extern "C" void draw__17dMenu_Collect2D_cFv(); // 1
 extern "C" extern char const* const d_menu_d_menu_collect__stringBase0;
+extern "C" extern u32 mViewOffsetY__17dMenu_Collect3D_c[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -2425,8 +2426,8 @@ asm void dMenu_Collect3D_c::getMaskMdlVisible() {
 
 
 /* ############################################################################################## */
-/* 80450720-80450728 0004+04 s=1 e=0 z=0  None .sdata     mViewOffsetY__17dMenu_Collect3D_c                            */
-SECTION_SDATA static u32 mViewOffsetY__17dMenu_Collect3D_c[1 + 1 /* padding */] = {
+/* 80450720-80450728 0004+04 s=1 e=0 z=1  None .sdata     mViewOffsetY__17dMenu_Collect3D_c                            */
+SECTION_SDATA u32 mViewOffsetY__17dMenu_Collect3D_c[1 + 1 /* padding */] = {
 	0xC2C80000,
 	/* padding */
 	0x00000000,

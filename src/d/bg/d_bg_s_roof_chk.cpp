@@ -90,7 +90,7 @@ SECTION_SDATA2 static u8 lit_316[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80078FF4-80079090 009C+00 s=0 e=10 z=0  None .text      __ct__12dBgS_RoofChkFv                                       */
+/* 80078FF4-80079090 009C+00 s=0 e=10 z=1  None .text      __ct__12dBgS_RoofChkFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,7 +101,7 @@ asm dBgS_RoofChk::dBgS_RoofChk() {
 #pragma pop
 
 
-/* 80079090-80079124 0094+00 s=4 e=11 z=0  None .text      __dt__12dBgS_RoofChkFv                                       */
+/* 80079090-80079124 0094+00 s=4 e=11 z=1  None .text      __dt__12dBgS_RoofChkFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

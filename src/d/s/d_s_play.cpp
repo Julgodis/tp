@@ -508,7 +508,7 @@ static u8 data_8045111C[4];
 /* 80451120-80451124 0004+00 s=1 e=0 z=0  None .sbss      g_preLoadHIO                                                 */
 static u8 g_preLoadHIO[4];
 
-/* 80451124-80451128 0004+00 s=3 e=7 z=0  None .sbss      None                                                         */
+/* 80451124-80451128 0004+00 s=3 e=7 z=38  None .sbss      None                                                         */
 u8 struct_80451124[4];
 
 /* 80259400-80259440 0040+00 s=1 e=0 z=0  None .text      calcPauseTimer__9dScnPly_cFv                                 */
@@ -563,7 +563,7 @@ SECTION_DATA static void* l_dScnPly_Method[5] = {
 	(void*)dScnPly_Draw__FP9dScnPly_c,
 };
 
-/* 803C31D4-803C31FC 0028+00 s=0 e=0 z=0  None .data      g_profile_PLAY_SCENE                                         */
+/* 803C31D4-803C31FC 0028+00 s=0 e=0 z=1  None .data      g_profile_PLAY_SCENE                                         */
 SECTION_DATA void* g_profile_PLAY_SCENE[10] = {
 	(void*)NULL,
 	(void*)0x0001FFFD,
@@ -577,7 +577,7 @@ SECTION_DATA void* g_profile_PLAY_SCENE[10] = {
 	(void*)NULL,
 };
 
-/* 803C31FC-803C3224 0028+00 s=0 e=0 z=0  None .data      g_profile_OPENING_SCENE                                      */
+/* 803C31FC-803C3224 0028+00 s=0 e=0 z=1  None .data      g_profile_OPENING_SCENE                                      */
 SECTION_DATA void* g_profile_OPENING_SCENE[10] = {
 	(void*)NULL,
 	(void*)0x0001FFFD,

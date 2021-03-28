@@ -11,7 +11,19 @@
 // Types:
 // 
 
-struct J3DJoint {
+struct request_of_phase_process_class {
+};
+
+struct cXyz {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CD9C */ void transM(f32, f32, f32);
+};
+
+struct fopAc_ac_c {
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daObjSwHang_c {
@@ -37,26 +49,32 @@ struct daObjSwHang_c {
 	/* 80CFD034 */ ~daObjSwHang_c();
 };
 
-struct cXyz {
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct cM3dGSph {
-	/* 8026F648 */ void SetC(cXyz const&);
-	/* 8026F708 */ void SetR(f32);
-	/* 80CFBF60 */ ~cM3dGSph();
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 800352B0 */ void offSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct cM3dGAab {
-	/* 80CFBFA8 */ ~cM3dGAab();
+struct dKy_tevstr_c {
 };
 
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80CFBFF0 */ ~dCcD_GStts();
+struct J3DModelData {
 };
 
-struct cCcD_GStts {
-	/* 80CFCF8C */ ~cCcD_GStts();
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 struct dEvLib_callback_c {
@@ -68,61 +86,41 @@ struct dEvLib_callback_c {
 	/* 80CFD02C */ bool eventEnd();
 };
 
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CD9C */ void transM(f32, f32, f32);
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
-struct J3DModel {
+struct dCcD_SrcSph {
 };
 
-struct J3DModelData {
+struct dCcD_Sph {
+	/* 80084A34 */ void Set(dCcD_SrcSph const&);
 };
 
-struct fopAc_ac_c {
-	/* 80018C8C */ ~fopAc_ac_c();
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80CFBFF0 */ ~dCcD_GStts();
 };
 
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 800352B0 */ void offSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-};
-
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 80084460 */ void ChkTgHit();
+	/* 800844F8 */ void GetTgHitObj();
 };
 
 struct dBgW_Base {
 };
 
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
-};
-
-struct dBgS {
-	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
+struct dBgW {
+	/* 8007B970 */ dBgW();
+	/* 8007B9C0 */ void Move();
 };
 
 struct cBgS_PolyInfo {
 };
 
 struct csXyz {
-};
-
-struct dBgW {
-	/* 8007B970 */ dBgW();
-	/* 8007B9C0 */ void Move();
 };
 
 struct dBgS_MoveBgActor {
@@ -135,37 +133,18 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct cBgD_t {
+struct dBgS {
+	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
 };
 
-struct cBgW {
-	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
+struct cM3dGSph {
+	/* 8026F648 */ void SetC(cXyz const&);
+	/* 8026F708 */ void SetR(f32);
+	/* 80CFBF60 */ ~cM3dGSph();
 };
 
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 80084460 */ void ChkTgHit();
-	/* 800844F8 */ void GetTgHitObj();
-};
-
-struct dCcD_SrcSph {
-};
-
-struct dCcD_Sph {
-	/* 80084A34 */ void Set(dCcD_SrcSph const&);
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct cM3dGAab {
+	/* 80CFBFA8 */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -175,8 +154,23 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
+struct cCcD_GStts {
+	/* 80CFCF8C */ ~cCcD_GStts();
+};
+
 struct cBgW_BgId {
 	/* 802681D4 */ void ChkUsed() const;
+};
+
+struct cBgD_t {
+};
+
+struct cBgW {
+	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
+};
+
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
 };
 
 struct JAISoundID {
@@ -191,6 +185,12 @@ struct Z2SeMgr {
 
 struct JUTNameTab {
 	/* 802DEAF8 */ void getName(u16) const;
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 // 

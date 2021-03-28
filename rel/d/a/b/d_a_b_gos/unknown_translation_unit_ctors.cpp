@@ -13,3 +13,17 @@
 
 
 extern void* const data_806053B4[2];
+
+// 
+// External References:
+// 
+
+
+extern "C" void __sinit_d_a_b_gos_cpp(); // 1
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".ctors$10"

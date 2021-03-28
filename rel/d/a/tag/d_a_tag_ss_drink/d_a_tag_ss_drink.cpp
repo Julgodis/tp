@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+};
+
 struct daTag_SSDrink_c {
 	/* 80D62DB8 */ void create();
 	/* 80D62E5C */ bool Delete();
@@ -39,11 +42,15 @@ struct daObj_SSBase_c {
 	/* 80D63794 */ void setSoldOut();
 };
 
-struct fopAc_ac_c {
-};
-
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F48 */ ~dMsgFlow_c();
+	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
 struct dEvt_control_c {
@@ -56,13 +63,6 @@ struct dEvent_manager_c {
 
 struct dAttCatch_c {
 	/* 80073A08 */ void request(fopAc_ac_c*, u8, f32, f32, f32, s16, int);
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F48 */ ~dMsgFlow_c();
-	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
 struct Vec {

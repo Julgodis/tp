@@ -47,15 +47,15 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
+struct JKRArchive {
+};
+
 struct J2DBasePosition {
 };
 
 struct J2DPane {
 	/* 802F7100 */ void getBounds();
 	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
-};
-
-struct JKRArchive {
 };
 
 struct dSelect_cursor_c {
@@ -89,6 +89,9 @@ struct dMeterHaihai_c {
 	/* 8020BC20 */ void setScale(f32);
 };
 
+struct JMSMesgEntry_c {
+};
+
 struct ResTIMG {
 };
 
@@ -96,9 +99,6 @@ struct J2DPicture {
 	/* 801BDD40 */ void append(ResTIMG const*, f32);
 	/* 801BDD70 */ void insert(ResTIMG const*, u8, f32);
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
-};
-
-struct JMSMesgEntry_c {
 };
 
 struct dMeter2Info_c {
@@ -135,11 +135,11 @@ struct dMenu_StageMapCtrl_c {
 	/* 801C2590 */ void setPlusZoomCenterZ(f32);
 };
 
-struct J2DOrthoGraph {
-};
-
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+struct J2DOrthoGraph {
 };
 
 struct STControl {
@@ -289,10 +289,10 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

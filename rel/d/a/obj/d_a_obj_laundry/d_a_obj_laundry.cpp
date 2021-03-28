@@ -11,52 +11,7 @@
 // Types:
 // 
 
-struct csXyz {
-};
-
-struct daObjLdy_c {
-	/* 80C50F98 */ void create_init();
-	/* 80C51088 */ void initBaseMtx();
-	/* 80C510F8 */ void setBaseMtx();
-	/* 80C5116C */ void getJointAngle(csXyz*, int);
-	/* 80C51194 */ void setNormalClothPos();
-	/* 80C51644 */ void calcJointAngle();
-	/* 80C5183C */ bool divorceParent();
-};
-
-struct J3DJoint {
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80C51A98 */ ~J3DFrameCtrl();
-};
-
-struct LaundJoint_c {
-	/* 80C51D2C */ ~LaundJoint_c();
-	/* 80C51EC0 */ LaundJoint_c();
-};
-
-struct cM3dGCyl {
-	/* 80C51EC4 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80C51F0C */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80C51F54 */ ~dCcD_GStts();
-};
-
-struct cCcD_GStts {
-	/* 80C51FB0 */ ~cCcD_GStts();
+struct request_of_phase_process_class {
 };
 
 struct Vec {
@@ -88,13 +43,33 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModel {
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct csXyz {
+};
+
+struct daObjLdy_c {
+	/* 80C50F98 */ void create_init();
+	/* 80C51088 */ void initBaseMtx();
+	/* 80C510F8 */ void setBaseMtx();
+	/* 80C5116C */ void getJointAngle(csXyz*, int);
+	/* 80C51194 */ void setNormalClothPos();
+	/* 80C51644 */ void calcJointAngle();
+	/* 80C5183C */ bool divorceParent();
+};
+
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct request_of_phase_process_class {
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -104,8 +79,9 @@ struct dRes_control_c {
 	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
 };
 
-struct dCcD_GAtTgCoCommonBase {
-	/* 80083688 */ void GetAc();
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80C51F54 */ ~dCcD_GStts();
 };
 
 struct dCcD_GObjInf {
@@ -116,12 +92,36 @@ struct dCcD_GObjInf {
 	/* 80084658 */ void ChkCoHit();
 };
 
-struct dKy_tevstr_c {
+struct dCcD_GAtTgCoCommonBase {
+	/* 80083688 */ void GetAc();
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct cM3dGCyl {
+	/* 80C51EC4 */ ~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	/* 80C51F0C */ ~cM3dGAab();
+};
+
+struct cCcD_GStts {
+	/* 80C51FB0 */ ~cCcD_GStts();
+};
+
+struct LaundJoint_c {
+	/* 80C51D2C */ ~LaundJoint_c();
+	/* 80C51EC0 */ LaundJoint_c();
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80C51A98 */ ~J3DFrameCtrl();
 };
 
 // 

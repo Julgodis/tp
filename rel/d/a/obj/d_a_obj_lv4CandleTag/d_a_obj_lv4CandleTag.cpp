@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct dalv4CandleTag_HIO_c {
-	/* 80C5D44C */ dalv4CandleTag_HIO_c();
-	/* 80C5D9C0 */ ~dalv4CandleTag_HIO_c();
-};
-
 struct mDoHIO_entry_c {
 	/* 80C5D470 */ ~mDoHIO_entry_c();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct dalv4CandleTag_c {
@@ -39,9 +39,14 @@ struct dalv4CandleTag_c {
 	/* 80C5DAC8 */ ~dalv4CandleTag_c();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct dalv4CandleTag_HIO_c {
+	/* 80C5D44C */ dalv4CandleTag_HIO_c();
+	/* 80C5D9C0 */ ~dalv4CandleTag_HIO_c();
+};
+
+struct dSv_info_c {
+	/* 800352B0 */ void offSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 struct dEvLib_callback_c {
@@ -51,11 +56,6 @@ struct dEvLib_callback_c {
 	/* 80C5DAB0 */ bool eventRun();
 	/* 80C5DAB8 */ bool eventEnd();
 	/* 80C5DAC0 */ bool eventStart();
-};
-
-struct dSv_info_c {
-	/* 800352B0 */ void offSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 struct JAISoundID {

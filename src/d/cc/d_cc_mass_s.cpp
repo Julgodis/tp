@@ -273,7 +273,7 @@ asm void dCcMassS_Mng::Ct() {
 #pragma pop
 
 
-/* 80085630-80085690 0060+00 s=0 e=0 z=0  None .text      SetAttr__12dCcMassS_MngFffUcUc                               */
+/* 80085630-80085690 0060+00 s=0 e=0 z=2  None .text      SetAttr__12dCcMassS_MngFffUcUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -288,7 +288,7 @@ asm void dCcMassS_Mng::SetAttr(f32 param_0, f32 param_1, u8 param_2, u8 param_3)
 /* 80452768-8045276C 0004+00 s=1 e=0 z=0  None .sdata2    @3780                                                        */
 SECTION_SDATA2 static u32 lit_3780 = 0x4E6E6B28;
 
-/* 80085690-800858AC 021C+00 s=0 e=1 z=0  None .text      Prepare__12dCcMassS_MngFv                                    */
+/* 80085690-800858AC 021C+00 s=0 e=1 z=1  None .text      Prepare__12dCcMassS_MngFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -306,7 +306,7 @@ SECTION_SDATA2 static u32 lit_3899 = 0x3F800000;
 /* 80452770-80452774 0004+00 s=1 e=0 z=0  None .sdata2    @3900                                                        */
 SECTION_SDATA2 static u32 lit_3900 = 0x41A00000;
 
-/* 800858AC-80085CF0 0444+00 s=0 e=0 z=0  None .text      Chk__12dCcMassS_MngFP4cXyzPP10fopAc_ac_cP15dCcMassS_HitInf   */
+/* 800858AC-80085CF0 0444+00 s=0 e=0 z=2  None .text      Chk__12dCcMassS_MngFP4cXyzPP10fopAc_ac_cP15dCcMassS_HitInf   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -332,7 +332,7 @@ asm void dCcMassS_Mng::Clear() {
 /* 80452774-80452778 0004+00 s=1 e=0 z=0  None .sdata2    @3941                                                        */
 SECTION_SDATA2 static u32 lit_3941 = 0x3F000000;
 
-/* 80085D98-80085E6C 00D4+00 s=0 e=4 z=0  None .text      Set__12dCcMassS_MngFP8cCcD_ObjUc                             */
+/* 80085D98-80085E6C 00D4+00 s=0 e=4 z=7  None .text      Set__12dCcMassS_MngFP8cCcD_ObjUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

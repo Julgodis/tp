@@ -36,10 +36,10 @@ struct J2DPicture {
 	/* 8025603C */ bool getMaterial() const;
 };
 
-struct J2DAnmVisibilityFull {
+struct J2DAnmTexPattern {
 };
 
-struct J2DAnmTexPattern {
+struct J2DAnmVisibilityFull {
 };
 
 struct J2DAnmVtxColor {

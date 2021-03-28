@@ -34,25 +34,22 @@ struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
-struct dBgS_SplGrpChk {
+struct cBgS_ShdwDraw {
 };
 
-struct csXyz {
-};
-
-struct cBgS_GndChk {
+struct dBgS_RoofChk {
 };
 
 struct cBgS_GrpPassChk {
 };
 
-struct cBgS_ShdwDraw {
+struct dBgS_CaptPoly {
 };
 
-struct cBgS_LinChk {
+struct KC_PrismData {
 };
 
-struct dBgS_SphChk {
+struct csXyz {
 };
 
 struct Vec {
@@ -65,20 +62,23 @@ struct dBgS_Acch {
 	/* 800772E8 */ void CalcMovePosWork();
 };
 
-struct cBgS_PolyPassChk {
+struct cBgS_GndChk {
+};
+
+struct cBgS_LinChk {
+};
+
+struct dBgS_SplGrpChk {
 };
 
 struct dBgPc {
 	/* 80074048 */ void setCode(sBgPc&);
 };
 
-struct KC_PrismData {
+struct dBgS_SphChk {
 };
 
-struct dBgS_RoofChk {
-};
-
-struct dBgS_CaptPoly {
+struct cBgS_PolyPassChk {
 };
 
 struct dBgWKCol {
@@ -388,7 +388,7 @@ SECTION_DATA static void* __vt__8dBgWKCol[60] = {
 	(void*)CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz,
 };
 
-/* 8007E6F4-8007E74C 0058+00 s=0 e=0 z=0  None .text      __ct__8dBgWKColFv                                            */
+/* 8007E6F4-8007E74C 0058+00 s=0 e=0 z=1  None .text      __ct__8dBgWKColFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -421,7 +421,7 @@ asm void dBgWKCol::initKCollision(void* param_0) {
 #pragma pop
 
 
-/* 8007E804-8007E850 004C+00 s=0 e=0 z=0  None .text      create__8dBgWKColFPvPv                                       */
+/* 8007E804-8007E850 004C+00 s=0 e=0 z=1  None .text      create__8dBgWKColFPvPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

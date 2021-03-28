@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JUTFont {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct JUTFont {
 };
 
 struct dMsgScrnTree_c {

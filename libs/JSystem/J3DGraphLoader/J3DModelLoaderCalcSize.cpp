@@ -31,10 +31,10 @@ struct J3DModelLoader_v26 {
 	/* 80336F60 */ void calcSizeMaterialTable(J3DMaterialBlock const*, u32);
 };
 
-struct J3DDrawBlock {
+struct J3DMaterialDLBlock {
 };
 
-struct J3DMaterialDLBlock {
+struct J3DJointBlock {
 };
 
 struct J3DModelInfoBlock {
@@ -43,7 +43,7 @@ struct J3DModelInfoBlock {
 struct J3DEnvelopeBlock {
 };
 
-struct J3DJointBlock {
+struct J3DDrawBlock {
 };
 
 struct J3DModelLoader {

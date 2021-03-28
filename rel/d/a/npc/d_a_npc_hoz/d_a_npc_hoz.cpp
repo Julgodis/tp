@@ -11,21 +11,47 @@
 // Types:
 // 
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DAnmTransform {
+};
+
+struct Vec {
+};
+
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfSO {
+	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
+	/* 80011310 */ void stopZelAnime();
+};
+
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
+struct daStartAndGoal_c {
+	/* 80D4DB30 */ void readyStartTimer();
+	/* 80D4DBAC */ void isStartCheck();
+};
+
+struct daPy_py_c {
+	/* 8015F424 */ void checkNowWolfEyeUp();
+};
+
 struct daNpcT_faceMotionAnmData_c {
-};
-
-struct J3DJoint {
-};
-
-struct daNpcT_motionAnmData_c {
-};
-
-struct daNpcT_evtData_c {
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -34,6 +60,15 @@ struct daNpcT_MotionSeqMngr_c {
 
 	/* 80145898 */ void initialize();
 	/* 80A05DF0 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct daNpcT_evtData_c {
+};
+
+struct J3DJoint {
 };
 
 struct daNpc_Hoz_c {
@@ -90,49 +125,20 @@ struct daNpc_Hoz_c {
 	/* 80A065D4 */ void checkRemoveJoint(int);
 };
 
-struct J3DTevKColorAnm {
-	/* 80A01B98 */ ~J3DTevKColorAnm();
-	/* 80A01BD4 */ J3DTevKColorAnm();
+struct daNpc_Hoz_Param_c {
+	/* 80A065E4 */ ~daNpc_Hoz_Param_c();
 };
 
-struct J3DTevColorAnm {
-	/* 80A01BEC */ ~J3DTevColorAnm();
-	/* 80A01C28 */ J3DTevColorAnm();
-};
-
-struct J3DTexNoAnm {
-	/* 80A01C40 */ ~J3DTexNoAnm();
-	/* 80A01C88 */ J3DTexNoAnm();
-	/* 80A05398 */ void calc(u16*) const;
-};
-
-struct J3DTexMtxAnm {
-	/* 80A01CAC */ ~J3DTexMtxAnm();
-	/* 80A01CE8 */ J3DTexMtxAnm();
-};
-
-struct J3DMatColorAnm {
-	/* 80A01D00 */ ~J3DMatColorAnm();
-	/* 80A01D3C */ J3DMatColorAnm();
-};
-
-struct cCcD_GStts {
-	/* 80A053C8 */ ~cCcD_GStts();
+struct _GXColorS10 {
 };
 
 struct J3DModel {
-};
-
-struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80A05798 */ ~cXyz();
 	/* 80A05DEC */ cXyz();
-};
-
-struct _GXColorS10 {
 };
 
 struct dCcD_GObjInf {
@@ -189,28 +195,8 @@ struct daNpcT_c {
 	/* 80A063B0 */ void changeBtk(int*, int*);
 };
 
-struct csXyz {
-	/* 80A057D4 */ ~csXyz();
-	/* 80A05CEC */ csXyz();
-};
-
-struct daNpcT_ActorMngr_c {
-	/* 801456D4 */ void initialize();
-	/* 801456E0 */ void entry(fopAc_ac_c*);
-	/* 801456FC */ void remove();
-	/* 80145708 */ void getActorP();
-	/* 80A05810 */ ~daNpcT_ActorMngr_c();
-};
-
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 80A05858 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80A058A0 */ ~cM3dGAab();
+struct daNpcT_MatAnm_c {
+	/* 80145764 */ void initialize();
 };
 
 struct daNpcT_JntAnm_c {
@@ -222,55 +208,12 @@ struct daNpcT_JntAnm_c {
 	/* 80A060D8 */ void setEyeAngleX(cXyz, f32, s16);
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 80A05E38 */ ~dBgS_AcchCir();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80A05EA8 */ ~dCcD_GStts();
-};
-
-struct dBgS_ObjAcch {
-	/* 80A05F04 */ ~dBgS_ObjAcch();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80A05F74 */ ~J3DFrameCtrl();
-};
-
-struct daNpc_Hoz_Param_c {
-	/* 80A065E4 */ ~daNpc_Hoz_Param_c();
-};
-
-struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
-
-struct mDoExt_McaMorfSO {
-	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
-	/* 80011310 */ void stopZelAnime();
-};
-
-struct dSv_danBit_c {
-	/* 80034BE8 */ void isSwitch(int) const;
+struct daNpcT_ActorMngr_c {
+	/* 801456D4 */ void initialize();
+	/* 801456E0 */ void entry(fopAc_ac_c*);
+	/* 801456FC */ void remove();
+	/* 80145708 */ void getActorP();
+	/* 80A05810 */ ~daNpcT_ActorMngr_c();
 };
 
 struct dSv_info_c {
@@ -278,11 +221,26 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct dSv_danBit_c {
+	/* 80034BE8 */ void isSwitch(int) const;
+};
+
 struct dRes_info_c {
 };
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F48 */ ~dMsgFlow_c();
+};
+
+struct dMeter2Info_c {
+	/* 8021DE18 */ void setMiniGameItem(u8);
+	/* 8021E0C4 */ void resetMiniGameItem(bool);
+	/* 8021E268 */ void setMiniGameCount(s8);
 };
 
 struct dEvt_control_c {
@@ -304,7 +262,52 @@ struct dEvent_manager_c {
 	/* 800487F0 */ void ChkPresentEnd();
 };
 
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80A05EA8 */ ~dCcD_GStts();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80A05F04 */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+	/* 80077CDC */ ~dBgS_LinChk();
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 80A05E38 */ ~dBgS_AcchCir();
+};
+
 struct dBgS {
+};
+
+struct csXyz {
+	/* 80A057D4 */ ~csXyz();
+	/* 80A05CEC */ csXyz();
 };
 
 struct dBgS_Acch {
@@ -314,48 +317,19 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 80A05858 */ ~cM3dGCyl();
 };
 
-struct dBgS_LinChk {
-	/* 80077C68 */ dBgS_LinChk();
-	/* 80077CDC */ ~dBgS_LinChk();
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct daNpcT_MatAnm_c {
-	/* 80145764 */ void initialize();
-};
-
-struct daPy_py_c {
-	/* 8015F424 */ void checkNowWolfEyeUp();
-};
-
-struct dMeter2Info_c {
-	/* 8021DE18 */ void setMiniGameItem(u8);
-	/* 8021E0C4 */ void resetMiniGameItem(bool);
-	/* 8021E268 */ void setMiniGameCount(s8);
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F48 */ ~dMsgFlow_c();
+struct cM3dGAab {
+	/* 80A058A0 */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -365,30 +339,56 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct cBgS_GndChk {
-	/* 80267C1C */ cBgS_GndChk();
-	/* 80267C94 */ ~cBgS_GndChk();
+struct cCcD_GStts {
+	/* 80A053C8 */ ~cCcD_GStts();
 };
 
 struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
+struct cBgS_GndChk {
+	/* 80267C1C */ cBgS_GndChk();
+	/* 80267C94 */ ~cBgS_GndChk();
 };
 
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+struct J3DTexNoAnm {
+	/* 80A01C40 */ ~J3DTexNoAnm();
+	/* 80A01C88 */ J3DTexNoAnm();
+	/* 80A05398 */ void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	/* 80A01CAC */ ~J3DTexMtxAnm();
+	/* 80A01CE8 */ J3DTexMtxAnm();
+};
+
+struct J3DTevKColorAnm {
+	/* 80A01B98 */ ~J3DTevKColorAnm();
+	/* 80A01BD4 */ J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	/* 80A01BEC */ ~J3DTevColorAnm();
+	/* 80A01C28 */ J3DTevColorAnm();
 };
 
 struct J3DMaterialAnm {
 	/* 8032C320 */ void initialize();
 };
 
-struct daStartAndGoal_c {
-	/* 80D4DB30 */ void readyStartTimer();
-	/* 80D4DBAC */ void isStartCheck();
+struct J3DMatColorAnm {
+	/* 80A01D00 */ ~J3DMatColorAnm();
+	/* 80A01D3C */ J3DMatColorAnm();
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80A05F74 */ ~J3DFrameCtrl();
+};
+
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
 // 

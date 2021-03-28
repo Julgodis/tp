@@ -11,6 +11,25 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct cXyz {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct daSetBgObj_c {
+	/* 80031870 */ void getArcName(fopAc_ac_c*);
+};
+
 struct FlagJoint_c {
 	/* 80BEC3BC */ ~FlagJoint_c();
 	/* 80BEC4E0 */ FlagJoint_c();
@@ -32,32 +51,15 @@ struct daObjFlag_c {
 	/* 80BEBE64 */ void getSwingY(f32);
 };
 
-struct J3DJoint {
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct cXyz {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-};
-
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct request_of_phase_process_class {
-};
-
-struct daSetBgObj_c {
-	/* 80031870 */ void getArcName(fopAc_ac_c*);
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -65,14 +67,6 @@ struct dRes_info_c {
 
 struct dRes_control_c {
 	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct JAISoundID {
@@ -83,6 +77,12 @@ struct Vec {
 
 struct Z2SeMgr {
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 // 

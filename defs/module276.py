@@ -30,11 +30,11 @@ SYMBOLS = [
 	{'addr':0x80860BE0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80860C0C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80860C38,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80860C58,'size':8,'pad':0,'label':"daKytag16_Draw__FP13kytag16_class",'name':"daKytag16_Draw__FP13kytag16_class",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
-	{'addr':0x80860C60,'size':572,'pad':0,'label':"daKytag16_Execute__FP13kytag16_class",'name':"daKytag16_Execute__FP13kytag16_class",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80860E9C,'size':8,'pad':0,'label':"daKytag16_IsDelete__FP13kytag16_class",'name':"daKytag16_IsDelete__FP13kytag16_class",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
-	{'addr':0x80860EA4,'size':8,'pad':0,'label':"daKytag16_Delete__FP13kytag16_class",'name':"daKytag16_Delete__FP13kytag16_class",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
-	{'addr':0x80860EAC,'size':640,'pad':0,'label':"daKytag16_Create__FP10fopAc_ac_c",'name':"daKytag16_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80860C58,'size':8,'pad':0,'label':"daKytag16_Draw__FP13kytag16_class",'name':"daKytag16_Draw__FP13kytag16_class",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
+	{'addr':0x80860C60,'size':572,'pad':0,'label':"daKytag16_Execute__FP13kytag16_class",'name':"daKytag16_Execute__FP13kytag16_class",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80860E9C,'size':8,'pad':0,'label':"daKytag16_IsDelete__FP13kytag16_class",'name':"daKytag16_IsDelete__FP13kytag16_class",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
+	{'addr':0x80860EA4,'size':8,'pad':0,'label':"daKytag16_Delete__FP13kytag16_class",'name':"daKytag16_Delete__FP13kytag16_class",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
+	{'addr':0x80860EAC,'size':640,'pad':0,'label':"daKytag16_Create__FP10fopAc_ac_c",'name':"daKytag16_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[2,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x8086112C,'size':4,'pad':0,'label':"data_8086112C",'name':None,'lib':-1,'tu':1,'section':1,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80861130,'size':4,'pad':0,'label':"data_80861130",'name':None,'lib':-1,'tu':2,'section':2,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80861134,'size':4,'pad':0,'label':"lit_3839",'name':"@3839",'lib':-1,'tu':3,'section':3,'r':[2,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
@@ -61,8 +61,8 @@ SYMBOLS = [
 	{'addr':0x8086118C,'size':8,'pad':0,'label':"lit_3913",'name':"@3913",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80861194,'size':8,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"StringBase"},
 	{'addr':0x8086119C,'size':32,'pad':0,'label':"lit_3917",'name':"@3917",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x808611BC,'size':32,'pad':0,'label':"l_daKytag16_Method",'name':"l_daKytag16_Method",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x808611DC,'size':48,'pad':0,'label':"g_profile_KYTAG16",'name':"g_profile_KYTAG16",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x808611BC,'size':32,'pad':0,'label':"l_daKytag16_Method",'name':"l_daKytag16_Method",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x808611DC,'size':48,'pad':0,'label':"g_profile_KYTAG16",'name':"g_profile_KYTAG16",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
 ]
 
 # Names

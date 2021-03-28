@@ -38,12 +38,9 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct Vec {
-};
-
-struct cXyz {
-	/* 80009184 */ ~cXyz();
-	/* 80266AE4 */ void operator+(Vec const&) const;
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct dKy_tevstr_c {
@@ -52,9 +49,12 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 802673F4 */ csXyz(s16, s16, s16);
+struct Vec {
+};
+
+struct cXyz {
+	/* 80009184 */ ~cXyz();
+	/* 80266AE4 */ void operator+(Vec const&) const;
 };
 
 struct dPa_control_c {
@@ -497,7 +497,7 @@ asm static void get_vectle_calc(cXyz* param_0, cXyz* param_1, cXyz* param_2) {
 #pragma pop
 
 
-/* 8005B760-8005B780 0020+00 s=8 e=7 z=0  None .text      dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz                    */
+/* 8005B760-8005B780 0020+00 s=8 e=7 z=11  None .text      dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2003,7 +2003,7 @@ asm void dKyr_mud_draw(f32 (* param_0)[4], u8** param_1) {
 #pragma pop
 
 
-/* 8006D914-8006DA04 00F0+00 s=0 e=1 z=0  None .text      dKyr_evil_init__Fv                                           */
+/* 8006D914-8006DA04 00F0+00 s=0 e=1 z=1  None .text      dKyr_evil_init__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

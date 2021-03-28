@@ -11,13 +11,12 @@
 // Types:
 // 
 
-struct daKiPot_HIO_c {
-	/* 80C44D0C */ daKiPot_HIO_c();
-	/* 80C450E8 */ ~daKiPot_HIO_c();
-};
-
 struct mDoHIO_entry_c {
 	/* 80C44D30 */ ~mDoHIO_entry_c();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct daKiPot_c {
@@ -32,8 +31,9 @@ struct daKiPot_c {
 	/* 80C45060 */ bool Delete();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct daKiPot_HIO_c {
+	/* 80C44D0C */ daKiPot_HIO_c();
+	/* 80C450E8 */ ~daKiPot_HIO_c();
 };
 
 struct dAttCatch_c {

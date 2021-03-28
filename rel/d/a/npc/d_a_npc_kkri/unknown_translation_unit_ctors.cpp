@@ -11,3 +11,19 @@
 // Forward References:
 // 
 
+
+extern void* const data_8055347C[2];
+
+// 
+// External References:
+// 
+
+
+extern "C" void __sinit_d_a_npc_kkri_cpp(); // 1
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".ctors$10"

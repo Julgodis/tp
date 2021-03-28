@@ -11,17 +11,30 @@
 // Types:
 // 
 
-struct daE_Bee_HIO_c {
-	/* 8068286C */ daE_Bee_HIO_c();
-	/* 8068539C */ ~daE_Bee_HIO_c();
+struct stage_tgsc_class {
+};
+
+struct request_of_phase_process_class {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD9C */ void transM(f32, f32, f32);
+	/* 8000CE38 */ void scaleM(f32, f32, f32);
+};
+
+struct layer_class {
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct e_bee_class {
 };
 
-struct bee_s {
-	/* 806852FC */ ~bee_s();
-	/* 80685368 */ bee_s();
+struct daE_Bee_HIO_c {
+	/* 8068286C */ daE_Bee_HIO_c();
+	/* 8068539C */ ~daE_Bee_HIO_c();
 };
 
 struct Vec {
@@ -33,8 +46,85 @@ struct cXyz {
 	/* 80682D78 */ ~cXyz();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
+};
+
+struct dStage_dt_c {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct csXyz {
+};
+
+struct dPa_control_c {
+	/* 8004C218 */ void setHitMark(u16, fopAc_ac_c*, cXyz const*, csXyz const*, cXyz const*, u32);
+};
+
+struct J3DModelData {
+};
+
+struct J3DModel {
+};
+
+struct dComIfG_play_c {
+	/* 8002CAF0 */ void addSimpleModel(J3DModelData*, int, u8);
+	/* 8002CB30 */ void removeSimpleModel(J3DModelData*, int);
+	/* 8002CB68 */ void entrySimpleModel(J3DModel*, int);
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcSph {
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_Sph {
+	/* 80084A34 */ void Set(dCcD_SrcSph const&);
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800842C0 */ void ChkAtHit();
+	/* 80084358 */ void GetAtHitObj();
+	/* 80084460 */ void ChkTgHit();
+	/* 800844F8 */ void GetTgHitObj();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+	/* 80077CDC */ ~dBgS_LinChk();
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
 };
 
 struct cM3dGSph {
@@ -53,51 +143,12 @@ struct cM3dGAab {
 	/* 806852B4 */ ~cM3dGAab();
 };
 
-struct mDoMtx_stack_c {
-	/* 8000CD9C */ void transM(f32, f32, f32);
-	/* 8000CE38 */ void scaleM(f32, f32, f32);
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
 };
 
-struct J3DModelData {
-};
-
-struct layer_class {
-};
-
-struct dStage_dt_c {
-};
-
-struct stage_tgsc_class {
-};
-
-struct J3DModel {
-};
-
-struct dComIfG_play_c {
-	/* 8002CAF0 */ void addSimpleModel(J3DModelData*, int, u8);
-	/* 8002CB30 */ void removeSimpleModel(J3DModelData*, int);
-	/* 8002CB68 */ void entrySimpleModel(J3DModel*, int);
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-};
-
-struct csXyz {
-};
-
-struct dPa_control_c {
-	/* 8004C218 */ void setHitMark(u16, fopAc_ac_c*, cXyz const*, csXyz const*, cXyz const*, u32);
-};
-
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
+struct cCcS {
+	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
 struct cBgS_LinChk {
@@ -112,65 +163,9 @@ struct cBgS {
 	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
 };
 
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
-};
-
-struct dBgS_LinChk {
-	/* 80077C68 */ dBgS_LinChk();
-	/* 80077CDC */ ~dBgS_LinChk();
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800842C0 */ void ChkAtHit();
-	/* 80084358 */ void GetAtHitObj();
-	/* 80084460 */ void ChkTgHit();
-	/* 800844F8 */ void GetTgHitObj();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct dCcD_SrcSph {
-};
-
-struct dCcD_Sph {
-	/* 80084A34 */ void Set(dCcD_SrcSph const&);
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-};
-
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
-};
-
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
-};
-
-struct Z2SoundObjBase {
-	/* 802BDF48 */ ~Z2SoundObjBase();
-	/* 802BDFF8 */ void deleteObject();
+struct bee_s {
+	/* 806852FC */ ~bee_s();
+	/* 80685368 */ bee_s();
 };
 
 struct Z2SoundObjSimple {
@@ -183,6 +178,11 @@ struct JAISoundID {
 struct Z2SoundObjBeeGroup {
 	/* 802C1D10 */ Z2SoundObjBeeGroup();
 	/* 802C1D6C */ void playBeeGroupSound(JAISoundID, u8);
+};
+
+struct Z2SoundObjBase {
+	/* 802BDF48 */ ~Z2SoundObjBase();
+	/* 802BDFF8 */ void deleteObject();
 };
 
 // 

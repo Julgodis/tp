@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daPasserMng_c {
 	/* 80D45738 */ void execute();
 	/* 80D4597C */ void getPasserParam();
@@ -19,23 +24,18 @@ struct daPasserMng_c {
 	/* 80D467C0 */ void create_init();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct cXyz {
+struct dPath {
 };
 
 struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
-struct dPath {
+struct cXyz {
 };
 
 struct Vec {

@@ -178,7 +178,7 @@ SECTION_SDATA2 static u8 lit_3808[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80245934-80245B00 01CC+00 s=0 e=4 z=0  None .text      __ct__15dMsgScrnLight_cFUcUc                                 */
+/* 80245934-80245B00 01CC+00 s=0 e=4 z=1  None .text      __ct__15dMsgScrnLight_cFUcUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -220,7 +220,7 @@ asm void dMsgScrnLight_c::draw(f32* param_0, f32 param_1, f32 param_2, f32 param
 #pragma pop
 
 
-/* 80245F90-802460DC 014C+00 s=0 e=1 z=0  None .text      draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor */
+/* 80245F90-802460DC 014C+00 s=0 e=1 z=1  None .text      draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

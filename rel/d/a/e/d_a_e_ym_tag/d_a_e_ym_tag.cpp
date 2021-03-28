@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daE_YM_TAG_c {
 	/* 80815E8C */ void execute();
 	/* 80815F28 */ void create();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct cXyz {

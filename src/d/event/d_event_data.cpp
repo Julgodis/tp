@@ -129,10 +129,10 @@ struct Z2SeqMgr {
 	/* 802AFE18 */ void bgmStreamPlay();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

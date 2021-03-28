@@ -431,7 +431,7 @@ extern "C" asm static void func_800889F8() {
 #pragma pop
 
 
-/* 80088A7C-80088BBC 0140+00 s=0 e=15 z=0  None .text      StartEventCamera__9dCamera_cFiie                             */
+/* 80088A7C-80088BBC 0140+00 s=0 e=15 z=2  None .text      StartEventCamera__9dCamera_cFiie                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -442,7 +442,7 @@ asm void dCamera_c::StartEventCamera(int param_0, int param_1, ...) {
 #pragma pop
 
 
-/* 80088BBC-80088C24 0068+00 s=0 e=3 z=0  None .text      EndEventCamera__9dCamera_cFi                                 */
+/* 80088BBC-80088C24 0068+00 s=0 e=3 z=4  None .text      EndEventCamera__9dCamera_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -36,7 +36,7 @@ extern "C" asm void div() {
 #pragma pop
 
 
-/* 803650D0-803650E0 0010+00 s=0 e=66 z=0  None .text      abs                                                          */
+/* 803650D0-803650E0 0010+00 s=0 e=66 z=225  None .text      abs                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

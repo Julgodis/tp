@@ -11,6 +11,19 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct cXyz {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+};
+
+struct leafdraw_class {
+};
+
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
@@ -26,25 +39,6 @@ struct daObjTMoon_c {
 	/* 80D12EDC */ void _delete();
 };
 
-struct cXyz {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-};
-
-struct J3DModelData {
-};
-
-struct create_tag_class {
-};
-
-struct leafdraw_class {
-};
-
-struct request_of_phase_process_class {
-};
-
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
@@ -54,6 +48,12 @@ struct dRes_info_c {
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct create_tag_class {
+};
+
+struct J3DModelData {
 };
 
 // 

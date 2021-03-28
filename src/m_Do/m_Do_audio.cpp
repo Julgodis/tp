@@ -54,10 +54,6 @@ struct Z2MultiSeMgr {
 	/* 802AEB34 */ ~Z2MultiSeMgr();
 };
 
-struct JKRSolidHeap {
-	/* 802D0BF4 */ void adjustSize();
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -67,12 +63,16 @@ struct JGeometry {
 
 };
 
-struct JAISoundID {
-};
-
 struct JAISoundHandle {
 	/* 80007838 */ ~JAISoundHandle();
 	/* 802A2184 */ void releaseSound();
+};
+
+struct JKRSolidHeap {
+	/* 802D0BF4 */ void adjustSize();
+};
+
+struct JAISoundID {
 };
 
 struct Z2AudioMgr {
@@ -322,7 +322,7 @@ asm void mDoAud_setFadeOutStart(u8 param_0) {
 #pragma pop
 
 
-/* 80007254-80007284 0030+00 s=0 e=2 z=0  None .text      mDoAud_setFadeInStart__FUc                                   */
+/* 80007254-80007284 0030+00 s=0 e=2 z=1  None .text      mDoAud_setFadeInStart__FUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -11,17 +11,21 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct J3DJoint {
+struct request_of_phase_process_class {
 };
 
 struct csXyz {
 	/* 80C18CCC */ ~csXyz();
 	/* 80C18D64 */ csXyz();
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daObjHata_c {
@@ -37,17 +41,18 @@ struct daObjHata_c {
 	/* 80C1919C */ void moveSwing();
 };
 
-struct mDoMtx_stack_c {
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
-};
-
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct request_of_phase_process_class {
+struct cXyz {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -57,15 +62,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct cXyz {
+struct J3DModel {
 };
 
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct J3DJoint {
 };
 
 // 

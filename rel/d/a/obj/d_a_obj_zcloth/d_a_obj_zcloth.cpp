@@ -11,6 +11,13 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daObjZCloth_c {
 	/* 80D3EE18 */ void initBaseMtx();
 	/* 80D3EE54 */ void setBaseMtx();
@@ -19,49 +26,6 @@ struct daObjZCloth_c {
 	/* 80D3F1AC */ void execute();
 	/* 80D3F1D0 */ void draw();
 	/* 80D3F200 */ void _delete();
-};
-
-struct cM3dGCyl {
-	/* 80D3F0AC */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80D3F0F4 */ ~cM3dGAab();
-};
-
-struct dBgS_ObjAcch {
-	/* 80D3F13C */ ~dBgS_ObjAcch();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct J3DModelData {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-};
-
-struct dBgS_Acch {
-	/* 80075F94 */ ~dBgS_Acch();
-	/* 800760A0 */ dBgS_Acch();
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
 };
 
 struct daItemBase_c {
@@ -80,6 +44,42 @@ struct daItemBase_c {
 	/* 8014519C */ void getShadowSize();
 	/* 801451B4 */ void getCollisionH();
 	/* 801451D0 */ void getCollisionR();
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80D3F13C */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+};
+
+struct dBgS_Acch {
+	/* 80075F94 */ ~dBgS_Acch();
+	/* 800760A0 */ dBgS_Acch();
+};
+
+struct cM3dGCyl {
+	/* 80D3F0AC */ ~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	/* 80D3F0F4 */ ~cM3dGAab();
+};
+
+struct J3DModelData {
 };
 
 // 

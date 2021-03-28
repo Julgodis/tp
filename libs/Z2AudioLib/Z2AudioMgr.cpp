@@ -58,9 +58,6 @@ struct Z2FxLineMgr {
 	/* 802BA7DC */ Z2FxLineMgr();
 };
 
-struct JKRSolidHeap {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -70,13 +67,16 @@ struct JGeometry {
 
 };
 
+struct JAISoundHandle {
+};
+
+struct JKRSolidHeap {
+};
+
 struct JKRArchive {
 };
 
 struct JAISoundID {
-};
-
-struct JAISoundHandle {
 };
 
 struct Z2AudioMgr {
@@ -207,10 +207,10 @@ struct JAISoundInfo {
 struct JAISeqDataMgr {
 };
 
-struct JAIAudience {
+struct JAISeCategoryArrangement {
 };
 
-struct JAISeCategoryArrangement {
+struct JAIAudience {
 };
 
 struct JAISeMgr {
@@ -359,7 +359,7 @@ SECTION_DATA void* __vt__10Z2AudioMgr[3] = {
 	(void*)func_802CDB1C,
 };
 
-/* 80451368-80451370 0004+04 s=1 e=251 z=0  None .sbss      mAudioMgrPtr__10Z2AudioMgr                                   */
+/* 80451368-80451370 0004+04 s=1 e=251 z=900  None .sbss      mAudioMgrPtr__10Z2AudioMgr                                   */
 u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 /* 802CD248-802CD34C 0104+00 s=0 e=1 z=0  None .text      __ct__10Z2AudioMgrFv                                         */

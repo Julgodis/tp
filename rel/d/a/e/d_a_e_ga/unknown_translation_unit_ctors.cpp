@@ -12,4 +12,18 @@
 // 
 
 
-extern 
+extern void* const data_804FBB7C[2];
+
+// 
+// External References:
+// 
+
+
+extern "C" void __sinit_d_a_e_ga_cpp(); // 1
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".ctors$10"

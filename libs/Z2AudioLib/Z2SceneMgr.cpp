@@ -277,7 +277,7 @@ SECTION_SDATA2 static u8 lit_3511[4] = {
 /* 80455A3C-80455A40 0004+00 s=6 e=0 z=0  None .sdata2    @3512                                                        */
 SECTION_SDATA2 static u32 lit_3512 = 0x3F800000;
 
-/* 802B68E0-802B697C 009C+00 s=3 e=2 z=0  None .text      setSceneExist__10Z2SceneMgrFb                                */
+/* 802B68E0-802B697C 009C+00 s=3 e=2 z=2  None .text      setSceneExist__10Z2SceneMgrFb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

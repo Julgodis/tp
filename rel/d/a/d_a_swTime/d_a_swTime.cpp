@@ -11,15 +11,15 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daSwTime_c {
 	/* 80D4F638 */ void Create();
 	/* 80D4F660 */ void create();
 	/* 80D4F6C8 */ void execute();
 	/* 80D4F758 */ bool _delete();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct dSv_info_c {

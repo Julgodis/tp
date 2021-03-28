@@ -84,31 +84,25 @@ struct J2DScreen {
 	/* 802F9640 */ void getNameResource(char const*);
 };
 
-struct J2DMaterial {
+struct J2DAnmTevRegKey {
 };
 
-struct J2DBinding {
-};
-
-struct J2DAnmBase {
+struct J2DAnmTextureSRTKey {
 };
 
 struct J2DAnmTexPattern {
 };
 
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmVisibilityFull {
-};
-
 struct J2DAnmTransform {
+};
+
+struct J2DAnmBase {
 };
 
 struct J2DAnmColor {
 };
 
-struct J2DAnmTextureSRTKey {
+struct J2DAnmVisibilityFull {
 };
 
 struct J2DAnmVtxColor {
@@ -153,6 +147,12 @@ struct J2DPane {
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
+};
+
+struct J2DBinding {
+};
+
+struct J2DMaterial {
 };
 
 struct J2DMirror {
@@ -544,7 +544,7 @@ asm J2DPicture::J2DPicture(J2DPane* param_0, JSURandomInputStream* param_1, J2DM
 /* 80456268-8045626C 0004+00 s=9 e=0 z=0  None .sdata2    @1767                                                        */
 SECTION_SDATA2 static u32 lit_1767 = 0x3F800000;
 
-/* 802FC708-802FC800 00F8+00 s=0 e=20 z=0  None .text      __ct__10J2DPictureFPC7ResTIMG                                */
+/* 802FC708-802FC800 00F8+00 s=0 e=20 z=1  None .text      __ct__10J2DPictureFPC7ResTIMG                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

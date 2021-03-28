@@ -47,7 +47,7 @@ extern "C" void _restgpr_29(); // 1
 // Declarations:
 // 
 
-/* 8001E308-8001E310 0008+00 s=0 e=12 z=0  None .text      fopCamM_GetParam__FP12camera_class                           */
+/* 8001E308-8001E310 0008+00 s=0 e=12 z=2  None .text      fopCamM_GetParam__FP12camera_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

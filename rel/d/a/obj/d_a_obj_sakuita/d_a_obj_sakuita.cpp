@@ -11,35 +11,7 @@
 // Types:
 // 
 
-struct daObjSakuita_c {
-	/* 80CC46F8 */ void create_init();
-	/* 80CC47F8 */ void initBaseMtx();
-	/* 80CC4818 */ void setBaseMtx();
-	/* 80CC489C */ void setPlatePos();
-	/* 80CC4A98 */ void calcAngle();
-	/* 80CC4C9C */ ~daObjSakuita_c();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct cM3dGCyl {
-	/* 80CC4F78 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80CC4FC0 */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80CC5008 */ ~dCcD_GStts();
-};
-
-struct cCcD_GStts {
-	/* 80CC5064 */ ~cCcD_GStts();
+struct request_of_phase_process_class {
 };
 
 struct Vec {
@@ -56,6 +28,27 @@ struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
 };
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct daObjSakuita_c {
+	/* 80CC46F8 */ void create_init();
+	/* 80CC47F8 */ void initBaseMtx();
+	/* 80CC4818 */ void setBaseMtx();
+	/* 80CC489C */ void setPlatePos();
+	/* 80CC4A98 */ void calcAngle();
+	/* 80CC4C9C */ ~daObjSakuita_c();
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
+};
+
 struct J3DModelData {
 };
 
@@ -68,19 +61,26 @@ struct dComIfG_play_c {
 	/* 8002CB68 */ void entrySimpleModel(J3DModel*, int);
 };
 
-struct request_of_phase_process_class {
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80CC5008 */ ~dCcD_GStts();
 };
 
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct cM3dGCyl {
+	/* 80CC4F78 */ ~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	/* 80CC4FC0 */ ~cM3dGAab();
+};
+
+struct cCcD_GStts {
+	/* 80CC5064 */ ~cCcD_GStts();
 };
 
 // 

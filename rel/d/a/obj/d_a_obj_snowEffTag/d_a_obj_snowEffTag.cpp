@@ -11,13 +11,12 @@
 // Types:
 // 
 
-struct daSnowEffTag_HIO_c {
-	/* 80CDF0AC */ daSnowEffTag_HIO_c();
-	/* 80CDF674 */ ~daSnowEffTag_HIO_c();
-};
-
 struct mDoHIO_entry_c {
 	/* 80CDF0E4 */ ~mDoHIO_entry_c();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct daSnowEffTag_c {
@@ -29,15 +28,15 @@ struct daSnowEffTag_c {
 	/* 80CDF5EC */ bool Delete();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct daSnowEffTag_HIO_c {
+	/* 80CDF0AC */ daSnowEffTag_HIO_c();
+	/* 80CDF674 */ ~daSnowEffTag_HIO_c();
 };
 
-struct Vec {
+struct dPa_levelEcallBack {
 };
 
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
+struct csXyz {
 };
 
 struct dKy_tevstr_c {
@@ -46,10 +45,11 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
+struct Vec {
 };
 
-struct csXyz {
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
 struct dPa_control_c {
@@ -60,6 +60,13 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
+struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -67,13 +74,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundID {
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // 

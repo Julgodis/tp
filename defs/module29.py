@@ -31,11 +31,11 @@ SYMBOLS = [
 	{'addr':0x8048A6AC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x8048A6D8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x8048A6F8,'size':756,'pad':0,'label':"execute__11daTag_Chk_cFv",'name':"execute__11daTag_Chk_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x8048A9EC,'size':8,'pad':0,'label':"daTag_Chk_Draw__FP11daTag_Chk_c",'name':"daTag_Chk_Draw__FP11daTag_Chk_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
-	{'addr':0x8048A9F4,'size':36,'pad':0,'label':"daTag_Chk_Execute__FP11daTag_Chk_c",'name':"daTag_Chk_Execute__FP11daTag_Chk_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x8048AA18,'size':8,'pad':0,'label':"daTag_Chk_IsDelete__FP11daTag_Chk_c",'name':"daTag_Chk_IsDelete__FP11daTag_Chk_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
-	{'addr':0x8048AA20,'size':48,'pad':0,'label':"daTag_Chk_Delete__FP11daTag_Chk_c",'name':"daTag_Chk_Delete__FP11daTag_Chk_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x8048AA50,'size':464,'pad':0,'label':"daTag_Chk_Create__FP10fopAc_ac_c",'name':"daTag_Chk_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x8048A9EC,'size':8,'pad':0,'label':"daTag_Chk_Draw__FP11daTag_Chk_c",'name':"daTag_Chk_Draw__FP11daTag_Chk_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
+	{'addr':0x8048A9F4,'size':36,'pad':0,'label':"daTag_Chk_Execute__FP11daTag_Chk_c",'name':"daTag_Chk_Execute__FP11daTag_Chk_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x8048AA18,'size':8,'pad':0,'label':"daTag_Chk_IsDelete__FP11daTag_Chk_c",'name':"daTag_Chk_IsDelete__FP11daTag_Chk_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
+	{'addr':0x8048AA20,'size':48,'pad':0,'label':"daTag_Chk_Delete__FP11daTag_Chk_c",'name':"daTag_Chk_Delete__FP11daTag_Chk_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x8048AA50,'size':464,'pad':0,'label':"daTag_Chk_Create__FP10fopAc_ac_c",'name':"daTag_Chk_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x8048AC20,'size':4,'pad':0,'label':"data_8048AC20",'name':None,'lib':-1,'tu':1,'section':1,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x8048AC24,'size':4,'pad':0,'label':"data_8048AC24",'name':None,'lib':-1,'tu':2,'section':2,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x8048AC28,'size':9,'pad':3,'label':"lit_3769",'name':"@3769",'lib':-1,'tu':3,'section':3,'r':[2,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
@@ -48,8 +48,8 @@ SYMBOLS = [
 	{'addr':0x8048AC58,'size':4,'pad':0,'label':"lit_3927",'name':"@3927",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"Integer"},
 	{'addr':0x8048AC5C,'size':4,'pad':0,'label':"lit_3928",'name':"@3928",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"Integer"},
 	{'addr':0x8048AC60,'size':8,'pad':0,'label':"lit_3930",'name':"@3930",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
-	{'addr':0x8048AC68,'size':32,'pad':0,'label':"l_daTag_Chk_Method",'name':"l_daTag_Chk_Method",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x8048AC88,'size':48,'pad':0,'label':"g_profile_TAG_CHKPOINT",'name':"g_profile_TAG_CHKPOINT",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x8048AC68,'size':32,'pad':0,'label':"l_daTag_Chk_Method",'name':"l_daTag_Chk_Method",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x8048AC88,'size':48,'pad':0,'label':"g_profile_TAG_CHKPOINT",'name':"g_profile_TAG_CHKPOINT",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
 ]
 
 # Names

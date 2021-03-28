@@ -64,7 +64,7 @@ extern "C" void _restgpr_26(); // 1
 // Declarations:
 // 
 
-/* 80023A48-80023A98 0050+00 s=1 e=3 z=0  None .text      fpcFCtRq_Do__FP19fast_create_request                         */
+/* 80023A48-80023A98 0050+00 s=1 e=3 z=52  None .text      fpcFCtRq_Do__FP19fast_create_request                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -91,7 +91,7 @@ SECTION_DATA static void* data_803A3AE0[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80023AA0-80023B70 00D0+00 s=0 e=3 z=0  None .text      fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv               */
+/* 80023AA0-80023B70 00D0+00 s=0 e=3 z=43  None .text      fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

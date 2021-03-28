@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JAISeqData {
+struct JAISoundID {
 };
 
 struct JAISeqDataUser {
 };
 
-struct JAISoundID {
+struct JAISeqData {
 };
 
 struct JAUSeqDataMgr_SeqCollection {

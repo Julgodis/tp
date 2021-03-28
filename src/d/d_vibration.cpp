@@ -178,7 +178,7 @@ asm void dVibration_c::Run() {
 #pragma pop
 
 
-/* 8006FA24-8006FB10 00EC+00 s=0 e=62 z=0  None .text      StartShock__12dVibration_cFii4cXyz                           */
+/* 8006FA24-8006FB10 00EC+00 s=0 e=62 z=298  None .text      StartShock__12dVibration_cFii4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -189,7 +189,7 @@ asm void dVibration_c::StartShock(int param_0, int param_1, cXyz param_2) {
 #pragma pop
 
 
-/* 8006FB10-8006FC0C 00FC+00 s=0 e=8 z=0  None .text      StartQuake__12dVibration_cFii4cXyz                           */
+/* 8006FB10-8006FC0C 00FC+00 s=0 e=8 z=67  None .text      StartQuake__12dVibration_cFii4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -200,7 +200,7 @@ asm void dVibration_c::StartQuake(int param_0, int param_1, cXyz param_2) {
 #pragma pop
 
 
-/* 8006FC0C-8006FD94 0188+00 s=0 e=2 z=0  None .text      StartQuake__12dVibration_cFPCUcii4cXyz                       */
+/* 8006FC0C-8006FD94 0188+00 s=0 e=2 z=2  None .text      StartQuake__12dVibration_cFPCUcii4cXyz                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -211,7 +211,7 @@ asm void dVibration_c::StartQuake(u8 const* param_0, int param_1, int param_2, c
 #pragma pop
 
 
-/* 8006FD94-8006FE00 006C+00 s=0 e=6 z=0  None .text      StopQuake__12dVibration_cFi                                  */
+/* 8006FD94-8006FE00 006C+00 s=0 e=6 z=82  None .text      StopQuake__12dVibration_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -233,7 +233,7 @@ asm void dVibration_c::Kill() {
 #pragma pop
 
 
-/* 8006FE5C-8006FE84 0028+00 s=0 e=0 z=0  None .text      CheckQuake__12dVibration_cFv                                 */
+/* 8006FE5C-8006FE84 0028+00 s=0 e=0 z=10  None .text      CheckQuake__12dVibration_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

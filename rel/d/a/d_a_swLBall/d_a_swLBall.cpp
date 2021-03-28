@@ -29,13 +29,13 @@ struct daSwLBall_c {
 	/* 80D4F444 */ bool _delete();
 };
 
-struct cXyz {
-};
-
 struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
 	/* 800352B0 */ void offSwitch(int, int);
 	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct cXyz {
 };
 
 struct Vec {

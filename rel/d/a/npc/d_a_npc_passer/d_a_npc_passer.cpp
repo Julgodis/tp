@@ -11,6 +11,20 @@
 // Types:
 // 
 
+struct mDoExt_morf_c {
+	/* 8000FB7C */ void setMorf(f32);
+};
+
+struct mDoExt_McaMorfSO {
+	/* 800111EC */ void modelCalc();
+	/* 80011310 */ void stopZelAnime();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daNpcPasser_c {
 	struct Mode_e {
 	};
@@ -68,23 +82,10 @@ struct daNpcPasser_c {
 	/* 80AA58BC */ void waitTime(void*);
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct cM3dGPla {
-	/* 80AA387C */ ~cM3dGPla();
-};
-
-struct cCcD_GStts {
-	/* 80AA5974 */ ~cCcD_GStts();
+struct J3DAnmTransformKey {
 };
 
 struct J3DModel {
-};
-
-struct J3DAnmTransformKey {
 };
 
 struct daNpcCd2_c {
@@ -106,12 +107,8 @@ struct daNpcCd2_c {
 	/* 80AA6404 */ ~daNpcCd2_c();
 };
 
-struct cXyz {
-	/* 80AA6654 */ ~cXyz();
-};
-
-struct csXyz {
-	/* 80AA6690 */ ~csXyz();
+struct dSv_danBit_c {
+	/* 80034B98 */ void onSwitch(int);
 };
 
 struct dNpcLib_lookat_c {
@@ -120,20 +117,33 @@ struct dNpcLib_lookat_c {
 	/* 80AA66CC */ ~dNpcLib_lookat_c();
 };
 
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 80AA67B4 */ ~cM3dGCyl();
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
-struct cM3dGAab {
-	/* 80AA67FC */ ~cM3dGAab();
+struct dCcD_SrcCyl {
 };
 
 struct dCcD_GStts {
 	/* 80083760 */ dCcD_GStts();
 	/* 80AA6844 */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80AA6910 */ ~dBgS_ObjAcch();
 };
 
 struct dBgS_AcchCir {
@@ -143,21 +153,52 @@ struct dBgS_AcchCir {
 	/* 80AA68A0 */ ~dBgS_AcchCir();
 };
 
-struct dBgS_ObjAcch {
-	/* 80AA6910 */ ~dBgS_ObjAcch();
+struct dBgS {
 };
 
-struct mDoExt_morf_c {
-	/* 8000FB7C */ void setMorf(f32);
+struct csXyz {
+	/* 80AA6690 */ ~csXyz();
 };
 
-struct mDoExt_McaMorfSO {
-	/* 800111EC */ void modelCalc();
-	/* 80011310 */ void stopZelAnime();
+struct cXyz {
+	/* 80AA6654 */ ~cXyz();
 };
 
-struct dSv_danBit_c {
-	/* 80034B98 */ void onSwitch(int);
+struct dBgS_Acch {
+	/* 80075F94 */ ~dBgS_Acch();
+	/* 800760A0 */ dBgS_Acch();
+	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
+	/* 80076AAC */ void CrrPos(dBgS&);
+};
+
+struct cM3dGPla {
+	/* 80AA387C */ ~cM3dGPla();
+};
+
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 80AA67B4 */ ~cM3dGCyl();
+};
+
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
+};
+
+struct cM3dGAab {
+	/* 80AA67FC */ ~cM3dGAab();
+};
+
+struct cCcD_Obj {
+};
+
+struct cCcS {
+	/* 80264BA8 */ void Set(cCcD_Obj*);
+};
+
+struct cCcD_GStts {
+	/* 80AA5974 */ ~cCcD_GStts();
 };
 
 struct cBgS_PolyInfo {
@@ -168,34 +209,10 @@ struct cBgS {
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-struct dBgS {
-};
-
-struct dBgS_Acch {
-	/* 80075F94 */ ~dBgS_Acch();
-	/* 800760A0 */ dBgS_Acch();
-	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
-	/* 80076AAC */ void CrrPos(dBgS&);
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+struct Z2CreatureCitizen {
+	/* 802C0C10 */ Z2CreatureCitizen();
+	/* 802C0C6C */ ~Z2CreatureCitizen();
+	/* 802C0E18 */ void playVoice(int);
 };
 
 struct Vec {
@@ -208,23 +225,6 @@ struct PathTrace_c {
 	/* 80159E54 */ void getTargetPoint(Vec*);
 	/* 80159F98 */ void setNextPoint(cXyz&);
 	/* 8015A370 */ void checkObstacle(fopAc_ac_c*);
-};
-
-struct cCcD_Obj {
-};
-
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
-};
-
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
-};
-
-struct Z2CreatureCitizen {
-	/* 802C0C10 */ Z2CreatureCitizen();
-	/* 802C0C6C */ ~Z2CreatureCitizen();
-	/* 802C0E18 */ void playVoice(int);
 };
 
 struct J3DFrameCtrl {

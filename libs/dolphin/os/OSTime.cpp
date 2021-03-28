@@ -44,7 +44,7 @@ extern "C" asm void OSGetTime() {
 #pragma pop
 
 
-/* 80342714-8034271C 0008+00 s=0 e=13 z=0  None .text      OSGetTick                                                    */
+/* 80342714-8034271C 0008+00 s=0 e=13 z=1  None .text      OSGetTick                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

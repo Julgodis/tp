@@ -11,13 +11,14 @@
 // Types:
 // 
 
-struct daSpinLift_HIO_c {
-	/* 80CE3DAC */ daSpinLift_HIO_c();
-	/* 80CE4C10 */ ~daSpinLift_HIO_c();
+struct request_of_phase_process_class {
 };
 
 struct mDoHIO_entry_c {
 	/* 80CE3DE4 */ ~mDoHIO_entry_c();
+};
+
+struct fopAc_ac_c {
 };
 
 struct daSpinLift_c {
@@ -38,21 +39,32 @@ struct daSpinLift_c {
 	/* 80CE4B44 */ void Delete();
 };
 
-struct fopAc_ac_c {
+struct daSpinLift_HIO_c {
+	/* 80CE3DAC */ daSpinLift_HIO_c();
+	/* 80CE4C10 */ ~daSpinLift_HIO_c();
 };
 
-struct J3DModel {
+struct cXyz {
 };
 
-struct J3DModelData {
-};
-
-struct request_of_phase_process_class {
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
 struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
 	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -62,27 +74,17 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct cXyz {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
-};
-
 struct dPa_levelEcallBack {
 };
 
 struct csXyz {
 };
 
-struct dPa_control_c {
-	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+struct _GXColor {
 };
 
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
+struct dPa_control_c {
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 struct dBgW {
@@ -102,11 +104,6 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
 struct JAISoundID {
 };
 
@@ -116,6 +113,9 @@ struct Vec {
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DModel {
 };
 
 // 

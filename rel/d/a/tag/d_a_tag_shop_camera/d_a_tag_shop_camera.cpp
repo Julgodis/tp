@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daTag_ShopCamera_c {
 	/* 80D60898 */ void create();
 	/* 80D608FC */ bool Delete();
@@ -18,11 +23,6 @@ struct daTag_ShopCamera_c {
 	/* 80D6090C */ bool Draw();
 	/* 80D60914 */ void initialize();
 	/* 80D60A18 */ ~daTag_ShopCamera_c();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 // 

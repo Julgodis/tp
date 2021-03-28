@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct Vec {
 };
 
@@ -22,11 +27,6 @@ struct daTagGuard_c {
 struct daGuardMng_c {
 	/* 80837B9C */ void checkMerchantNum();
 	/* 80837BEC */ void checkAppearTag(daTagGuard_c*);
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct dSv_danBit_c {

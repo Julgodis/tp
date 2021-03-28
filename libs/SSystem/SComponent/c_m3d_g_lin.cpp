@@ -50,7 +50,7 @@ extern "C" extern void* __vt__8cM3dGLin[3];
 // Declarations:
 // 
 
-/* 8026F2A8-8026F2E8 0040+00 s=0 e=8 z=0  None .text      __ct__8cM3dGLinFRC4cXyzRC4cXyz                               */
+/* 8026F2A8-8026F2E8 0040+00 s=0 e=8 z=1  None .text      __ct__8cM3dGLinFRC4cXyzRC4cXyz                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -61,7 +61,7 @@ asm cM3dGLin::cM3dGLin(cXyz const& param_0, cXyz const& param_1) {
 #pragma pop
 
 
-/* 8026F2E8-8026F31C 0034+00 s=0 e=8 z=0  None .text      SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz                        */
+/* 8026F2E8-8026F31C 0034+00 s=0 e=8 z=10  None .text      SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +72,7 @@ asm void cM3dGLin::SetStartEnd(cXyz const& param_0, cXyz const& param_1) {
 #pragma pop
 
 
-/* 8026F31C-8026F350 0034+00 s=0 e=7 z=0  None .text      SetStartEnd__8cM3dGLinFRC3VecRC3Vec                          */
+/* 8026F31C-8026F350 0034+00 s=0 e=7 z=4  None .text      SetStartEnd__8cM3dGLinFRC3VecRC3Vec                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

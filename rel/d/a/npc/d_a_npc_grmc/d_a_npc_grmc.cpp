@@ -11,20 +11,36 @@
 // Types:
 // 
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DAnmTransform {
+};
+
+struct Vec {
+};
+
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfSO {
+	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
+	/* 80011310 */ void stopZelAnime();
+};
+
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct daNpcT_faceMotionAnmData_c {
-};
-
-struct J3DJoint {
-};
-
-struct daNpcT_motionAnmData_c {
-};
-
-struct daNpcT_evtData_c {
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -33,6 +49,15 @@ struct daNpcT_MotionSeqMngr_c {
 
 	/* 80145898 */ void initialize();
 	/* 809D9728 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct daNpcT_evtData_c {
+};
+
+struct J3DJoint {
 };
 
 struct daNpc_grMC_c {
@@ -76,65 +101,20 @@ struct daNpc_grMC_c {
 	/* 809D900C */ bool getEyeballMaterialNo();
 };
 
-struct cCcD_GStts {
-	/* 809D8E14 */ ~cCcD_GStts();
+struct daNpc_grMC_Param_c {
+	/* 809D9014 */ ~daNpc_grMC_Param_c();
 };
 
-struct Vec {
+struct _GXColorS10 {
+};
+
+struct J3DModel {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 809D8F98 */ ~cXyz();
 	/* 809D96DC */ cXyz();
-};
-
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 809D8F08 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 809D8F50 */ ~cM3dGAab();
-};
-
-struct daNpc_grMC_Param_c {
-	/* 809D9014 */ ~daNpc_grMC_Param_c();
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-};
-
-struct dShopSystem_c {
-	/* 80197338 */ void initShopSystem();
-	/* 801974E4 */ ~dShopSystem_c();
-	/* 80198878 */ void drawCursor();
-	/* 80198950 */ void itemRotate();
-	/* 80198A2C */ void itemZoom(cXyz*);
-	/* 8019A0D0 */ void shop_init(bool);
-	/* 8019A158 */ void shop_process(fopAc_ac_c*, dMsgFlow_c*);
-	/* 8019A564 */ void deleteObject();
-	/* 8019A5D0 */ void searchItemActor();
-	/* 8019AB1C */ void setSellItemMax(u8);
-	/* 8019AB24 */ void checkShopOpen();
-	/* 809D906C */ dShopSystem_c(daNpcT_faceMotionAnmData_c const*, daNpcT_motionAnmData_c const*, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_evtData_c const*, char**);
-	/* 809D9184 */ bool getResName2(int);
-	/* 809D918C */ bool beforeStartSeqAction(dMsgFlow_c*, int);
-	/* 809D9194 */ bool beforeSelectSeqAction(dMsgFlow_c*, int);
-};
-
-struct csXyz {
-	/* 809D919C */ ~csXyz();
-	/* 809D95DC */ csXyz();
-};
-
-struct J3DModel {
-};
-
-struct _GXColorS10 {
 };
 
 struct dCcD_GObjInf {
@@ -200,6 +180,11 @@ struct daNpcT_JntAnm_c {
 	/* 809D9A10 */ void setEyeAngleX(cXyz, f32, s16);
 };
 
+struct daNpcT_DmgStagger_c {
+	/* 80147DCC */ void setParam(fopAc_ac_c*, fopAc_ac_c*, s16);
+	/* 80147E3C */ void calc(int);
+};
+
 struct daNpcT_ActorMngr_c {
 	/* 801456D4 */ void initialize();
 	/* 801456E0 */ void entry(fopAc_ac_c*);
@@ -207,46 +192,30 @@ struct daNpcT_ActorMngr_c {
 	/* 809D96E0 */ ~daNpcT_ActorMngr_c();
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 809D9770 */ ~dBgS_AcchCir();
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
 };
 
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 809D97E0 */ ~dCcD_GStts();
+struct dShopSystem_c {
+	/* 80197338 */ void initShopSystem();
+	/* 801974E4 */ ~dShopSystem_c();
+	/* 80198878 */ void drawCursor();
+	/* 80198950 */ void itemRotate();
+	/* 80198A2C */ void itemZoom(cXyz*);
+	/* 8019A0D0 */ void shop_init(bool);
+	/* 8019A158 */ void shop_process(fopAc_ac_c*, dMsgFlow_c*);
+	/* 8019A564 */ void deleteObject();
+	/* 8019A5D0 */ void searchItemActor();
+	/* 8019AB1C */ void setSellItemMax(u8);
+	/* 8019AB24 */ void checkShopOpen();
+	/* 809D906C */ dShopSystem_c(daNpcT_faceMotionAnmData_c const*, daNpcT_motionAnmData_c const*, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_evtData_c const*, char**);
+	/* 809D9184 */ bool getResName2(int);
+	/* 809D918C */ bool beforeStartSeqAction(dMsgFlow_c*, int);
+	/* 809D9194 */ bool beforeSelectSeqAction(dMsgFlow_c*, int);
 };
 
-struct dBgS_ObjAcch {
-	/* 809D983C */ ~dBgS_ObjAcch();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 809D98AC */ ~J3DFrameCtrl();
-};
-
-struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
-
-struct mDoExt_McaMorfSO {
-	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
-	/* 80011310 */ void stopZelAnime();
+struct dShopItemCtrl_c {
+	/* 80196914 */ dShopItemCtrl_c();
 };
 
 struct dRes_info_c {
@@ -267,7 +236,50 @@ struct dEvent_manager_c {
 	/* 800487F0 */ void ChkPresentEnd();
 };
 
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 809D97E0 */ ~dCcD_GStts();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 809D983C */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 809D9770 */ ~dBgS_AcchCir();
+};
+
 struct dBgS {
+};
+
+struct csXyz {
+	/* 809D919C */ ~csXyz();
+	/* 809D95DC */ csXyz();
 };
 
 struct dBgS_Acch {
@@ -277,32 +289,38 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 809D8F08 */ ~cM3dGCyl();
 };
 
-struct dBgS_LinChk {
-	/* 80077C68 */ dBgS_LinChk();
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct cM3dGAab {
+	/* 809D8F50 */ ~cM3dGAab();
 };
 
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+struct cCcD_Obj {
 };
 
-struct dCcD_SrcCyl {
+struct cCcS {
+	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+struct cCcD_GStts {
+	/* 809D8E14 */ ~cCcD_GStts();
 };
 
-struct daNpcT_DmgStagger_c {
-	/* 80147DCC */ void setParam(fopAc_ac_c*, fopAc_ac_c*, s16);
-	/* 80147E3C */ void calc(int);
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
+};
+
+struct cBgS_GndChk {
+	/* 80267C1C */ cBgS_GndChk();
 };
 
 struct ShopCam_action_c {
@@ -313,27 +331,9 @@ struct ShopCam_action_c {
 	/* 801964C8 */ void move();
 };
 
-struct dShopItemCtrl_c {
-	/* 80196914 */ dShopItemCtrl_c();
-};
-
-struct cCcD_Obj {
-};
-
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
-};
-
-struct cBgS_GndChk {
-	/* 80267C1C */ cBgS_GndChk();
-};
-
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
-};
-
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 809D98AC */ ~J3DFrameCtrl();
 };
 
 // 

@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daObjWaterEff_c {
 	/* 80C5C4F8 */ void Create();
 	/* 80C5C5DC */ void create();
@@ -18,13 +22,10 @@ struct daObjWaterEff_c {
 	/* 80C5C7B8 */ void _delete();
 };
 
-struct cXyz {
-	/* 80C5C670 */ ~cXyz();
-	/* 80C5C6AC */ cXyz();
+struct dPa_levelEcallBack {
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct csXyz {
 };
 
 struct dKy_tevstr_c {
@@ -33,10 +34,9 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
-};
-
-struct csXyz {
+struct cXyz {
+	/* 80C5C670 */ ~cXyz();
+	/* 80C5C6AC */ cXyz();
 };
 
 struct dPa_control_c {

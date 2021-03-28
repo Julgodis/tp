@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J2DPane {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
 struct dSelect_cursor_c {
@@ -84,10 +84,10 @@ struct dDlst_NameIN_c {
 	/* 8025115C */ ~dDlst_NameIN_c();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

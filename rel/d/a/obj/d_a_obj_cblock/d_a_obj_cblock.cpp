@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
 struct Vec {
 };
 
@@ -20,6 +23,17 @@ struct cXyz {
 	/* 80266F48 */ void normalizeZP();
 	/* 80BC5CBC */ ~cXyz();
 	/* 80BC6020 */ cXyz();
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+};
+
+struct fopAc_ac_c {
+};
+
+struct fopAcM_lc_c {
+	/* 8001DC68 */ void lineCheck(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
 struct daObjCBlk_c {
@@ -45,49 +59,6 @@ struct daObjCBlk_c {
 	/* 80BC6870 */ void Delete();
 };
 
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-	/* 80BC6024 */ dCcD_Cyl();
-	/* 80BC60A8 */ ~dCcD_Cyl();
-};
-
-struct cM3dGCyl {
-	/* 80BC6174 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80BC61BC */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80BC6204 */ ~dCcD_GStts();
-};
-
-struct fopAc_ac_c {
-};
-
-struct cCcD_GStts {
-	/* 80BC6930 */ ~cCcD_GStts();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-};
-
-struct J3DModelData {
-};
-
-struct fopAcM_lc_c {
-	/* 8001DC68 */ void lineCheck(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct request_of_phase_process_class {
-};
-
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
@@ -100,6 +71,29 @@ struct dRes_control_c {
 };
 
 struct dPath {
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80BC6204 */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+	/* 80BC6024 */ dCcD_Cyl();
+	/* 80BC60A8 */ ~dCcD_Cyl();
 };
 
 struct dBgW {
@@ -121,13 +115,16 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+struct cM3dGCyl {
+	/* 80BC6174 */ ~cM3dGCyl();
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
+struct cM3dGAab {
+	/* 80BC61BC */ ~cM3dGAab();
+};
+
+struct cCcD_GStts {
+	/* 80BC6930 */ ~cCcD_GStts();
 };
 
 struct JAISoundID {
@@ -135,6 +132,9 @@ struct JAISoundID {
 
 struct Z2SeMgr {
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DModelData {
 };
 
 // 

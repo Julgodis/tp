@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daTag_ShopItem_c {
 	/* 80D60B78 */ void create();
 	/* 80D60D78 */ void Delete();
@@ -24,15 +29,9 @@ struct daTag_ShopItem_c {
 	/* 80D61168 */ ~daTag_ShopItem_c();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct cXyz {
-};
-
-struct csXyz {
+struct daItemBase_c {
+	/* 80037A64 */ void hide();
+	/* 80037A74 */ void show();
 };
 
 struct dSv_memBit_c {
@@ -45,9 +44,10 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct daItemBase_c {
-	/* 80037A64 */ void hide();
-	/* 80037A74 */ void show();
+struct csXyz {
+};
+
+struct cXyz {
 };
 
 // 

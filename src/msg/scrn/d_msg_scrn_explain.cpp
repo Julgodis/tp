@@ -98,10 +98,10 @@ struct Z2SpeechMgr2 {
 	/* 802CBF60 */ void setTextCount(s16);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daTalk_c {
 	/* 80D66378 */ ~daTalk_c();
 	/* 80D663E4 */ void create();
@@ -19,15 +24,6 @@ struct daTalk_c {
 	/* 80D66664 */ void setStatus(u16);
 	/* 80D66688 */ void getStatus();
 	/* 80D666A8 */ void messageSet();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
 };
 
 struct dMsgObject_c {
@@ -44,6 +40,10 @@ struct dMsgFlow_c {
 	/* 80249F48 */ ~dMsgFlow_c();
 	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+};
+
+struct dEvt_control_c {
+	/* 80042468 */ void reset();
 };
 
 // 

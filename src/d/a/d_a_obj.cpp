@@ -18,14 +18,6 @@ struct daPy_py_c {
 	/* 8015F398 */ void checkMasterSwordEquip();
 };
 
-struct dCcD_GObjInf {
-	/* 800844F8 */ void GetTgHitObj();
-	/* 8008457C */ void GetTgHitObjSe();
-};
-
-struct Quaternion {
-};
-
 struct Vec {
 };
 
@@ -35,6 +27,14 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266C18 */ void operator/(f32) const;
 	/* 80266CBC */ void outprod(Vec const&) const;
+};
+
+struct Quaternion {
+};
+
+struct dCcD_GObjInf {
+	/* 800844F8 */ void GetTgHitObj();
+	/* 8008457C */ void GetTgHitObjSe();
 };
 
 struct daObj {
@@ -56,13 +56,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct JPABaseEmitter {
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
 struct dPa_modelEcallBack {
@@ -72,10 +72,10 @@ struct dPa_modelEcallBack {
 struct dPa_levelEcallBack {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -212,7 +212,7 @@ static u8 lit_3677[12];
 /* 804245F4-80424600 000C+00 s=1 e=0 z=0  None .bss       scale$3676                                                   */
 static f32 data_804245F4[3];
 
-/* 80037180-80037210 0090+00 s=0 e=0 z=0  None .text      make_eff_break_kotubo__5daObjFP10fopAc_ac_c                  */
+/* 80037180-80037210 0090+00 s=0 e=0 z=2  None .text      make_eff_break_kotubo__5daObjFP10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -230,7 +230,7 @@ static u8 lit_3692[12];
 /* 8042460C-80424618 000C+00 s=1 e=0 z=0  None .bss       scale$3691                                                   */
 static f32 data_8042460C[3];
 
-/* 80037210-800372A0 0090+00 s=0 e=0 z=0  None .text      make_eff_break_kotubo2__5daObjFP10fopAc_ac_c                 */
+/* 80037210-800372A0 0090+00 s=0 e=0 z=2  None .text      make_eff_break_kotubo2__5daObjFP10fopAc_ac_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -248,7 +248,7 @@ static u8 lit_3719[12];
 /* 80424624-80424630 000C+00 s=1 e=0 z=0  None .bss       scale$3718                                                   */
 static f32 data_80424624[3];
 
-/* 800372A0-80037330 0090+00 s=0 e=0 z=0  None .text      make_eff_break_gm_kotubo__5daObjFP10fopAc_ac_c               */
+/* 800372A0-80037330 0090+00 s=0 e=0 z=1  None .text      make_eff_break_gm_kotubo__5daObjFP10fopAc_ac_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,7 +269,7 @@ static f32 data_8042463C[3];
 /* 80451D9C-80451DA0 0004+00 s=1 e=0 z=0  None .sdata2    @3714                                                        */
 SECTION_SDATA2 static u32 lit_3714 = 0x40000000;
 
-/* 80037330-800373C0 0090+00 s=0 e=0 z=0  None .text      make_eff_break_gm_ootubo__5daObjFP10fopAc_ac_c               */
+/* 80037330-800373C0 0090+00 s=0 e=0 z=1  None .text      make_eff_break_gm_ootubo__5daObjFP10fopAc_ac_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -286,7 +286,7 @@ SECTION_SDATA2 static u8 lit_3801[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800373C0-800373F0 0030+00 s=0 e=0 z=0  None .text      posMoveF_stream__5daObjFP10fopAc_ac_cPC4cXyzPC4cXyzff        */
+/* 800373C0-800373F0 0030+00 s=0 e=0 z=4  None .text      posMoveF_stream__5daObjFP10fopAc_ac_cPC4cXyzPC4cXyzff        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -342,7 +342,7 @@ SECTION_SDATA2 static f32 lit_3956[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 80037788-80037900 0178+00 s=0 e=0 z=0  None .text      quat_rotBaseY__5daObjFP10QuaternionRC4cXyz                   */
+/* 80037788-80037900 0178+00 s=0 e=0 z=1  None .text      quat_rotBaseY__5daObjFP10QuaternionRC4cXyz                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -353,7 +353,7 @@ asm void daObj::quat_rotBaseY(Quaternion* param_0, cXyz const& param_1) {
 #pragma pop
 
 
-/* 80037900-80037A4C 014C+00 s=0 e=0 z=0  None .text      HitSeStart__5daObjFPC4cXyziPC12dCcD_GObjInfUl                */
+/* 80037900-80037A4C 014C+00 s=0 e=0 z=3  None .text      HitSeStart__5daObjFPC4cXyziPC12dCcD_GObjInfUl                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

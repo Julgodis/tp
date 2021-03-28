@@ -11,19 +11,103 @@
 // Types:
 // 
 
-struct daObj_Lbox_HIO_c {
-	/* 80C5356C */ daObj_Lbox_HIO_c();
-	/* 80C53F14 */ ~daObj_Lbox_HIO_c();
+struct request_of_phase_process_class {
 };
 
 struct obj_lbox_class {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
+struct daObj_Lbox_HIO_c {
+	/* 80C5356C */ daObj_Lbox_HIO_c();
+	/* 80C53F14 */ ~daObj_Lbox_HIO_c();
+};
+
 struct cXyz {
+};
+
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcSph {
+};
+
+struct dCcD_Sph {
+	/* 80084A34 */ void Set(dCcD_SrcSph const&);
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 80084460 */ void ChkTgHit();
+};
+
+struct dBgW_Base {
+};
+
+struct dBgW {
+	/* 8007B970 */ dBgW();
+	/* 8007B9C0 */ void Move();
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80C53EA4 */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
+};
+
+struct dBgS {
+	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
+};
+
+struct csXyz {
+};
+
+struct dBgS_Acch {
+	/* 80075F94 */ ~dBgS_Acch();
+	/* 800760A0 */ dBgS_Acch();
+	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
+	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
 struct cM3dGSph {
@@ -36,73 +120,11 @@ struct cM3dGAab {
 	/* 80C53E5C */ ~cM3dGAab();
 };
 
-struct dBgS_ObjAcch {
-	/* 80C53EA4 */ ~dBgS_ObjAcch();
+struct cCcD_Obj {
 };
 
-struct mDoMtx_stack_c {
-	/* 8000CE38 */ void scaleM(f32, f32, f32);
-};
-
-struct J3DModel {
-};
-
-struct J3DModelData {
-};
-
-struct csXyz {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-};
-
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
-};
-
-struct dBgW_Base {
-};
-
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
-};
-
-struct dBgS {
-	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
-};
-
-struct dBgW {
-	/* 8007B970 */ dBgW();
-	/* 8007B9C0 */ void Move();
-};
-
-struct cBgS_PolyInfo {
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
-};
-
-struct dBgS_Acch {
-	/* 80075F94 */ ~dBgS_Acch();
-	/* 800760A0 */ dBgS_Acch();
-	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
-	/* 80076AAC */ void CrrPos(dBgS&);
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct cCcS {
+	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
 struct cBgD_t {
@@ -112,36 +134,11 @@ struct cBgW {
 	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
 };
 
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
+struct cBgS_PolyInfo {
 };
 
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 80084460 */ void ChkTgHit();
-};
-
-struct dCcD_SrcSph {
-};
-
-struct dCcD_Sph {
-	/* 80084A34 */ void Set(dCcD_SrcSph const&);
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct cCcD_Obj {
-};
-
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
 };
 
 struct JAISoundID {
@@ -152,6 +149,9 @@ struct Vec {
 
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DModel {
 };
 
 // 

@@ -11,6 +11,26 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 80D2EFF8 */ ~cXyz();
+	/* 80D2F6DC */ cXyz();
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daObjWaterFall_c {
 	/* 80D2ED14 */ void search_bomb();
 	/* 80D2F034 */ void search_arrow();
@@ -24,13 +44,45 @@ struct daObjWaterFall_c {
 	/* 80D2FC9C */ void _delete();
 };
 
-struct Vec {
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 80D2EFF8 */ ~cXyz();
-	/* 80D2F6DC */ cXyz();
+struct dCcD_Tri {
+	/* 80D2F770 */ ~dCcD_Tri();
+	/* 80D2F850 */ dCcD_Tri();
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBomb_c {
+	/* 80031FF4 */ void checkWaterBomb(fopAc_ac_c*);
+};
+
+struct cM3dGTri {
+	/* 80D2F8E0 */ ~cM3dGTri();
+};
+
+struct cM3dGPla {
+	/* 80D2F93C */ ~cM3dGPla();
 };
 
 struct cM3dGCyl {
@@ -42,58 +94,6 @@ struct cM3dGCyl {
 
 struct cM3dGAab {
 	/* 80D2F728 */ ~cM3dGAab();
-};
-
-struct dCcD_Tri {
-	/* 80D2F770 */ ~dCcD_Tri();
-	/* 80D2F850 */ dCcD_Tri();
-};
-
-struct cM3dGTri {
-	/* 80D2F8E0 */ ~cM3dGTri();
-};
-
-struct cM3dGPla {
-	/* 80D2F93C */ ~cM3dGPla();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dBomb_c {
-	/* 80031FF4 */ void checkWaterBomb(fopAc_ac_c*);
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
 };
 
 struct cCcD_Obj {

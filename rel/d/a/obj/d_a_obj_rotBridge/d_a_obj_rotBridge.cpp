@@ -11,13 +11,26 @@
 // Types:
 // 
 
-struct daRotBridge_HIO_c {
-	/* 80CBE98C */ daRotBridge_HIO_c();
-	/* 80CBF5BC */ ~daRotBridge_HIO_c();
+struct request_of_phase_process_class {
 };
 
 struct mDoHIO_entry_c {
 	/* 80CBE9DC */ ~mDoHIO_entry_c();
+};
+
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
 };
 
 struct fopAc_ac_c {
@@ -40,45 +53,9 @@ struct daRotBridge_c {
 	/* 80CBF4BC */ void Delete();
 };
 
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80CBEED4 */ ~J3DFrameCtrl();
-};
-
-struct csXyz {
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
-};
-
-struct J3DModel {
-	/* 80327BD4 */ void calcAnmMtx();
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+struct daRotBridge_HIO_c {
+	/* 80CBE98C */ daRotBridge_HIO_c();
+	/* 80CBF5BC */ ~daRotBridge_HIO_c();
 };
 
 struct Vec {
@@ -92,18 +69,32 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
 struct dBgW_Base {
 };
 
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
-};
-
-struct dBgS {
-	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
-};
-
 struct cBgS_PolyInfo {
+};
+
+struct csXyz {
 };
 
 struct dBgS_MoveBgActor {
@@ -117,6 +108,14 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
+struct dBgS {
+	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
+};
+
+struct cBgW_BgId {
+	/* 802681D4 */ void ChkUsed() const;
+};
+
 struct cBgD_t {
 };
 
@@ -124,16 +123,8 @@ struct cBgW {
 	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
 };
 
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct cBgW_BgId {
-	/* 802681D4 */ void ChkUsed() const;
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
 };
 
 struct JAISoundID {
@@ -142,6 +133,15 @@ struct JAISoundID {
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DModel {
+	/* 80327BD4 */ void calcAnmMtx();
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80CBEED4 */ ~J3DFrameCtrl();
 };
 
 // 

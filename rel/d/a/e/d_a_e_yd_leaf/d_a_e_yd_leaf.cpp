@@ -11,18 +11,14 @@
 // Types:
 // 
 
-struct e_yd_leaf_class {
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct request_of_phase_process_class {
 };
 
 struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTransform {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -31,7 +27,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DModelData {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorf {
@@ -40,7 +36,22 @@ struct mDoExt_McaMorf {
 	/* 800106AC */ void modelCalc();
 };
 
-struct request_of_phase_process_class {
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct e_yd_leaf_class {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct cXyz {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -48,17 +59,6 @@ struct dRes_info_c {
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-};
-
-struct cXyz {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 // 

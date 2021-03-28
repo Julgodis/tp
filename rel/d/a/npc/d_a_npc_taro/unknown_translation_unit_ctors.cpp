@@ -12,3 +12,18 @@
 // 
 
 
+extern void* const data_805716B4[2];
+
+// 
+// External References:
+// 
+
+
+extern "C" void __sinit_d_a_npc_taro_cpp(); // 1
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".ctors$10"

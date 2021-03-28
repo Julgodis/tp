@@ -11,16 +11,69 @@
 // Types:
 // 
 
+struct tg_ss {
+	/* 80D083C0 */ ~tg_ss();
+	/* 80D08494 */ tg_ss();
+};
+
+struct request_of_phase_process_class {
+};
+
 struct obj_tatigi_class {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct tg_ss {
-	/* 80D083C0 */ ~tg_ss();
-	/* 80D08494 */ tg_ss();
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct J3DModelData {
+};
+
+struct J3DModel {
+};
+
+struct dComIfG_play_c {
+	/* 8002CAF0 */ void addSimpleModel(J3DModelData*, int, u8);
+	/* 8002CB30 */ void removeSimpleModel(J3DModelData*, int);
+	/* 8002CB68 */ void entrySimpleModel(J3DModel*, int);
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 80084658 */ void ChkCoHit();
+	/* 800846F0 */ void GetCoHitObj();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
 };
 
 struct Vec {
@@ -41,30 +94,12 @@ struct cM3dGAab {
 	/* 80D08570 */ ~cM3dGAab();
 };
 
-struct mDoMtx_stack_c {
-	/* 8000CE38 */ void scaleM(f32, f32, f32);
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
 };
 
-struct J3DModelData {
-};
-
-struct J3DModel {
-};
-
-struct dComIfG_play_c {
-	/* 8002CAF0 */ void addSimpleModel(J3DModelData*, int, u8);
-	/* 8002CB30 */ void removeSimpleModel(J3DModelData*, int);
-	/* 8002CB68 */ void entrySimpleModel(J3DModel*, int);
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+struct cCcS {
+	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
 struct cBgS_GndChk {
@@ -73,41 +108,6 @@ struct cBgS_GndChk {
 
 struct cBgS {
 	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
-};
-
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 80084658 */ void ChkCoHit();
-	/* 800846F0 */ void GetCoHitObj();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
-};
-
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
 // 

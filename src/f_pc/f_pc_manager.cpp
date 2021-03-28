@@ -58,7 +58,7 @@ struct JUTGamePad {
 
 void fpcM_Draw(void*); // 2
 static void fpcM_DrawIterater(int (*)(void*, void*)); // 2
-static void fpcM_Execute(void*); // 2
+void fpcM_Execute(void*); // 2
 void fpcM_Delete(void*); // 2
 void fpcM_IsCreating(unsigned int); // 2
 void fpcM_Management(void (*)(void), void (*)(void)); // 2
@@ -71,7 +71,7 @@ void fpcM_JudgeInLayer(unsigned int, void* (*)(void*, void*), void*); // 2
 
 extern "C" void fpcM_Draw__FPv(); // 1
 extern "C" static void fpcM_DrawIterater__FPFPvPv_i(); // 1
-extern "C" static void fpcM_Execute__FPv(); // 1
+extern "C" void fpcM_Execute__FPv(); // 1
 extern "C" void fpcM_Delete__FPv(); // 1
 extern "C" void fpcM_IsCreating__FUi(); // 1
 extern "C" void fpcM_Management__FPFv_vPFv_v(); // 1
@@ -175,11 +175,11 @@ asm static void fpcM_DrawIterater(int (*)(void*, void*)) {
 #pragma pop
 
 
-/* 800220F8-80022118 0020+00 s=1 e=0 z=0  None .text      fpcM_Execute__FPv                                            */
+/* 800220F8-80022118 0020+00 s=1 e=0 z=1  None .text      fpcM_Execute__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcM_Execute(void* param_0) {
+asm void fpcM_Execute(void* param_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_manager/fpcM_Execute__FPv.s"
 }
@@ -197,7 +197,7 @@ asm void fpcM_Delete(void* param_0) {
 #pragma pop
 
 
-/* 80022138-80022158 0020+00 s=0 e=6 z=0  None .text      fpcM_IsCreating__FUi                                         */
+/* 80022138-80022158 0020+00 s=0 e=6 z=43  None .text      fpcM_IsCreating__FUi                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

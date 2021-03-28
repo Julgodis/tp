@@ -41,10 +41,10 @@ struct dBrightCheck_c {
 	/* 80193594 */ void _draw();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

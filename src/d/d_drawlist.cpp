@@ -72,10 +72,10 @@ struct dDlst_shadowRealPoly_c {
 	/* 800569A8 */ s32 getTriMax();
 };
 
-struct cM3dGPla {
+struct cBgD_Vtx_t {
 };
 
-struct cBgD_Vtx_t {
+struct cM3dGPla {
 };
 
 struct dDlst_shadowPoly_c {
@@ -105,9 +105,6 @@ struct dDlst_peekZ_c {
 struct J3DPacket {
 };
 
-struct _GXColor {
-};
-
 struct J3DDrawBuffer {
 	/* 80324F08 */ void initialize();
 	/* 80324F70 */ void allocBuffer(u32);
@@ -118,6 +115,9 @@ struct J3DDrawBuffer {
 };
 
 struct dDlst_base_c {
+};
+
+struct _GXColor {
 };
 
 struct dDlst_list_c {
@@ -1541,7 +1541,7 @@ SECTION_SDATA2 static u32 lit_5552 = 0xC47A0000;
 /* 804520C0-804520C4 0004+00 s=1 e=0 z=0  None .sdata2    @5553                                                        */
 SECTION_SDATA2 static u32 lit_5553 = 0x3A83126F;
 
-/* 80055C74-80055F1C 02A8+00 s=0 e=1 z=0  None .text      setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c */
+/* 80055C74-80055F1C 02A8+00 s=0 e=1 z=1  None .text      setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1552,7 +1552,7 @@ asm void dDlst_shadowControl_c::setReal(u32 param_0, s8 param_1, J3DModel* param
 #pragma pop
 
 
-/* 80055F1C-80055F84 0068+00 s=0 e=1 z=0  None .text      addReal__21dDlst_shadowControl_cFUlP8J3DModel                */
+/* 80055F1C-80055F84 0068+00 s=0 e=1 z=45  None .text      addReal__21dDlst_shadowControl_cFUlP8J3DModel                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1563,7 +1563,7 @@ asm void dDlst_shadowControl_c::addReal(u32 param_0, J3DModel* param_1) {
 #pragma pop
 
 
-/* 80055F84-80055FE8 0064+00 s=0 e=1 z=0  None .text      setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj */
+/* 80055F84-80055FE8 0064+00 s=0 e=1 z=10  None .text      setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1575,7 +1575,7 @@ asm void dDlst_shadowControl_c::setSimple(cXyz* param_0, f32 param_1, f32 param_
 
 
 /* ############################################################################################## */
-/* 804248D0-804248F0 0020+00 s=1 e=6 z=0  None .bss       mSimpleTexObj__21dDlst_shadowControl_c                       */
+/* 804248D0-804248F0 0020+00 s=1 e=6 z=173  None .bss       mSimpleTexObj__21dDlst_shadowControl_c                       */
 u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
 
 /* 80055FE8-80056018 0030+00 s=0 e=1 z=0  None .text      setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG             */
@@ -1589,7 +1589,7 @@ asm void dDlst_shadowControl_c::setSimpleTex(ResTIMG const* param_0) {
 #pragma pop
 
 
-/* 80056018-80056080 0068+00 s=0 e=3 z=0  None .text      newData__13dDlst_peekZ_cFssPUl                               */
+/* 80056018-80056080 0068+00 s=0 e=3 z=9  None .text      newData__13dDlst_peekZ_cFssPUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1799,7 +1799,7 @@ asm void dDlst_list_c::drawXluListItem3d() {
 #pragma pop
 
 
-/* 80056794-800567C4 0030+00 s=2 e=35 z=0  None .text      set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c */
+/* 80056794-800567C4 0030+00 s=2 e=35 z=6  None .text      set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

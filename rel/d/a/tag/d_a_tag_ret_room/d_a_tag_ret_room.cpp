@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daTagRetRm_c {
 	/* 80D5EE98 */ daTagRetRm_c();
 	/* 80D5EED4 */ ~daTagRetRm_c();
@@ -20,11 +25,6 @@ struct daTagRetRm_c {
 	/* 80D5EF9C */ void execute();
 	/* 80D5F010 */ void init();
 	/* 80D5F050 */ void chkPlyrInTag();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daPy_py_c {

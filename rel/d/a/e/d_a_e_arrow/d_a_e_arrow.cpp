@@ -11,6 +11,21 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD9C */ void transM(f32, f32, f32);
+	/* 8000CE38 */ void scaleM(f32, f32, f32);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct fast_create_request {
+};
+
 struct e_arrow_class {
 };
 
@@ -24,57 +39,25 @@ struct cXyz {
 	/* 8067CB68 */ ~cXyz();
 };
 
-struct dBgS_ObjGndChk {
-	/* 8067DA70 */ ~dBgS_ObjGndChk();
+struct csXyz {
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct daAlink_c {
+	/* 800DC8C4 */ void setArrowShieldActor(fopAc_ac_c*, int);
+	/* 800DCA2C */ void checkWoodShieldEquipNotIronBall() const;
+	/* 800DCA80 */ void getArrowShieldOffset(cXyz const*, csXyz const*, cXyz*, cXyz*) const;
+	/* 800DCD74 */ void setArrowShieldPos(cXyz*, csXyz*, cXyz const*, cXyz const*) const;
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800842C0 */ void ChkAtHit();
-	/* 80084460 */ void ChkTgHit();
-};
-
-struct cM3dGSph {
-	/* 8026F648 */ void SetC(cXyz const&);
-	/* 8026F708 */ void SetR(f32);
-	/* 8067E724 */ ~cM3dGSph();
-};
-
-struct cM3dGAab {
-	/* 8067E76C */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 8067E7B4 */ ~dCcD_GStts();
-};
-
-struct cCcD_GStts {
-	/* 8067E810 */ ~cCcD_GStts();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD9C */ void transM(f32, f32, f32);
-	/* 8000CE38 */ void scaleM(f32, f32, f32);
-};
-
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct csXyz {
-};
-
-struct fast_create_request {
-};
-
-struct request_of_phase_process_class {
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -84,13 +67,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -103,55 +83,12 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dAttLook_c {
-	/* 80073D08 */ void request(fopAc_ac_c*, f32, f32, f32, s16, int);
+struct dMsgObject_c {
+	/* 8023822C */ void getStatus();
 };
 
-struct cBgS_LinChk {
-};
-
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
-};
-
-struct cBgS {
-	/* 800743B4 */ void LineCross(cBgS_LinChk*);
-	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
-};
-
-struct cBgS_PolyInfo {
-};
-
-struct dBgS {
-	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
-	/* 80075BF4 */ void ArrowStickCallBack(cBgS_PolyInfo const&, fopAc_ac_c*, cXyz&);
-};
-
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
-};
-
-struct dBgS_ObjGndChk_Spl {
-	/* 800777B0 */ dBgS_ObjGndChk_Spl();
-	/* 80077848 */ ~dBgS_ObjGndChk_Spl();
-};
-
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct dBgS_ArrowLinChk {
-	/* 800781D8 */ dBgS_ArrowLinChk();
-	/* 80078240 */ ~dBgS_ArrowLinChk();
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_GAtTgCoCommonBase {
-	/* 80083688 */ void GetAc();
+struct dMeter2_c {
+	/* 8021F780 */ void setLifeZero();
 };
 
 struct dCcD_Stts {
@@ -167,24 +104,68 @@ struct dCcD_Sph {
 	/* 80084AC4 */ void MoveCAt(cXyz&);
 };
 
-struct daAlink_c {
-	/* 800DC8C4 */ void setArrowShieldActor(fopAc_ac_c*, int);
-	/* 800DCA2C */ void checkWoodShieldEquipNotIronBall() const;
-	/* 800DCA80 */ void getArrowShieldOffset(cXyz const*, csXyz const*, cXyz*, cXyz*) const;
-	/* 800DCD74 */ void setArrowShieldPos(cXyz*, csXyz*, cXyz const*, cXyz const*) const;
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 8067E7B4 */ ~dCcD_GStts();
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800842C0 */ void ChkAtHit();
+	/* 80084460 */ void ChkTgHit();
 };
 
-struct dMeter2_c {
-	/* 8021F780 */ void setLifeZero();
+struct dCcD_GAtTgCoCommonBase {
+	/* 80083688 */ void GetAc();
 };
 
-struct dMsgObject_c {
-	/* 8023822C */ void getStatus();
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjGndChk_Spl {
+	/* 800777B0 */ dBgS_ObjGndChk_Spl();
+	/* 80077848 */ ~dBgS_ObjGndChk_Spl();
+};
+
+struct dBgS_ObjGndChk {
+	/* 8067DA70 */ ~dBgS_ObjGndChk();
+};
+
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
+};
+
+struct dBgS_ArrowLinChk {
+	/* 800781D8 */ dBgS_ArrowLinChk();
+	/* 80078240 */ ~dBgS_ArrowLinChk();
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct dBgS {
+	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
+	/* 80075BF4 */ void ArrowStickCallBack(cBgS_PolyInfo const&, fopAc_ac_c*, cXyz&);
+};
+
+struct dAttLook_c {
+	/* 80073D08 */ void request(fopAc_ac_c*, f32, f32, f32, s16, int);
+};
+
+struct cM3dGSph {
+	/* 8026F648 */ void SetC(cXyz const&);
+	/* 8026F708 */ void SetR(f32);
+	/* 8067E724 */ ~cM3dGSph();
+};
+
+struct cM3dGAab {
+	/* 8067E76C */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -194,8 +175,29 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct JPABaseEmitter {
-	/* 8027EC60 */ void deleteAllParticle();
+struct cCcD_GStts {
+	/* 8067E810 */ ~cCcD_GStts();
+};
+
+struct cBgS_LinChk {
+};
+
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cBgS {
+	/* 800743B4 */ void LineCross(cBgS_LinChk*);
+	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
+};
+
+struct Z2SoundObjBase {
+	/* 802BDFF8 */ void deleteObject();
+	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
+};
+
+struct Z2SoundObjArrow {
+	/* 802BEB38 */ Z2SoundObjArrow();
 };
 
 struct JAISoundID {
@@ -206,13 +208,11 @@ struct Z2SeMgr {
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-struct Z2SoundObjBase {
-	/* 802BDFF8 */ void deleteObject();
-	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
+struct JPABaseEmitter {
+	/* 8027EC60 */ void deleteAllParticle();
 };
 
-struct Z2SoundObjArrow {
-	/* 802BEB38 */ Z2SoundObjArrow();
+struct J3DModel {
 };
 
 // 

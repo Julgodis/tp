@@ -11,17 +11,16 @@
 // Types:
 // 
 
-struct daE_Bug_HIO_c {
-	/* 80694B8C */ daE_Bug_HIO_c();
-	/* 80697BEC */ ~daE_Bug_HIO_c();
+struct request_of_phase_process_class {
 };
 
-struct e_bug_class {
+struct mDoMtx_stack_c {
+	/* 8000CD9C */ void transM(f32, f32, f32);
+	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct bug_s {
-	/* 80697B4C */ ~bug_s();
-	/* 80697BB8 */ bug_s();
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct Vec {
@@ -33,32 +32,20 @@ struct cXyz {
 	/* 80694F58 */ ~cXyz();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD9C */ void transM(f32, f32, f32);
-	/* 8000CE38 */ void scaleM(f32, f32, f32);
-};
-
-struct J3DModelData {
-};
-
 struct fopAcM_gc_c {
 	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
-struct J3DModel {
+struct e_bug_class {
 };
 
-struct dComIfG_play_c {
-	/* 8002CAF0 */ void addSimpleModel(J3DModelData*, int, u8);
-	/* 8002CB30 */ void removeSimpleModel(J3DModelData*, int);
-	/* 8002CB68 */ void entrySimpleModel(J3DModel*, int);
+struct daPy_py_c {
+	/* 8015F89C */ void checkBoomerangCharge();
 };
 
-struct request_of_phase_process_class {
+struct daE_Bug_HIO_c {
+	/* 80694B8C */ daE_Bug_HIO_c();
+	/* 80697BEC */ ~daE_Bug_HIO_c();
 };
 
 struct dSv_info_c {
@@ -79,11 +66,16 @@ struct dPa_control_c {
 	/* 8004C218 */ void setHitMark(u16, fopAc_ac_c*, cXyz const*, csXyz const*, cXyz const*, u32);
 };
 
-struct cBgS_LinChk {
+struct J3DModelData {
 };
 
-struct cBgS {
-	/* 800743B4 */ void LineCross(cBgS_LinChk*);
+struct J3DModel {
+};
+
+struct dComIfG_play_c {
+	/* 8002CAF0 */ void addSimpleModel(J3DModelData*, int, u8);
+	/* 8002CB30 */ void removeSimpleModel(J3DModelData*, int);
+	/* 8002CB68 */ void entrySimpleModel(J3DModel*, int);
 };
 
 struct dBgS_LinChk {
@@ -92,13 +84,16 @@ struct dBgS_LinChk {
 	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
-struct daPy_py_c {
-	/* 8015F89C */ void checkBoomerangCharge();
+struct cBgS_LinChk {
 };
 
-struct Z2SoundObjBase {
-	/* 802BDF48 */ ~Z2SoundObjBase();
-	/* 802BDFF8 */ void deleteObject();
+struct cBgS {
+	/* 800743B4 */ void LineCross(cBgS_LinChk*);
+};
+
+struct bug_s {
+	/* 80697B4C */ ~bug_s();
+	/* 80697BB8 */ bug_s();
 };
 
 struct Z2SoundObjSimple {
@@ -111,6 +106,11 @@ struct JAISoundID {
 struct Z2SoundObjBeeGroup {
 	/* 802C1D10 */ Z2SoundObjBeeGroup();
 	/* 802C1D6C */ void playBeeGroupSound(JAISoundID, u8);
+};
+
+struct Z2SoundObjBase {
+	/* 802BDF48 */ ~Z2SoundObjBase();
+	/* 802BDFF8 */ void deleteObject();
 };
 
 // 

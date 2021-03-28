@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct dalv4CandleDemoTag_HIO_c {
-	/* 80C5C9EC */ dalv4CandleDemoTag_HIO_c();
-	/* 80C5D07C */ ~dalv4CandleDemoTag_HIO_c();
-};
-
 struct mDoHIO_entry_c {
 	/* 80C5CA10 */ ~mDoHIO_entry_c();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct dalv4CandleDemoTag_c {
@@ -40,9 +40,15 @@ struct dalv4CandleDemoTag_c {
 	/* 80C5D184 */ ~dalv4CandleDemoTag_c();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct dalv4CandleDemoTag_HIO_c {
+	/* 80C5C9EC */ dalv4CandleDemoTag_HIO_c();
+	/* 80C5D07C */ ~dalv4CandleDemoTag_HIO_c();
+};
+
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 800352B0 */ void offSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 struct dEvLib_callback_c {
@@ -54,16 +60,10 @@ struct dEvLib_callback_c {
 	/* 80C5D17C */ bool eventStart();
 };
 
-struct cXyz {
-};
-
 struct csXyz {
 };
 
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 800352B0 */ void offSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
+struct cXyz {
 };
 
 // 

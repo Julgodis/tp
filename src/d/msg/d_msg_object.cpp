@@ -28,6 +28,9 @@ struct mDoDvdThd_mountXArchive_c {
 	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
 };
 
+struct jmessage_tControl {
+};
+
 struct Vec {
 };
 
@@ -44,9 +47,6 @@ struct jmessage_tReference {
 	/* 80229810 */ void resetCharCountBuffer();
 	/* 8022994C */ void isLightEnd();
 	/* 80238C78 */ void setActorPos(cXyz);
-};
-
-struct jmessage_tControl {
 };
 
 struct jmessage_tSequenceProcessor {
@@ -86,10 +86,10 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct JUTFont {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct JUTFont {
 };
 
 struct dMsgScrnTree_c {
@@ -146,11 +146,11 @@ struct dMsgScrnBase_c {
 	/* 8023C3EC */ void setRubyString(char*);
 };
 
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(u8);
+struct J2DTextBox {
 };
 
-struct J2DTextBox {
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
 };
 
 struct dMsgObject_c {
@@ -402,10 +402,10 @@ static void dMsgObject_Execute(dMsgObject_c*); // 2
 static bool dMsgObject_IsDelete(dMsgObject_c*); // 2
 static void dMsgObject_Delete(dMsgObject_c*); // 2
 static void dMsgObject_Create(msg_class*); // 2
-static void dMsgObject_getTotalPrice(); // 2
+void dMsgObject_getTotalPrice(); // 2
 void dMsgObject_setTotalPrice(u16); // 2
 void dMsgObject_addTotalPrice(s16); // 2
-static void dMsgObject_getTotalPayment(); // 2
+void dMsgObject_getTotalPayment(); // 2
 void dMsgObject_setTotalPayment(u16); // 2
 static void dMsgObject_addTotalPayment(s16); // 2
 void dMsgObject_getFundRaising(); // 2
@@ -560,10 +560,10 @@ extern "C" void getSelectBombPrice__12dMsgObject_cFv(); // 1
 extern "C" void setEquipBombInfo__12dMsgObject_cFv(); // 1
 extern "C" void getItemEquipButton__12dMsgObject_cFv(); // 1
 extern "C" void setSelectCancelPos__12dMsgObject_cFUc(); // 1
-extern "C" static void dMsgObject_getTotalPrice__Fv(); // 1
+extern "C" void dMsgObject_getTotalPrice__Fv(); // 1
 extern "C" void dMsgObject_setTotalPrice__FUs(); // 1
 extern "C" void dMsgObject_addTotalPrice__Fs(); // 1
-extern "C" static void dMsgObject_getTotalPayment__Fv(); // 1
+extern "C" void dMsgObject_getTotalPayment__Fv(); // 1
 extern "C" void dMsgObject_setTotalPayment__FUs(); // 1
 extern "C" static void dMsgObject_addTotalPayment__Fs(); // 1
 extern "C" void dMsgObject_getFundRaising__Fv(); // 1
@@ -806,7 +806,7 @@ SECTION_DATA static void* l_dMsgObject_Method[5] = {
 	(void*)dMsgObject_Draw__FP12dMsgObject_c,
 };
 
-/* 803C0BB0-803C0BD8 0028+00 s=0 e=0 z=0  None .data      g_profile_MSG_OBJECT                                         */
+/* 803C0BB0-803C0BD8 0028+00 s=0 e=0 z=1  None .data      g_profile_MSG_OBJECT                                         */
 SECTION_DATA void* g_profile_MSG_OBJECT[10] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,
@@ -1466,7 +1466,7 @@ asm void dMsgObject_c::isMidonaTalkWait() {
 #pragma pop
 
 
-/* 802371E4-802371F8 0014+00 s=4 e=3 z=0  None .text      isPlaceMessage__12dMsgObject_cFv                             */
+/* 802371E4-802371F8 0014+00 s=4 e=3 z=2  None .text      isPlaceMessage__12dMsgObject_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1824,7 +1824,7 @@ asm void dMsgObject_c::isKillMessageFlag() {
 #pragma pop
 
 
-/* 80237994-802379AC 0018+00 s=0 e=2 z=0  None .text      onKillMessageFlag__12dMsgObject_cFv                          */
+/* 80237994-802379AC 0018+00 s=0 e=2 z=3  None .text      onKillMessageFlag__12dMsgObject_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1879,7 +1879,7 @@ asm void dMsgObject_c::setNowTalkFlowNo(s16 param_0) {
 #pragma pop
 
 
-/* 80237A9C-80237AB0 0014+00 s=0 e=0 z=0  None .text      getNowTalkFlowNo__12dMsgObject_cFv                           */
+/* 80237A9C-80237AB0 0014+00 s=0 e=0 z=1  None .text      getNowTalkFlowNo__12dMsgObject_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2105,7 +2105,7 @@ asm void dMsgObject_c::demoMessageGroup() {
 #pragma pop
 
 
-/* 80238098-802380C4 002C+00 s=0 e=3 z=0  None .text      endFlowGroup__12dMsgObject_cFv                               */
+/* 80238098-802380C4 002C+00 s=0 e=3 z=4  None .text      endFlowGroup__12dMsgObject_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2149,7 +2149,7 @@ asm void dMsgObject_c::getMsgDtPtr() {
 #pragma pop
 
 
-/* 80238188-8023819C 0014+00 s=0 e=0 z=0  None .text      setProcessID__12dMsgObject_cFUi                              */
+/* 80238188-8023819C 0014+00 s=0 e=0 z=1  None .text      setProcessID__12dMsgObject_cFUi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2160,7 +2160,7 @@ asm void dMsgObject_c::setProcessID(unsigned int param_0) {
 #pragma pop
 
 
-/* 8023819C-802381C0 0024+00 s=0 e=5 z=0  None .text      getActor__12dMsgObject_cFv                                   */
+/* 8023819C-802381C0 0024+00 s=0 e=5 z=5  None .text      getActor__12dMsgObject_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2171,7 +2171,7 @@ asm void dMsgObject_c::getActor() {
 #pragma pop
 
 
-/* 802381C0-802381D4 0014+00 s=0 e=0 z=0  None .text      getpTalkActor__12dMsgObject_cFv                              */
+/* 802381C0-802381D4 0014+00 s=0 e=0 z=3  None .text      getpTalkActor__12dMsgObject_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2182,7 +2182,7 @@ asm void dMsgObject_c::getpTalkActor() {
 #pragma pop
 
 
-/* 802381D4-802381E8 0014+00 s=0 e=0 z=0  None .text      getIdx__12dMsgObject_cFv                                     */
+/* 802381D4-802381E8 0014+00 s=0 e=0 z=1  None .text      getIdx__12dMsgObject_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2193,7 +2193,7 @@ asm void dMsgObject_c::getIdx() {
 #pragma pop
 
 
-/* 802381E8-802381FC 0014+00 s=0 e=0 z=0  None .text      getNodeIdx__12dMsgObject_cFv                                 */
+/* 802381E8-802381FC 0014+00 s=0 e=0 z=1  None .text      getNodeIdx__12dMsgObject_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2204,7 +2204,7 @@ asm void dMsgObject_c::getNodeIdx() {
 #pragma pop
 
 
-/* 802381FC-8023822C 0030+00 s=0 e=1 z=0  None .text      setStatus__12dMsgObject_cFUs                                 */
+/* 802381FC-8023822C 0030+00 s=0 e=1 z=3  None .text      setStatus__12dMsgObject_cFUs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2215,7 +2215,7 @@ asm void dMsgObject_c::setStatus(u16 param_0) {
 #pragma pop
 
 
-/* 8023822C-80238258 002C+00 s=0 e=40 z=0  None .text      getStatus__12dMsgObject_cFv                                  */
+/* 8023822C-80238258 002C+00 s=0 e=40 z=22  None .text      getStatus__12dMsgObject_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2259,7 +2259,7 @@ asm void dMsgObject_c::onMsgSendControl() {
 #pragma pop
 
 
-/* 802382C8-802382F4 002C+00 s=2 e=2 z=0  None .text      offMsgSendControl__12dMsgObject_cFv                          */
+/* 802382C8-802382F4 002C+00 s=2 e=2 z=2  None .text      offMsgSendControl__12dMsgObject_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2270,7 +2270,7 @@ asm void dMsgObject_c::offMsgSendControl() {
 #pragma pop
 
 
-/* 802382F4-80238320 002C+00 s=0 e=3 z=0  None .text      isMsgSendControl__12dMsgObject_cFv                           */
+/* 802382F4-80238320 002C+00 s=0 e=3 z=3  None .text      isMsgSendControl__12dMsgObject_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2281,7 +2281,7 @@ asm void dMsgObject_c::isMsgSendControl() {
 #pragma pop
 
 
-/* 80238320-8023834C 002C+00 s=1 e=2 z=0  None .text      onMsgSend__12dMsgObject_cFv                                  */
+/* 80238320-8023834C 002C+00 s=1 e=2 z=1  None .text      onMsgSend__12dMsgObject_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2314,7 +2314,7 @@ asm void dMsgObject_c::isMsgSend() {
 #pragma pop
 
 
-/* 802383A4-802383D0 002C+00 s=0 e=2 z=0  None .text      isMouthCheck__12dMsgObject_cFv                               */
+/* 802383A4-802383D0 002C+00 s=0 e=2 z=6  None .text      isMouthCheck__12dMsgObject_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2358,7 +2358,7 @@ asm void dMsgObject_c::setSmellType(u8 param_0) {
 #pragma pop
 
 
-/* 80238440-8023846C 002C+00 s=4 e=0 z=0  None .text      getSelectCursorPos__12dMsgObject_cFv                         */
+/* 80238440-8023846C 002C+00 s=4 e=0 z=7  None .text      getSelectCursorPos__12dMsgObject_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2391,7 +2391,7 @@ asm void dMsgObject_c::setPortalMessageID(u16 param_0) {
 #pragma pop
 
 
-/* 802384B0-802384C4 0014+00 s=0 e=0 z=0  None .text      setInsectItemNo__12dMsgObject_cFUc                           */
+/* 802384B0-802384C4 0014+00 s=0 e=0 z=1  None .text      setInsectItemNo__12dMsgObject_cFUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2556,18 +2556,18 @@ asm void dMsgObject_c::setSelectCancelPos(u8 param_0) {
 #pragma pop
 
 
-/* 80238660-802386C8 0068+00 s=1 e=0 z=0  None .text      dMsgObject_getTotalPrice__Fv                                 */
+/* 80238660-802386C8 0068+00 s=1 e=0 z=3  None .text      dMsgObject_getTotalPrice__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dMsgObject_getTotalPrice() {
+asm void dMsgObject_getTotalPrice() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_getTotalPrice__Fv.s"
 }
 #pragma pop
 
 
-/* 802386C8-80238730 0068+00 s=0 e=0 z=0  None .text      dMsgObject_setTotalPrice__FUs                                */
+/* 802386C8-80238730 0068+00 s=0 e=0 z=2  None .text      dMsgObject_setTotalPrice__FUs                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2578,7 +2578,7 @@ asm void dMsgObject_setTotalPrice(u16 param_0) {
 #pragma pop
 
 
-/* 80238730-802387C4 0094+00 s=0 e=0 z=0  None .text      dMsgObject_addTotalPrice__Fs                                 */
+/* 80238730-802387C4 0094+00 s=0 e=0 z=4  None .text      dMsgObject_addTotalPrice__Fs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2589,18 +2589,18 @@ asm void dMsgObject_addTotalPrice(s16 param_0) {
 #pragma pop
 
 
-/* 802387C4-8023882C 0068+00 s=1 e=0 z=0  None .text      dMsgObject_getTotalPayment__Fv                               */
+/* 802387C4-8023882C 0068+00 s=1 e=0 z=4  None .text      dMsgObject_getTotalPayment__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dMsgObject_getTotalPayment() {
+asm void dMsgObject_getTotalPayment() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_getTotalPayment__Fv.s"
 }
 #pragma pop
 
 
-/* 8023882C-80238894 0068+00 s=0 e=0 z=0  None .text      dMsgObject_setTotalPayment__FUs                              */
+/* 8023882C-80238894 0068+00 s=0 e=0 z=2  None .text      dMsgObject_setTotalPayment__FUs                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

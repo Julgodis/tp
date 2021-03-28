@@ -96,7 +96,7 @@ extern "C" extern u32 __float_epsilon;
 // Declarations:
 // 
 
-/* 8027E6A4-8027E6EC 0048+00 s=0 e=14 z=0  None .text      __dt__18JPAEmitterCallBackFv                                 */
+/* 8027E6A4-8027E6EC 0048+00 s=0 e=14 z=16  None .text      __dt__18JPAEmitterCallBackFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -162,7 +162,7 @@ asm void JPABaseEmitter::createChild(JPABaseParticle* param_0) {
 #pragma pop
 
 
-/* 8027EC60-8027EDD4 0174+00 s=0 e=2 z=0  None .text      deleteAllParticle__14JPABaseEmitterFv                        */
+/* 8027EC60-8027EDD4 0174+00 s=0 e=2 z=21  None .text      deleteAllParticle__14JPABaseEmitterFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

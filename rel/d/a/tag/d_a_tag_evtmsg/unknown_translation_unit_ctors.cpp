@@ -12,4 +12,18 @@
 // 
 
 
-extern void* const data_8048D7DC[2]
+extern void* const data_8048D7DC[2];
+
+// 
+// External References:
+// 
+
+
+extern "C" void __sinit_d_a_tag_evtmsg_cpp(); // 1
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".ctors$10"

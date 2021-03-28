@@ -52,7 +52,7 @@ SECTION_SDATA2 static f32 lit_149[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 8035ED2C-8035EEA4 0178+00 s=0 e=4 z=0  None .text      GXSetIndTexMtx                                               */
+/* 8035ED2C-8035EEA4 0178+00 s=0 e=4 z=1  None .text      GXSetIndTexMtx                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +85,7 @@ extern "C" asm void GXSetIndTexOrder() {
 #pragma pop
 
 
-/* 8035F0D4-8035F0F8 0024+00 s=0 e=43 z=0  None .text      GXSetNumIndStages                                            */
+/* 8035F0D4-8035F0F8 0024+00 s=0 e=43 z=7  None .text      GXSetNumIndStages                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

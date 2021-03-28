@@ -15,12 +15,6 @@ struct Z2SpeechMgr2 {
 	/* 802CC190 */ void speakOneWord(bool);
 };
 
-struct JAISound {
-};
-
-struct JAISoundHandle {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -31,6 +25,12 @@ struct JGeometry {
 };
 
 struct JAISoundID {
+};
+
+struct JAISoundHandle {
+};
+
+struct JAISound {
 };
 
 struct Z2SoundMgr {

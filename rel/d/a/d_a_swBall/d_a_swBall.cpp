@@ -15,6 +15,9 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
+struct fast_create_request {
+};
+
 struct daSwBall_c {
 	/* 80D4E054 */ void checkArea_sub(fopAc_ac_c*);
 	/* 80D4E194 */ void checkArea();
@@ -28,7 +31,9 @@ struct daSwBall_c {
 	/* 80D4E90C */ bool _delete();
 };
 
-struct fast_create_request {
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 800352B0 */ void offSwitch(int, int);
 };
 
 struct dStage_roomControl_c {
@@ -36,11 +41,6 @@ struct dStage_roomControl_c {
 };
 
 struct cXyz {
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 800352B0 */ void offSwitch(int, int);
 };
 
 struct Vec {

@@ -11,25 +11,26 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
 struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct csXyz {
 };
 
-struct cM3dGPla {
-	/* 80D3A134 */ ~cM3dGPla();
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 80084658 */ void ChkCoHit();
+struct fast_create_request {
 };
 
 struct daObjWStatue_c {
@@ -57,77 +58,6 @@ struct daObjWStatue_c {
 	/* 80D3B480 */ void _delete();
 };
 
-struct dPa_followEcallBack {
-	/* 80049580 */ dPa_followEcallBack(u8, u8);
-	/* 80D3A66C */ ~dPa_followEcallBack();
-	/* 80D3A6F4 */ void __defctor();
-};
-
-struct dPa_levelEcallBack {
-	/* 80D3A6F0 */ void cleanup();
-	/* 80D3B580 */ ~dPa_levelEcallBack();
-};
-
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 80D3A71C */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80D3A764 */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80D3A7AC */ ~dCcD_GStts();
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 80D3A808 */ ~dBgS_AcchCir();
-};
-
-struct dBgS_ObjAcch {
-	/* 80D3A878 */ ~dBgS_ObjAcch();
-};
-
-struct cCcD_GStts {
-	/* 80D3B538 */ ~cCcD_GStts();
-};
-
-struct JPABaseEmitter {
-};
-
-struct JPAEmitterCallBack {
-	/* 8027E6A4 */ ~JPAEmitterCallBack();
-	/* 80D3B5F4 */ void execute(JPABaseEmitter*);
-	/* 80D3B5F8 */ void executeAfter(JPABaseEmitter*);
-	/* 80D3B5FC */ void draw(JPABaseEmitter*);
-	/* 80D3B600 */ void drawAfter(JPABaseEmitter*);
-};
-
-struct csXyz {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
-};
-
-struct fast_create_request {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
 struct daItemBase_c {
 	/* 80037A64 */ void hide();
 	/* 80037A74 */ void show();
@@ -149,6 +79,32 @@ struct daItemBase_c {
 	/* 801451D0 */ void getCollisionR();
 };
 
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dPa_levelEcallBack {
+	/* 80D3A6F0 */ void cleanup();
+	/* 80D3B580 */ ~dPa_levelEcallBack();
+};
+
+struct dPa_followEcallBack {
+	/* 80049580 */ dPa_followEcallBack(u8, u8);
+	/* 80D3A66C */ ~dPa_followEcallBack();
+	/* 80D3A6F4 */ void __defctor();
+};
+
+struct dKy_tevstr_c {
+};
+
+struct _GXColor {
+};
+
+struct dPa_control_c {
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+};
+
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
 	/* 80042518 */ void reset(void*);
@@ -166,18 +122,43 @@ struct dEvent_manager_c {
 	/* 800483C4 */ void setGoal(cXyz*);
 };
 
-struct dKy_tevstr_c {
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
-struct _GXColor {
+struct dCcD_SrcCyl {
 };
 
-struct dPa_control_c {
-	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80D3A7AC */ ~dCcD_GStts();
 };
 
-struct cBgS {
-	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 80084658 */ void ChkCoHit();
+};
+
+struct dCcD_GAtTgCoCommonBase {
+	/* 80083688 */ void GetAc();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80D3A878 */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 80D3A808 */ ~dBgS_AcchCir();
 };
 
 struct dBgS {
@@ -190,23 +171,23 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct cM3dGPla {
+	/* 80D3A134 */ ~cM3dGPla();
 };
 
-struct dCcD_GAtTgCoCommonBase {
-	/* 80083688 */ void GetAc();
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 80D3A71C */ ~cM3dGCyl();
 };
 
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+struct cM3dGAab {
+	/* 80D3A764 */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -216,8 +197,16 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
+struct cCcD_GStts {
+	/* 80D3B538 */ ~cCcD_GStts();
+};
+
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
+};
+
+struct cBgS {
+	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
 struct JAISoundID {
@@ -228,6 +217,17 @@ struct Vec {
 
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct JPABaseEmitter {
+};
+
+struct JPAEmitterCallBack {
+	/* 8027E6A4 */ ~JPAEmitterCallBack();
+	/* 80D3B5F4 */ void execute(JPABaseEmitter*);
+	/* 80D3B5F8 */ void executeAfter(JPABaseEmitter*);
+	/* 80D3B5FC */ void draw(JPABaseEmitter*);
+	/* 80D3B600 */ void drawAfter(JPABaseEmitter*);
 };
 
 // 

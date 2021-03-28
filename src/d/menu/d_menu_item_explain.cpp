@@ -48,7 +48,16 @@ struct dMsgScrn3Select_c {
 	/* 8023A97C */ void getCharSpace();
 };
 
+struct JMSMesgEntry_c {
+};
+
 struct JUTFont {
+};
+
+struct ResTLUT {
+};
+
+struct ResTIMG {
 };
 
 struct JGeometry {
@@ -60,18 +69,9 @@ struct JGeometry {
 
 };
 
-struct ResTLUT {
-};
-
-struct ResTIMG {
-};
-
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
-};
-
-struct JMSMesgEntry_c {
 };
 
 struct dMeter2Info_c {
@@ -80,13 +80,13 @@ struct dMeter2Info_c {
 	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
-struct J2DOrthoGraph {
+struct JKRArchive {
 };
 
 struct JKRExpHeap {
 };
 
-struct JKRArchive {
+struct J2DOrthoGraph {
 };
 
 struct STControl {
@@ -130,10 +130,10 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

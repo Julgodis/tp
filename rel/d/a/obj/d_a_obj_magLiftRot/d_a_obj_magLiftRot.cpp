@@ -11,37 +11,7 @@
 // Types:
 // 
 
-struct daMagLiftRot_HIO_c {
-	/* 80C8E94C */ daMagLiftRot_HIO_c();
-	/* 80C8FA3C */ ~daMagLiftRot_HIO_c();
-};
-
-struct mDoHIO_entry_c {
-	/* 80C8E9E0 */ ~mDoHIO_entry_c();
-};
-
-struct daMagLiftRot_c {
-	/* 80C8EA28 */ void setBaseMtx();
-	/* 80C8EB1C */ void CreateHeap();
-	/* 80C8EC64 */ void create();
-	/* 80C8EF94 */ void Execute(f32 (** )[3][4]);
-	/* 80C8F02C */ void moveLift();
-	/* 80C8F264 */ void init_modeMove();
-	/* 80C8F4A0 */ void modeMove();
-	/* 80C8F538 */ void init_modeWait();
-	/* 80C8F7CC */ void modeWait();
-	/* 80C8F804 */ void init_modeMoveWait();
-	/* 80C8F810 */ void modeMoveWait();
-	/* 80C8F86C */ void Draw();
-	/* 80C8F970 */ void Delete();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80C8EF4C */ ~J3DFrameCtrl();
-};
-
-struct fopAc_ac_c {
+struct request_of_phase_process_class {
 };
 
 struct mDoMtx_stack_c {
@@ -49,8 +19,8 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
+struct mDoHIO_entry_c {
+	/* 80C8E9E0 */ ~mDoHIO_entry_c();
 };
 
 struct J3DMaterialTable {
@@ -72,17 +42,50 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModel {
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+struct fopAc_ac_c {
+};
+
+struct daMagLiftRot_c {
+	/* 80C8EA28 */ void setBaseMtx();
+	/* 80C8EB1C */ void CreateHeap();
+	/* 80C8EC64 */ void create();
+	/* 80C8EF94 */ void Execute(f32 (** )[3][4]);
+	/* 80C8F02C */ void moveLift();
+	/* 80C8F264 */ void init_modeMove();
+	/* 80C8F4A0 */ void modeMove();
+	/* 80C8F538 */ void init_modeWait();
+	/* 80C8F7CC */ void modeWait();
+	/* 80C8F804 */ void init_modeMoveWait();
+	/* 80C8F810 */ void modeMoveWait();
+	/* 80C8F86C */ void Draw();
+	/* 80C8F970 */ void Delete();
+};
+
+struct daMagLiftRot_HIO_c {
+	/* 80C8E94C */ daMagLiftRot_HIO_c();
+	/* 80C8FA3C */ ~daMagLiftRot_HIO_c();
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct request_of_phase_process_class {
+struct cXyz {
 };
 
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -96,9 +99,6 @@ struct dBgW {
 };
 
 struct cBgS_PolyInfo {
-};
-
-struct cXyz {
 };
 
 struct csXyz {
@@ -115,14 +115,6 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
 struct JAISoundID {
 };
 
@@ -131,6 +123,14 @@ struct Vec {
 
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80C8EF4C */ ~J3DFrameCtrl();
 };
 
 // 

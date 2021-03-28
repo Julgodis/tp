@@ -11,39 +11,7 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct J3DJoint {
-};
-
-struct daNpcT_motionAnmData_c {
-};
-
-struct daNpcT_evtData_c {
-};
-
-struct _GXColorS10 {
-};
-
-struct J3DAnmTexPattern {
-};
-
-struct J3DModelData {
-};
-
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct J3DAnmTextureSRTKey {
-};
-
-struct J3DAnmTransformKey {
-};
-
-struct J3DModel {
+struct request_of_phase_process_class {
 };
 
 struct Vec {
@@ -58,12 +26,122 @@ struct cXyz {
 	/* 80A3C45C */ cXyz();
 };
 
+struct csXyz {
+	/* 80A3B724 */ ~csXyz();
+	/* 80A3C35C */ csXyz();
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CE70 */ void scaleM(cXyz const&);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+};
+
+struct mDoExt_morf_c {
+	/* 8000FB7C */ void setMorf(f32);
+};
+
+struct J3DModel {
+};
+
+struct mDoExt_invisibleModel {
+	/* 8000E53C */ void create(J3DModel*, u8);
+	/* 8000E7C0 */ void entryDL(cXyz*);
+};
+
+struct J3DAnmColor {
+};
+
+struct J3DAnmTexPattern {
+};
+
+struct J3DAnmTevRegKey {
+};
+
+struct J3DAnmTextureSRTKey {
+};
+
+struct J3DMaterialTable {
+	/* 8032F64C */ void removeMatColorAnimator(J3DAnmColor*);
+	/* 8032F6F8 */ void removeTexNoAnimator(J3DAnmTexPattern*);
+	/* 8032F7B4 */ void removeTexMtxAnimator(J3DAnmTextureSRTKey*);
+	/* 8032F880 */ void removeTevRegAnimator(J3DAnmTevRegKey*);
+};
+
+struct mDoExt_btpAnm {
+	/* 8000D54C */ void init(J3DMaterialTable*, J3DAnmTexPattern*, int, int, f32, s16, s16);
+	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
+};
+
+struct mDoExt_btkAnm {
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
+	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct mDoExt_brkAnm {
+	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct mDoExt_bpkAnm {
+	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct J3DModelData {
+};
+
 struct J3DAnmTransform {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfSO {
+	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
+	/* 80010E70 */ void setAnm(J3DAnmTransform*, int, f32, f32, f32, f32);
+	/* 800110B0 */ void play(u32, s8);
+	/* 800111C0 */ void entryDL();
+	/* 800111EC */ void modelCalc();
+	/* 80011310 */ void stopZelAnime();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct fopAcM_gc_c {
+	/* 8001DCBC */ void gndCheck(cXyz const*);
+};
+
+struct daPy_py_c {
+	/* 8015F3FC */ void getAttentionOffsetY();
 };
 
 struct J3DFrameCtrl {
 	/* 803283FC */ void init(s16);
 	/* 80A3C62C */ ~J3DFrameCtrl();
+};
+
+struct daNpcT_motionAnmData_c {
 };
 
 struct dCcD_GObjInf {
@@ -81,6 +159,21 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80145898 */ void initialize();
 	/* 801458C0 */ void play(u16, int*, f32*);
 	/* 80A3C4A8 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DAnmTransformKey {
+};
+
+struct _GXColorS10 {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct daNpcT_evtData_c {
+};
+
+struct J3DJoint {
 };
 
 struct daNpc_Kn_c {
@@ -266,29 +359,6 @@ struct daNpc_Kn_c {
 	/* 80A403B8 */ void ECut_secondSkillGet(int);
 };
 
-struct dCcD_SrcSph {
-};
-
-struct dCcD_Sph {
-	/* 80084A34 */ void Set(dCcD_SrcSph const&);
-	/* 80A2AECC */ ~dCcD_Sph();
-	/* 80A3C1C8 */ dCcD_Sph();
-};
-
-struct cCcD_GStts {
-	/* 80A384D8 */ ~cCcD_GStts();
-};
-
-struct dAttention_c {
-	/* 800737E4 */ void LockonTruth();
-	/* 80A3AF50 */ void getDistTable(int);
-};
-
-struct csXyz {
-	/* 80A3B724 */ ~csXyz();
-	/* 80A3C35C */ csXyz();
-};
-
 struct daNpc_Kn_Param_c {
 	/* 80A3C124 */ ~daNpc_Kn_Param_c();
 };
@@ -299,25 +369,8 @@ struct daNpcT_Path_c {
 	/* 80A3C17C */ ~daNpcT_Path_c();
 };
 
-struct cM3dGSph {
-	/* 8026F648 */ void SetC(cXyz const&);
-	/* 8026F708 */ void SetR(f32);
-	/* 80A3C24C */ ~cM3dGSph();
-};
-
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 80A3C294 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80A3C2DC */ ~cM3dGAab();
-};
-
-struct J3DLightObj {
-	/* 80A3C324 */ J3DLightObj();
+struct daNpcT_MatAnm_c {
+	/* 80145764 */ void initialize();
 };
 
 struct daNpcT_JntAnm_c {
@@ -337,114 +390,12 @@ struct daNpcT_ActorMngr_c {
 	/* 80A3C460 */ ~daNpcT_ActorMngr_c();
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 80A3C4F0 */ ~dBgS_AcchCir();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80083830 */ void Move();
-	/* 80A3C560 */ ~dCcD_GStts();
-};
-
-struct dBgS_ObjAcch {
-	/* 80A3C5BC */ ~dBgS_ObjAcch();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CE70 */ void scaleM(cXyz const&);
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
-};
-
-struct J3DAnmTevRegKey {
-};
-
-struct J3DAnmColor {
-};
-
-struct J3DMaterialTable {
-	/* 8032F64C */ void removeMatColorAnimator(J3DAnmColor*);
-	/* 8032F6F8 */ void removeTexNoAnimator(J3DAnmTexPattern*);
-	/* 8032F7B4 */ void removeTexMtxAnimator(J3DAnmTextureSRTKey*);
-	/* 8032F880 */ void removeTevRegAnimator(J3DAnmTevRegKey*);
-};
-
-struct mDoExt_bpkAnm {
-	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct mDoExt_btpAnm {
-	/* 8000D54C */ void init(J3DMaterialTable*, J3DAnmTexPattern*, int, int, f32, s16, s16);
-	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
-};
-
-struct mDoExt_btkAnm {
-	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
-	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct mDoExt_brkAnm {
-	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
-};
-
-struct mDoExt_invisibleModel {
-	/* 8000E53C */ void create(J3DModel*, u8);
-	/* 8000E7C0 */ void entryDL(cXyz*);
-};
-
-struct mDoExt_morf_c {
-	/* 8000FB7C */ void setMorf(f32);
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
-
-struct mDoExt_McaMorfSO {
-	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
-	/* 80010E70 */ void setAnm(J3DAnmTransform*, int, f32, f32, f32, f32);
-	/* 800110B0 */ void play(u32, s8);
-	/* 800111C0 */ void entryDL();
-	/* 800111EC */ void modelCalc();
-	/* 80011310 */ void stopZelAnime();
-};
-
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
-};
-
-struct fopAcM_gc_c {
-	/* 8001DCBC */ void gndCheck(cXyz const*);
-};
-
-struct request_of_phase_process_class {
-};
-
-struct _GXTexObj {
-};
-
 struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -452,6 +403,70 @@ struct dRes_info_c {
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dPa_levelEcallBack {
+};
+
+struct _GXColor {
+};
+
+struct dPa_control_c {
+	struct level_c {
+		/* 8004B918 */ void getEmitter(u32);
+	};
+
+	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+};
+
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
+};
+
+struct dBgS {
+	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
+	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
+	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 80A3C4F0 */ ~dBgS_AcchCir();
+};
+
+struct dBgS_Acch {
+	/* 80075F94 */ ~dBgS_Acch();
+	/* 800760A0 */ dBgS_Acch();
+	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
+	/* 80076AAC */ void CrrPos(dBgS&);
+};
+
+struct dPaPo_c {
+	/* 80050C9C */ void init(dBgS_Acch*, f32, f32);
+	/* 80051008 */ void setEffectCenter(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
+};
+
+struct dPaPoT_c {
+	/* 8005115C */ void setEffectTwo(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
+};
+
+struct dMsgObject_c {
+	/* 8023819C */ void getActor();
+	/* 802382C8 */ void offMsgSendControl();
+	/* 802382F4 */ void isMsgSendControl();
+	/* 802383A4 */ void isMouthCheck();
+};
+
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F48 */ ~dMsgFlow_c();
+	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+	/* 8024A424 */ void checkEventRender(int*, int*, int*, int*);
+	/* 8024A528 */ void getEventId(int*);
+	/* 8024A538 */ void getMsgNo();
+	/* 8024A548 */ void getMsg();
 };
 
 struct dEvt_control_c {
@@ -475,44 +490,105 @@ struct dEvent_manager_c {
 	/* 800487F0 */ void ChkPresentEnd();
 };
 
-struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
-};
-
-struct dPa_control_c {
-	struct level_c {
-		/* 8004B918 */ void getEmitter(u32);
-	};
-
-	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
-struct dBgS {
-	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
-	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
-	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
-};
-
-struct dBgS_Acch {
-	/* 80075F94 */ ~dBgS_Acch();
-	/* 800760A0 */ dBgS_Acch();
-	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
-	/* 80076AAC */ void CrrPos(dBgS&);
-};
-
-struct dPaPo_c {
-	/* 80050C9C */ void init(dBgS_Acch*, f32, f32);
-	/* 80051008 */ void setEffectCenter(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
-};
-
-struct dPaPoT_c {
-	/* 8005115C */ void setEffectTwo(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
-};
-
 struct dDlst_shadowControl_c {
 	/* 80055F1C */ void addReal(u32, J3DModel*);
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcSph {
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_Sph {
+	/* 80084A34 */ void Set(dCcD_SrcSph const&);
+	/* 80A2AECC */ ~dCcD_Sph();
+	/* 80A3C1C8 */ dCcD_Sph();
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80083830 */ void Move();
+	/* 80A3C560 */ ~dCcD_GStts();
+};
+
+struct dCcD_GAtTgCoCommonBase {
+	/* 80083688 */ void GetAc();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80A3C5BC */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+	/* 80077CDC */ ~dBgS_LinChk();
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
+};
+
+struct dAttention_c {
+	/* 800737E4 */ void LockonTruth();
+	/* 80A3AF50 */ void getDistTable(int);
+};
+
+struct cSGlobe {
+	/* 80271880 */ cSGlobe(cXyz const&);
+};
+
+struct cSAngle {
+	/* 80270F68 */ cSAngle(cSAngle const&);
+	/* 80270F98 */ cSAngle(s16);
+	/* 802710E8 */ void Inv() const;
+	/* 80271228 */ void operator-(s16) const;
+};
+
+struct cM3dGSph {
+	/* 8026F648 */ void SetC(cXyz const&);
+	/* 8026F708 */ void SetR(f32);
+	/* 80A3C24C */ ~cM3dGSph();
+};
+
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 80A3C294 */ ~cM3dGCyl();
+};
+
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
+};
+
+struct cM3dGAab {
+	/* 80A3C2DC */ ~cM3dGAab();
+};
+
+struct cCcD_Obj {
+};
+
+struct cCcS {
+	/* 80264BA8 */ void Set(cCcD_Obj*);
+};
+
+struct cCcD_GStts {
+	/* 80A384D8 */ ~cCcD_GStts();
 };
 
 struct cBgS_LinChk {
@@ -529,87 +605,14 @@ struct cBgS {
 	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
 };
 
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
+struct _GXTexObj {
 };
 
-struct dBgS_LinChk {
-	/* 80077C68 */ dBgS_LinChk();
-	/* 80077CDC */ ~dBgS_LinChk();
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_GAtTgCoCommonBase {
-	/* 80083688 */ void GetAc();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct daNpcT_MatAnm_c {
-	/* 80145764 */ void initialize();
-};
-
-struct daPy_py_c {
-	/* 8015F3FC */ void getAttentionOffsetY();
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct dMsgObject_c {
-	/* 8023819C */ void getActor();
-	/* 802382C8 */ void offMsgSendControl();
-	/* 802382F4 */ void isMsgSendControl();
-	/* 802383A4 */ void isMouthCheck();
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F48 */ ~dMsgFlow_c();
-	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
-	/* 8024A424 */ void checkEventRender(int*, int*, int*, int*);
-	/* 8024A528 */ void getEventId(int*);
-	/* 8024A538 */ void getMsgNo();
-	/* 8024A548 */ void getMsg();
-};
-
-struct cCcD_Obj {
-};
-
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
-};
-
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
-};
-
-struct cSAngle {
-	/* 80270F68 */ cSAngle(cSAngle const&);
-	/* 80270F98 */ cSAngle(s16);
-	/* 802710E8 */ void Inv() const;
-	/* 80271228 */ void operator-(s16) const;
-};
-
-struct cSGlobe {
-	/* 80271880 */ cSGlobe(cXyz const&);
+struct Z2SeqMgr {
+	/* 802AF010 */ void bgmStart(u32, u32, s32);
+	/* 802AF408 */ void bgmStop(u32, s32);
+	/* 802AFB94 */ void bgmStreamPrepare(u32);
+	/* 802AFE18 */ void bgmStreamPlay();
 };
 
 struct JGeometry {
@@ -621,11 +624,8 @@ struct JGeometry {
 
 };
 
-struct Z2SeqMgr {
-	/* 802AF010 */ void bgmStart(u32, u32, s32);
-	/* 802AF408 */ void bgmStop(u32, s32);
-	/* 802AFB94 */ void bgmStreamPrepare(u32);
-	/* 802AFE18 */ void bgmStreamPlay();
+struct J3DLightObj {
+	/* 80A3C324 */ J3DLightObj();
 };
 
 struct J3DLightInfo {

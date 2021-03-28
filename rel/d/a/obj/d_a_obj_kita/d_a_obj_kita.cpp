@@ -11,26 +11,10 @@
 // Types:
 // 
 
-struct daObj_Kita_HIO_c {
-	/* 80C4534C */ daObj_Kita_HIO_c();
-	/* 80C45E84 */ ~daObj_Kita_HIO_c();
+struct request_of_phase_process_class {
 };
 
 struct obj_kita_class {
-};
-
-struct dBgW {
-	/* 8007B970 */ dBgW();
-	/* 8007B9C0 */ void Move();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct kita_s {
-	/* 80C45E44 */ ~kita_s();
-	/* 80C45E80 */ kita_s();
 };
 
 struct mDoMtx_stack_c {
@@ -38,13 +22,36 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModel {
+struct kita_s {
+	/* 80C45E44 */ ~kita_s();
+	/* 80C45E80 */ kita_s();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct daObj_Kita_HIO_c {
+	/* 80C4534C */ daObj_Kita_HIO_c();
+	/* 80C45E84 */ ~daObj_Kita_HIO_c();
+};
+
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct request_of_phase_process_class {
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266AE4 */ void operator+(Vec const&) const;
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -57,22 +64,13 @@ struct dRes_control_c {
 struct dBgW_Base {
 };
 
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
+struct dBgW {
+	/* 8007B970 */ dBgW();
+	/* 8007B9C0 */ void Move();
 };
 
 struct dBgS {
 	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
-};
-
-struct cBgS_PolyInfo {
-};
-
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266AE4 */ void operator+(Vec const&) const;
 };
 
 struct csXyz {
@@ -85,12 +83,11 @@ struct cBgW {
 	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
 };
 
-struct dKy_tevstr_c {
+struct cBgS_PolyInfo {
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
 };
 
 struct JAISoundID {
@@ -98,6 +95,9 @@ struct JAISoundID {
 
 struct Z2SeMgr {
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DModel {
 };
 
 // 

@@ -30,7 +30,7 @@ extern "C" void acosf(); // 1
 // Declarations:
 // 
 
-/* 80347418-80347474 005C+00 s=0 e=0 z=0  None .text      PSQUATMultiply                                               */
+/* 80347418-80347474 005C+00 s=0 e=0 z=2  None .text      PSQUATMultiply                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -68,7 +68,7 @@ extern "C" asm void C_QUATRotAxisRad() {
 /* 8045655C-80456560 0004+00 s=1 e=0 z=0  None .sdata2    @261                                                         */
 SECTION_SDATA2 static u32 lit_261 = 0x3F7FFF58;
 
-/* 80347500-80347674 0174+00 s=0 e=0 z=0  None .text      C_QUATSlerp                                                  */
+/* 80347500-80347674 0174+00 s=0 e=0 z=2  None .text      C_QUATSlerp                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

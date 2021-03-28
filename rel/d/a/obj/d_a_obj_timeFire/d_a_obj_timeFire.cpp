@@ -11,13 +11,12 @@
 // Types:
 // 
 
-struct daTimeFire_HIO_c {
-	/* 80D0E8EC */ daTimeFire_HIO_c();
-	/* 80D0F038 */ ~daTimeFire_HIO_c();
-};
-
 struct mDoHIO_entry_c {
 	/* 80D0E910 */ ~mDoHIO_entry_c();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct daTimeFire_c {
@@ -32,21 +31,13 @@ struct daTimeFire_c {
 	/* 80D0EF90 */ void Delete();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct daTimeFire_HIO_c {
+	/* 80D0E8EC */ daTimeFire_HIO_c();
+	/* 80D0F038 */ ~daTimeFire_HIO_c();
 };
 
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct cXyz {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
@@ -55,11 +46,17 @@ struct dPa_levelEcallBack {
 struct csXyz {
 };
 
-struct dPa_control_c {
-	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+struct dKy_tevstr_c {
 };
 
-struct LIGHT_INFLUENCE {
+struct _GXColor {
+};
+
+struct cXyz {
+};
+
+struct dPa_control_c {
+	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 struct JAISoundID {
@@ -71,6 +68,9 @@ struct Vec {
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct LIGHT_INFLUENCE {
 };
 
 // 

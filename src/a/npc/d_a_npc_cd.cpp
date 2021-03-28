@@ -23,19 +23,19 @@ struct mDoHIO_entry_c {
 	/* 8015791C */ ~mDoHIO_entry_c();
 };
 
-struct Z2Creature {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DModelData {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct J3DAnmTransform {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {
@@ -54,13 +54,13 @@ struct daPy_py_c {
 	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
-struct J3DModel {
-};
-
 struct J3DAnmTransformKey {
 };
 
 struct J3DJoint {
+};
+
+struct J3DModel {
 };
 
 struct daNpcCd_c {
@@ -98,11 +98,11 @@ struct daNpcCd_HIO_Child_c {
 	/* 80157858 */ daNpcCd_HIO_Child_c();
 };
 
-struct cXyz {
-	/* 80009184 */ ~cXyz();
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
+	/* 80009184 */ ~cXyz();
 };
 
 struct dScnKy_env_light_c {
@@ -120,10 +120,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -187,6 +187,7 @@ extern "C" extern u8 const m_cylDat__9daNpcCd_c[68];
 extern "C" extern char const* const a_npc_d_a_npc_cd__stringBase0;
 extern "C" extern void* __vt__18fOpAcm_HIO_entry_c[3];
 extern "C" extern void* __vt__14mDoHIO_entry_c[3];
+extern "C" extern u8 l_Cd_HIO[10684];
 
 // 
 // External References:
@@ -657,7 +658,7 @@ SECTION_RODATA static void* const l_bckTbl_W[20] = {
 	(void*)0x00000005,
 };
 
-/* 80392E18-80392E5C 0044+00 s=0 e=0 z=0  None .rodata    m_cylDat__9daNpcCd_c                                         */
+/* 80392E18-80392E5C 0044+00 s=0 e=0 z=1  None .rodata    m_cylDat__9daNpcCd_c                                         */
 SECTION_RODATA u8 const m_cylDat__9daNpcCd_c[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x00,
@@ -777,7 +778,7 @@ SECTION_DEAD static char const* const pad_8039324E = "\0";
 /* 804534B8-804534BC 0004+00 s=2 e=0 z=0  None .sdata2    @4021                                                        */
 SECTION_SDATA2 static u32 lit_4021 = 0x3F800000;
 
-/* 8015605C-801561E8 018C+00 s=0 e=0 z=0  None .text      NpcCreate__9daNpcCd_cFi                                      */
+/* 8015605C-801561E8 018C+00 s=0 e=0 z=1  None .text      NpcCreate__9daNpcCd_cFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -788,7 +789,7 @@ asm void daNpcCd_c::NpcCreate(int param_0) {
 #pragma pop
 
 
-/* 801561E8-80156228 0040+00 s=0 e=0 z=0  None .text      ObjCreate__9daNpcCd_cFi                                      */
+/* 801561E8-80156228 0040+00 s=0 e=0 z=1  None .text      ObjCreate__9daNpcCd_cFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -810,7 +811,7 @@ asm void daNpcCd_c::isM_() {
 #pragma pop
 
 
-/* 80156248-801563C8 0180+00 s=0 e=0 z=0  None .text      getAnmP__9daNpcCd_cFii                                       */
+/* 80156248-801563C8 0180+00 s=0 e=0 z=1  None .text      getAnmP__9daNpcCd_cFii                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -825,8 +826,8 @@ asm void daNpcCd_c::getAnmP(int param_0, int param_1) {
 /* 80425978-80425984 000C+00 s=2 e=0 z=0  None .bss       @3974                                                        */
 static u8 lit_3974[12];
 
-/* 80425984-80428340 29BC+00 s=3 e=0 z=0  None .bss       l_Cd_HIO                                                     */
-static u8 l_Cd_HIO[10684];
+/* 80425984-80428340 29BC+00 s=3 e=0 z=4  None .bss       l_Cd_HIO                                                     */
+u8 l_Cd_HIO[10684];
 
 /* 80428340-8042834C 000C+00 s=1 e=0 z=0  None .bss       @4080                                                        */
 static u8 lit_4080[12];
@@ -938,7 +939,7 @@ SECTION_SDATA2 static u8 lit_4375[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 801563C8-80156B4C 0784+00 s=0 e=0 z=0  None .text      setAttention__9daNpcCd_cFi                                   */
+/* 801563C8-80156B4C 0784+00 s=0 e=0 z=2  None .text      setAttention__9daNpcCd_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -989,7 +990,7 @@ SECTION_DATA static void* l_resNameTbl[30] = {
 	(void*)&l_resWANb2,
 };
 
-/* 80156B4C-80156C50 0104+00 s=0 e=0 z=0  None .text      loadResrc__9daNpcCd_cFii                                     */
+/* 80156B4C-80156C50 0104+00 s=0 e=0 z=1  None .text      loadResrc__9daNpcCd_cFii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1000,7 +1001,7 @@ asm void daNpcCd_c::loadResrc(int param_0, int param_1) {
 #pragma pop
 
 
-/* 80156C50-80156D1C 00CC+00 s=0 e=0 z=0  None .text      removeResrc__9daNpcCd_cFii                                   */
+/* 80156C50-80156D1C 00CC+00 s=0 e=0 z=1  None .text      removeResrc__9daNpcCd_cFii                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1011,7 +1012,7 @@ asm void daNpcCd_c::removeResrc(int param_0, int param_1) {
 #pragma pop
 
 
-/* 80156D1C-80156D78 005C+00 s=0 e=0 z=0  None .text      setEnvTevCol__9daNpcCd_cFv                                   */
+/* 80156D1C-80156D78 005C+00 s=0 e=0 z=1  None .text      setEnvTevCol__9daNpcCd_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1022,7 +1023,7 @@ asm void daNpcCd_c::setEnvTevCol() {
 #pragma pop
 
 
-/* 80156D78-80156DBC 0044+00 s=0 e=0 z=0  None .text      setRoomNo__9daNpcCd_cFv                                      */
+/* 80156D78-80156DBC 0044+00 s=0 e=0 z=1  None .text      setRoomNo__9daNpcCd_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1033,7 +1034,7 @@ asm void daNpcCd_c::setRoomNo() {
 #pragma pop
 
 
-/* 80156DBC-80156E20 0064+00 s=0 e=0 z=0  None .text      animation__9daNpcCd_cFv                                      */
+/* 80156DBC-80156E20 0064+00 s=0 e=0 z=1  None .text      animation__9daNpcCd_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1044,7 +1045,7 @@ asm void daNpcCd_c::animation() {
 #pragma pop
 
 
-/* 80156E20-80156E8C 006C+00 s=0 e=0 z=0  None .text      setAnm__9daNpcCd_cFP18J3DAnmTransformKeyffiii                */
+/* 80156E20-80156E8C 006C+00 s=0 e=0 z=1  None .text      setAnm__9daNpcCd_cFP18J3DAnmTransformKeyffiii                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1055,7 +1056,7 @@ asm void daNpcCd_c::setAnm(J3DAnmTransformKey* param_0, f32 param_1, f32 param_2
 #pragma pop
 
 
-/* 80156E8C-80156F74 00E8+00 s=0 e=0 z=0  None .text      drawObj__9daNpcCd_cFiP8J3DModelf                             */
+/* 80156E8C-80156F74 00E8+00 s=0 e=0 z=1  None .text      drawObj__9daNpcCd_cFiP8J3DModelf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1066,7 +1067,7 @@ asm void daNpcCd_c::drawObj(int param_0, J3DModel* param_1, f32 param_2) {
 #pragma pop
 
 
-/* 80156F74-80157084 0110+00 s=0 e=0 z=0  None .text      drawNpc__9daNpcCd_cFv                                        */
+/* 80156F74-80157084 0110+00 s=0 e=0 z=1  None .text      drawNpc__9daNpcCd_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

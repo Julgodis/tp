@@ -11,6 +11,14 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daObjBombf_c {
 	/* 80BBA9F8 */ void createHeap();
 	/* 80BBAA84 */ void create();
@@ -20,12 +28,7 @@ struct daObjBombf_c {
 	/* 80BBADF8 */ void draw();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
@@ -34,14 +37,9 @@ struct J3DModelData {
 struct cXyz {
 };
 
-struct csXyz {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dBomb_c {
-	/* 80031FCC */ void checkFlowerBombWait(fopAc_ac_c*);
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -51,12 +49,14 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct dBomb_c {
+	/* 80031FCC */ void checkFlowerBombWait(fopAc_ac_c*);
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct csXyz {
+};
+
+struct J3DModel {
 };
 
 // 

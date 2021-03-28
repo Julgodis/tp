@@ -1167,7 +1167,7 @@ SECTION_DATA static void* item_func_ptr[256] = {
 	(void*)item_func_noentry__Fv,
 };
 
-/* 80097E8C-80097EE0 0054+00 s=0 e=4 z=0  None .text      execItemGet__FUc                                             */
+/* 80097E8C-80097EE0 0054+00 s=0 e=4 z=7  None .text      execItemGet__FUc                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1439,7 +1439,7 @@ SECTION_DATA static void* item_getcheck_func_ptr[256] = {
 	(void*)item_getcheck_func_noentry__Fv,
 };
 
-/* 80097EE0-80097F2C 004C+00 s=1 e=14 z=0  None .text      checkItemGet__FUci                                           */
+/* 80097EE0-80097F2C 004C+00 s=1 e=14 z=16  None .text      checkItemGet__FUci                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5082,7 +5082,7 @@ asm static void isArrow(u8 param_0) {
 #pragma pop
 
 
-/* 8009B708-8009B77C 0074+00 s=0 e=4 z=0  None .text      isBottleItem__FUc                                            */
+/* 8009B708-8009B77C 0074+00 s=0 e=4 z=1  None .text      isBottleItem__FUc                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5104,7 +5104,7 @@ asm void isHeart(u8 param_0) {
 #pragma pop
 
 
-/* 8009B79C-8009B7C4 0028+00 s=0 e=0 z=0  None .text      isInsect__FUc                                                */
+/* 8009B79C-8009B7C4 0028+00 s=0 e=0 z=1  None .text      isInsect__FUc                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

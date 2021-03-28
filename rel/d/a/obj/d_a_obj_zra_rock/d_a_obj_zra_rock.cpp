@@ -11,33 +11,7 @@
 // Types:
 // 
 
-struct daObjZraRock_c {
-	/* 80D44CB8 */ void setAttnPos();
-	/* 80D44D3C */ void setBaseMtx();
-	/* 80D44DCC */ void setEnvTevColor();
-	/* 80D44E28 */ void setRoomNo();
-	/* 80D44E68 */ void Create();
-	/* 80D44FB0 */ void CreateHeap();
-	/* 80D450E0 */ void create();
-	/* 80D4531C */ void Execute(f32 (** )[3][4]);
-	/* 80D45374 */ void Draw();
-	/* 80D454AC */ void Delete();
-};
-
-struct dBgS_ObjAcch {
-	/* 80D45264 */ ~dBgS_ObjAcch();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80D452D4 */ ~J3DFrameCtrl();
-};
-
-struct fopAc_ac_c {
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
+struct request_of_phase_process_class {
 };
 
 struct J3DAnmTevRegKey {
@@ -52,17 +26,42 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModel {
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+struct fopAc_ac_c {
+};
+
+struct daObjZraRock_c {
+	/* 80D44CB8 */ void setAttnPos();
+	/* 80D44D3C */ void setBaseMtx();
+	/* 80D44DCC */ void setEnvTevColor();
+	/* 80D44E28 */ void setRoomNo();
+	/* 80D44E68 */ void Create();
+	/* 80D44FB0 */ void CreateHeap();
+	/* 80D450E0 */ void create();
+	/* 80D4531C */ void Execute(f32 (** )[3][4]);
+	/* 80D45374 */ void Draw();
+	/* 80D454AC */ void Delete();
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct request_of_phase_process_class {
+struct cXyz {
 };
 
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -76,37 +75,21 @@ struct dRes_control_c {
 struct dBgW_Base {
 };
 
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
+struct dBgW {
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80D45264 */ ~dBgS_ObjAcch();
 };
 
 struct cBgS_PolyInfo {
 };
 
-struct dBgS {
-	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
-	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
-};
-
-struct dBgW {
-};
-
-struct cXyz {
-};
-
 struct csXyz {
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
-};
-
-struct dBgS_Acch {
-	/* 80075F94 */ ~dBgS_Acch();
-	/* 800760A0 */ dBgS_Acch();
-	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
-	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
 struct dBgS_MoveBgActor {
@@ -119,24 +102,41 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
 };
 
-struct dKy_tevstr_c {
+struct dBgS {
+	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
+	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct dBgS_Acch {
+	/* 80075F94 */ ~dBgS_Acch();
+	/* 800760A0 */ dBgS_Acch();
+	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
+	/* 80076AAC */ void CrrPos(dBgS&);
+};
+
+struct cBgW_BgId {
+	/* 802681D4 */ void ChkUsed() const;
 };
 
 struct cBgS_GndChk {
 	/* 80267C1C */ cBgS_GndChk();
 };
 
-struct cBgW_BgId {
-	/* 802681D4 */ void ChkUsed() const;
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
+};
+
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80D452D4 */ ~J3DFrameCtrl();
 };
 
 // 

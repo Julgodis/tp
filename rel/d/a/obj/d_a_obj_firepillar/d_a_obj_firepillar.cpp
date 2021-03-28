@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daObjFPillar_c {
 	/* 80BE9118 */ void initBaseMtx();
 	/* 80BE9138 */ void setBaseMtx();
@@ -28,8 +32,15 @@ struct daObjFPillar_c {
 	/* 80BE99B8 */ bool _delete();
 };
 
-struct cM3dGAab {
-	/* 80BE9360 */ ~cM3dGAab();
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCps {
 };
 
 struct dCcD_GStts {
@@ -37,13 +48,33 @@ struct dCcD_GStts {
 	/* 80BE93A8 */ ~dCcD_GStts();
 };
 
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+};
+
+struct dCcD_Cps {
+	/* 800847D0 */ void Set(dCcD_SrcCps const&);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80BE9474 */ ~dBgS_ObjAcch();
+};
+
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80BE9404 */ ~dBgS_AcchCir();
 };
 
-struct dBgS_ObjAcch {
-	/* 80BE9474 */ ~dBgS_ObjAcch();
+struct dBgS_Acch {
+	/* 80075F94 */ ~dBgS_Acch();
+	/* 800760A0 */ dBgS_Acch();
+};
+
+struct csXyz {
 };
 
 struct Vec {
@@ -53,43 +84,20 @@ struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
 };
 
-struct csXyz {
+struct cM3dGCpsS {
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct cM3dGCps {
+	/* 8026EF88 */ cM3dGCps();
+	/* 8026F03C */ void Set(cM3dGCpsS const&);
 };
 
-struct cCcD_GStts {
-	/* 80BE9A40 */ ~cCcD_GStts();
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dBgS_Acch {
-	/* 80075F94 */ ~dBgS_Acch();
-	/* 800760A0 */ dBgS_Acch();
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-};
-
-struct dCcD_SrcCps {
-};
-
-struct dCcD_Cps {
-	/* 800847D0 */ void Set(dCcD_SrcCps const&);
+struct cM3dGAab {
+	/* 80BE9360 */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -99,20 +107,12 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
+struct cCcD_GStts {
+	/* 80BE9A40 */ ~cCcD_GStts();
+};
+
 struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
-};
-
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
-};
-
-struct cM3dGCpsS {
-};
-
-struct cM3dGCps {
-	/* 8026EF88 */ cM3dGCps();
-	/* 8026F03C */ void Set(cM3dGCpsS const&);
 };
 
 // 

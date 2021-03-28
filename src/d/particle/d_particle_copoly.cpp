@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct csXyz {
-};
-
 struct cBgS_PolyInfo {
 };
 
@@ -21,6 +18,9 @@ struct cXyz {
 };
 
 struct dKy_tevstr_c {
+};
+
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -97,6 +97,7 @@ extern "C" void getBackLeftEffType__8dPaPoF_cCFi(); // 1
 extern "C" void getBackRightEmitter__8dPaPoF_cFii(); // 1
 extern "C" void getBackLeftEmitter__8dPaPoF_cFii(); // 1
 extern "C" void __sinit_d_particle_copoly_cpp(); // 1
+extern "C" extern u8 m_emitterTwoData__8dPaPoT_c[36];
 extern "C" extern u8 m_typeFourData__8dPaPoF_c[60];
 extern "C" extern u8 m_emitterFourData__8dPaPoF_c[60 + 28 /* padding */];
 
@@ -127,7 +128,7 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 // Declarations:
 // 
 
-/* 80050C9C-80050CC4 0028+00 s=0 e=2 z=0  None .text      init__7dPaPo_cFP9dBgS_Acchff                                 */
+/* 80050C9C-80050CC4 0028+00 s=0 e=2 z=27  None .text      init__7dPaPo_cFP9dBgS_Acchff                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,7 +169,7 @@ asm void dPaPo_c::setEffect(u32* param_0, int param_1, dKy_tevstr_c const* param
 #pragma pop
 
 
-/* 80051008-8005113C 0134+00 s=1 e=1 z=0  None .text      setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff */
+/* 80051008-8005113C 0134+00 s=1 e=1 z=12  None .text      setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -190,7 +191,7 @@ asm void dPaPo_c::clearID(u32* param_0, u8* param_1) {
 #pragma pop
 
 
-/* 8005115C-80051294 0138+00 s=1 e=1 z=0  None .text      setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff */
+/* 8005115C-80051294 0138+00 s=1 e=1 z=2  None .text      setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -212,7 +213,7 @@ asm void dPaPoT_c::clearTwoAllID() {
 #pragma pop
 
 
-/* 800512E8-80051424 013C+00 s=0 e=1 z=0  None .text      setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff */
+/* 800512E8-80051424 013C+00 s=0 e=1 z=1  None .text      setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -399,8 +400,8 @@ SECTION_DATA static void* lit_3828[3] = {
 	(void*)getRightEmitter__8dPaPoT_cFii,
 };
 
-/* 803A8670-803A8694 0024+00 s=1 e=0 z=0  None .data      m_emitterTwoData__8dPaPoT_c                                  */
-SECTION_DATA static u8 m_emitterTwoData__8dPaPoT_c[36] = {
+/* 803A8670-803A8694 0024+00 s=1 e=0 z=1  None .data      m_emitterTwoData__8dPaPoT_c                                  */
+SECTION_DATA u8 m_emitterTwoData__8dPaPoT_c[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
@@ -441,7 +442,7 @@ SECTION_DATA static void* lit_3845[3] = {
 	(void*)getBackRightEffType__8dPaPoF_cCFi,
 };
 
-/* 803A86D0-803A870C 003C+00 s=1 e=5 z=0  None .data      m_typeFourData__8dPaPoF_c                                    */
+/* 803A86D0-803A870C 003C+00 s=1 e=5 z=1  None .data      m_typeFourData__8dPaPoF_c                                    */
 SECTION_DATA u8 m_typeFourData__8dPaPoF_c[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -484,7 +485,7 @@ SECTION_DATA static void* lit_3854[3] = {
 	(void*)getBackRightEmitter__8dPaPoF_cFii,
 };
 
-/* 803A8748-803A87A0 003C+1C s=1 e=5 z=0  None .data      m_emitterFourData__8dPaPoF_c                                 */
+/* 803A8748-803A87A0 003C+1C s=1 e=5 z=1  None .data      m_emitterFourData__8dPaPoF_c                                 */
 SECTION_DATA u8 m_emitterFourData__8dPaPoF_c[60 + 28 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

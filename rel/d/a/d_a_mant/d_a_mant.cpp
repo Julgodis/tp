@@ -11,17 +11,27 @@
 // Types:
 // 
 
-struct daMant_packet_c {
-	/* 80861298 */ void draw();
-	/* 80862BA4 */ ~daMant_packet_c();
+struct mant_j_s {
+	/* 80862AC0 */ ~mant_j_s();
+	/* 80862B3C */ mant_j_s();
 };
 
 struct mant_class {
 };
 
-struct mant_j_s {
-	/* 80862AC0 */ ~mant_j_s();
-	/* 80862B3C */ mant_j_s();
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct daMant_packet_c {
+	/* 80861298 */ void draw();
+	/* 80862BA4 */ ~daMant_packet_c();
+};
+
+struct dStage_dt_c {
+};
+
+struct dKy_tevstr_c {
 };
 
 struct Vec {
@@ -35,11 +45,17 @@ struct cXyz {
 	/* 80862C40 */ cXyz();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 };
 
-struct dStage_dt_c {
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
+};
+
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct cBgS_GndChk {
@@ -48,22 +64,6 @@ struct cBgS_GndChk {
 
 struct cBgS {
 	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
-};
-
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-};
-
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct J3DSys {

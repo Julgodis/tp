@@ -26,15 +26,15 @@ struct daObjE_CREATE_c {
 	/* 80BE3770 */ void create();
 };
 
-struct cXyz {
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 struct csXyz {
 };
 
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
+struct cXyz {
 };
 
 // 

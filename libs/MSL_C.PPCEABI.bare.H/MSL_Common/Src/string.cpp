@@ -65,7 +65,7 @@ extern "C" asm void strncmp() {
 #pragma pop
 
 
-/* 80368994-80368ABC 0128+00 s=0 e=155 z=0  None .text      strcmp                                                       */
+/* 80368994-80368ABC 0128+00 s=0 e=155 z=279  None .text      strcmp                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ extern "C" asm void strcmp() {
 #pragma pop
 
 
-/* 80368ABC-80368AE8 002C+00 s=0 e=20 z=0  None .text      strcat                                                       */
+/* 80368ABC-80368AE8 002C+00 s=0 e=20 z=8  None .text      strcat                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ extern "C" asm void strcat() {
 #pragma pop
 
 
-/* 80368AE8-80368B2C 0044+00 s=0 e=9 z=0  None .text      strncpy                                                      */
+/* 80368AE8-80368B2C 0044+00 s=0 e=9 z=1  None .text      strncpy                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +98,7 @@ extern "C" asm void strncpy() {
 #pragma pop
 
 
-/* 80368B2C-80368BE4 00B8+00 s=0 e=131 z=0  None .text      strcpy                                                       */
+/* 80368B2C-80368BE4 00B8+00 s=0 e=131 z=13  None .text      strcpy                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +109,7 @@ extern "C" asm void strcpy() {
 #pragma pop
 
 
-/* 80368BE4-80368C00 001C+00 s=0 e=28 z=0  None .text      strlen                                                       */
+/* 80368BE4-80368C00 001C+00 s=0 e=28 z=8  None .text      strlen                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

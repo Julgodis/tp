@@ -11,13 +11,30 @@
 // Types:
 // 
 
-struct daLv3Water2_HIO_c {
-	/* 80C5A40C */ daLv3Water2_HIO_c();
-	/* 80C5B14C */ ~daLv3Water2_HIO_c();
+struct request_of_phase_process_class {
 };
 
 struct mDoHIO_entry_c {
 	/* 80C5A430 */ ~mDoHIO_entry_c();
+};
+
+struct J3DMaterialTable {
+};
+
+struct J3DAnmTextureSRTKey {
+};
+
+struct mDoExt_btkAnm {
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
+	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+struct fopAc_ac_c {
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daLv3Water2_c {
@@ -34,13 +51,48 @@ struct daLv3Water2_c {
 	/* 80C5B298 */ ~daLv3Water2_c();
 };
 
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80C5A7FC */ ~J3DFrameCtrl();
+struct daLv3Water2_HIO_c {
+	/* 80C5A40C */ daLv3Water2_HIO_c();
+	/* 80C5B14C */ ~daLv3Water2_HIO_c();
 };
 
-struct fopAc_ac_c {
-	/* 80018C8C */ ~fopAc_ac_c();
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+};
+
+struct cXyz {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dPa_levelEcallBack {
+};
+
+struct csXyz {
+};
+
+struct _GXColor {
+};
+
+struct dPa_control_c {
+	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 struct dEvLib_callback_c {
@@ -52,65 +104,10 @@ struct dEvLib_callback_c {
 	/* 80C5B290 */ bool eventEnd();
 };
 
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
-};
-
-struct J3DMaterialTable {
-};
-
-struct J3DAnmTextureSRTKey {
-};
-
-struct mDoExt_btkAnm {
-	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
-	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct J3DModel {
-};
-
-struct J3DModelData {
-	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-};
-
-struct cXyz {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
-};
-
-struct csXyz {
-};
-
-struct dPa_control_c {
-	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+struct dBgW {
 };
 
 struct cBgS_PolyInfo {
-};
-
-struct dBgW {
 };
 
 struct dBgS_MoveBgActor {
@@ -122,11 +119,6 @@ struct dBgS_MoveBgActor {
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct JAISoundID {
@@ -141,6 +133,14 @@ struct Z2SeMgr {
 
 struct J3DTexMtxInfo {
 	/* 80325794 */ void setEffectMtx(f32 (* )[4]);
+};
+
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80C5A7FC */ ~J3DFrameCtrl();
 };
 
 // 

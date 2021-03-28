@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct Vec {
 };
 
@@ -30,9 +35,34 @@ struct daTagSppath_c {
 	/* 80D629C0 */ void execute();
 };
 
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCyl {
+};
+
 struct dCcD_GStts {
 	/* 80083760 */ dCcD_GStts();
 	/* 80D61DB8 */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct cM3dGLin {
+	/* 8026F31C */ void SetStartEnd(Vec const&, Vec const&);
+	/* 80D62978 */ ~cM3dGLin();
 };
 
 struct cM3dGCyl {
@@ -45,45 +75,15 @@ struct cM3dGAab {
 	/* 80D61E5C */ ~cM3dGAab();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct cM3dGLin {
-	/* 8026F31C */ void SetStartEnd(Vec const&, Vec const&);
-	/* 80D62978 */ ~cM3dGLin();
-};
-
-struct cCcD_GStts {
-	/* 80D62BC8 */ ~cCcD_GStts();
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
 struct cCcD_Obj {
 };
 
 struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
+};
+
+struct cCcD_GStts {
+	/* 80D62BC8 */ ~cCcD_GStts();
 };
 
 // 

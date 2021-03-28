@@ -45,9 +45,6 @@ struct JSUList__template4 {
 	/* 802D1F50 */ ~JSUList__template4();
 };
 
-struct JKRThreadName_ {
-};
-
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
@@ -66,6 +63,9 @@ struct JKRThread {
 	/* 802D1934 */ void start(void*);
 	/* 802D1960 */ void searchThread(OSThread*);
 	/* 802D1E14 */ bool run();
+};
+
+struct JKRThreadName_ {
 };
 
 struct JKRThreadSwitch {

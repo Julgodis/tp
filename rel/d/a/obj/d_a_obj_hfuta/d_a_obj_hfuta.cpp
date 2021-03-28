@@ -11,6 +11,16 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD9C */ void transM(f32, f32, f32);
+};
+
+struct fopAc_ac_c {
+};
+
 struct daObjFuta_c {
 	/* 80C1DD8C */ void initBaseMtx();
 	/* 80C1DDC8 */ void setBaseMtx();
@@ -26,29 +36,22 @@ struct daObjFuta_c {
 	/* 80C1ED68 */ void Delete();
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
-	/* 80C1EAFC */ ~csXyz();
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct mDoMtx_stack_c {
-	/* 8000CD9C */ void transM(f32, f32, f32);
-};
-
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct fopAc_ac_c {
+struct cXyz {
 };
 
-struct request_of_phase_process_class {
-};
-
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -64,7 +67,9 @@ struct dBgW {
 struct cBgS_PolyInfo {
 };
 
-struct cXyz {
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+	/* 80C1EAFC */ ~csXyz();
 };
 
 struct dBgS_MoveBgActor {
@@ -77,12 +82,7 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct J3DModel {
 };
 
 // 

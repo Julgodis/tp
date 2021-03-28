@@ -11,6 +11,13 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daObjSword_c {
 	/* 80CFD558 */ void initBaseMtx();
 	/* 80CFD594 */ void setBaseMtx();
@@ -23,51 +30,6 @@ struct daObjSword_c {
 	/* 80CFDC1C */ void execute();
 	/* 80CFDD18 */ void draw();
 	/* 80CFDD6C */ void _delete();
-};
-
-struct cM3dGCyl {
-	/* 80CFD848 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80CFD890 */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80CFD8D8 */ ~dCcD_GStts();
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80CFD934 */ ~dBgS_AcchCir();
-};
-
-struct dBgS_ObjAcch {
-	/* 80CFD9A4 */ ~dBgS_ObjAcch();
-};
-
-struct cCcD_GStts {
-	/* 80CFDE24 */ ~cCcD_GStts();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct cXyz {
-};
-
-struct csXyz {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 800354E0 */ void onItem(int, int);
-	/* 80035590 */ void isItem(int, int) const;
 };
 
 struct daItemBase_c {
@@ -92,6 +54,12 @@ struct daItemBase_c {
 	/* 801451D0 */ void getCollisionR();
 };
 
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 800354E0 */ void onItem(int, int);
+	/* 80035590 */ void isItem(int, int) const;
+};
+
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
 	/* 800436EC */ void setPtI_Id(unsigned int);
@@ -101,25 +69,57 @@ struct dEvent_manager_c {
 	/* 80047ADC */ void endCheckOld(char const*);
 };
 
-struct dBgS_Acch {
-	/* 80075F94 */ ~dBgS_Acch();
-	/* 800760A0 */ dBgS_Acch();
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80CFD8D8 */ ~dCcD_GStts();
 };
 
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80CFD9A4 */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80CFD934 */ ~dBgS_AcchCir();
+};
+
+struct dBgS_Acch {
+	/* 80075F94 */ ~dBgS_Acch();
+	/* 800760A0 */ dBgS_Acch();
+};
+
+struct csXyz {
+};
+
+struct cXyz {
+};
+
+struct cM3dGCyl {
+	/* 80CFD848 */ ~cM3dGCyl();
 };
 
 struct cM3dGCir {
 	/* 8026EF18 */ ~cM3dGCir();
+};
+
+struct cM3dGAab {
+	/* 80CFD890 */ ~cM3dGAab();
+};
+
+struct cCcD_GStts {
+	/* 80CFDE24 */ ~cCcD_GStts();
+};
+
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 // 

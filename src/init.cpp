@@ -32,7 +32,7 @@ SECTION_INIT static void __set_debug_bba(); // 1
 SECTION_INIT static void __get_debug_bba(); // 1
 SECTION_INIT void __start(); // 1
 SECTION_INIT static void __init_registers(); // 1
-SECTION_INIT static void __init_data(); // 1
+SECTION_INIT void __init_data(); // 1
 SECTION_INIT static void __init_hardware(); // 1
 SECTION_INIT static void __flush_cache(); // 1
 SECTION_INIT void memset(); // 1
@@ -127,11 +127,11 @@ SECTION_INIT asm static void __init_registers() {
 #pragma pop
 
 
-/* 80003340-80003400 00C0+00 s=1 e=0 z=0  None .init      __init_data                                                  */
+/* 80003340-80003400 00C0+00 s=1 e=0 z=1  None .init      __init_data                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-SECTION_INIT asm static void __init_data() {
+SECTION_INIT asm void __init_data() {
 	nofralloc
 #include "asm/init/__init_data.s"
 }
@@ -160,7 +160,7 @@ SECTION_INIT asm static void __flush_cache() {
 #pragma pop
 
 
-/* 80003458-80003488 0030+00 s=1 e=55 z=0  None .init      memset                                                       */
+/* 80003458-80003488 0030+00 s=1 e=55 z=137  None .init      memset                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -182,7 +182,7 @@ SECTION_INIT asm static void __fill_mem() {
 #pragma pop
 
 
-/* 80003540-80003590 0050+00 s=1 e=63 z=0  None .init      memcpy                                                       */
+/* 80003540-80003590 0050+00 s=1 e=63 z=6  None .init      memcpy                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -11,15 +11,15 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daTagStream_c {
 	/* 80D638F8 */ void create();
 	/* 80D63A98 */ ~daTagStream_c();
 	/* 80D63B58 */ void execute();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct dSv_info_c {

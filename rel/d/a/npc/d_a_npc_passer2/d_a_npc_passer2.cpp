@@ -11,6 +11,15 @@
 // Types:
 // 
 
+struct mDoExt_morf_c {
+	/* 8000FB7C */ void setMorf(f32);
+};
+
+struct mDoExt_McaMorfSO {
+	/* 800111EC */ void modelCalc();
+	/* 80011310 */ void stopZelAnime();
+};
+
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 	/* 80018C8C */ ~fopAc_ac_c();
@@ -32,18 +41,10 @@ struct daNpcPasser2_c {
 	/* 80AA8270 */ ~daNpcPasser2_c();
 };
 
-struct cM3dGPla {
-	/* 80AA78C4 */ ~cM3dGPla();
-};
-
-struct cCcD_GStts {
-	/* 80AA8580 */ ~cCcD_GStts();
+struct J3DAnmTransformKey {
 };
 
 struct J3DModel {
-};
-
-struct J3DAnmTransformKey {
 };
 
 struct daNpcCd_c {
@@ -62,23 +63,33 @@ struct daNpcCd_c {
 	/* 80AA8694 */ ~daNpcCd_c();
 };
 
-struct cXyz {
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 80AA8840 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80AA8888 */ ~cM3dGAab();
+struct dCcD_SrcCyl {
 };
 
 struct dCcD_GStts {
 	/* 80083760 */ dCcD_GStts();
 	/* 80AA88D0 */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80AA899C */ ~dBgS_ObjAcch();
 };
 
 struct dBgS_AcchCir {
@@ -88,17 +99,50 @@ struct dBgS_AcchCir {
 	/* 80AA892C */ ~dBgS_AcchCir();
 };
 
-struct dBgS_ObjAcch {
-	/* 80AA899C */ ~dBgS_ObjAcch();
+struct dBgS {
 };
 
-struct mDoExt_morf_c {
-	/* 8000FB7C */ void setMorf(f32);
+struct csXyz {
 };
 
-struct mDoExt_McaMorfSO {
-	/* 800111EC */ void modelCalc();
-	/* 80011310 */ void stopZelAnime();
+struct cXyz {
+};
+
+struct dBgS_Acch {
+	/* 80075F94 */ ~dBgS_Acch();
+	/* 800760A0 */ dBgS_Acch();
+	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
+	/* 80076AAC */ void CrrPos(dBgS&);
+};
+
+struct cM3dGPla {
+	/* 80AA78C4 */ ~cM3dGPla();
+};
+
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 80AA8840 */ ~cM3dGCyl();
+};
+
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
+};
+
+struct cM3dGAab {
+	/* 80AA8888 */ ~cM3dGAab();
+};
+
+struct cCcD_Obj {
+};
+
+struct cCcS {
+	/* 80264BA8 */ void Set(cCcD_Obj*);
+};
+
+struct cCcD_GStts {
+	/* 80AA8580 */ ~cCcD_GStts();
 };
 
 struct cBgS_PolyInfo {
@@ -109,37 +153,9 @@ struct cBgS {
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-struct dBgS {
-};
-
-struct csXyz {
-};
-
-struct dBgS_Acch {
-	/* 80075F94 */ ~dBgS_Acch();
-	/* 800760A0 */ dBgS_Acch();
-	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
-	/* 80076AAC */ void CrrPos(dBgS&);
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+struct Z2CreatureCitizen {
+	/* 802C0C10 */ Z2CreatureCitizen();
+	/* 802C0C6C */ ~Z2CreatureCitizen();
 };
 
 struct Vec {
@@ -151,22 +167,6 @@ struct PathTrace_c {
 	/* 80159DC0 */ void checkPathEnd(cXyz, f32);
 	/* 80159E54 */ void getTargetPoint(Vec*);
 	/* 80159F98 */ void setNextPoint(cXyz&);
-};
-
-struct cCcD_Obj {
-};
-
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
-};
-
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
-};
-
-struct Z2CreatureCitizen {
-	/* 802C0C10 */ Z2CreatureCitizen();
-	/* 802C0C6C */ ~Z2CreatureCitizen();
 };
 
 // 

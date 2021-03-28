@@ -358,7 +358,7 @@ asm void JASDriver::finishDSPFrame() {
 #pragma pop
 
 
-/* 8029C9DC-8029C9E8 000C+00 s=0 e=0 z=0  None .text      registerMixCallback__9JASDriverFPFl_Ps10JASMixMode           */
+/* 8029C9DC-8029C9E8 000C+00 s=0 e=0 z=2  None .text      registerMixCallback__9JASDriverFPFl_Ps10JASMixMode           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

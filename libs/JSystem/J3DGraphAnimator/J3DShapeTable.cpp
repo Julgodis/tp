@@ -55,7 +55,7 @@ extern "C" void _restgpr_27(); // 1
 // Declarations:
 // 
 
-/* 803258A0-803258D8 0038+00 s=0 e=0 z=0  None .text      hide__13J3DShapeTableFv                                      */
+/* 803258A0-803258D8 0038+00 s=0 e=0 z=6  None .text      hide__13J3DShapeTableFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,7 +66,7 @@ asm void J3DShapeTable::hide() {
 #pragma pop
 
 
-/* 803258D8-80325910 0038+00 s=0 e=0 z=0  None .text      show__13J3DShapeTableFv                                      */
+/* 803258D8-80325910 0038+00 s=0 e=0 z=6  None .text      show__13J3DShapeTableFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

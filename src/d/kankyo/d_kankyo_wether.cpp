@@ -29,6 +29,15 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct _GXColor {
+};
+
 struct Vec {
 };
 
@@ -39,15 +48,6 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266D30 */ void normZP() const;
 	/* 8026706C */ bool operator!=(Vec const&) const;
-};
-
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -248,7 +248,7 @@ static void dKyw_pntwind_init(); // 2
 static void pntwind_set(WIND_INFLUENCE*); // 2
 void dKyw_pntwind_set(WIND_INFLUENCE*); // 2
 static void dKyw_pntlight_set(WIND_INFLUENCE*); // 2
-static void dKyw_pntwind_cut(WIND_INFLUENCE*); // 2
+void dKyw_pntwind_cut(WIND_INFLUENCE*); // 2
 static void pntwind_get_info(cXyz*, cXyz*, f32*, u8); // 2
 static void dKyw_pntwind_get_info(cXyz*, cXyz*, f32*); // 2
 void dKyw_pntlight_collision_get_info(cXyz*, cXyz*, f32*); // 2
@@ -360,7 +360,7 @@ extern "C" static void dKyw_pntwind_init__Fv(); // 1
 extern "C" static void pntwind_set__FP14WIND_INFLUENCE(); // 1
 extern "C" void dKyw_pntwind_set__FP14WIND_INFLUENCE(); // 1
 extern "C" static void dKyw_pntlight_set__FP14WIND_INFLUENCE(); // 1
-extern "C" static void dKyw_pntwind_cut__FP14WIND_INFLUENCE(); // 1
+extern "C" void dKyw_pntwind_cut__FP14WIND_INFLUENCE(); // 1
 extern "C" static void pntwind_get_info__FP4cXyzP4cXyzPfUc(); // 1
 extern "C" static void dKyw_pntwind_get_info__FP4cXyzP4cXyzPf(); // 1
 extern "C" void dKyw_pntlight_collision_get_info__FP4cXyzP4cXyzPf(); // 1
@@ -1783,7 +1783,7 @@ asm void dKyw_wind_set() {
 #pragma pop
 
 
-/* 8005AAE0-8005AAF0 0010+00 s=1 e=6 z=0  None .text      dKyw_get_wind_vec__Fv                                        */
+/* 8005AAE0-8005AAF0 0010+00 s=1 e=6 z=7  None .text      dKyw_get_wind_vec__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1794,7 +1794,7 @@ asm void dKyw_get_wind_vec() {
 #pragma pop
 
 
-/* 8005AAF0-8005AB00 0010+00 s=1 e=6 z=0  None .text      dKyw_get_wind_pow__Fv                                        */
+/* 8005AAF0-8005AB00 0010+00 s=1 e=6 z=8  None .text      dKyw_get_wind_pow__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1805,7 +1805,7 @@ asm void dKyw_get_wind_pow() {
 #pragma pop
 
 
-/* 8005AB00-8005AB64 0064+00 s=0 e=8 z=0  None .text      dKyw_get_wind_vecpow__Fv                                     */
+/* 8005AB00-8005AB64 0064+00 s=0 e=8 z=3  None .text      dKyw_get_wind_vecpow__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1816,7 +1816,7 @@ asm void dKyw_get_wind_vecpow() {
 #pragma pop
 
 
-/* 8005AB64-8005AC30 00CC+00 s=0 e=0 z=0  None .text      dKyw_plight_collision_set__FP4cXyzssfffff                    */
+/* 8005AB64-8005AC30 00CC+00 s=0 e=0 z=1  None .text      dKyw_plight_collision_set__FP4cXyzssfffff                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1864,7 +1864,7 @@ asm static void pntwind_set(WIND_INFLUENCE* param_0) {
 #pragma pop
 
 
-/* 8005ADFC-8005AE28 002C+00 s=0 e=0 z=0  None .text      dKyw_pntwind_set__FP14WIND_INFLUENCE                         */
+/* 8005ADFC-8005AE28 002C+00 s=0 e=0 z=5  None .text      dKyw_pntwind_set__FP14WIND_INFLUENCE                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1886,11 +1886,11 @@ asm static void dKyw_pntlight_set(WIND_INFLUENCE* param_0) {
 #pragma pop
 
 
-/* 8005AE58-8005AE90 0038+00 s=1 e=0 z=0  None .text      dKyw_pntwind_cut__FP14WIND_INFLUENCE                         */
+/* 8005AE58-8005AE90 0038+00 s=1 e=0 z=5  None .text      dKyw_pntwind_cut__FP14WIND_INFLUENCE                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_pntwind_cut(WIND_INFLUENCE* param_0) {
+asm void dKyw_pntwind_cut(WIND_INFLUENCE* param_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_pntwind_cut__FP14WIND_INFLUENCE.s"
 }
@@ -1919,7 +1919,7 @@ asm static void dKyw_pntwind_get_info(cXyz* param_0, cXyz* param_1, f32* param_2
 #pragma pop
 
 
-/* 8005B260-8005B284 0024+00 s=0 e=0 z=0  None .text      dKyw_pntlight_collision_get_info__FP4cXyzP4cXyzPf            */
+/* 8005B260-8005B284 0024+00 s=0 e=0 z=3  None .text      dKyw_pntlight_collision_get_info__FP4cXyzP4cXyzPf            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1949,7 +1949,7 @@ SECTION_SDATA2 static f32 lit_5855[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 8005B2F8-8005B530 0238+00 s=0 e=3 z=0  None .text      dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf                        */
+/* 8005B2F8-8005B530 0238+00 s=0 e=3 z=13  None .text      dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1960,7 +1960,7 @@ asm void dKyw_get_AllWind_vec(cXyz* param_0, cXyz* param_1, f32* param_2) {
 #pragma pop
 
 
-/* 8005B530-8005B60C 00DC+00 s=0 e=0 z=0  None .text      dKyw_get_AllWind_vecpow__FP4cXyz                             */
+/* 8005B530-8005B60C 00DC+00 s=0 e=0 z=5  None .text      dKyw_get_AllWind_vecpow__FP4cXyz                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1971,7 +1971,7 @@ asm void dKyw_get_AllWind_vecpow(cXyz* param_0) {
 #pragma pop
 
 
-/* 8005B60C-8005B61C 0010+00 s=0 e=0 z=0  None .text      dKyw_custom_windpower__Ff                                    */
+/* 8005B60C-8005B61C 0010+00 s=0 e=0 z=5  None .text      dKyw_custom_windpower__Ff                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1982,7 +1982,7 @@ asm void dKyw_custom_windpower(f32 param_0) {
 #pragma pop
 
 
-/* 8005B61C-8005B638 001C+00 s=0 e=0 z=0  None .text      dKyw_evt_wind_set__Fss                                       */
+/* 8005B61C-8005B638 001C+00 s=0 e=0 z=6  None .text      dKyw_evt_wind_set__Fss                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1993,7 +1993,7 @@ asm void dKyw_evt_wind_set(s16 param_0, s16 param_1) {
 #pragma pop
 
 
-/* 8005B638-8005B64C 0014+00 s=0 e=0 z=0  None .text      dKyw_evt_wind_set_go__Fv                                     */
+/* 8005B638-8005B64C 0014+00 s=0 e=0 z=3  None .text      dKyw_evt_wind_set_go__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2004,7 +2004,7 @@ asm void dKyw_evt_wind_set_go() {
 #pragma pop
 
 
-/* 8005B64C-8005B660 0014+00 s=0 e=1 z=0  None .text      dKyw_rain_set__Fi                                            */
+/* 8005B64C-8005B660 0014+00 s=0 e=1 z=5  None .text      dKyw_rain_set__Fi                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

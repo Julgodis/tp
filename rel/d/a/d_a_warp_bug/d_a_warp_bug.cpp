@@ -11,19 +11,7 @@
 // Types:
 // 
 
-struct daWarpBug_c {
-	/* 80D67E38 */ void create_init();
-	/* 80D68068 */ void draw();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80D68000 */ ~J3DFrameCtrl();
+struct request_of_phase_process_class {
 };
 
 struct J3DMaterialTable {
@@ -43,10 +31,14 @@ struct mDoExt_brkAnm {
 	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
 };
 
-struct J3DModelData {
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct request_of_phase_process_class {
+struct daWarpBug_c {
+	/* 80D67E38 */ void create_init();
+	/* 80D68068 */ void draw();
 };
 
 struct dRes_info_c {
@@ -54,6 +46,14 @@ struct dRes_info_c {
 
 struct dRes_control_c {
 	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
+};
+
+struct J3DModelData {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80D68000 */ ~J3DFrameCtrl();
 };
 
 // 

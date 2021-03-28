@@ -181,10 +181,10 @@ struct dStage_nextStage_c {
 	/* 80023E28 */ void set(char const*, s8, s16, s8, s8, u8);
 };
 
-struct J3DModel {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DModel {
 };
 
 struct dSmplMdl_draw_c {
@@ -909,7 +909,7 @@ static u8 dComIfG_mTimerInfo[20];
 /* 804061B4-804061C0 000C+00 s=1 e=0 z=0  None .bss       @5065                                                        */
 static u8 lit_5065[12];
 
-/* 804061C0-80423FD0 1DE10+00 s=99 e=2264 z=0  None .bss       g_dComIfG_gameInfo                                           */
+/* 804061C0-80423FD0 1DE10+00 s=99 e=2264 z=7115  None .bss       g_dComIfG_gameInfo                                           */
 u8 g_dComIfG_gameInfo[122384];
 
 /* 8002B22C-8002B2A8 007C+00 s=1 e=1 z=0  None .text      init__14dComIfG_play_cFv                                     */
@@ -945,7 +945,7 @@ asm void dComIfG_play_c::itemInit() {
 #pragma pop
 
 
-/* 8002B36C-8002B384 0018+00 s=1 e=3 z=0  None .text      setItemBombNumCount__14dComIfG_play_cFUcs                    */
+/* 8002B36C-8002B384 0018+00 s=1 e=3 z=1  None .text      setItemBombNumCount__14dComIfG_play_cFUcs                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1096,7 +1096,7 @@ asm void dComIfG_play_c::getLayerNo_common(char const* param_0, int param_1, int
 #pragma pop
 
 
-/* 8002C97C-8002C9D8 005C+00 s=1 e=22 z=0  None .text      getLayerNo__14dComIfG_play_cFi                               */
+/* 8002C97C-8002C9D8 005C+00 s=1 e=22 z=68  None .text      getLayerNo__14dComIfG_play_cFi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1151,7 +1151,7 @@ asm void dComIfG_play_c::drawSimpleModel() {
 #pragma pop
 
 
-/* 8002CAF0-8002CB30 0040+00 s=0 e=0 z=0  None .text      addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc          */
+/* 8002CAF0-8002CB30 0040+00 s=0 e=0 z=16  None .text      addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1162,7 +1162,7 @@ asm void dComIfG_play_c::addSimpleModel(J3DModelData* param_0, int param_1, u8 p
 #pragma pop
 
 
-/* 8002CB30-8002CB68 0038+00 s=0 e=0 z=0  None .text      removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai         */
+/* 8002CB30-8002CB68 0038+00 s=0 e=0 z=16  None .text      removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1173,7 +1173,7 @@ asm void dComIfG_play_c::removeSimpleModel(J3DModelData* param_0, int param_1) {
 #pragma pop
 
 
-/* 8002CB68-8002CB94 002C+00 s=0 e=0 z=0  None .text      entrySimpleModel__14dComIfG_play_cFP8J3DModeli               */
+/* 8002CB68-8002CB94 002C+00 s=0 e=0 z=16  None .text      entrySimpleModel__14dComIfG_play_cFP8J3DModeli               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1195,7 +1195,7 @@ asm void dComIfG_play_c::setTimerNowTimeMs(int param_0) {
 #pragma pop
 
 
-/* 8002CB9C-8002CBA4 0008+00 s=0 e=2 z=0  None .text      getTimerNowTimeMs__14dComIfG_play_cFv                        */
+/* 8002CB9C-8002CBA4 0008+00 s=0 e=2 z=3  None .text      getTimerNowTimeMs__14dComIfG_play_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1239,7 +1239,7 @@ asm void dComIfG_play_c::setTimerMode(int param_0) {
 #pragma pop
 
 
-/* 8002CBBC-8002CBC4 0008+00 s=6 e=8 z=0  None .text      getTimerMode__14dComIfG_play_cFv                             */
+/* 8002CBBC-8002CBC4 0008+00 s=6 e=8 z=7  None .text      getTimerMode__14dComIfG_play_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1283,7 +1283,7 @@ asm void dComIfG_play_c::setTimerPtr(dTimer_c* param_0) {
 #pragma pop
 
 
-/* 8002CBDC-8002CBE4 0008+00 s=6 e=7 z=0  None .text      getTimerPtr__14dComIfG_play_cFv                              */
+/* 8002CBDC-8002CBE4 0008+00 s=6 e=7 z=15  None .text      getTimerPtr__14dComIfG_play_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1306,12 +1306,12 @@ asm void dComIfG_inf_c::ct() {
 
 
 /* ############################################################################################## */
-/* 80450600-80450604 0004+00 s=0 e=18 z=0  None .sdata     g_clearColor                                                 */
+/* 80450600-80450604 0004+00 s=0 e=18 z=2  None .sdata     g_clearColor                                                 */
 SECTION_SDATA u8 g_clearColor[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80450604-80450608 0004+00 s=1 e=10 z=0  None .sdata     g_blackColor                                                 */
+/* 80450604-80450608 0004+00 s=1 e=10 z=15  None .sdata     g_blackColor                                                 */
 SECTION_SDATA u32 g_blackColor = 0x000000FF;
 
 /* 8002CC54-8002CD44 00F0+00 s=1 e=1 z=0  None .text      dComIfG_changeOpeningScene__FP11scene_classs                 */
@@ -1372,7 +1372,7 @@ SECTION_DATA static void* data_803A71B8[3] = {
 	(void*)phase_3__FPc,
 };
 
-/* 8002CEBC-8002CEFC 0040+00 s=0 e=7 z=0  None .text      dComIfG_resLoad__FP30request_of_phase_process_classPCc       */
+/* 8002CEBC-8002CEFC 0040+00 s=0 e=7 z=550  None .text      dComIfG_resLoad__FP30request_of_phase_process_classPCc       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1430,7 +1430,7 @@ asm void dComIfG_resLoad(request_of_phase_process_class* param_0, char const* pa
 #pragma pop
 
 
-/* 8002D008-8002D06C 0064+00 s=1 e=10 z=0  None .text      dComIfG_resDelete__FP30request_of_phase_process_classPCc     */
+/* 8002D008-8002D06C 0064+00 s=1 e=10 z=540  None .text      dComIfG_resDelete__FP30request_of_phase_process_classPCc     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1441,7 +1441,7 @@ asm void dComIfG_resDelete(request_of_phase_process_class* param_0, char const* 
 #pragma pop
 
 
-/* 8002D06C-8002D0B4 0048+00 s=0 e=14 z=0  None .text      dComIfGp_getReverb__Fi                                       */
+/* 8002D06C-8002D0B4 0048+00 s=0 e=14 z=596  None .text      dComIfGp_getReverb__Fi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1456,7 +1456,7 @@ asm void dComIfGp_getReverb(int param_0) {
 /* 80451D00-80451D04 0004+00 s=2 e=0 z=0  None .sdata2    @5090                                                        */
 SECTION_SDATA2 static u32 lit_5090 = 0xCE6E6B28;
 
-/* 8002D0B4-8002D1AC 00F8+00 s=0 e=3 z=0  None .text      dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj */
+/* 8002D0B4-8002D1AC 00F8+00 s=0 e=3 z=34  None .text      dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1467,7 +1467,7 @@ asm void dComIfGd_setSimpleShadow(cXyz* param_0, f32 param_1, f32 param_2, cBgS_
 #pragma pop
 
 
-/* 8002D1AC-8002D25C 00B0+00 s=0 e=0 z=0  None .text      dComIfGp_getMapTrans__FiPfPfPs                               */
+/* 8002D1AC-8002D25C 00B0+00 s=0 e=0 z=1  None .text      dComIfGp_getMapTrans__FiPfPfPs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1478,7 +1478,7 @@ asm void dComIfGp_getMapTrans(int param_0, f32* param_1, f32* param_2, s16* para
 #pragma pop
 
 
-/* 8002D25C-8002D2AC 0050+00 s=0 e=3 z=0  None .text      dComIfGp_getRoomCamera__Fi                                   */
+/* 8002D25C-8002D2AC 0050+00 s=0 e=3 z=3  None .text      dComIfGp_getRoomCamera__Fi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1489,7 +1489,7 @@ asm void dComIfGp_getRoomCamera(int param_0) {
 #pragma pop
 
 
-/* 8002D2AC-8002D2FC 0050+00 s=0 e=3 z=0  None .text      dComIfGp_getRoomArrow__Fi                                    */
+/* 8002D2AC-8002D2FC 0050+00 s=0 e=3 z=3  None .text      dComIfGp_getRoomArrow__Fi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1500,7 +1500,7 @@ asm void dComIfGp_getRoomArrow(int param_0) {
 #pragma pop
 
 
-/* 8002D2FC-8002D554 0258+00 s=2 e=7 z=0  None .text      dComIfGp_setNextStage__FPCcsScScfUliScsii                    */
+/* 8002D2FC-8002D554 0258+00 s=2 e=7 z=4  None .text      dComIfGp_setNextStage__FPCcsScScfUliScsii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1517,7 +1517,7 @@ SECTION_SDATA2 static u8 lit_5226[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8002D554-8002D598 0044+00 s=1 e=1 z=0  None .text      dComIfGp_setNextStage__FPCcsScSc                             */
+/* 8002D554-8002D598 0044+00 s=1 e=1 z=9  None .text      dComIfGp_setNextStage__FPCcsScSc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1539,7 +1539,7 @@ asm void dComIfGs_isStageTbox(int param_0, int param_1) {
 #pragma pop
 
 
-/* 8002D628-8002D6B4 008C+00 s=0 e=1 z=0  None .text      dComIfGs_onStageSwitch__Fii                                  */
+/* 8002D628-8002D6B4 008C+00 s=0 e=1 z=1  None .text      dComIfGs_onStageSwitch__Fii                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1550,7 +1550,7 @@ asm void dComIfGs_onStageSwitch(int param_0, int param_1) {
 #pragma pop
 
 
-/* 8002D6B4-8002D740 008C+00 s=0 e=1 z=0  None .text      dComIfGs_offStageSwitch__Fii                                 */
+/* 8002D6B4-8002D740 008C+00 s=0 e=1 z=2  None .text      dComIfGs_offStageSwitch__Fii                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1561,7 +1561,7 @@ asm void dComIfGs_offStageSwitch(int param_0, int param_1) {
 #pragma pop
 
 
-/* 8002D740-8002D7D0 0090+00 s=0 e=6 z=0  None .text      dComIfGs_isStageSwitch__Fii                                  */
+/* 8002D740-8002D7D0 0090+00 s=0 e=6 z=5  None .text      dComIfGs_isStageSwitch__Fii                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1572,7 +1572,7 @@ asm void dComIfGs_isStageSwitch(int param_0, int param_1) {
 #pragma pop
 
 
-/* 8002D7D0-8002D878 00A8+00 s=0 e=0 z=0  None .text      dComIfGs_onStageBossEnemy__Fi                                */
+/* 8002D7D0-8002D878 00A8+00 s=0 e=0 z=2  None .text      dComIfGs_onStageBossEnemy__Fi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1594,7 +1594,7 @@ asm void dComIfGs_isDungeonItemWarp(int param_0) {
 #pragma pop
 
 
-/* 8002D8FC-8002D910 0014+00 s=0 e=1 z=0  None .text      dComIfGs_BossLife_public_Set__FSc                            */
+/* 8002D8FC-8002D910 0014+00 s=0 e=1 z=6  None .text      dComIfGs_BossLife_public_Set__FSc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1605,7 +1605,7 @@ asm void dComIfGs_BossLife_public_Set(s8 param_0) {
 #pragma pop
 
 
-/* 8002D910-8002D924 0014+00 s=0 e=0 z=0  None .text      dComIfGs_BossLife_public_Get__Fv                             */
+/* 8002D910-8002D924 0014+00 s=0 e=0 z=4  None .text      dComIfGs_BossLife_public_Get__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1616,7 +1616,7 @@ asm void dComIfGs_BossLife_public_Get() {
 #pragma pop
 
 
-/* 8002D924-8002D938 0014+00 s=0 e=0 z=0  None .text      dComIfGs_sense_type_change_Set__FSc                          */
+/* 8002D924-8002D938 0014+00 s=0 e=0 z=2  None .text      dComIfGs_sense_type_change_Set__FSc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1638,7 +1638,7 @@ asm void dComIfGs_sense_type_change_Get() {
 #pragma pop
 
 
-/* 8002D94C-8002D9B0 0064+00 s=0 e=1 z=0  None .text      dComIfGs_onZoneSwitch__Fii                                   */
+/* 8002D94C-8002D9B0 0064+00 s=0 e=1 z=17  None .text      dComIfGs_onZoneSwitch__Fii                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1660,7 +1660,7 @@ asm void dStage_roomControl_c::getZoneNo(int param_0) {
 #pragma pop
 
 
-/* 8002D9CC-8002DA30 0064+00 s=0 e=1 z=0  None .text      dComIfGs_offZoneSwitch__Fii                                  */
+/* 8002D9CC-8002DA30 0064+00 s=0 e=1 z=1  None .text      dComIfGs_offZoneSwitch__Fii                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1671,7 +1671,7 @@ asm void dComIfGs_offZoneSwitch(int param_0, int param_1) {
 #pragma pop
 
 
-/* 8002DA30-8002DA9C 006C+00 s=0 e=1 z=0  None .text      dComIfGs_isZoneSwitch__Fii                                   */
+/* 8002DA30-8002DA9C 006C+00 s=0 e=1 z=10  None .text      dComIfGs_isZoneSwitch__Fii                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1682,7 +1682,7 @@ asm void dComIfGs_isZoneSwitch(int param_0, int param_1) {
 #pragma pop
 
 
-/* 8002DA9C-8002DB00 0064+00 s=0 e=1 z=0  None .text      dComIfGs_onOneZoneSwitch__Fii                                */
+/* 8002DA9C-8002DB00 0064+00 s=0 e=1 z=51  None .text      dComIfGs_onOneZoneSwitch__Fii                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1693,7 +1693,7 @@ asm void dComIfGs_onOneZoneSwitch(int param_0, int param_1) {
 #pragma pop
 
 
-/* 8002DB00-8002DB64 0064+00 s=0 e=1 z=0  None .text      dComIfGs_offOneZoneSwitch__Fii                               */
+/* 8002DB00-8002DB64 0064+00 s=0 e=1 z=17  None .text      dComIfGs_offOneZoneSwitch__Fii                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1704,7 +1704,7 @@ asm void dComIfGs_offOneZoneSwitch(int param_0, int param_1) {
 #pragma pop
 
 
-/* 8002DB64-8002DBD0 006C+00 s=0 e=5 z=0  None .text      dComIfGs_isOneZoneSwitch__Fii                                */
+/* 8002DB64-8002DBD0 006C+00 s=0 e=5 z=13  None .text      dComIfGs_isOneZoneSwitch__Fii                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1737,7 +1737,7 @@ asm void dComIfGs_isOneZoneItem(int param_0, int param_1) {
 #pragma pop
 
 
-/* 8002DCA8-8002DCC4 001C+00 s=0 e=5 z=0  None .text      dComIfGs_getMaxLifeGauge__Fv                                 */
+/* 8002DCA8-8002DCC4 001C+00 s=0 e=5 z=3  None .text      dComIfGs_getMaxLifeGauge__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2016,7 +2016,7 @@ asm void dComIfGp_addSelectItemNum(int param_0, s16 param_1) {
 #pragma pop
 
 
-/* 8002E910-8002E974 0064+00 s=0 e=5 z=0  None .text      dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj */
+/* 8002E910-8002E974 0064+00 s=0 e=5 z=137  None .text      dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2038,7 +2038,7 @@ asm void dComIfGs_gameStart() {
 #pragma pop
 
 
-/* 8002E9D4-8002E9F0 001C+00 s=0 e=0 z=0  None .text      dComIfG_getTrigA__FUl                                        */
+/* 8002E9D4-8002E9F0 001C+00 s=0 e=0 z=1  None .text      dComIfG_getTrigA__FUl                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2111,7 +2111,7 @@ asm void dComIfGs_setSelectEquipClothes(u8 param_0) {
 #pragma pop
 
 
-/* 8002EEC0-8002EF94 00D4+00 s=0 e=4 z=0  None .text      dComIfGs_setSelectEquipSword__FUc                            */
+/* 8002EEC0-8002EF94 00D4+00 s=0 e=4 z=1  None .text      dComIfGs_setSelectEquipSword__FUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2249,7 +2249,7 @@ void dComIfGs_setWarpMarkFlag(u8 param_0) {
 }
 
 
-/* 8002F314-8002F328 0014+00 s=0 e=0 z=0  None .text      __ct__19dComIfG_resLoader_cFv                                */
+/* 8002F314-8002F328 0014+00 s=0 e=0 z=1  None .text      __ct__19dComIfG_resLoader_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2260,7 +2260,7 @@ asm dComIfG_resLoader_c::dComIfG_resLoader_c() {
 #pragma pop
 
 
-/* 8002F328-8002F3B4 008C+00 s=0 e=0 z=0  None .text      __dt__19dComIfG_resLoader_cFv                                */
+/* 8002F328-8002F3B4 008C+00 s=0 e=0 z=1  None .text      __dt__19dComIfG_resLoader_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2271,7 +2271,7 @@ asm dComIfG_resLoader_c::~dComIfG_resLoader_c() {
 #pragma pop
 
 
-/* 8002F3B4-8002F434 0080+00 s=0 e=0 z=0  None .text      load__19dComIfG_resLoader_cFPPCcP7JKRHeap                    */
+/* 8002F3B4-8002F434 0080+00 s=0 e=0 z=1  None .text      load__19dComIfG_resLoader_cFPPCcP7JKRHeap                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2282,7 +2282,7 @@ asm void dComIfG_resLoader_c::load(char const** param_0, JKRHeap* param_1) {
 #pragma pop
 
 
-/* 8002F434-8002F478 0044+00 s=0 e=12 z=0  None .text      dComIfG_getStageRes__FPCc                                    */
+/* 8002F434-8002F478 0044+00 s=0 e=12 z=12  None .text      dComIfG_getStageRes__FPCc                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2308,7 +2308,7 @@ asm void dComIfG_getOldStageRes(char const* param_0) {
 /* 80423FD0-80423FF0 0020+00 s=1 e=0 z=0  None .bss       buf$7371                                                     */
 static u8 data_80423FD0[32];
 
-/* 8002F4BC-8002F500 0044+00 s=0 e=5 z=0  None .text      dComIfG_getRoomArcName__Fi                                   */
+/* 8002F4BC-8002F500 0044+00 s=0 e=5 z=1  None .text      dComIfG_getRoomArcName__Fi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2347,7 +2347,7 @@ asm void dComIfGp_world_dark_get() {
 #pragma pop
 
 
-/* 8002F52C-8002F5C0 0094+00 s=0 e=0 z=0  None .text      dComIfG_TimerStart__Fis                                      */
+/* 8002F52C-8002F5C0 0094+00 s=0 e=0 z=8  None .text      dComIfG_TimerStart__Fis                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2358,7 +2358,7 @@ asm void dComIfG_TimerStart(int param_0, s16 param_1) {
 #pragma pop
 
 
-/* 8002F5C0-8002F638 0078+00 s=0 e=0 z=0  None .text      dComIfG_TimerStop__Fi                                        */
+/* 8002F5C0-8002F638 0078+00 s=0 e=0 z=2  None .text      dComIfG_TimerStop__Fi                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2369,7 +2369,7 @@ asm void dComIfG_TimerStop(int param_0) {
 #pragma pop
 
 
-/* 8002F638-8002F6B0 0078+00 s=0 e=0 z=0  None .text      dComIfG_TimerReStart__Fi                                     */
+/* 8002F638-8002F6B0 0078+00 s=0 e=0 z=3  None .text      dComIfG_TimerReStart__Fi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2380,7 +2380,7 @@ asm void dComIfG_TimerReStart(int param_0) {
 #pragma pop
 
 
-/* 8002F6B0-8002F72C 007C+00 s=0 e=0 z=0  None .text      dComIfG_TimerEnd__Fii                                        */
+/* 8002F6B0-8002F72C 007C+00 s=0 e=0 z=4  None .text      dComIfG_TimerEnd__Fii                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2391,7 +2391,7 @@ asm void dComIfG_TimerEnd(int param_0, int param_1) {
 #pragma pop
 
 
-/* 8002F72C-8002F79C 0070+00 s=0 e=0 z=0  None .text      dComIfG_TimerDeleteCheck__Fi                                 */
+/* 8002F72C-8002F79C 0070+00 s=0 e=0 z=2  None .text      dComIfG_TimerDeleteCheck__Fi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2402,7 +2402,7 @@ asm void dComIfG_TimerDeleteCheck(int param_0) {
 #pragma pop
 
 
-/* 8002F79C-8002F810 0074+00 s=0 e=1 z=0  None .text      dComIfG_TimerDeleteRequest__Fi                               */
+/* 8002F79C-8002F810 0074+00 s=0 e=1 z=17  None .text      dComIfG_TimerDeleteRequest__Fi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2446,7 +2446,7 @@ asm void dComIfGs_PolyDamageOff_Check() {
 #pragma pop
 
 
-/* 8002FA18-8002FA30 0018+00 s=0 e=0 z=0  None .text      dComIfGs_shake_kandelaar__Fv                                 */
+/* 8002FA18-8002FA30 0018+00 s=0 e=0 z=1  None .text      dComIfGs_shake_kandelaar__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2457,7 +2457,7 @@ asm void dComIfGs_shake_kandelaar() {
 #pragma pop
 
 
-/* 8002FA30-8002FA54 0024+00 s=0 e=0 z=0  None .text      dComIfGs_shake_kandelaar_check__Fv                           */
+/* 8002FA30-8002FA54 0024+00 s=0 e=0 z=1  None .text      dComIfGs_shake_kandelaar_check__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2474,7 +2474,7 @@ SECTION_SDATA2 static u8 lit_7580[8] = {
 	0x3F, 0xE3, 0x33, 0x33, 0x33, 0x33, 0x33, 0x33,
 };
 
-/* 8002FA54-8002FA84 0030+00 s=0 e=4 z=0  None .text      dComIfGs_wolfeye_effect_check__Fv                            */
+/* 8002FA54-8002FA84 0030+00 s=0 e=4 z=96  None .text      dComIfGs_wolfeye_effect_check__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2485,7 +2485,7 @@ asm void dComIfGs_wolfeye_effect_check() {
 #pragma pop
 
 
-/* 8002FA84-8002FA98 0014+00 s=0 e=0 z=0  None .text      dComIfGs_Grass_hide_Set__FSc                                 */
+/* 8002FA84-8002FA98 0014+00 s=0 e=0 z=1  None .text      dComIfGs_Grass_hide_Set__FSc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2496,7 +2496,7 @@ asm void dComIfGs_Grass_hide_Set(s8 param_0) {
 #pragma pop
 
 
-/* 8002FA98-8002FAAC 0014+00 s=0 e=1 z=0  None .text      dComIfGp_TargetWarpPt_set__FUc                               */
+/* 8002FA98-8002FAAC 0014+00 s=0 e=1 z=8  None .text      dComIfGp_TargetWarpPt_set__FUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2540,7 +2540,7 @@ asm void dComIfGp_SelectWarpPt_get() {
 #pragma pop
 
 
-/* 8002FAE8-8002FB20 0038+00 s=0 e=2 z=0  None .text      dComIfGp_TransportWarp_check__Fv                             */
+/* 8002FAE8-8002FB20 0038+00 s=0 e=2 z=6  None .text      dComIfGp_TransportWarp_check__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2562,7 +2562,7 @@ asm void dComLbG_PhaseHandler(request_of_phase_process_class* param_0, int (**)(
 #pragma pop
 
 
-/* 8002FB80-8002FC3C 00BC+00 s=0 e=1 z=0  None .text      dComIfGs_onVisitedRoom__Fi                                   */
+/* 8002FB80-8002FC3C 00BC+00 s=0 e=1 z=1  None .text      dComIfGs_onVisitedRoom__Fi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2573,7 +2573,7 @@ asm void dComIfGs_onVisitedRoom(int param_0) {
 #pragma pop
 
 
-/* 8002FC3C-8002FC98 005C+00 s=0 e=0 z=0  None .text      dComIfGs_offVisitedRoom__Fi                                  */
+/* 8002FC3C-8002FC98 005C+00 s=0 e=0 z=1  None .text      dComIfGs_offVisitedRoom__Fi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3073,9 +3073,9 @@ asm cCcD_DivideInfo::~cCcD_DivideInfo() {
 
 
 /* ############################################################################################## */
-/* 80450608-8045060C 0004+00 s=0 e=6 z=0  None .sdata     g_whiteColor                                                 */
+/* 80450608-8045060C 0004+00 s=0 e=6 z=11  None .sdata     g_whiteColor                                                 */
 SECTION_SDATA u32 g_whiteColor = 0xFFFFFFFF;
 
-/* 8045060C-80450610 0004+00 s=0 e=3 z=0  None .sdata     g_saftyWhiteColor                                            */
+/* 8045060C-80450610 0004+00 s=0 e=3 z=3  None .sdata     g_saftyWhiteColor                                            */
 SECTION_SDATA u32 g_saftyWhiteColor = 0xA0A0A0FF;
 

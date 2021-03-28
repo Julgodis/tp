@@ -11,55 +11,48 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DAnmTransform {
+};
+
+struct Vec {
+};
+
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfSO {
+	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
+	/* 80011310 */ void stopZelAnime();
+};
+
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct daNpcDrSol_c {
-	/* 809ADE6C */ daNpcDrSol_c();
-	/* 809ADFE4 */ ~daNpcDrSol_c();
-	/* 809AE10C */ void Create();
-	/* 809AE354 */ void CreateHeap();
-	/* 809AE51C */ void Delete();
-	/* 809AE550 */ void Execute();
-	/* 809AE5CC */ void Draw();
-	/* 809AE60C */ void drawOtherMdls();
-	/* 809AE69C */ void createHeapCallBack(fopAc_ac_c*);
-	/* 809AE6BC */ void reset();
-	/* 809AE844 */ void setAction(bool (daNpcDrSol_c::*)(void*));
-	/* 809AE8EC */ void chkFindPlayer();
-	/* 809AE994 */ void wait(void*);
-	/* 809AEB18 */ void setMotion(int, f32, int);
-	/* 809AEB94 */ void talk(void*);
-	/* 809AEDA8 */ void setParam();
-	/* 809AEE24 */ void main();
-	/* 809AEFDC */ void setAttnPos();
-	/* 809AF12C */ void setMotionAnm(int, f32);
-	/* 809AF1FC */ bool drawDbgInfo();
-	/* 809AF934 */ void adjustShapeAngle();
-};
-
-struct cXyz {
-	/* 809ADFA8 */ ~cXyz();
-	/* 809AF6C8 */ cXyz();
-};
-
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 809ADF18 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 809ADF60 */ ~cM3dGAab();
-};
-
-struct _GXColorS10 {
+struct daPy_py_c {
+	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
 struct J3DAnmTransformKey {
+};
+
+struct _GXColorS10 {
 };
 
 struct daNpcF_c {
@@ -96,73 +89,43 @@ struct daNpcF_ActorMngr_c {
 	/* 809AF6CC */ daNpcF_ActorMngr_c();
 };
 
-struct csXyz {
-	/* 809AF498 */ ~csXyz();
-	/* 809AF6C4 */ csXyz();
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 809AF708 */ ~dBgS_AcchCir();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 809AF778 */ ~dCcD_GStts();
-};
-
-struct dBgS_ObjAcch {
-	/* 809AF7D4 */ ~dBgS_ObjAcch();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 809AF844 */ ~J3DFrameCtrl();
-};
-
-struct cCcD_GStts {
-	/* 809AF8AC */ ~cCcD_GStts();
+struct daNpcDrSol_c {
+	/* 809ADE6C */ daNpcDrSol_c();
+	/* 809ADFE4 */ ~daNpcDrSol_c();
+	/* 809AE10C */ void Create();
+	/* 809AE354 */ void CreateHeap();
+	/* 809AE51C */ void Delete();
+	/* 809AE550 */ void Execute();
+	/* 809AE5CC */ void Draw();
+	/* 809AE60C */ void drawOtherMdls();
+	/* 809AE69C */ void createHeapCallBack(fopAc_ac_c*);
+	/* 809AE6BC */ void reset();
+	/* 809AE844 */ void setAction(bool (daNpcDrSol_c::*)(void*));
+	/* 809AE8EC */ void chkFindPlayer();
+	/* 809AE994 */ void wait(void*);
+	/* 809AEB18 */ void setMotion(int, f32, int);
+	/* 809AEB94 */ void talk(void*);
+	/* 809AEDA8 */ void setParam();
+	/* 809AEE24 */ void main();
+	/* 809AEFDC */ void setAttnPos();
+	/* 809AF12C */ void setMotionAnm(int, f32);
+	/* 809AF1FC */ bool drawDbgInfo();
+	/* 809AF934 */ void adjustShapeAngle();
 };
 
 struct daNpcDrSol_Param_c {
 	/* 809AF938 */ ~daNpcDrSol_Param_c();
 };
 
-struct J3DModel {
-};
-
-struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Vec {
-};
-
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
-
-struct mDoExt_McaMorfSO {
-	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
-	/* 80011310 */ void stopZelAnime();
-};
-
-struct request_of_phase_process_class {
-};
-
 struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -170,6 +133,11 @@ struct dRes_info_c {
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F48 */ ~dMsgFlow_c();
 };
 
 struct dEvt_control_c {
@@ -180,14 +148,63 @@ struct dEvent_manager_c {
 	/* 800487F0 */ void ChkPresentEnd();
 };
 
-struct cBgS_LinChk {
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
-struct cBgS {
-	/* 800743B4 */ void LineCross(cBgS_LinChk*);
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 809AF778 */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 809AF7D4 */ ~dBgS_ObjAcch();
+};
+
+struct cXyz {
+	/* 809ADFA8 */ ~cXyz();
+	/* 809AF6C8 */ cXyz();
+};
+
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+	/* 80077CDC */ ~dBgS_LinChk();
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 809AF708 */ ~dBgS_AcchCir();
 };
 
 struct dBgS {
+};
+
+struct csXyz {
+	/* 809AF498 */ ~csXyz();
+	/* 809AF6C4 */ csXyz();
 };
 
 struct dBgS_Acch {
@@ -197,51 +214,19 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 809ADF18 */ ~cM3dGCyl();
 };
 
-struct dBgS_LinChk {
-	/* 80077C68 */ dBgS_LinChk();
-	/* 80077CDC */ ~dBgS_LinChk();
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct daPy_py_c {
-	/* 8015F424 */ void checkNowWolfEyeUp();
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F48 */ ~dMsgFlow_c();
+struct cM3dGAab {
+	/* 809ADF60 */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -251,17 +236,32 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct cBgS_GndChk {
-	/* 80267C1C */ cBgS_GndChk();
-	/* 80267C94 */ ~cBgS_GndChk();
+struct cCcD_GStts {
+	/* 809AF8AC */ ~cCcD_GStts();
 };
 
 struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
+struct cBgS_LinChk {
+};
+
+struct cBgS_GndChk {
+	/* 80267C1C */ cBgS_GndChk();
+	/* 80267C94 */ ~cBgS_GndChk();
+};
+
+struct cBgS {
+	/* 800743B4 */ void LineCross(cBgS_LinChk*);
+};
+
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 809AF844 */ ~J3DFrameCtrl();
 };
 
 // 

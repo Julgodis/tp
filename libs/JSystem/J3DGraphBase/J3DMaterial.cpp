@@ -33,11 +33,11 @@ struct J3DTexGenBlock4 {
 	/* 80317674 */ void initialize();
 };
 
-struct J3DNBTScale {
-};
-
 struct J3DTexCoord {
 	/* 8000E464 */ J3DTexCoord();
+};
+
+struct J3DNBTScale {
 };
 
 struct J3DTexGenBlock {

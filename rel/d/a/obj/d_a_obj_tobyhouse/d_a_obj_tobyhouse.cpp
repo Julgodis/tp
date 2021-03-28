@@ -11,7 +11,41 @@
 // Types:
 // 
 
-struct J3DJoint {
+struct request_of_phase_process_class {
+};
+
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+};
+
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	/* 80D17700 */ ~cXyz();
+};
+
+struct fopAcM_wt_c {
+	/* 8001DD84 */ void waterCheck(cXyz const*);
 };
 
 struct daObjTobyHouse_c {
@@ -33,57 +67,22 @@ struct daObjTobyHouse_c {
 	/* 80D174F8 */ void Delete();
 };
 
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80D163A8 */ ~J3DFrameCtrl();
-};
-
-struct cXyz {
-	/* 80D17700 */ ~cXyz();
-};
-
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
-};
-
-struct J3DModel {
-};
-
-struct fopAc_ac_c {
-};
-
-struct fopAcM_wt_c {
-	/* 8001DD84 */ void waterCheck(cXyz const*);
-};
-
-struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(int);
-};
-
-struct request_of_phase_process_class {
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
+	/* 8006FB10 */ void StartQuake(int, int, cXyz);
+	/* 8006FD94 */ void StopQuake(int);
 };
 
 struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -91,6 +90,16 @@ struct dRes_info_c {
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dPa_levelEcallBack {
+};
+
+struct _GXColor {
+};
+
+struct dPa_control_c {
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 struct dEvt_control_c {
@@ -108,23 +117,8 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
-};
-
-struct dPa_control_c {
-	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
-	/* 8006FB10 */ void StartQuake(int, int, cXyz);
-	/* 8006FD94 */ void StopQuake(int);
+struct dComIfG_play_c {
+	/* 8002C97C */ void getLayerNo(int);
 };
 
 struct dBgW {
@@ -146,18 +140,10 @@ struct dBgS_MoveBgActor {
 struct camera_class {
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
+struct Z2SeqMgr {
+	/* 802AFB94 */ void bgmStreamPrepare(u32);
+	/* 802AFE18 */ void bgmStreamPlay();
+	/* 802AFEDC */ void bgmStreamStop(u32);
 };
 
 struct JAISoundID {
@@ -170,14 +156,28 @@ struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-struct Z2SeqMgr {
-	/* 802AFB94 */ void bgmStreamPrepare(u32);
-	/* 802AFE18 */ void bgmStreamPlay();
-	/* 802AFEDC */ void bgmStreamStop(u32);
-};
-
 struct JUTNameTab {
 	/* 802DEAF8 */ void getName(u16) const;
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80D163A8 */ ~J3DFrameCtrl();
 };
 
 // 

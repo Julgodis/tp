@@ -11,15 +11,15 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daTagMwait_c {
 	/* 80D5BE18 */ void create();
 	/* 80D5C01C */ ~daTagMwait_c();
 	/* 80D5C0A8 */ void execute();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct dSv_info_c {
@@ -27,15 +27,15 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
-};
-
 struct dMsgFlow_c {
 	/* 80249F00 */ dMsgFlow_c();
 	/* 80249F48 */ ~dMsgFlow_c();
 	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+};
+
+struct dEvt_control_c {
+	/* 80042468 */ void reset();
 };
 
 // 

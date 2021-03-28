@@ -11,13 +11,14 @@
 // Types:
 // 
 
-struct daKekaiTrap_HIO_c {
-	/* 80C87CAC */ daKekaiTrap_HIO_c();
-	/* 80C88438 */ ~daKekaiTrap_HIO_c();
+struct request_of_phase_process_class {
 };
 
 struct mDoHIO_entry_c {
 	/* 80C87CF8 */ ~mDoHIO_entry_c();
+};
+
+struct fopAc_ac_c {
 };
 
 struct daKekaiTrap_c {
@@ -36,20 +37,27 @@ struct daKekaiTrap_c {
 	/* 80C8836C */ void Delete();
 };
 
-struct fopAc_ac_c {
+struct daKekaiTrap_HIO_c {
+	/* 80C87CAC */ daKekaiTrap_HIO_c();
+	/* 80C88438 */ ~daKekaiTrap_HIO_c();
 };
 
-struct J3DModel {
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct request_of_phase_process_class {
+struct cXyz {
 };
 
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -62,21 +70,10 @@ struct dRes_control_c {
 struct dBgW_Base {
 };
 
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
-};
-
-struct dBgS {
-	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
-};
-
 struct dBgW {
 };
 
 struct cBgS_PolyInfo {
-};
-
-struct cXyz {
 };
 
 struct csXyz {
@@ -93,12 +90,15 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dKy_tevstr_c {
+struct dBgS {
+	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
+};
+
+struct J3DModel {
 };
 
 // 

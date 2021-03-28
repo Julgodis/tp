@@ -175,7 +175,7 @@ asm void J3DModelData::makeSharedDL() {
 #pragma pop
 
 
-/* 8032600C-803260CC 00C0+00 s=0 e=3 z=0  None .text      simpleCalcMaterial__12J3DModelDataFUsPA4_f                   */
+/* 8032600C-803260CC 00C0+00 s=0 e=3 z=7  None .text      simpleCalcMaterial__12J3DModelDataFUsPA4_f                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

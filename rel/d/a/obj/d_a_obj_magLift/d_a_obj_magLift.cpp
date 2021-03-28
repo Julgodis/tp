@@ -11,13 +11,14 @@
 // Types:
 // 
 
-struct daMagLift_HIO_c {
-	/* 80C8DA2C */ daMagLift_HIO_c();
-	/* 80C8E5B0 */ ~daMagLift_HIO_c();
+struct request_of_phase_process_class {
 };
 
 struct mDoHIO_entry_c {
 	/* 80C8DA58 */ ~mDoHIO_entry_c();
+};
+
+struct fopAc_ac_c {
 };
 
 struct daMagLift_c {
@@ -43,20 +44,32 @@ struct daMagLift_c {
 	/* 80C8E4F4 */ void Delete();
 };
 
-struct fopAc_ac_c {
+struct daMagLift_HIO_c {
+	/* 80C8DA2C */ daMagLift_HIO_c();
+	/* 80C8E5B0 */ ~daMagLift_HIO_c();
 };
 
-struct J3DModel {
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct request_of_phase_process_class {
+struct Vec {
 };
 
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 8026702C */ bool operator==(Vec const&) const;
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -70,14 +83,6 @@ struct dBgW {
 };
 
 struct cBgS_PolyInfo {
-};
-
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 8026702C */ bool operator==(Vec const&) const;
 };
 
 struct csXyz {
@@ -94,12 +99,7 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct J3DModel {
 };
 
 // 

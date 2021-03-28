@@ -490,7 +490,7 @@ SECTION_SDATA2 static f32 lit_4041[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 802CB6EC-802CBA88 039C+00 s=0 e=0 z=0  None .text      startWindStoneSound__13Z2WolfHowlMgrFScP3Vec                 */
+/* 802CB6EC-802CBA88 039C+00 s=0 e=0 z=2  None .text      startWindStoneSound__13Z2WolfHowlMgrFScP3Vec                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

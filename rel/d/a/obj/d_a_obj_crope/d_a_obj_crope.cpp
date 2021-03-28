@@ -11,6 +11,35 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct mDoExt_3DlineMat_c {
+};
+
+struct mDoExt_3DlineMatSortPacket {
+	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
+};
+
+struct ResTIMG {
+};
+
+struct _GXColor {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct mDoExt_3DlineMat1_c {
+	/* 80013360 */ void init(u16, u16, ResTIMG*, int);
+	/* 8001373C */ void update(int, f32, _GXColor&, u16, dKy_tevstr_c*);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daObjCrope_c {
 	/* 80BCCCD8 */ void createHeap();
 	/* 80BCCD64 */ void create();
@@ -19,11 +48,6 @@ struct daObjCrope_c {
 	/* 80BCD9EC */ void setRideRopePos();
 	/* 80BCE4FC */ void execute();
 	/* 80BCE9BC */ void draw();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct Vec {
@@ -40,51 +64,8 @@ struct cXyz {
 	/* 80BCD4C8 */ ~cXyz();
 };
 
-struct cM3dGSph {
-	/* 8026F648 */ void SetC(cXyz const&);
-	/* 80BCD3DC */ ~cM3dGSph();
-};
-
-struct cM3dGAab {
-	/* 80BCD424 */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80BCD46C */ ~dCcD_GStts();
-};
-
-struct cM3dGLin {
-	/* 8026F2A8 */ cM3dGLin(cXyz const&, cXyz const&);
-	/* 80BCE954 */ ~cM3dGLin();
-};
-
-struct cCcD_GStts {
-	/* 80BCEA7C */ ~cCcD_GStts();
-};
-
-struct _GXColor {
-};
-
-struct ResTIMG {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct mDoExt_3DlineMat1_c {
-	/* 80013360 */ void init(u16, u16, ResTIMG*, int);
-	/* 8001373C */ void update(int, f32, _GXColor&, u16, dKy_tevstr_c*);
-};
-
-struct mDoExt_3DlineMat_c {
-};
-
-struct mDoExt_3DlineMatSortPacket {
-	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
-};
-
-struct request_of_phase_process_class {
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -98,11 +79,6 @@ struct dCcD_Stts {
 	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-};
-
 struct dCcD_SrcSph {
 };
 
@@ -110,8 +86,28 @@ struct dCcD_Sph {
 	/* 80084A34 */ void Set(dCcD_SrcSph const&);
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80BCD46C */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct cM3dGSph {
+	/* 8026F648 */ void SetC(cXyz const&);
+	/* 80BCD3DC */ ~cM3dGSph();
+};
+
+struct cM3dGLin {
+	/* 8026F2A8 */ cM3dGLin(cXyz const&, cXyz const&);
+	/* 80BCE954 */ ~cM3dGLin();
+};
+
+struct cM3dGAab {
+	/* 80BCD424 */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -119,6 +115,10 @@ struct cCcD_Obj {
 
 struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
+};
+
+struct cCcD_GStts {
+	/* 80BCEA7C */ ~cCcD_GStts();
 };
 
 // 

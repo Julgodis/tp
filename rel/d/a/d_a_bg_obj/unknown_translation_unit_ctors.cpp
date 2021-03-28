@@ -14,3 +14,16 @@
 
 extern void* const data_8045C9AC[2];
 
+// 
+// External References:
+// 
+
+
+extern "C" void __sinit_d_a_bg_obj_cpp(); // 1
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".ctors$10"

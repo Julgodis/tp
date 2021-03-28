@@ -94,7 +94,7 @@ asm void JStudio::stb::data::TParse_TParagraph::getData(JStudio::stb::data::TPar
 #pragma pop
 
 
-/* 80289A80-80289B00 0080+00 s=0 e=3 z=0  None .text      getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData */
+/* 80289A80-80289B00 0080+00 s=0 e=3 z=1  None .text      getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

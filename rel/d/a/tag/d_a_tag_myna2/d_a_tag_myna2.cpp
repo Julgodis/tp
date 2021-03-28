@@ -11,11 +11,6 @@
 // Types:
 // 
 
-struct daTagMyna2_c {
-	/* 80D5C698 */ void create();
-	/* 80D5C708 */ void execute();
-};
-
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 	/* 80018C8C */ ~fopAc_ac_c();
@@ -28,17 +23,22 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
-};
-
 struct fopAcM_gc_c {
 	/* 8001DCBC */ void gndCheck(cXyz const*);
+};
+
+struct daTagMyna2_c {
+	/* 80D5C698 */ void create();
+	/* 80D5C708 */ void execute();
 };
 
 struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
 	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 // 

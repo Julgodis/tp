@@ -18,10 +18,10 @@ struct mDoGph_gInf_c {
 	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
 };
 
-struct J3DAnmTransform {
+struct Vec {
 };
 
-struct Vec {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorf {
@@ -52,14 +52,14 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct cXyz {
-	/* 80009184 */ ~cXyz();
+struct csXyz {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct cXyz {
+	/* 80009184 */ ~cXyz();
 };
 
 struct dPa_control_c {
@@ -70,10 +70,10 @@ struct dMsgObject_c {
 	/* 80237AB0 */ void setDemoMessage(u32);
 };
 
-struct _GXSpotFn {
+struct _GXDistAttnFn {
 };
 
-struct _GXDistAttnFn {
+struct _GXSpotFn {
 };
 
 struct JStage {
@@ -483,6 +483,7 @@ extern "C" extern u16 m_branchId__7dDemo_c[1 + 3 /* padding */];
 extern "C" extern u8 m_control__7dDemo_c[4];
 extern "C" extern u8 m_mesgControl__7dDemo_c[4];
 extern "C" extern u8 m_object__7dDemo_c[4];
+extern "C" extern u8 m_frame__7dDemo_c[4];
 extern "C" extern u8 m_frameNoMsg__7dDemo_c[4];
 extern "C" extern u8 m_mode__7dDemo_c[4];
 extern "C" extern u8 m_status__7dDemo_c[4];
@@ -983,7 +984,7 @@ SECTION_SDATA2 static u8 lit_4127[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 8003819C-80038338 019C+00 s=1 e=1 z=0  None .text      getPrm_Morf__13dDemo_actor_cFv                               */
+/* 8003819C-80038338 019C+00 s=1 e=1 z=1  None .text      getPrm_Morf__13dDemo_actor_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1022,14 +1023,14 @@ static u8 m_factory__7dDemo_c[4];
 /* 80450E1C-80450E20 0004+00 s=2 e=1 z=0  None .sbss      m_mesgControl__7dDemo_c                                      */
 u8 m_mesgControl__7dDemo_c[4];
 
-/* 80450E20-80450E24 0004+00 s=5 e=9 z=0  None .sbss      m_object__7dDemo_c                                           */
+/* 80450E20-80450E24 0004+00 s=5 e=9 z=7  None .sbss      m_object__7dDemo_c                                           */
 u8 m_object__7dDemo_c[4];
 
 /* 80450E24-80450E28 0004+00 s=4 e=0 z=0  None .sbss      m_data__7dDemo_c                                             */
 static u8 m_data__7dDemo_c[4];
 
-/* 80450E28-80450E2C 0004+00 s=2 e=0 z=0  None .sbss      m_frame__7dDemo_c                                            */
-static u8 m_frame__7dDemo_c[4];
+/* 80450E28-80450E2C 0004+00 s=2 e=0 z=1  None .sbss      m_frame__7dDemo_c                                            */
+u8 m_frame__7dDemo_c[4];
 
 /* 80450E2C-80450E30 0004+00 s=2 e=0 z=0  None .sbss      m_translation__7dDemo_c                                      */
 static u8 m_translation__7dDemo_c[4];
@@ -1058,7 +1059,7 @@ static u8 struct_80450E48[4];
 /* 80450E4C-80450E50 0004+00 s=1 e=0 z=0  None .sbss      it$4206                                                      */
 static u8 data_80450E4C[4];
 
-/* 80038338-80038490 0158+00 s=0 e=1 z=0  None .text      getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc                  */
+/* 80038338-80038490 0158+00 s=0 e=1 z=5  None .text      getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1084,7 +1085,7 @@ asm static void dDemo_getJaiPointer(char const* param_0, u32 param_1, int param_
 /* 80451DC0-80451DC4 0004+00 s=1 e=0 z=0  None .sdata2    @4152                                                        */
 SECTION_SDATA2 static u32 lit_4152 = 0xBF800000;
 
-/* 80038518-800387A8 0290+00 s=0 e=0 z=0  None .text      dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc */
+/* 80038518-800387A8 0290+00 s=0 e=0 z=2  None .text      dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1604,7 +1605,7 @@ asm void dDemo_object_c::appendActor(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80039088-800390AC 0024+00 s=2 e=6 z=0  None .text      getActor__14dDemo_object_cFUc                                */
+/* 80039088-800390AC 0024+00 s=2 e=6 z=7  None .text      getActor__14dDemo_object_cFUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

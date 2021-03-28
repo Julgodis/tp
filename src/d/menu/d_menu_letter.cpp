@@ -24,11 +24,11 @@ struct dSv_letter_info_c {
 	/* 8003449C */ void isLetterReadFlag(int) const;
 };
 
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
 };
 
 struct dSelect_cursor_c {
@@ -80,10 +80,10 @@ struct dMeter2Info_c {
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
 };
 
-struct CSTControl {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct CSTControl {
 };
 
 struct STControl {
@@ -136,10 +136,10 @@ struct dMenu_Letter_c {
 	/* 801E1D5C */ void draw();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

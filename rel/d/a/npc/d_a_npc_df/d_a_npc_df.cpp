@@ -11,20 +11,13 @@
 // Types:
 // 
 
+struct standard_create_request_class {
+};
+
+struct request_of_phase_process_class {
+};
+
 struct npc_df_class {
-};
-
-struct df_s {
-	/* 809A6728 */ ~df_s();
-	/* 809A6764 */ df_s();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct dBgS_ObjGndChk {
-	/* 809A6800 */ ~dBgS_ObjGndChk();
 };
 
 struct mDoMtx_stack_c {
@@ -32,10 +25,23 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct standard_create_request_class {
+struct df_s {
+	/* 809A6728 */ ~df_s();
+	/* 809A6764 */ df_s();
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct J3DModelData {
 };
 
 struct J3DModel {
@@ -47,17 +53,12 @@ struct dComIfG_play_c {
 	/* 8002CB68 */ void entrySimpleModel(J3DModel*, int);
 };
 
-struct request_of_phase_process_class {
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
 };
 
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-};
-
-struct cBgS_LinChk {
+struct dBgS_ObjGndChk {
+	/* 809A6800 */ ~dBgS_ObjGndChk();
 };
 
 struct Vec {
@@ -69,13 +70,10 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
-};
-
-struct cBgS {
-	/* 800743B4 */ void LineCross(cBgS_LinChk*);
-	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+	/* 80077CDC */ ~dBgS_LinChk();
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
 struct dBgS_GndChk {
@@ -83,14 +81,16 @@ struct dBgS_GndChk {
 	/* 800775F0 */ ~dBgS_GndChk();
 };
 
-struct dBgS_LinChk {
-	/* 80077C68 */ dBgS_LinChk();
-	/* 80077CDC */ ~dBgS_LinChk();
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+struct cBgS_LinChk {
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cBgS {
+	/* 800743B4 */ void LineCross(cBgS_LinChk*);
+	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
 };
 
 // 

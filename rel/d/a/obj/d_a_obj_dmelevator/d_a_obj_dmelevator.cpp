@@ -11,12 +11,7 @@
 // Types:
 // 
 
-struct dBgW {
-	/* 8007B970 */ dBgW();
-	/* 8007B9C0 */ void Move();
-};
-
-struct fopAc_ac_c {
+struct request_of_phase_process_class {
 };
 
 struct Vec {
@@ -27,7 +22,13 @@ struct cXyz {
 	/* 80BDDBB4 */ ~cXyz();
 };
 
-struct J3DJoint {
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CD9C */ void transM(f32, f32, f32);
+	/* 8000CDD4 */ void transM(cXyz const&);
+};
+
+struct fopAc_ac_c {
 };
 
 struct daObjDmElevator_c {
@@ -70,19 +71,19 @@ struct daObjDmElevator_c {
 	/* 80BDF6DC */ void Delete();
 };
 
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CD9C */ void transM(f32, f32, f32);
-	/* 8000CDD4 */ void transM(cXyz const&);
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct request_of_phase_process_class {
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -90,6 +91,9 @@ struct dRes_info_c {
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dPath {
 };
 
 struct dEvt_control_c {
@@ -106,22 +110,12 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct dPath {
-};
-
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
-};
-
 struct dBgW_Base {
 };
 
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
-};
-
-struct dBgS {
-	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
+struct dBgW {
+	/* 8007B970 */ dBgW();
+	/* 8007B9C0 */ void Move();
 };
 
 struct cBgS_PolyInfo {
@@ -140,6 +134,14 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
+struct dBgS {
+	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
+};
+
+struct cBgW_BgId {
+	/* 802681D4 */ void ChkUsed() const;
+};
+
 struct cBgD_t {
 };
 
@@ -147,16 +149,16 @@ struct cBgW {
 	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
 };
 
-struct dKy_tevstr_c {
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct Z2SoundObjSimple {
+	/* 802BE844 */ Z2SoundObjSimple();
 };
 
-struct cBgW_BgId {
-	/* 802681D4 */ void ChkUsed() const;
+struct Z2SoundObjBase {
+	/* 802BDFF8 */ void deleteObject();
 };
 
 struct JAISoundID {
@@ -166,12 +168,10 @@ struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-struct Z2SoundObjBase {
-	/* 802BDFF8 */ void deleteObject();
+struct J3DModel {
 };
 
-struct Z2SoundObjSimple {
-	/* 802BE844 */ Z2SoundObjSimple();
+struct J3DJoint {
 };
 
 // 

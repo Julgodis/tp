@@ -11,20 +11,7 @@
 // Types:
 // 
 
-struct kytag15_class {
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80860AF0 */ ~J3DFrameCtrl();
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
+struct request_of_phase_process_class {
 };
 
 struct J3DMaterialTable {
@@ -38,13 +25,15 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModel {
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct kytag15_class {
 };
 
-struct request_of_phase_process_class {
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct dRes_info_c {
@@ -52,6 +41,17 @@ struct dRes_info_c {
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct J3DModelData {
+};
+
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80860AF0 */ ~J3DFrameCtrl();
 };
 
 // 

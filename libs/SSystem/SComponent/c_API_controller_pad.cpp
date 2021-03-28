@@ -48,7 +48,7 @@ asm void cAPICPad_recalibrate() {
 #pragma pop
 
 
-/* 802632AC-802632C8 001C+00 s=0 e=3 z=0  None .text      cAPICPad_ANY_BUTTON__FUl                                     */
+/* 802632AC-802632C8 001C+00 s=0 e=3 z=1  None .text      cAPICPad_ANY_BUTTON__FUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

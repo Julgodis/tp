@@ -231,7 +231,7 @@ SECTION_DATA static void* l_dEnvSe_Method[5] = {
 	(void*)dEnvSe_Draw__FP8dEnvSe_c,
 };
 
-/* 803BA81C-803BA848 0028+04 s=0 e=0 z=0  None .data      g_profile_ENVSE                                              */
+/* 803BA81C-803BA848 0028+04 s=0 e=0 z=1  None .data      g_profile_ENVSE                                              */
 SECTION_DATA void* g_profile_ENVSE[10 + 1 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0002FFFD,

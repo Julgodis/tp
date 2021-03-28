@@ -58,9 +58,6 @@ struct JStudio_JParticle {
 struct JPAParticleCallBack {
 };
 
-struct JPAEmitterCallBack {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -68,6 +65,9 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JPAEmitterCallBack {
 };
 
 struct JPAEmitterManager {

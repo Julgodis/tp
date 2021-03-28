@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
 struct Vec {
 };
 
@@ -25,6 +28,27 @@ struct cXyz {
 	/* 80BE63A4 */ cXyz();
 };
 
+struct csXyz {
+	/* 80BE6328 */ ~csXyz();
+	/* 80BE6364 */ csXyz();
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CDD4 */ void transM(cXyz const&);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct daObjFchain_shape_c {
+	/* 80BE7194 */ void draw();
+	/* 80BE73D4 */ ~daObjFchain_shape_c();
+};
+
 struct daObjFchain_c {
 	/* 80BE5FF8 */ void createHeap();
 	/* 80BE6074 */ void create();
@@ -35,43 +59,8 @@ struct daObjFchain_c {
 	/* 80BE7324 */ void draw();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct csXyz {
-	/* 80BE6328 */ ~csXyz();
-	/* 80BE6364 */ csXyz();
-};
-
-struct daObjFchain_shape_c {
-	/* 80BE7194 */ void draw();
-	/* 80BE73D4 */ ~daObjFchain_shape_c();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CDD4 */ void transM(cXyz const&);
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
-};
-
-struct request_of_phase_process_class {
-};
-
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-};
-
-struct dEvent_manager_c {
-	/* 800483E8 */ void getRunEventName();
 };
 
 struct dKy_tevstr_c {
@@ -85,6 +74,21 @@ struct dScnKy_env_light_c {
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dEvent_manager_c {
+	/* 800483E8 */ void getRunEventName();
+};
+
+struct J3DShape {
+	/* 80315300 */ void loadPreDrawSetting() const;
+};
+
 struct J3DPacket;
 struct J3DDrawBuffer {
 	/* 8032548C */ void entryImm(J3DPacket*, u16);
@@ -92,10 +96,6 @@ struct J3DDrawBuffer {
 
 struct J3DPacket {
 	/* 80312750 */ bool entry(J3DDrawBuffer*);
-};
-
-struct J3DShape {
-	/* 80315300 */ void loadPreDrawSetting() const;
 };
 
 // 

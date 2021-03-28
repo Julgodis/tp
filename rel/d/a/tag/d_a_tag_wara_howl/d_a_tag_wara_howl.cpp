@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daTagWrHowl_c {
 	/* 80D63F38 */ daTagWrHowl_c();
 	/* 80D63F74 */ ~daTagWrHowl_c();
@@ -20,11 +25,6 @@ struct daTagWrHowl_c {
 	/* 80D6403C */ void execute();
 	/* 80D64090 */ void init();
 	/* 80D640B4 */ void chkWlfInTag();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 // 

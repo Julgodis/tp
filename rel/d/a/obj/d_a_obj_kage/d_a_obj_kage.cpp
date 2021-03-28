@@ -11,18 +11,21 @@
 // Types:
 // 
 
-struct obj_kage_class {
+struct request_of_phase_process_class {
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct obj_kage_class {
 };
 
 struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DModel {
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
@@ -31,10 +34,9 @@ struct J3DModelData {
 struct cXyz {
 };
 
-struct csXyz {
-};
-
-struct request_of_phase_process_class {
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -44,16 +46,14 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct csXyz {
 };
 
 struct Z2SoundObjSimple {
 	/* 802BE844 */ Z2SoundObjSimple();
+};
+
+struct J3DModel {
 };
 
 // 

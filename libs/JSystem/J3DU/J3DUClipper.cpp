@@ -98,7 +98,7 @@ SECTION_SDATA2 static u32 lit_913 = 0x3C8EFA35;
 /* 80455284-80455288 0004+00 s=1 e=0 z=0  None .sdata2    @914                                                         */
 SECTION_SDATA2 static u32 lit_914 = 0x3F000000;
 
-/* 8027378C-802738FC 0170+00 s=0 e=3 z=0  None .text      calcViewFrustum__11J3DUClipperFv                             */
+/* 8027378C-802738FC 0170+00 s=0 e=3 z=4  None .text      calcViewFrustum__11J3DUClipperFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +109,7 @@ asm void J3DUClipper::calcViewFrustum() {
 #pragma pop
 
 
-/* 802738FC-80273A44 0148+00 s=0 e=3 z=0  None .text      clip__11J3DUClipperCFPA4_Cf3Vecf                             */
+/* 802738FC-80273A44 0148+00 s=0 e=3 z=2  None .text      clip__11J3DUClipperCFPA4_Cf3Vecf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -128,7 +128,7 @@ SECTION_SDATA2 static u8 lit_991[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80273A44-80273E08 03C4+00 s=0 e=3 z=0  None .text      clip__11J3DUClipperCFPA4_CfP3VecP3Vec                        */
+/* 80273A44-80273E08 03C4+00 s=0 e=3 z=2  None .text      clip__11J3DUClipperCFPA4_CfP3VecP3Vec                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

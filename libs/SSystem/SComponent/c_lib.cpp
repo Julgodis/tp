@@ -146,7 +146,7 @@ SECTION_SDATA2 static u8 lit_2262[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8026F97C-8026FA3C 00C0+00 s=0 e=50 z=0  None .text      cLib_addCalc__FPfffff                                        */
+/* 8026F97C-8026FA3C 00C0+00 s=0 e=50 z=178  None .text      cLib_addCalc__FPfffff                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +157,7 @@ asm void cLib_addCalc(f32* param_0, f32 param_1, f32 param_2, f32 param_3, f32 p
 #pragma pop
 
 
-/* 8026FA3C-8026FA80 0044+00 s=0 e=20 z=0  None .text      cLib_addCalc2__FPffff                                        */
+/* 8026FA3C-8026FA80 0044+00 s=0 e=20 z=701  None .text      cLib_addCalc2__FPffff                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,7 +168,7 @@ asm void cLib_addCalc2(f32* param_0, f32 param_1, f32 param_2, f32 param_3) {
 #pragma pop
 
 
-/* 8026FA80-8026FAB8 0038+00 s=0 e=2 z=0  None .text      cLib_addCalc0__FPfff                                         */
+/* 8026FA80-8026FAB8 0038+00 s=0 e=2 z=322  None .text      cLib_addCalc0__FPfff                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -202,7 +202,7 @@ SECTION_SDATA2 static f32 lit_2382[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 8026FAB8-8026FDF4 033C+00 s=0 e=3 z=0  None .text      cLib_addCalcPos__FP4cXyzRC4cXyzfff                           */
+/* 8026FAB8-8026FDF4 033C+00 s=0 e=3 z=78  None .text      cLib_addCalcPos__FP4cXyzRC4cXyzfff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -213,7 +213,7 @@ asm void cLib_addCalcPos(cXyz* param_0, cXyz const& param_1, f32 param_2, f32 pa
 #pragma pop
 
 
-/* 8026FDF4-80270178 0384+00 s=0 e=1 z=0  None .text      cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff                         */
+/* 8026FDF4-80270178 0384+00 s=0 e=1 z=4  None .text      cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -224,7 +224,7 @@ asm void cLib_addCalcPosXZ(cXyz* param_0, cXyz const& param_1, f32 param_2, f32 
 #pragma pop
 
 
-/* 80270178-80270350 01D8+00 s=0 e=2 z=0  None .text      cLib_addCalcPos2__FP4cXyzRC4cXyzff                           */
+/* 80270178-80270350 01D8+00 s=0 e=2 z=33  None .text      cLib_addCalcPos2__FP4cXyzRC4cXyzff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -235,7 +235,7 @@ asm void cLib_addCalcPos2(cXyz* param_0, cXyz const& param_1, f32 param_2, f32 p
 #pragma pop
 
 
-/* 80270350-80270540 01F0+00 s=0 e=0 z=0  None .text      cLib_addCalcPosXZ2__FP4cXyzRC4cXyzff                         */
+/* 80270350-80270540 01F0+00 s=0 e=0 z=4  None .text      cLib_addCalcPosXZ2__FP4cXyzRC4cXyzff                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -246,7 +246,7 @@ asm void cLib_addCalcPosXZ2(cXyz* param_0, cXyz const& param_1, f32 param_2, f32
 #pragma pop
 
 
-/* 80270540-80270608 00C8+00 s=0 e=81 z=0  None .text      cLib_addCalcAngleS__FPsssss                                  */
+/* 80270540-80270608 00C8+00 s=0 e=81 z=244  None .text      cLib_addCalcAngleS__FPsssss                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -257,7 +257,7 @@ asm void cLib_addCalcAngleS(s16* param_0, s16 param_1, s16 param_2, s16 param_3,
 #pragma pop
 
 
-/* 80270608-8027065C 0054+00 s=0 e=2 z=0  None .text      cLib_addCalcAngleS2__FPssss                                  */
+/* 80270608-8027065C 0054+00 s=0 e=2 z=849  None .text      cLib_addCalcAngleS2__FPssss                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -268,7 +268,7 @@ asm void cLib_addCalcAngleS2(s16* param_0, s16 param_1, s16 param_2, s16 param_3
 #pragma pop
 
 
-/* 8027065C-802706D0 0074+00 s=0 e=3 z=0  None .text      cLib_chaseUC__FPUcUcUc                                       */
+/* 8027065C-802706D0 0074+00 s=0 e=3 z=14  None .text      cLib_chaseUC__FPUcUcUc                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -279,7 +279,7 @@ asm void cLib_chaseUC(u8* param_0, u8 param_1, u8 param_2) {
 #pragma pop
 
 
-/* 802706D0-80270740 0070+00 s=0 e=4 z=0  None .text      cLib_chaseS__FPsss                                           */
+/* 802706D0-80270740 0070+00 s=0 e=4 z=49  None .text      cLib_chaseS__FPsss                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -290,7 +290,7 @@ asm void cLib_chaseS(s16* param_0, s16 param_1, s16 param_2) {
 #pragma pop
 
 
-/* 80270740-802707AC 006C+00 s=0 e=70 z=0  None .text      cLib_chaseF__FPfff                                           */
+/* 80270740-802707AC 006C+00 s=0 e=70 z=448  None .text      cLib_chaseF__FPfff                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -301,7 +301,7 @@ asm void cLib_chaseF(f32* param_0, f32 param_1, f32 param_2) {
 #pragma pop
 
 
-/* 802707AC-80270990 01E4+00 s=0 e=3 z=0  None .text      cLib_chasePos__FP4cXyzRC4cXyzf                               */
+/* 802707AC-80270990 01E4+00 s=0 e=3 z=60  None .text      cLib_chasePos__FP4cXyzRC4cXyzf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -312,7 +312,7 @@ asm void cLib_chasePos(cXyz* param_0, cXyz const& param_1, f32 param_2) {
 #pragma pop
 
 
-/* 80270990-80270B90 0200+00 s=0 e=1 z=0  None .text      cLib_chasePosXZ__FP4cXyzRC4cXyzf                             */
+/* 80270990-80270B90 0200+00 s=0 e=1 z=19  None .text      cLib_chasePosXZ__FP4cXyzRC4cXyzf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -323,7 +323,7 @@ asm void cLib_chasePosXZ(cXyz* param_0, cXyz const& param_1, f32 param_2) {
 #pragma pop
 
 
-/* 80270B90-80270C04 0074+00 s=0 e=4 z=0  None .text      cLib_chaseAngleS__FPsss                                      */
+/* 80270B90-80270C04 0074+00 s=0 e=4 z=213  None .text      cLib_chaseAngleS__FPsss                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -334,7 +334,7 @@ asm void cLib_chaseAngleS(s16* param_0, s16 param_1, s16 param_2) {
 #pragma pop
 
 
-/* 80270C04-80270C3C 0038+00 s=0 e=39 z=0  None .text      cLib_targetAngleY__FPC3VecPC3Vec                             */
+/* 80270C04-80270C3C 0038+00 s=0 e=39 z=454  None .text      cLib_targetAngleY__FPC3VecPC3Vec                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -345,7 +345,7 @@ asm void cLib_targetAngleY(Vec const* param_0, Vec const* param_1) {
 #pragma pop
 
 
-/* 80270C3C-80270C74 0038+00 s=0 e=0 z=0  None .text      cLib_targetAngleY__FRC3VecRC3Vec                             */
+/* 80270C3C-80270C74 0038+00 s=0 e=0 z=7  None .text      cLib_targetAngleY__FRC3VecRC3Vec                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -356,7 +356,7 @@ asm void cLib_targetAngleY(Vec const& param_0, Vec const& param_1) {
 #pragma pop
 
 
-/* 80270C74-80270DC0 014C+00 s=0 e=2 z=0  None .text      cLib_targetAngleX__FPC4cXyzPC4cXyz                           */
+/* 80270C74-80270DC0 014C+00 s=0 e=2 z=109  None .text      cLib_targetAngleX__FPC4cXyzPC4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -367,7 +367,7 @@ asm void cLib_targetAngleX(cXyz const* param_0, cXyz const* param_1) {
 #pragma pop
 
 
-/* 80270DC0-80270E24 0064+00 s=0 e=2 z=0  None .text      cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz                       */
+/* 80270DC0-80270E24 0064+00 s=0 e=2 z=118  None .text      cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -378,7 +378,7 @@ asm void cLib_offsetPos(cXyz* param_0, cXyz const* param_1, s16 param_2, cXyz co
 #pragma pop
 
 
-/* 80270E24-80270E4C 0028+00 s=0 e=48 z=0  None .text      cLib_distanceAngleS__Fss                                     */
+/* 80270E24-80270E4C 0028+00 s=0 e=48 z=71  None .text      cLib_distanceAngleS__Fss                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -393,7 +393,7 @@ asm void cLib_distanceAngleS(s16 param_0, s16 param_1) {
 /* 80430DB8-80430F98 01E0+00 s=2 e=0 z=0  None .bss       mtx                                                          */
 static u8 mtx[480];
 
-/* 80450768-80450770 0004+04 s=6 e=2 z=0  None .sdata     calc_mtx                                                     */
+/* 80450768-80450770 0004+04 s=6 e=2 z=695  None .sdata     calc_mtx                                                     */
 SECTION_SDATA void* calc_mtx[1 + 1 /* padding */] = {
 	(void*)&mtx,
 	/* padding */
@@ -411,7 +411,7 @@ asm void MtxInit() {
 #pragma pop
 
 
-/* 80270E5C-80270EA4 0048+00 s=0 e=0 z=0  None .text      MtxTrans__FfffUc                                             */
+/* 80270E5C-80270EA4 0048+00 s=0 e=0 z=43  None .text      MtxTrans__FfffUc                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -422,7 +422,7 @@ asm void MtxTrans(f32 param_0, f32 param_1, f32 param_2, u8 param_3) {
 #pragma pop
 
 
-/* 80270EA4-80270EEC 0048+00 s=0 e=0 z=0  None .text      MtxScale__FfffUc                                             */
+/* 80270EA4-80270EEC 0048+00 s=0 e=0 z=46  None .text      MtxScale__FfffUc                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -433,7 +433,7 @@ asm void MtxScale(f32 param_0, f32 param_1, f32 param_2, u8 param_3) {
 #pragma pop
 
 
-/* 80270EEC-80270F1C 0030+00 s=0 e=2 z=0  None .text      MtxPosition__FP4cXyzP4cXyz                                   */
+/* 80270EEC-80270F1C 0030+00 s=0 e=2 z=615  None .text      MtxPosition__FP4cXyzP4cXyz                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -444,7 +444,7 @@ asm void MtxPosition(cXyz* param_0, cXyz* param_1) {
 #pragma pop
 
 
-/* 80270F1C-80270F58 003C+00 s=0 e=0 z=0  None .text      MtxPush__Fv                                                  */
+/* 80270F1C-80270F58 003C+00 s=0 e=0 z=20  None .text      MtxPush__Fv                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -455,7 +455,7 @@ asm void MtxPush() {
 #pragma pop
 
 
-/* 80270F58-80270F68 0010+00 s=0 e=0 z=0  None .text      MtxPull__Fv                                                  */
+/* 80270F58-80270F68 0010+00 s=0 e=0 z=20  None .text      MtxPull__Fv                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

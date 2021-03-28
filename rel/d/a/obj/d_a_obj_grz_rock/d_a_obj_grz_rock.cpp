@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct fopAc_ac_c {
+};
+
 struct daObjGrzRock_c {
 	/* 80C14BD8 */ void setBaseMtx();
 	/* 80C14C54 */ void setEnvTevColor();
@@ -24,24 +30,22 @@ struct daObjGrzRock_c {
 	/* 80C15248 */ void Delete();
 };
 
-struct dBgS_ObjAcch {
-	/* 80C150DC */ ~dBgS_ObjAcch();
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct fopAc_ac_c {
-};
-
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct request_of_phase_process_class {
+struct cXyz {
 };
 
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -52,19 +56,13 @@ struct dRes_control_c {
 	/* 8003C6B8 */ void getObjectResName2Index(char const*, char const*);
 };
 
-struct cXyz {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
-};
-
 struct dPa_levelEcallBack {
 };
 
 struct csXyz {
+};
+
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -74,31 +72,18 @@ struct dPa_control_c {
 struct dBgW_Base {
 };
 
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
-};
-
-struct cBgS_PolyInfo {
-};
-
-struct dBgS {
-	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
-	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
-};
-
 struct dBgW {
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
 };
 
-struct dBgS_Acch {
-	/* 80075F94 */ ~dBgS_Acch();
-	/* 800760A0 */ dBgS_Acch();
-	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
-	/* 80076AAC */ void CrrPos(dBgS&);
+struct dBgS_ObjAcch {
+	/* 80C150DC */ ~dBgS_ObjAcch();
+};
+
+struct cBgS_PolyInfo {
 };
 
 struct dBgS_MoveBgActor {
@@ -111,21 +96,36 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct dBgS {
+	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
+	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
+};
+
+struct dBgS_Acch {
+	/* 80075F94 */ ~dBgS_Acch();
+	/* 800760A0 */ dBgS_Acch();
+	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
+	/* 80076AAC */ void CrrPos(dBgS&);
+};
+
+struct cBgW_BgId {
+	/* 802681D4 */ void ChkUsed() const;
 };
 
 struct cBgS_GndChk {
 	/* 80267C1C */ cBgS_GndChk();
 };
 
-struct cBgW_BgId {
-	/* 802681D4 */ void ChkUsed() const;
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
+};
+
+struct J3DModel {
 };
 
 // 

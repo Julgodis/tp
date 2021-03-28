@@ -379,7 +379,7 @@ SECTION_DATA static void* l_dThunder_Method[5] = {
 	(void*)dThunder_Draw__FP10dThunder_c,
 };
 
-/* 803BC1EC-803BC218 0028+04 s=0 e=0 z=0  None .data      g_profile_KY_THUNDER                                         */
+/* 803BC1EC-803BC218 0028+04 s=0 e=0 z=1  None .data      g_profile_KY_THUNDER                                         */
 SECTION_DATA void* g_profile_KY_THUNDER[10 + 1 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,

@@ -12,3 +12,18 @@
 // 
 
 
+extern void* const data_8058CF74[2];
+
+// 
+// External References:
+// 
+
+
+extern "C" void __sinit_d_a_obj_ktOnFire_cpp(); // 1
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".ctors$10"

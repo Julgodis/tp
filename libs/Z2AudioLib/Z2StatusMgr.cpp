@@ -407,7 +407,7 @@ SECTION_SDATA2 static u8 lit_3731[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802B61E8-802B671C 0534+00 s=1 e=7 z=0  None .text      setDemoName__11Z2StatusMgrFPc                                */
+/* 802B61E8-802B671C 0534+00 s=1 e=7 z=11  None .text      setDemoName__11Z2StatusMgrFPc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

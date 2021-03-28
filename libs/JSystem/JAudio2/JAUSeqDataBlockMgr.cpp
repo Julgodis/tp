@@ -30,11 +30,11 @@ struct JSULink__template1 {
 struct JKRArchive {
 };
 
-struct JAUSeqDataBlock {
-	/* 802A68F4 */ JAUSeqDataBlock();
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct JAUSeqDataBlock {
+	/* 802A68F4 */ JAUSeqDataBlock();
 };
 
 struct JAUSeqDataBlocks {

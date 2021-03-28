@@ -11,18 +11,7 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct J3DMaterial {
-};
-
-struct daHoZelda_matAnm_c {
-	/* 80845EAC */ void init();
-	/* 80845EDC */ void calc(J3DMaterial*) const;
-	/* 80848D54 */ ~daHoZelda_matAnm_c();
+struct request_of_phase_process_class {
 };
 
 struct Vec {
@@ -32,6 +21,87 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80267128 */ void atan2sX_Z() const;
 	/* 80267150 */ void atan2sY_XZ() const;
+};
+
+struct Quaternion {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CD9C */ void transM(f32, f32, f32);
+	/* 8000CF7C */ void quatM(Quaternion const*);
+};
+
+struct J3DMaterialTable {
+};
+
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+};
+
+struct mDoExt_btpAnm {
+	/* 8000D54C */ void init(J3DMaterialTable*, J3DAnmTexPattern*, int, int, f32, s16, s16);
+	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
+};
+
+struct J3DAnmTextureSRTKey {
+};
+
+struct mDoExt_btkAnm {
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
+	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+struct mDoExt_MtxCalcOldFrame {
+	/* 8000F848 */ void initOldFrameMorf(f32, u16, u16);
+};
+
+struct mDoExt_AnmRatioPack {
+	/* 80846CF4 */ ~mDoExt_AnmRatioPack();
+	/* 80846D30 */ mDoExt_AnmRatioPack();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct daPy_frameCtrl_c {
+	/* 8015E4CC */ void checkAnmEnd();
+	/* 8015E510 */ void updateFrame();
+	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
+	/* 80846C4C */ ~daPy_frameCtrl_c();
+	/* 80846CA8 */ daPy_frameCtrl_c();
+};
+
+struct daPy_actorKeep_c {
+	/* 8015EC48 */ void setActor();
+	/* 8015ECB8 */ void setData(fopAc_ac_c*);
+	/* 8015ECFC */ void clearData();
+};
+
+struct J3DMaterial {
+};
+
+struct daHoZelda_matAnm_c {
+	/* 80845EAC */ void init();
+	/* 80845EDC */ void calc(J3DMaterial*) const;
+	/* 80848D54 */ ~daHoZelda_matAnm_c();
 };
 
 struct daHoZelda_c {
@@ -62,131 +132,12 @@ struct daHoZelda_c {
 	/* 80848B64 */ void draw();
 };
 
-template <typename A0, typename B0>
-struct J3DMtxCalcNoAnm { };
-/* J3DMtxCalcNoAnm<J3DMtxCalcCalcTransformMaya, J3DMtxCalcJ3DSysInitMaya> */
-struct J3DMtxCalcNoAnm__template0 {
-	/* 8084642C */ ~J3DMtxCalcNoAnm__template0();
-	/* 80848CE0 */ void init(Vec const&, f32 const (& )[3][4]);
-	/* 80848D08 */ void calc();
+struct dKy_tevstr_c {
 };
 
-struct J3DMtxCalcNoAnmBase {
-	/* 80846498 */ ~J3DMtxCalcNoAnmBase();
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DMtxCalc {
-	/* 808464F4 */ ~J3DMtxCalc();
-	/* 80848CB8 */ void setAnmTransform(u8, J3DAnmTransform*);
-	/* 80848CBC */ void setAnmTransform(J3DAnmTransform*);
-	/* 80848CC0 */ bool getAnmTransform(u8);
-	/* 80848CC8 */ bool getAnmTransform();
-	/* 80848CD0 */ void setWeight(u8, f32);
-	/* 80848CD4 */ void getWeight(u8) const;
-};
-
-struct J3DTevKColorAnm {
-	/* 8084653C */ ~J3DTevKColorAnm();
-	/* 80846578 */ J3DTevKColorAnm();
-};
-
-struct J3DTevColorAnm {
-	/* 80846590 */ ~J3DTevColorAnm();
-	/* 808465CC */ J3DTevColorAnm();
-};
-
-struct J3DTexNoAnm {
-	/* 808465E4 */ ~J3DTexNoAnm();
-	/* 8084662C */ J3DTexNoAnm();
-	/* 80848C88 */ void calc(u16*) const;
-};
-
-struct J3DTexMtxAnm {
-	/* 80846650 */ ~J3DTexMtxAnm();
-	/* 8084668C */ J3DTexMtxAnm();
-};
-
-struct J3DMatColorAnm {
-	/* 808466A4 */ ~J3DMatColorAnm();
-	/* 808466E0 */ J3DMatColorAnm();
-};
-
-struct J3DJoint {
-};
-
-struct daPy_frameCtrl_c {
-	/* 8015E4CC */ void checkAnmEnd();
-	/* 8015E510 */ void updateFrame();
-	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
-	/* 80846C4C */ ~daPy_frameCtrl_c();
-	/* 80846CA8 */ daPy_frameCtrl_c();
-};
-
-struct mDoExt_AnmRatioPack {
-	/* 80846CF4 */ ~mDoExt_AnmRatioPack();
-	/* 80846D30 */ mDoExt_AnmRatioPack();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80846D48 */ ~J3DFrameCtrl();
-};
-
-struct Quaternion {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CD9C */ void transM(f32, f32, f32);
-	/* 8000CF7C */ void quatM(Quaternion const*);
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
-};
-
-struct J3DMaterialTable {
-};
-
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
-};
-
-struct mDoExt_btpAnm {
-	/* 8000D54C */ void init(J3DMaterialTable*, J3DAnmTexPattern*, int, int, f32, s16, s16);
-	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
-};
-
-struct J3DAnmTextureSRTKey {
-};
-
-struct mDoExt_btkAnm {
-	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
-	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
-};
-
-struct J3DModel {
-};
-
-struct mDoExt_MtxCalcOldFrame {
-	/* 8000F848 */ void initOldFrameMorf(f32, u16, u16);
-};
-
-struct csXyz {
-};
-
-struct request_of_phase_process_class {
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -194,6 +145,9 @@ struct dRes_info_c {
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct J3DModel {
 };
 
 struct dDlst_shadowControl_c {
@@ -209,18 +163,7 @@ struct dAttList_c {
 	/* 80073864 */ void getActor();
 };
 
-struct daPy_actorKeep_c {
-	/* 8015EC48 */ void setActor();
-	/* 8015ECB8 */ void setData(fopAc_ac_c*);
-	/* 8015ECFC */ void clearData();
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct csXyz {
 };
 
 struct Z2Creature {
@@ -229,20 +172,77 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
-struct J3DMaterialAnm {
-	/* 8032C320 */ void initialize();
-	/* 8032C3C4 */ void calc(J3DMaterial*) const;
+struct J3DTransformInfo {
+};
+
+struct J3DTexNoAnm {
+	/* 808465E4 */ ~J3DTexNoAnm();
+	/* 8084662C */ J3DTexNoAnm();
+	/* 80848C88 */ void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	/* 80846650 */ ~J3DTexMtxAnm();
+	/* 8084668C */ J3DTexMtxAnm();
+};
+
+struct J3DTevKColorAnm {
+	/* 8084653C */ ~J3DTevKColorAnm();
+	/* 80846578 */ J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	/* 80846590 */ ~J3DTevColorAnm();
+	/* 808465CC */ J3DTevColorAnm();
+};
+
+struct J3DMtxCalcNoAnmBase {
+	/* 80846498 */ ~J3DMtxCalcNoAnmBase();
+};
+
+template <typename A0, typename B0>
+struct J3DMtxCalcNoAnm { };
+/* J3DMtxCalcNoAnm<J3DMtxCalcCalcTransformMaya, J3DMtxCalcJ3DSysInitMaya> */
+struct J3DMtxCalcNoAnm__template0 {
+	/* 8084642C */ ~J3DMtxCalcNoAnm__template0();
+	/* 80848CE0 */ void init(Vec const&, f32 const (& )[3][4]);
+	/* 80848D08 */ void calc();
 };
 
 struct J3DMtxCalcJ3DSysInitMaya {
 	/* 8032ECAC */ void init(Vec const&, f32 const (& )[3][4]);
 };
 
-struct J3DTransformInfo {
-};
-
 struct J3DMtxCalcCalcTransformMaya {
 	/* 8032EFBC */ void calcTransform(J3DTransformInfo const&);
+};
+
+struct J3DMtxCalc {
+	/* 808464F4 */ ~J3DMtxCalc();
+	/* 80848CB8 */ void setAnmTransform(u8, J3DAnmTransform*);
+	/* 80848CBC */ void setAnmTransform(J3DAnmTransform*);
+	/* 80848CC0 */ bool getAnmTransform(u8);
+	/* 80848CC8 */ bool getAnmTransform();
+	/* 80848CD0 */ void setWeight(u8, f32);
+	/* 80848CD4 */ void getWeight(u8) const;
+};
+
+struct J3DMaterialAnm {
+	/* 8032C320 */ void initialize();
+	/* 8032C3C4 */ void calc(J3DMaterial*) const;
+};
+
+struct J3DMatColorAnm {
+	/* 808466A4 */ ~J3DMatColorAnm();
+	/* 808466E0 */ J3DMatColorAnm();
+};
+
+struct J3DJoint {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80846D48 */ ~J3DFrameCtrl();
 };
 
 // 

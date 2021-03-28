@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daTag_BottleItem_c {
 	/* 80D55FD8 */ void create();
 	/* 80D5605C */ bool Delete();
@@ -27,11 +32,6 @@ struct daTag_BottleItem_c {
 	/* 80D56418 */ void makeSoup();
 	/* 80D564A0 */ void wait(void*);
 	/* 80D565F0 */ ~daTag_BottleItem_c();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct dSv_event_c {

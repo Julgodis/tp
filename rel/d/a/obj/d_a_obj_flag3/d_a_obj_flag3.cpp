@@ -11,17 +11,7 @@
 // Types:
 // 
 
-struct daObjFlag3_c {
-	/* 80BEEA78 */ void createHeap();
-	/* 80BEED3C */ void execute();
-	/* 80BEF700 */ ~daObjFlag3_c();
-	/* 80BEF95C */ void create();
-	/* 80BEFBC4 */ void create_init();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct request_of_phase_process_class {
 };
 
 struct Vec {
@@ -37,14 +27,53 @@ struct cXyz {
 	/* 80BEFF30 */ cXyz();
 };
 
-struct FlagCloth2_c {
-	/* 80BEEDE4 */ void execute();
-	/* 80BEEF74 */ void calcFlagNormal(cXyz*, int);
-	/* 80BEF278 */ void calcFlagFactor(cXyz*, cXyz*, cXyz*, int);
-	/* 80BEF790 */ ~FlagCloth2_c();
-	/* 80BEFD08 */ void initFlagPos(cXyz*, fopAc_ac_c*);
-	/* 80BF00A0 */ void draw();
-	/* 80BF0434 */ void getTargetPos();
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct daSetBgObj_c {
+	/* 80031870 */ void getArcName(fopAc_ac_c*);
+};
+
+struct daObjFlag3_c {
+	/* 80BEEA78 */ void createHeap();
+	/* 80BEED3C */ void execute();
+	/* 80BEF700 */ ~daObjFlag3_c();
+	/* 80BEF95C */ void create();
+	/* 80BEFBC4 */ void create_init();
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80BEFFC4 */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
 struct cM3dGSph {
@@ -55,54 +84,8 @@ struct cM3dGAab {
 	/* 80BEFF7C */ ~cM3dGAab();
 };
 
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80BEFFC4 */ ~dCcD_GStts();
-};
-
-struct J3DLightObj {
-	/* 80BF0020 */ J3DLightObj();
-};
-
 struct cCcD_GStts {
 	/* 80BF0058 */ ~cCcD_GStts();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-};
-
-struct J3DModel {
-};
-
-struct J3DModelData {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct daSetBgObj_c {
-	/* 80031870 */ void getArcName(fopAc_ac_c*);
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct J3DSys {
@@ -118,8 +101,25 @@ struct J3DPacket {
 	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
+struct J3DModel {
+};
+
+struct J3DLightObj {
+	/* 80BF0020 */ J3DLightObj();
+};
+
 struct J3DLightInfo {
 	/* 803256C4 */ void operator=(J3DLightInfo const&);
+};
+
+struct FlagCloth2_c {
+	/* 80BEEDE4 */ void execute();
+	/* 80BEEF74 */ void calcFlagNormal(cXyz*, int);
+	/* 80BEF278 */ void calcFlagFactor(cXyz*, cXyz*, cXyz*, int);
+	/* 80BEF790 */ ~FlagCloth2_c();
+	/* 80BEFD08 */ void initFlagPos(cXyz*, fopAc_ac_c*);
+	/* 80BF00A0 */ void draw();
+	/* 80BF0434 */ void getTargetPos();
 };
 
 // 

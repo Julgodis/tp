@@ -11,13 +11,15 @@
 // Types:
 // 
 
-struct daAmiShutter_HIO_c {
-	/* 80BA14CC */ daAmiShutter_HIO_c();
-	/* 80BA21E0 */ ~daAmiShutter_HIO_c();
+struct request_of_phase_process_class {
 };
 
 struct mDoHIO_entry_c {
 	/* 80BA1514 */ ~mDoHIO_entry_c();
+};
+
+struct fopAc_ac_c {
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daAmiShutter_c {
@@ -45,8 +47,38 @@ struct daAmiShutter_c {
 	/* 80BA22E8 */ ~daAmiShutter_c();
 };
 
-struct fopAc_ac_c {
-	/* 80018C8C */ ~fopAc_ac_c();
+struct daAmiShutter_HIO_c {
+	/* 80BA14CC */ daAmiShutter_HIO_c();
+	/* 80BA21E0 */ ~daAmiShutter_HIO_c();
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 struct dEvLib_callback_c {
@@ -58,37 +90,10 @@ struct dEvLib_callback_c {
 	/* 80BA22E0 */ bool eventEnd();
 };
 
-struct J3DModel {
-};
-
-struct J3DModelData {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-};
-
 struct dBgW {
 };
 
 struct cBgS_PolyInfo {
-};
-
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
 struct csXyz {
@@ -105,19 +110,14 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
 struct JAISoundID {
 };
 
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DModel {
 };
 
 // 

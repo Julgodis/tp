@@ -169,7 +169,7 @@ asm void fopMsgM_setStageLayer(void* param_0) {
 #pragma pop
 
 
-/* 8001FA24-8001FA44 0020+00 s=3 e=14 z=0  None .text      fopMsgM_SearchByID__FUi                                      */
+/* 8001FA24-8001FA44 0020+00 s=3 e=14 z=4  None .text      fopMsgM_SearchByID__FUi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -260,7 +260,7 @@ SECTION_SDATA static u32 i_msgID[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 8001FD34-8001FE84 0150+00 s=0 e=2 z=0  None .text      fopMsgM_messageSet__FUlP10fopAc_ac_cUl                       */
+/* 8001FD34-8001FE84 0150+00 s=0 e=2 z=1  None .text      fopMsgM_messageSet__FUlP10fopAc_ac_cUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -271,7 +271,7 @@ asm void fopMsgM_messageSet(u32 param_0, fopAc_ac_c* param_1, u32 param_2) {
 #pragma pop
 
 
-/* 8001FE84-8001FFC4 0140+00 s=0 e=6 z=0  None .text      fopMsgM_messageSet__FUlUl                                    */
+/* 8001FE84-8001FFC4 0140+00 s=0 e=6 z=4  None .text      fopMsgM_messageSet__FUlUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -282,7 +282,7 @@ asm void fopMsgM_messageSet(u32 param_0, u32 param_1) {
 #pragma pop
 
 
-/* 8001FFC4-800200C0 00FC+00 s=0 e=1 z=0  None .text      fopMsgM_messageSetDemo__FUl                                  */
+/* 8001FFC4-800200C0 00FC+00 s=0 e=1 z=13  None .text      fopMsgM_messageSetDemo__FUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -293,7 +293,7 @@ asm void fopMsgM_messageSetDemo(u32 param_0) {
 #pragma pop
 
 
-/* 800200C0-80020100 0040+00 s=0 e=7 z=0  None .text      fopMsgM_messageGet__FPcUl                                    */
+/* 800200C0-80020100 0040+00 s=0 e=7 z=1  None .text      fopMsgM_messageGet__FPcUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -371,7 +371,7 @@ SECTION_SDATA2 static u8 lit_4303[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80020160-800202CC 016C+00 s=1 e=4 z=0  None .text      fopMsgM_valueIncrease__FiiUc                                 */
+/* 80020160-800202CC 016C+00 s=1 e=4 z=2  None .text      fopMsgM_valueIncrease__FiiUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

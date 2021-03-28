@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daTag_MynaLight_c {
 	/* 80D5CB38 */ void create();
 	/* 80D5CB9C */ void Delete();
@@ -23,12 +28,10 @@ struct daTag_MynaLight_c {
 	/* 80D5D298 */ ~daTag_MynaLight_c();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct dPa_levelEcallBack {
 };
 
-struct cXyz {
+struct csXyz {
 };
 
 struct dKy_tevstr_c {
@@ -37,10 +40,7 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
-};
-
-struct csXyz {
+struct cXyz {
 };
 
 struct dPa_control_c {

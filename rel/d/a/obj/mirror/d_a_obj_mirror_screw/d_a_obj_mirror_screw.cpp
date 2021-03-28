@@ -11,19 +11,7 @@
 // Types:
 // 
 
-struct daObjMirrorScrew_c {
-	/* 80C98AD8 */ void initWait();
-	/* 80C98AE4 */ void executeWait();
-	/* 80C98C00 */ void initDown();
-	/* 80C98F04 */ void executeDown();
-	/* 80C992F4 */ void CreateHeap();
-	/* 80C99364 */ void Create();
-	/* 80C99490 */ void Execute(f32 (** )[3][4]);
-	/* 80C99608 */ void Draw();
-	/* 80C996AC */ void Delete();
-};
-
-struct fopAc_ac_c {
+struct request_of_phase_process_class {
 };
 
 struct cXyz {
@@ -38,13 +26,30 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModel {
+struct fopAc_ac_c {
 };
 
-struct J3DModelData {
+struct daObjMirrorScrew_c {
+	/* 80C98AD8 */ void initWait();
+	/* 80C98AE4 */ void executeWait();
+	/* 80C98C00 */ void initDown();
+	/* 80C98F04 */ void executeDown();
+	/* 80C992F4 */ void CreateHeap();
+	/* 80C99364 */ void Create();
+	/* 80C99490 */ void Execute(f32 (** )[3][4]);
+	/* 80C99608 */ void Draw();
+	/* 80C996AC */ void Delete();
 };
 
-struct request_of_phase_process_class {
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
+	/* 8006FB10 */ void StartQuake(int, int, cXyz);
+	/* 8006FD94 */ void StopQuake(int);
+};
+
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 struct dSv_event_c {
@@ -52,9 +57,15 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -64,23 +75,14 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
-};
-
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
-	/* 8006FB10 */ void StartQuake(int, int, cXyz);
-	/* 8006FD94 */ void StopQuake(int);
 };
 
 struct dBgW {
@@ -100,11 +102,6 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
 struct JAISoundID {
 };
 
@@ -114,6 +111,9 @@ struct Vec {
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DModel {
 };
 
 // 

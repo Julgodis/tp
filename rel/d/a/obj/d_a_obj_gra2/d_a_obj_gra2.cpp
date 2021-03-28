@@ -11,10 +11,7 @@
 // Types:
 // 
 
-struct J3DJoint {
-};
-
-struct fopAc_ac_c {
+struct request_of_phase_process_class {
 };
 
 struct Vec {
@@ -28,10 +25,70 @@ struct cXyz {
 	/* 80C04C40 */ ~cXyz();
 };
 
-struct J3DModel {
+struct csXyz {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CDD4 */ void transM(cXyz const&);
+	/* 8000CD9C */ void transM(f32, f32, f32);
+	/* 8000CE70 */ void scaleM(cXyz const&);
+	/* 8000CF0C */ void ZXYrotS(csXyz const&);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+};
+
+struct mDoExt_morf_c {
+	/* 8000FB7C */ void setMorf(f32);
+};
+
+struct J3DAnmTransform {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct Z2Creature {
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfSO {
+	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
+	/* 800111EC */ void modelCalc();
+	/* 80011310 */ void stopZelAnime();
+};
+
+struct fopAc_ac_c {
+};
+
+struct fopAcM_lc_c {
+	/* 8001DC68 */ void lineCheck(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct daTagGra_c {
+	/* 80C0CF10 */ void getGraPos();
+};
+
+struct daPy_py_c {
+	/* 8015F3FC */ void getAttentionOffsetY();
 };
 
 struct dBgW {
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daObj_GrA_c {
@@ -187,43 +244,7 @@ struct daBaseNpc_path_c {
 	/* 80C04B64 */ ~daBaseNpc_path_c();
 };
 
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 80C04BB0 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80C04BF8 */ ~cM3dGAab();
-};
-
-struct dCcD_SrcSph {
-};
-
-struct dCcD_Sph {
-	/* 80084A34 */ void Set(dCcD_SrcSph const&);
-	/* 80C04C7C */ ~dCcD_Sph();
-	/* 80C04D48 */ dCcD_Sph();
-};
-
-struct cM3dGSph {
-	/* 8026F648 */ void SetC(cXyz const&);
-	/* 8026F708 */ void SetR(f32);
-	/* 80C04DCC */ ~cM3dGSph();
-};
-
-struct daBaseNpc_acMngr_c {
-	/* 8014D804 */ daBaseNpc_acMngr_c();
-	/* 8014D81C */ void entry(fopAc_ac_c*);
-	/* 8014D838 */ void getActor();
-	/* 80C04E54 */ ~daBaseNpc_acMngr_c();
-};
-
 struct cBgS_PolyInfo {
-};
-
-struct csXyz {
 };
 
 struct daBaseNpc_moveBgActor_c {
@@ -240,188 +261,6 @@ struct daBaseNpc_moveBgActor_c {
 	/* 80C04F24 */ bool CreateHeap();
 	/* 80C04F2C */ bool Execute(f32 (** )[3][4]);
 	/* 80C04F34 */ bool Delete();
-};
-
-struct daTagGra_c {
-	/* 80C0CF10 */ void getGraPos();
-};
-
-struct dAttention_c {
-	/* 80C0F590 */ void getDistTable(int);
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CDD4 */ void transM(cXyz const&);
-	/* 8000CD9C */ void transM(f32, f32, f32);
-	/* 8000CE70 */ void scaleM(cXyz const&);
-	/* 8000CF0C */ void ZXYrotS(csXyz const&);
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
-};
-
-struct J3DAnmTransform {
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
-};
-
-struct mDoExt_morf_c {
-	/* 8000FB7C */ void setMorf(f32);
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
-
-struct mDoExt_McaMorfSO {
-	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
-	/* 800111EC */ void modelCalc();
-	/* 80011310 */ void stopZelAnime();
-};
-
-struct fopAcM_lc_c {
-	/* 8001DC68 */ void lineCheck(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_danBit_c {
-	/* 80034B98 */ void onSwitch(int);
-	/* 80034BE8 */ void isSwitch(int) const;
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-	/* 8003C6B8 */ void getObjectResName2Index(char const*, char const*);
-};
-
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
-	/* 80042914 */ void setSkipProc(void*, int (*)(void*, int), int);
-	/* 800429A8 */ void onSkipFade();
-};
-
-struct dEvent_manager_c {
-	/* 80047A78 */ void endCheck(s16);
-	/* 800487F0 */ void ChkPresentEnd();
-};
-
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
-};
-
-struct dPa_control_c {
-	struct level_c {
-		/* 8004B918 */ void getEmitter(u32);
-	};
-
-	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-	/* 8004D6A4 */ void setPoly(u32, u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
-};
-
-struct dBgW_Base {
-};
-
-struct dBgS {
-	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
-};
-
-struct dBgS_AcchCir {
-	/* 80075F58 */ void SetWall(f32, f32);
-};
-
-struct dBgS_Acch {
-	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
-	/* 80076AAC */ void CrrPos(dBgS&);
-};
-
-struct dPaPo_c {
-	/* 80050C9C */ void init(dBgS_Acch*, f32, f32);
-	/* 80051008 */ void setEffectCenter(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
-};
-
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
-	/* 8006FB10 */ void StartQuake(int, int, cXyz);
-	/* 8006FD94 */ void StopQuake(int);
-	/* 8006FE5C */ void CheckQuake();
-};
-
-struct cBgS_LinChk {
-};
-
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
-	/* 800743B4 */ void LineCross(cBgS_LinChk*);
-	/* 80074618 */ void GetActorPointer(int) const;
-};
-
-struct dBgS_LinChk {
-	/* 80077C68 */ dBgS_LinChk();
-	/* 80077CDC */ ~dBgS_LinChk();
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct dBgS_LinkLinChk {
-	/* 80078030 */ dBgS_LinkLinChk();
-	/* 8007808C */ ~dBgS_LinkLinChk();
-};
-
-struct dCcD_GAtTgCoCommonBase {
-	/* 80083688 */ void GetAc();
-};
-
-struct dCcD_GStts {
-	/* 80083830 */ void Move();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 800842C0 */ void ChkAtHit();
-	/* 80084460 */ void ChkTgHit();
-	/* 800844F8 */ void GetTgHitObj();
-	/* 80084658 */ void ChkCoHit();
-	/* 800846F0 */ void GetCoHitObj();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
 };
 
 struct daBaseNpc_lookat_c {
@@ -465,8 +304,134 @@ struct daBaseNpc_c {
 	/* 8014F4AC */ bool dbgDraw();
 };
 
-struct daPy_py_c {
-	/* 8015F3FC */ void getAttentionOffsetY();
+struct daBaseNpc_acMngr_c {
+	/* 8014D804 */ daBaseNpc_acMngr_c();
+	/* 8014D81C */ void entry(fopAc_ac_c*);
+	/* 8014D838 */ void getActor();
+	/* 80C04E54 */ ~daBaseNpc_acMngr_c();
+};
+
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
+	/* 8006FB10 */ void StartQuake(int, int, cXyz);
+	/* 8006FD94 */ void StopQuake(int);
+	/* 8006FE5C */ void CheckQuake();
+};
+
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dSv_danBit_c {
+	/* 80034B98 */ void onSwitch(int);
+	/* 80034BE8 */ void isSwitch(int) const;
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+	/* 8003C6B8 */ void getObjectResName2Index(char const*, char const*);
+};
+
+struct dPa_levelEcallBack {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct _GXColor {
+};
+
+struct dPa_control_c {
+	struct level_c {
+		/* 8004B918 */ void getEmitter(u32);
+	};
+
+	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	/* 8004D6A4 */ void setPoly(u32, u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
+};
+
+struct dBgW_Base {
+};
+
+struct dBgS {
+	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
+};
+
+struct dBgS_AcchCir {
+	/* 80075F58 */ void SetWall(f32, f32);
+};
+
+struct dBgS_Acch {
+	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
+	/* 80076AAC */ void CrrPos(dBgS&);
+};
+
+struct dPaPo_c {
+	/* 80050C9C */ void init(dBgS_Acch*, f32, f32);
+	/* 80051008 */ void setEffectCenter(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
+};
+
+struct dMsgObject_c {
+	/* 8023819C */ void getActor();
+	/* 802383A4 */ void isMouthCheck();
+};
+
+struct dMsgFlow_c {
+	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+};
+
+struct dEvt_control_c {
+	/* 80042468 */ void reset();
+	/* 80042914 */ void setSkipProc(void*, int (*)(void*, int), int);
+	/* 800429A8 */ void onSkipFade();
+};
+
+struct dEvent_manager_c {
+	/* 80047A78 */ void endCheck(s16);
+	/* 800487F0 */ void ChkPresentEnd();
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcSph {
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_Sph {
+	/* 80084A34 */ void Set(dCcD_SrcSph const&);
+	/* 80C04C7C */ ~dCcD_Sph();
+	/* 80C04D48 */ dCcD_Sph();
+};
+
+struct dCcD_GStts {
+	/* 80083830 */ void Move();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 800842C0 */ void ChkAtHit();
+	/* 80084460 */ void ChkTgHit();
+	/* 800844F8 */ void GetTgHitObj();
+	/* 80084658 */ void ChkCoHit();
+	/* 800846F0 */ void GetCoHitObj();
+};
+
+struct dCcD_GAtTgCoCommonBase {
+	/* 80083688 */ void GetAc();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
 };
 
 struct dCamera_c {
@@ -480,27 +445,23 @@ struct dCamera_c {
 	/* 80181E98 */ void Center();
 };
 
-struct dMsgObject_c {
-	/* 8023819C */ void getActor();
-	/* 802383A4 */ void isMouthCheck();
+struct dBgS_LinkLinChk {
+	/* 80078030 */ dBgS_LinkLinChk();
+	/* 8007808C */ ~dBgS_LinkLinChk();
 };
 
-struct dMsgFlow_c {
-	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+	/* 80077CDC */ ~dBgS_LinChk();
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
+struct dAttention_c {
+	/* 80C0F590 */ void getDistTable(int);
 };
 
-struct cBgS_GndChk {
-	/* 80267C1C */ cBgS_GndChk();
-	/* 80267C94 */ ~cBgS_GndChk();
-};
-
-struct cBgW_BgId {
-	/* 802681D4 */ void ChkUsed() const;
+struct cSGlobe {
+	/* 80271880 */ cSGlobe(cXyz const&);
 };
 
 struct cSAngle {
@@ -510,8 +471,47 @@ struct cSAngle {
 	/* 80271228 */ void operator-(s16) const;
 };
 
-struct cSGlobe {
-	/* 80271880 */ cSGlobe(cXyz const&);
+struct cM3dGSph {
+	/* 8026F648 */ void SetC(cXyz const&);
+	/* 8026F708 */ void SetR(f32);
+	/* 80C04DCC */ ~cM3dGSph();
+};
+
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 80C04BB0 */ ~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	/* 80C04BF8 */ ~cM3dGAab();
+};
+
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
+};
+
+struct cCcS {
+	/* 80264BA8 */ void Set(cCcD_Obj*);
+};
+
+struct cBgW_BgId {
+	/* 802681D4 */ void ChkUsed() const;
+};
+
+struct cBgS_LinChk {
+};
+
+struct cBgS_GndChk {
+	/* 80267C1C */ cBgS_GndChk();
+	/* 80267C94 */ ~cBgS_GndChk();
+};
+
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
+	/* 800743B4 */ void LineCross(cBgS_LinChk*);
+	/* 80074618 */ void GetActorPointer(int) const;
 };
 
 struct J3DFrameCtrl {

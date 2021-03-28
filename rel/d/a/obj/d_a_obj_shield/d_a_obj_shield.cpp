@@ -11,16 +11,27 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD9C */ void transM(f32, f32, f32);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct fopAcM_gc_c {
+	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
-struct cM3dGPla {
-	/* 80CD6D54 */ ~cM3dGPla();
+struct daPy_py_c {
+	/* 8015F4F0 */ void setLookPos(cXyz*);
 };
 
 struct daItemShield_c {
@@ -47,59 +58,6 @@ struct daItemShield_c {
 	/* 80CD8140 */ void _delete();
 };
 
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 80CD7420 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80CD7468 */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80CD74B0 */ ~dCcD_GStts();
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 80CD750C */ ~dBgS_AcchCir();
-};
-
-struct dBgS_ObjAcch {
-	/* 80CD757C */ ~dBgS_ObjAcch();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct cCcD_GStts {
-	/* 80CD81F8 */ ~cCcD_GStts();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD9C */ void transM(f32, f32, f32);
-};
-
-struct csXyz {
-};
-
-struct fopAcM_gc_c {
-	/* 8001DCBC */ void gndCheck(cXyz const*);
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
 struct daItemBase_c {
 	/* 80037A64 */ void hide();
 	/* 80037A74 */ void show();
@@ -121,6 +79,11 @@ struct daItemBase_c {
 	/* 801451D0 */ void getCollisionR();
 };
 
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
 	/* 800436EC */ void setPtI_Id(unsigned int);
@@ -132,11 +95,49 @@ struct dEvent_manager_c {
 	/* 80047ADC */ void endCheckOld(char const*);
 };
 
-struct cBgS {
-	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80CD74B0 */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 80084658 */ void ChkCoHit();
+};
+
+struct dCcD_GAtTgCoCommonBase {
+	/* 80083688 */ void GetAc();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80CD757C */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 80CD750C */ ~dBgS_AcchCir();
 };
 
 struct dBgS {
+};
+
+struct csXyz {
 };
 
 struct dBgS_Acch {
@@ -146,32 +147,23 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct cM3dGPla {
+	/* 80CD6D54 */ ~cM3dGPla();
 };
 
-struct dCcD_GAtTgCoCommonBase {
-	/* 80083688 */ void GetAc();
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 80CD7420 */ ~cM3dGCyl();
 };
 
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 80084658 */ void ChkCoHit();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct daPy_py_c {
-	/* 8015F4F0 */ void setLookPos(cXyz*);
+struct cM3dGAab {
+	/* 80CD7468 */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -181,8 +173,16 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
+struct cCcD_GStts {
+	/* 80CD81F8 */ ~cCcD_GStts();
+};
+
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
+};
+
+struct cBgS {
+	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
 struct JAISoundID {

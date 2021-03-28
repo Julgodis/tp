@@ -64,17 +64,17 @@ struct dMeterMap_c {
 struct J2DPicture {
 };
 
-struct cXyz {
+struct JUTFont {
 };
 
 struct J2DTextBox {
 	/* 8021C7F4 */ void getFont() const;
 };
 
-struct JUTFont {
+struct JMSMesgEntry_c {
 };
 
-struct JMSMesgEntry_c {
+struct cXyz {
 };
 
 struct dMeter2Info_c {
@@ -643,7 +643,7 @@ asm void dMeter2Info_c::init() {
 #pragma pop
 
 
-/* 8021C0E0-8021C11C 003C+00 s=0 e=1 z=0  None .text      setFloatingMessage__13dMeter2Info_cFUssb                     */
+/* 8021C0E0-8021C11C 003C+00 s=0 e=1 z=2  None .text      setFloatingMessage__13dMeter2Info_cFUssb                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -654,7 +654,7 @@ asm void dMeter2Info_c::setFloatingMessage(u16 param_0, s16 param_1, bool param_
 #pragma pop
 
 
-/* 8021C11C-8021C1DC 00C0+00 s=0 e=0 z=0  None .text      setFloatingFlow__13dMeter2Info_cFUssb                        */
+/* 8021C11C-8021C1DC 00C0+00 s=0 e=0 z=1  None .text      setFloatingFlow__13dMeter2Info_cFUssb                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -731,7 +731,7 @@ asm void dMeter2Info_c::getStringKana(u32 param_0, char* param_1, JMSMesgEntry_c
 #pragma pop
 
 
-/* 8021C544-8021C6A4 0160+00 s=0 e=32 z=0  None .text      getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c        */
+/* 8021C544-8021C6A4 0160+00 s=0 e=32 z=1  None .text      getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -807,10 +807,10 @@ asm void dMeter2Info_c::isDirectUseItem(int param_0) {
 /* 80430178-80430188 000C+04 s=1 e=0 z=0  None .bss       @3846                                                        */
 static u8 lit_3846[12 + 4 /* padding */];
 
-/* 80430188-80430280 00F8+00 s=4 e=267 z=0  None .bss       g_meter2_info                                                */
+/* 80430188-80430280 00F8+00 s=4 e=267 z=70  None .bss       g_meter2_info                                                */
 u8 g_meter2_info[248];
 
-/* 8021C970-8021C9DC 006C+00 s=0 e=0 z=0  None .text      setMeterString__13dMeter2Info_cFl                            */
+/* 8021C970-8021C9DC 006C+00 s=0 e=0 z=5  None .text      setMeterString__13dMeter2Info_cFl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -832,7 +832,7 @@ asm void dMeter2Info_c::resetWarpStatus() {
 #pragma pop
 
 
-/* 8021CA04-8021CA70 006C+00 s=0 e=2 z=0  None .text      warpInProc__13dMeter2Info_cFv                                */
+/* 8021CA04-8021CA70 006C+00 s=0 e=2 z=3  None .text      warpInProc__13dMeter2Info_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -854,7 +854,7 @@ asm void dMeter2Info_c::warpOutProc() {
 #pragma pop
 
 
-/* 8021CC00-8021CC0C 000C+00 s=0 e=1 z=0  None .text      resetMeterString__13dMeter2Info_cFv                          */
+/* 8021CC00-8021CC0C 000C+00 s=0 e=1 z=1  None .text      resetMeterString__13dMeter2Info_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1019,7 +1019,7 @@ asm void dMeter2Info_c::changeWater(u8 param_0) {
 #pragma pop
 
 
-/* 8021DE18-8021E0C4 02AC+00 s=0 e=3 z=0  None .text      setMiniGameItem__13dMeter2Info_cFUc                          */
+/* 8021DE18-8021E0C4 02AC+00 s=0 e=3 z=3  None .text      setMiniGameItem__13dMeter2Info_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1030,7 +1030,7 @@ asm void dMeter2Info_c::setMiniGameItem(u8 param_0) {
 #pragma pop
 
 
-/* 8021E0C4-8021E268 01A4+00 s=0 e=3 z=0  None .text      resetMiniGameItem__13dMeter2Info_cFb                         */
+/* 8021E0C4-8021E268 01A4+00 s=0 e=3 z=4  None .text      resetMiniGameItem__13dMeter2Info_cFb                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1041,7 +1041,7 @@ asm void dMeter2Info_c::resetMiniGameItem(bool param_0) {
 #pragma pop
 
 
-/* 8021E268-8021E290 0028+00 s=0 e=0 z=0  None .text      setMiniGameCount__13dMeter2Info_cFSc                         */
+/* 8021E268-8021E290 0028+00 s=0 e=0 z=5  None .text      setMiniGameCount__13dMeter2Info_cFSc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1063,7 +1063,7 @@ asm void dMeter2Info_c::setSaveStageName(char const* param_0) {
 #pragma pop
 
 
-/* 8021E2B4-8021E2C8 0014+00 s=0 e=0 z=0  None .text      dMeter2Info_getNowLifeGauge__Fv                              */
+/* 8021E2B4-8021E2C8 0014+00 s=0 e=0 z=1  None .text      dMeter2Info_getNowLifeGauge__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1074,7 +1074,7 @@ asm void dMeter2Info_getNowLifeGauge() {
 #pragma pop
 
 
-/* 8021E2C8-8021E2DC 0014+00 s=0 e=11 z=0  None .text      dMeter2Info_getNumberTextureName__Fi                         */
+/* 8021E2C8-8021E2DC 0014+00 s=0 e=11 z=3  None .text      dMeter2Info_getNumberTextureName__Fi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1092,7 +1092,7 @@ static u8 data_804510B8[4];
 /* 804510BC-804510C0 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804510BC[4];
 
-/* 8021E2DC-8021E308 002C+00 s=0 e=0 z=0  None .text      dMeter2Info_getPlusTextureName__Fv                           */
+/* 8021E2DC-8021E308 002C+00 s=0 e=0 z=1  None .text      dMeter2Info_getPlusTextureName__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1120,7 +1120,7 @@ asm void dMeter2Info_getPixel(f32 param_0, f32 param_1, f32 param_2, f32 param_3
 #pragma pop
 
 
-/* 8021E4B0-8021E530 0080+00 s=0 e=2 z=0  None .text      dMeter2Info_setCloth__FUcb                                   */
+/* 8021E4B0-8021E530 0080+00 s=0 e=2 z=1  None .text      dMeter2Info_setCloth__FUcb                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1131,7 +1131,7 @@ asm void dMeter2Info_setCloth(u8 param_0, bool param_1) {
 #pragma pop
 
 
-/* 8021E530-8021E5D4 00A4+00 s=0 e=3 z=0  None .text      dMeter2Info_setSword__FUcb                                   */
+/* 8021E530-8021E5D4 00A4+00 s=0 e=3 z=3  None .text      dMeter2Info_setSword__FUcb                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1192,7 +1192,7 @@ asm void dMeter2Info_getRecieveLetterNum() {
 #pragma pop
 
 
-/* 8021E754-8021E804 00B0+00 s=0 e=4 z=0  None .text      dMeter2Info_getNewLetterNum__Fv                              */
+/* 8021E754-8021E804 00B0+00 s=0 e=4 z=2  None .text      dMeter2Info_getNewLetterNum__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

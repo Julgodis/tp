@@ -11,6 +11,21 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct cXyz {
+	/* 80C9DEDC */ ~cXyz();
+	/* 80C9E700 */ cXyz();
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+};
+
+struct fopAc_ac_c {
+};
+
 struct daObjStair_c {
 	/* 80C9D098 */ void initBaseMtx();
 	/* 80C9D0D4 */ void setBaseMtx();
@@ -38,51 +53,23 @@ struct daObjStair_c {
 	/* 80C9E5A0 */ void removeParticle();
 };
 
-struct cXyz {
-	/* 80C9DEDC */ ~cXyz();
-	/* 80C9E700 */ cXyz();
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct dPa_followEcallBack {
-	/* 80049580 */ dPa_followEcallBack(u8, u8);
-	/* 80C9E704 */ ~dPa_followEcallBack();
-	/* 80C9E78C */ void __defctor();
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dPa_levelEcallBack {
-	/* 80C9E788 */ void cleanup();
-	/* 80C9E820 */ ~dPa_levelEcallBack();
-};
-
-struct JPABaseEmitter {
-};
-
-struct JPAEmitterCallBack {
-	/* 8027E6A4 */ ~JPAEmitterCallBack();
-	/* 80C9E894 */ void execute(JPABaseEmitter*);
-	/* 80C9E898 */ void executeAfter(JPABaseEmitter*);
-	/* 80C9E89C */ void draw(JPABaseEmitter*);
-	/* 80C9E8A0 */ void drawAfter(JPABaseEmitter*);
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-};
-
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct fopAc_ac_c {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -92,6 +79,27 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct dPa_levelEcallBack {
+	/* 80C9E788 */ void cleanup();
+	/* 80C9E820 */ ~dPa_levelEcallBack();
+};
+
+struct dPa_followEcallBack {
+	/* 80049580 */ dPa_followEcallBack(u8, u8);
+	/* 80C9E704 */ ~dPa_followEcallBack();
+	/* 80C9E78C */ void __defctor();
+};
+
+struct csXyz {
+};
+
+struct _GXColor {
+};
+
+struct dPa_control_c {
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+};
+
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
@@ -99,23 +107,6 @@ struct dEvt_control_c {
 struct dEvent_manager_c {
 	/* 80047698 */ void getEventIdx(fopAc_ac_c*, u8);
 	/* 80047A78 */ void endCheck(s16);
-};
-
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
-};
-
-struct csXyz {
-};
-
-struct dPa_control_c {
-	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
 struct dBgW {
@@ -134,11 +125,6 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
 struct JAISoundID {
 };
 
@@ -148,6 +134,20 @@ struct Vec {
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct JPABaseEmitter {
+};
+
+struct JPAEmitterCallBack {
+	/* 8027E6A4 */ ~JPAEmitterCallBack();
+	/* 80C9E894 */ void execute(JPABaseEmitter*);
+	/* 80C9E898 */ void executeAfter(JPABaseEmitter*);
+	/* 80C9E89C */ void draw(JPABaseEmitter*);
+	/* 80C9E8A0 */ void drawAfter(JPABaseEmitter*);
+};
+
+struct J3DModel {
 };
 
 // 

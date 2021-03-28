@@ -87,7 +87,7 @@ extern "C" extern u32 __float_epsilon;
 // Declarations:
 // 
 
-/* 80266AE4-80266B34 0050+00 s=0 e=103 z=0  None .text      __pl__4cXyzCFRC3Vec                                          */
+/* 80266AE4-80266B34 0050+00 s=0 e=103 z=300  None .text      __pl__4cXyzCFRC3Vec                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +98,7 @@ asm void cXyz::operator+(Vec const& param_0) const {
 #pragma pop
 
 
-/* 80266B34-80266B84 0050+00 s=0 e=196 z=0  None .text      __mi__4cXyzCFRC3Vec                                          */
+/* 80266B34-80266B84 0050+00 s=0 e=196 z=1082  None .text      __mi__4cXyzCFRC3Vec                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +109,7 @@ asm void cXyz::operator-(Vec const& param_0) const {
 #pragma pop
 
 
-/* 80266B84-80266BD0 004C+00 s=1 e=99 z=0  None .text      __ml__4cXyzCFf                                               */
+/* 80266B84-80266BD0 004C+00 s=1 e=99 z=158  None .text      __ml__4cXyzCFf                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,7 +135,7 @@ asm void cXyz::operator*(Vec const& param_0) const {
 /* 80455070-80455074 0004+00 s=3 e=0 z=0  None .sdata2    @2201                                                        */
 SECTION_SDATA2 static u32 lit_2201 = 0x3F800000;
 
-/* 80266C18-80266C6C 0054+00 s=0 e=3 z=0  None .text      __dv__4cXyzCFf                                               */
+/* 80266C18-80266C6C 0054+00 s=0 e=3 z=12  None .text      __dv__4cXyzCFf                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +157,7 @@ asm void cXyz::getCrossProduct(Vec const& param_0) const {
 #pragma pop
 
 
-/* 80266CBC-80266CE4 0028+00 s=0 e=7 z=0  None .text      outprod__4cXyzCFRC3Vec                                       */
+/* 80266CBC-80266CE4 0028+00 s=0 e=7 z=6  None .text      outprod__4cXyzCFRC3Vec                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,7 +168,7 @@ asm void cXyz::outprod(Vec const& param_0) const {
 #pragma pop
 
 
-/* 80266CE4-80266D30 004C+00 s=0 e=10 z=0  None .text      norm__4cXyzCFv                                               */
+/* 80266CE4-80266D30 004C+00 s=0 e=10 z=1  None .text      norm__4cXyzCFv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -183,7 +183,7 @@ asm void cXyz::norm() const {
 /* 80430CE8-80430CF4 000C+00 s=1 e=0 z=0  None .bss       @2450                                                        */
 static u8 lit_2450[12];
 
-/* 80430CF4-80430D00 000C+00 s=3 e=50 z=0  None .bss       Zero__4cXyz                                                  */
+/* 80430CF4-80430D00 000C+00 s=3 e=50 z=42  None .bss       Zero__4cXyz                                                  */
 f32 Zero__4cXyz[3];
 
 /* 80455074-80455078 0004+00 s=4 e=0 z=0  None .sdata2    @2288                                                        */
@@ -219,7 +219,7 @@ SECTION_SDATA2 static u8 lit_2327[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80266DC4-80266EF4 0130+00 s=0 e=0 z=0  None .text      normZC__4cXyzCFv                                             */
+/* 80266DC4-80266EF4 0130+00 s=0 e=0 z=2  None .text      normZC__4cXyzCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -230,7 +230,7 @@ asm void cXyz::normZC() const {
 #pragma pop
 
 
-/* 80266EF4-80266F48 0054+00 s=0 e=13 z=0  None .text      normalize__4cXyzFv                                           */
+/* 80266EF4-80266F48 0054+00 s=0 e=13 z=17  None .text      normalize__4cXyzFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -241,7 +241,7 @@ asm void cXyz::normalize() {
 #pragma pop
 
 
-/* 80266F48-80266FDC 0094+00 s=0 e=19 z=0  None .text      normalizeZP__4cXyzFv                                         */
+/* 80266F48-80266FDC 0094+00 s=0 e=19 z=59  None .text      normalizeZP__4cXyzFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -252,7 +252,7 @@ asm void cXyz::normalizeZP() {
 #pragma pop
 
 
-/* 80266FDC-8026702C 0050+00 s=0 e=2 z=0  None .text      normalizeRS__4cXyzFv                                         */
+/* 80266FDC-8026702C 0050+00 s=0 e=2 z=3  None .text      normalizeRS__4cXyzFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -263,7 +263,7 @@ asm void cXyz::normalizeRS() {
 #pragma pop
 
 
-/* 8026702C-8026706C 0040+00 s=0 e=5 z=0  None .text      __eq__4cXyzCFRC3Vec                                          */
+/* 8026702C-8026706C 0040+00 s=0 e=5 z=9  None .text      __eq__4cXyzCFRC3Vec                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -274,7 +274,7 @@ asm bool cXyz::operator==(Vec const& param_0) const {
 #pragma pop
 
 
-/* 8026706C-802670AC 0040+00 s=0 e=6 z=0  None .text      __ne__4cXyzCFRC3Vec                                          */
+/* 8026706C-802670AC 0040+00 s=0 e=6 z=6  None .text      __ne__4cXyzCFRC3Vec                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -289,7 +289,7 @@ asm bool cXyz::operator!=(Vec const& param_0) const {
 /* 80455084-80455088 0004+00 s=1 e=0 z=0  None .sdata2    @2405                                                        */
 SECTION_SDATA2 static u32 lit_2405 = 0x42000000;
 
-/* 802670AC-80267128 007C+00 s=0 e=4 z=0  None .text      isZero__4cXyzCFv                                             */
+/* 802670AC-80267128 007C+00 s=0 e=4 z=7  None .text      isZero__4cXyzCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -300,7 +300,7 @@ asm void cXyz::isZero() const {
 #pragma pop
 
 
-/* 80267128-80267150 0028+00 s=0 e=81 z=0  None .text      atan2sX_Z__4cXyzCFv                                          */
+/* 80267128-80267150 0028+00 s=0 e=81 z=85  None .text      atan2sX_Z__4cXyzCFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -327,7 +327,7 @@ SECTION_SDATA2 static u8 lit_2448[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80267150-80267290 0140+00 s=0 e=21 z=0  None .text      atan2sY_XZ__4cXyzCFv                                         */
+/* 80267150-80267290 0140+00 s=0 e=21 z=33  None .text      atan2sY_XZ__4cXyzCFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -342,19 +342,19 @@ asm void cXyz::atan2sY_XZ() const {
 /* 80430D00-80430D0C 000C+00 s=1 e=0 z=0  None .bss       @2451                                                        */
 static u8 lit_2451[12];
 
-/* 80430D0C-80430D18 000C+00 s=1 e=3 z=0  None .bss       BaseX__4cXyz                                                 */
+/* 80430D0C-80430D18 000C+00 s=1 e=3 z=9  None .bss       BaseX__4cXyz                                                 */
 u8 BaseX__4cXyz[12];
 
 /* 80430D18-80430D24 000C+00 s=1 e=0 z=0  None .bss       @2452                                                        */
 static u8 lit_2452[12];
 
-/* 80430D24-80430D30 000C+00 s=1 e=14 z=0  None .bss       BaseY__4cXyz                                                 */
+/* 80430D24-80430D30 000C+00 s=1 e=14 z=8  None .bss       BaseY__4cXyz                                                 */
 u8 BaseY__4cXyz[12];
 
 /* 80430D30-80430D3C 000C+00 s=1 e=0 z=0  None .bss       @2453                                                        */
 static u8 lit_2453[12];
 
-/* 80430D3C-80430D48 000C+00 s=1 e=15 z=0  None .bss       BaseZ__4cXyz                                                 */
+/* 80430D3C-80430D48 000C+00 s=1 e=15 z=5  None .bss       BaseZ__4cXyz                                                 */
 u8 BaseZ__4cXyz[12];
 
 /* 80430D48-80430D54 000C+00 s=1 e=0 z=0  None .bss       @2454                                                        */

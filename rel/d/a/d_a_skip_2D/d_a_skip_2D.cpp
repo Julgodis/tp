@@ -26,15 +26,15 @@ struct daSkip2D_c {
 	/* 80D4D674 */ ~daSkip2D_c();
 };
 
+struct dMeterButton_c {
+	/* 80201328 */ dMeterButton_c();
+};
+
 struct dDlst_base_c {
 };
 
 struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
-};
-
-struct dMeterButton_c {
-	/* 80201328 */ dMeterButton_c();
 };
 
 // 

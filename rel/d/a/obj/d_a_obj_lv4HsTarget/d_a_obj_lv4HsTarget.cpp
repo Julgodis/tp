@@ -11,13 +11,14 @@
 // Types:
 // 
 
-struct daLv4HsTarget_HIO_c {
-	/* 80C5F62C */ daLv4HsTarget_HIO_c();
-	/* 80C5F990 */ ~daLv4HsTarget_HIO_c();
+struct request_of_phase_process_class {
 };
 
 struct mDoHIO_entry_c {
 	/* 80C5F648 */ ~mDoHIO_entry_c();
+};
+
+struct fopAc_ac_c {
 };
 
 struct daLv4HsTarget_c {
@@ -29,16 +30,23 @@ struct daLv4HsTarget_c {
 	/* 80C5F8D4 */ void Delete();
 };
 
-struct fopAc_ac_c {
+struct daLv4HsTarget_HIO_c {
+	/* 80C5F62C */ daLv4HsTarget_HIO_c();
+	/* 80C5F990 */ ~daLv4HsTarget_HIO_c();
 };
 
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct request_of_phase_process_class {
+struct cXyz {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -52,9 +60,6 @@ struct dBgW {
 };
 
 struct cBgS_PolyInfo {
-};
-
-struct cXyz {
 };
 
 struct csXyz {
@@ -71,12 +76,7 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct J3DModel {
 };
 
 // 

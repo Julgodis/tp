@@ -11,6 +11,23 @@
 // Types:
 // 
 
+struct cXyz {
+	/* 80266EF4 */ void normalize();
+	/* 802670AC */ void isZero() const;
+};
+
+struct csXyz {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daObjTrnd2_c {
 	/* 80D1C4D8 */ void setPntWind();
 	/* 80D1C54C */ void cutPntWind();
@@ -29,29 +46,11 @@ struct daObjTrnd2_c {
 	/* 80D1D2E8 */ void _delete();
 };
 
-struct cM3dGAab {
-	/* 80D1CD78 */ ~cM3dGAab();
-};
-
-struct cXyz {
-	/* 80266EF4 */ void normalize();
-	/* 802670AC */ void isZero() const;
-};
-
-struct csXyz {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dPa_levelEcallBack {
 };
 
 struct dKy_tevstr_c {
@@ -60,33 +59,39 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
-};
-
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
-struct WIND_INFLUENCE {
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
 };
 
 struct dCcD_Stts {
 	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
+struct dCcD_SrcCps {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+};
+
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 };
 
-struct dCcD_SrcCps {
-};
-
 struct dCcD_Cps {
 	/* 800847D0 */ void Set(dCcD_SrcCps const&);
+};
+
+struct cM3dGCpsS {
+};
+
+struct cM3dGCps {
+	/* 8026EF88 */ cM3dGCps();
+	/* 8026F03C */ void Set(cM3dGCpsS const&);
+};
+
+struct cM3dGAab {
+	/* 80D1CD78 */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -96,12 +101,7 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct cM3dGCpsS {
-};
-
-struct cM3dGCps {
-	/* 8026EF88 */ cM3dGCps();
-	/* 8026F03C */ void Set(cM3dGCpsS const&);
+struct WIND_INFLUENCE {
 };
 
 // 

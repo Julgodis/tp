@@ -11,6 +11,31 @@
 // Types:
 // 
 
+struct standard_create_request_class {
+};
+
+struct request_of_phase_process_class {
+};
+
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+struct fopAc_ac_c {
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daObjCdoor_c {
 	/* 80BC6DB8 */ void CreateHeap();
 	/* 80BC6F30 */ void create();
@@ -33,41 +58,19 @@ struct daObjCdoor_c {
 	/* 80BC7C04 */ void Draw();
 };
 
-struct fopAc_ac_c {
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80BC7234 */ ~J3DFrameCtrl();
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
-};
-
-struct J3DModel {
-};
-
-struct standard_create_request_class {
-};
-
-struct request_of_phase_process_class {
-};
-
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct cXyz {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -86,16 +89,18 @@ struct dEvent_manager_c {
 	/* 80047A78 */ void endCheck(s16);
 };
 
-struct cBgS_PolyInfo {
-};
-
-struct cXyz {
-};
-
-struct csXyz {
+struct dCamera_c {
+	/* 80181534 */ void ForceLockOn(fopAc_ac_c*);
+	/* 8018159C */ void ForceLockOff(fopAc_ac_c*);
 };
 
 struct dBgW {
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct csXyz {
 };
 
 struct dBgS_MoveBgActor {
@@ -108,19 +113,6 @@ struct dBgS_MoveBgActor {
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
-};
-
-struct dCamera_c {
-	/* 80181534 */ void ForceLockOn(fopAc_ac_c*);
-	/* 8018159C */ void ForceLockOff(fopAc_ac_c*);
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct JAISoundID {
@@ -136,6 +128,14 @@ struct Z2SeMgr {
 
 struct Z2EnvSeMgr {
 	/* 802C8258 */ void setHyrulSewerOpen(bool);
+};
+
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80BC7234 */ ~J3DFrameCtrl();
 };
 
 // 

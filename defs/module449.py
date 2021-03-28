@@ -39,12 +39,12 @@ SYMBOLS = [
 	{'addr':0x80BEBE64,'size':356,'pad':0,'label':"getSwingY__11daObjFlag_cFf",'name':"getSwingY__11daObjFlag_cFf",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80BEBFC8,'size':240,'pad':0,'label':"nodeCallBack__FP8J3DJointi",'name':"nodeCallBack__FP8J3DJointi",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80BEC0B8,'size':380,'pad':0,'label':"createSolidHeap__FP10fopAc_ac_c",'name':"createSolidHeap__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80BEC234,'size':204,'pad':0,'label':"daObjFlag_Draw__FP11daObjFlag_c",'name':"daObjFlag_Draw__FP11daObjFlag_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80BEC300,'size':56,'pad':0,'label':"daObjFlag_Execute__FP11daObjFlag_c",'name':"daObjFlag_Execute__FP11daObjFlag_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80BEC338,'size':8,'pad':0,'label':"daObjFlag_IsDelete__FP11daObjFlag_c",'name':"daObjFlag_IsDelete__FP11daObjFlag_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
-	{'addr':0x80BEC340,'size':124,'pad':0,'label':"daObjFlag_Delete__FP11daObjFlag_c",'name':"daObjFlag_Delete__FP11daObjFlag_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80BEC234,'size':204,'pad':0,'label':"daObjFlag_Draw__FP11daObjFlag_c",'name':"daObjFlag_Draw__FP11daObjFlag_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80BEC300,'size':56,'pad':0,'label':"daObjFlag_Execute__FP11daObjFlag_c",'name':"daObjFlag_Execute__FP11daObjFlag_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80BEC338,'size':8,'pad':0,'label':"daObjFlag_IsDelete__FP11daObjFlag_c",'name':"daObjFlag_IsDelete__FP11daObjFlag_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
+	{'addr':0x80BEC340,'size':124,'pad':0,'label':"daObjFlag_Delete__FP11daObjFlag_c",'name':"daObjFlag_Delete__FP11daObjFlag_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80BEC3BC,'size':60,'pad':0,'label':"__dt__11FlagJoint_cFv",'name':"__dt__11FlagJoint_cFv",'lib':-1,'tu':3,'section':0,'r':[2,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80BEC3F8,'size':232,'pad':0,'label':"daObjFlag_Create__FP10fopAc_ac_c",'name':"daObjFlag_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80BEC3F8,'size':232,'pad':0,'label':"daObjFlag_Create__FP10fopAc_ac_c",'name':"daObjFlag_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80BEC4E0,'size':4,'pad':0,'label':"__ct__11FlagJoint_cFv",'name':"__ct__11FlagJoint_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
 	{'addr':0x80BEC4E4,'size':4,'pad':0,'label':"data_80BEC4E4",'name':None,'lib':-1,'tu':1,'section':1,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80BEC4E8,'size':4,'pad':0,'label':"data_80BEC4E8",'name':None,'lib':-1,'tu':2,'section':2,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
@@ -61,8 +61,8 @@ SYMBOLS = [
 	{'addr':0x80BEC54C,'size':4,'pad':0,'label':"lit_3832",'name':"@3832",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"Integer"},
 	{'addr':0x80BEC550,'size':4,'pad':0,'label':"lit_3833",'name':"@3833",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"Integer"},
 	{'addr':0x80BEC554,'size':41,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':3,'section':3,'r':[4,0,0],'sh':[0,0,0],'type':"StringBase"},
-	{'addr':0x80BEC580,'size':32,'pad':0,'label':"l_daObjFlag_Method",'name':"l_daObjFlag_Method",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x80BEC5A0,'size':48,'pad':0,'label':"g_profile_Obj_Flag",'name':"g_profile_Obj_Flag",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x80BEC580,'size':32,'pad':0,'label':"l_daObjFlag_Method",'name':"l_daObjFlag_Method",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x80BEC5A0,'size':48,'pad':0,'label':"g_profile_Obj_Flag",'name':"g_profile_Obj_Flag",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
 ]
 
 # Names

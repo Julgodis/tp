@@ -12,4 +12,17 @@
 // 
 
 
-extern 
+extern u8 const data_8046AFBC[4];
+
+// 
+// External References:
+// 
+
+
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".ctors$10"

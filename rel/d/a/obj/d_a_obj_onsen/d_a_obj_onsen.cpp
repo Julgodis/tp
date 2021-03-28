@@ -11,20 +11,7 @@
 // Types:
 // 
 
-struct daObjOnsen_c {
-	/* 80CA7B58 */ void initBaseMtx();
-	/* 80CA7BB0 */ void setBaseMtx();
-	/* 80CA7C28 */ void Create();
-	/* 80CA7C74 */ void CreateHeap();
-	/* 80CA7E44 */ void create1st();
-	/* 80CA7EEC */ void Execute(f32 (** )[3][4]);
-	/* 80CA7F1C */ void Draw();
-	/* 80CA8008 */ void Delete();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80CA7DFC */ ~J3DFrameCtrl();
+struct request_of_phase_process_class {
 };
 
 struct cXyz {
@@ -32,10 +19,6 @@ struct cXyz {
 
 struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
 };
 
 struct J3DMaterialTable {
@@ -49,16 +32,33 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModel {
-};
-
-struct J3DModelData {
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
 };
 
 struct fopAc_ac_c {
 };
 
-struct request_of_phase_process_class {
+struct daObjOnsen_c {
+	/* 80CA7B58 */ void initBaseMtx();
+	/* 80CA7BB0 */ void setBaseMtx();
+	/* 80CA7C28 */ void Create();
+	/* 80CA7C74 */ void CreateHeap();
+	/* 80CA7E44 */ void create1st();
+	/* 80CA7EEC */ void Execute(f32 (** )[3][4]);
+	/* 80CA7F1C */ void Draw();
+	/* 80CA8008 */ void Delete();
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -68,13 +68,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct dBgW {
+};
+
 struct cBgS_PolyInfo {
 };
 
 struct csXyz {
-};
-
-struct dBgW {
 };
 
 struct dBgS_MoveBgActor {
@@ -87,12 +87,12 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dKy_tevstr_c {
+struct J3DModel {
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80CA7DFC */ ~J3DFrameCtrl();
 };
 
 // 

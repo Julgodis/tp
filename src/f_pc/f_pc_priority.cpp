@@ -203,7 +203,7 @@ asm void fpcPi_Init(process_priority_class* param_0, void* param_1, unsigned int
 
 
 /* ############################################################################################## */
-/* 804505F0-804505F8 0008+00 s=0 e=5 z=0  None .sdata     None                                                         */
+/* 804505F0-804505F8 0008+00 s=0 e=5 z=1  None .sdata     None                                                         */
 SECTION_SDATA u8 data_804505F0[8] = {
 	0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };

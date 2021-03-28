@@ -308,7 +308,7 @@ asm void JKRArchive::readResource(void* param_0, u32 param_1, char const* param_
 #pragma pop
 
 
-/* 802D5ECC-802D5F40 0074+00 s=0 e=7 z=0  None .text      readIdxResource__10JKRArchiveFPvUlUl                         */
+/* 802D5ECC-802D5F40 0074+00 s=0 e=7 z=1  None .text      readIdxResource__10JKRArchiveFPvUlUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

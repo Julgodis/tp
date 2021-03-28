@@ -11,6 +11,25 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct Quaternion {
+};
+
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+	/* 8000CF7C */ void quatM(Quaternion const*);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct Vec {
 };
 
@@ -20,16 +39,8 @@ struct cXyz {
 	/* 80266FDC */ void normalizeRS();
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
-};
-
-struct cM3dGPla {
-	/* 80CE935C */ ~cM3dGPla();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct fopAcM_gc_c {
+	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
 struct daObjStone_c {
@@ -65,72 +76,19 @@ struct daObjStone_c {
 	/* 80CEC948 */ void _delete();
 };
 
-struct cM3dGSph {
-	/* 8026F648 */ void SetC(cXyz const&);
-	/* 8026F708 */ void SetR(f32);
-	/* 80CE99D4 */ ~cM3dGSph();
-};
-
-struct cM3dGAab {
-	/* 80CE9A1C */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80CE9A64 */ ~dCcD_GStts();
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 80CE9AC0 */ ~dBgS_AcchCir();
-};
-
-struct dBgS_ObjAcch {
-	/* 80CE9B30 */ ~dBgS_ObjAcch();
-};
-
-struct dBgS_ObjGndChk {
-	/* 80CEAF10 */ ~dBgS_ObjGndChk();
-};
-
-struct cCcD_GStts {
-	/* 80CECA3C */ ~cCcD_GStts();
-};
-
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
-};
-
-struct Quaternion {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
-	/* 8000CF7C */ void quatM(Quaternion const*);
-};
-
-struct J3DModel {
-};
-
-struct J3DModelData {
+struct dSv_info_c {
+	/* 800356B4 */ void offActor(int, int);
 };
 
 struct dKy_tevstr_c {
 };
 
-struct fopAcM_gc_c {
-	/* 8001DCBC */ void gndCheck(cXyz const*);
+struct J3DModelData {
 };
 
-struct request_of_phase_process_class {
-};
-
-struct _GXTexObj {
-};
-
-struct dSv_info_c {
-	/* 800356B4 */ void offActor(int, int);
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -147,10 +105,10 @@ struct dPa_modelEcallBack {
 	/* 8004AC00 */ void setModel(JPABaseEmitter*, J3DModelData*, dKy_tevstr_c const&, u8, void*, u8, u8);
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -161,13 +119,62 @@ struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
-struct cBgS {
-	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
-	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
+struct dCcD_SrcSph {
+};
+
+struct dCcD_Sph {
+	/* 80084A34 */ void Set(dCcD_SrcSph const&);
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80CE9A64 */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800842C0 */ void ChkAtHit();
+	/* 80084460 */ void ChkTgHit();
+	/* 800844F8 */ void GetTgHitObj();
+	/* 8008457C */ void GetTgHitObjSe();
+	/* 800845B0 */ void getHitSeID(u8, int);
+};
+
+struct dCcD_GAtTgCoCommonBase {
+	/* 80083688 */ void GetAc();
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+	/* 80078E74 */ void ClrObj();
+	/* 80078EBC */ void SetBomb();
+};
+
+struct dBgS_ObjGndChk {
+	/* 80CEAF10 */ ~dBgS_ObjGndChk();
+};
+
+struct dBgS_ObjAcch {
+	/* 80CE9B30 */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 80CE9AC0 */ ~dBgS_AcchCir();
+};
+
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dBgS {
@@ -181,44 +188,22 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
+struct cM3dGSph {
+	/* 8026F648 */ void SetC(cXyz const&);
+	/* 8026F708 */ void SetR(f32);
+	/* 80CE99D4 */ ~cM3dGSph();
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-	/* 80078E74 */ void ClrObj();
-	/* 80078EBC */ void SetBomb();
+struct cM3dGPla {
+	/* 80CE935C */ ~cM3dGPla();
 };
 
-struct dCcD_GAtTgCoCommonBase {
-	/* 80083688 */ void GetAc();
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800842C0 */ void ChkAtHit();
-	/* 80084460 */ void ChkTgHit();
-	/* 800844F8 */ void GetTgHitObj();
-	/* 8008457C */ void GetTgHitObjSe();
-	/* 800845B0 */ void getHitSeID(u8, int);
-};
-
-struct dCcD_SrcSph {
-};
-
-struct dCcD_Sph {
-	/* 80084A34 */ void Set(dCcD_SrcSph const&);
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct cM3dGAab {
+	/* 80CE9A1C */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -228,8 +213,29 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
+struct cCcD_GStts {
+	/* 80CECA3C */ ~cCcD_GStts();
+};
+
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cBgS {
+	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
+	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
+};
+
+struct _GXTexObj {
+};
+
+struct Z2SoundObjSimple {
+	/* 802BE844 */ Z2SoundObjSimple();
+};
+
+struct Z2SoundObjBase {
+	/* 802BDFF8 */ void deleteObject();
+	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
 };
 
 struct JAISoundID {
@@ -239,13 +245,7 @@ struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-struct Z2SoundObjBase {
-	/* 802BDFF8 */ void deleteObject();
-	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
-};
-
-struct Z2SoundObjSimple {
-	/* 802BE844 */ Z2SoundObjSimple();
+struct J3DModel {
 };
 
 // 

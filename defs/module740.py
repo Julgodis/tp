@@ -36,16 +36,16 @@ SYMBOLS = [
 	{'addr':0x80D6055C,'size':4,'pad':0,'label':"__ct__4cXyzFv",'name':"__ct__4cXyzFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
 	{'addr':0x80D60560,'size':484,'pad':0,'label':"execute__14daTagRestart_cFv",'name':"execute__14daTagRestart_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D60744,'size':8,'pad':0,'label':"_delete__14daTagRestart_cFv",'name':"_delete__14daTagRestart_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
-	{'addr':0x80D6074C,'size':32,'pad':0,'label':"daTagRestart_Execute__FP14daTagRestart_c",'name':"daTagRestart_Execute__FP14daTagRestart_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80D6076C,'size':32,'pad':0,'label':"daTagRestart_Delete__FP14daTagRestart_c",'name':"daTagRestart_Delete__FP14daTagRestart_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80D6078C,'size':32,'pad':0,'label':"daTagRestart_Create__FP10fopAc_ac_c",'name':"daTagRestart_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80D6074C,'size':32,'pad':0,'label':"daTagRestart_Execute__FP14daTagRestart_c",'name':"daTagRestart_Execute__FP14daTagRestart_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80D6076C,'size':32,'pad':0,'label':"daTagRestart_Delete__FP14daTagRestart_c",'name':"daTagRestart_Delete__FP14daTagRestart_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80D6078C,'size':32,'pad':0,'label':"daTagRestart_Create__FP10fopAc_ac_c",'name':"daTagRestart_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D607AC,'size':4,'pad':0,'label':"data_80D607AC",'name':None,'lib':-1,'tu':1,'section':1,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80D607B0,'size':4,'pad':0,'label':"data_80D607B0",'name':None,'lib':-1,'tu':2,'section':2,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80D607B4,'size':4,'pad':0,'label':"lit_3650",'name':"@3650",'lib':-1,'tu':3,'section':3,'r':[2,0,0],'sh':[0,0,0],'type':"Integer"},
 	{'addr':0x80D607B8,'size':4,'pad':0,'label':"lit_3651",'name':"@3651",'lib':-1,'tu':3,'section':3,'r':[2,0,0],'sh':[0,0,0],'type':"Integer"},
 	{'addr':0x80D607BC,'size':4,'pad':0,'label':"lit_3652",'name':"@3652",'lib':-1,'tu':3,'section':3,'r':[2,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
-	{'addr':0x80D607C0,'size':32,'pad':0,'label':"l_daTagRestart_Method",'name':"l_daTagRestart_Method",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x80D607E0,'size':48,'pad':0,'label':"g_profile_Tag_Restart",'name':"g_profile_Tag_Restart",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x80D607C0,'size':32,'pad':0,'label':"l_daTagRestart_Method",'name':"l_daTagRestart_Method",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x80D607E0,'size':48,'pad':0,'label':"g_profile_Tag_Restart",'name':"g_profile_Tag_Restart",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
 ]
 
 # Names

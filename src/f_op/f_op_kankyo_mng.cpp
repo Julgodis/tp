@@ -17,7 +17,7 @@ struct layer_class {
 struct dPa_levelEcallBack {
 };
 
-struct cXyz {
+struct csXyz {
 };
 
 struct dKy_tevstr_c {
@@ -26,7 +26,7 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct dPa_control_c {
@@ -116,7 +116,7 @@ asm static void createAppend(int param_0, cXyz* param_1, cXyz* param_2) {
 #pragma pop
 
 
-/* 8001F748-8001F768 0020+00 s=0 e=3 z=0  None .text      fopKyM_Delete__FPv                                           */
+/* 8001F748-8001F768 0020+00 s=0 e=3 z=1  None .text      fopKyM_Delete__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,7 +138,7 @@ asm static void fopKyM_Create(s16 param_0, int (*)(void*), void* param_2) {
 #pragma pop
 
 
-/* 8001F7B8-8001F818 0060+00 s=0 e=3 z=0  None .text      fopKyM_create__FsiP4cXyzP4cXyzPFPv_i                         */
+/* 8001F7B8-8001F818 0060+00 s=0 e=3 z=1  None .text      fopKyM_create__FsiP4cXyzP4cXyzPFPv_i                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,7 +160,7 @@ asm void fopKyM_fastCreate(s16 param_0, int param_1, cXyz* param_2, cXyz* param_
 #pragma pop
 
 
-/* 8001F87C-8001F90C 0090+00 s=0 e=6 z=0  None .text      fopKyM_createWpillar__FPC4cXyzfi                             */
+/* 8001F87C-8001F90C 0090+00 s=0 e=6 z=37  None .text      fopKyM_createWpillar__FPC4cXyzfi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -179,7 +179,7 @@ SECTION_SDATA static u8 data_804505C0[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8001F90C-8001F9B4 00A8+00 s=0 e=0 z=0  None .text      fopKyM_createMpillar__FPC4cXyzf                              */
+/* 8001F90C-8001F9B4 00A8+00 s=0 e=0 z=3  None .text      fopKyM_createMpillar__FPC4cXyzf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

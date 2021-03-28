@@ -11,23 +11,34 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daNpc_shopMaro_c {
 	/* 80AEBEB4 */ void create();
 	/* 80AEBF04 */ daNpc_shopMaro_c();
 	/* 80AEBF64 */ ~daNpc_shopMaro_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-};
-
 struct daNpcT_motionAnmData_c {
 };
 
+struct daNpcT_faceMotionAnmData_c {
+};
+
 struct daNpcT_evtData_c {
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct cXyz {
+	/* 80AEC0DC */ ~cXyz();
+	/* 80AEC670 */ cXyz();
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -36,32 +47,6 @@ struct daNpcT_MotionSeqMngr_c {
 
 	/* 80145898 */ void initialize();
 	/* 80AEC6BC */ ~daNpcT_MotionSeqMngr_c();
-};
-
-struct dShopSystem_c {
-	/* 80197338 */ void initShopSystem();
-	/* 801974E4 */ ~dShopSystem_c();
-	/* 8019A564 */ void deleteObject();
-	/* 80AEBFC4 */ dShopSystem_c(daNpcT_faceMotionAnmData_c const*, daNpcT_motionAnmData_c const*, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_evtData_c const*, char**);
-	/* 80AEC118 */ bool getResName2(int);
-	/* 80AEC120 */ bool beforeStartSeqAction(dMsgFlow_c*, int);
-	/* 80AEC128 */ bool beforeSelectSeqAction(dMsgFlow_c*, int);
-};
-
-struct cXyz {
-	/* 80AEC0DC */ ~cXyz();
-	/* 80AEC670 */ cXyz();
-};
-
-struct csXyz {
-	/* 80AEC130 */ ~csXyz();
-	/* 80AEC570 */ csXyz();
-};
-
-struct J3DModel {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_c {
@@ -124,17 +109,42 @@ struct daNpcT_ActorMngr_c {
 	/* 80AEC674 */ ~daNpcT_ActorMngr_c();
 };
 
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+};
+
+struct dShopSystem_c {
+	/* 80197338 */ void initShopSystem();
+	/* 801974E4 */ ~dShopSystem_c();
+	/* 8019A564 */ void deleteObject();
+	/* 80AEBFC4 */ dShopSystem_c(daNpcT_faceMotionAnmData_c const*, daNpcT_motionAnmData_c const*, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_evtData_c const*, char**);
+	/* 80AEC118 */ bool getResName2(int);
+	/* 80AEC120 */ bool beforeStartSeqAction(dMsgFlow_c*, int);
+	/* 80AEC128 */ bool beforeSelectSeqAction(dMsgFlow_c*, int);
+};
+
+struct dShopItemCtrl_c {
+	/* 80196914 */ dShopItemCtrl_c();
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
 struct dBgS_ObjAcch {
 	/* 80AEC704 */ ~dBgS_ObjAcch();
 };
 
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80AEC774 */ ~J3DFrameCtrl();
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
 };
 
 struct dBgS_AcchCir {
@@ -146,24 +156,9 @@ struct dBgS_Acch {
 	/* 800760A0 */ dBgS_Acch();
 };
 
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-};
-
-struct dBgS_LinChk {
-	/* 80077C68 */ dBgS_LinChk();
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-};
-
-struct dShopItemCtrl_c {
-	/* 80196914 */ dShopItemCtrl_c();
+struct csXyz {
+	/* 80AEC130 */ ~csXyz();
+	/* 80AEC570 */ csXyz();
 };
 
 struct cBgS_GndChk {
@@ -172,6 +167,11 @@ struct cBgS_GndChk {
 
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80AEC774 */ ~J3DFrameCtrl();
 };
 
 // 

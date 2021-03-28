@@ -11,24 +11,6 @@
 // Types:
 // 
 
-struct daObjTrnd_c {
-	/* 80D1B998 */ void setPntWind();
-	/* 80D1BA0C */ void cutPntWind();
-	/* 80D1BA30 */ void movePntWind();
-	/* 80D1BC40 */ void setCpsInfo();
-	/* 80D1BE04 */ void initBaseMtx();
-	/* 80D1BE24 */ void setBaseMtx();
-	/* 80D1BE6C */ void Create();
-	/* 80D1BFB0 */ void create();
-	/* 80D1C0F0 */ void execute();
-	/* 80D1C290 */ bool draw();
-	/* 80D1C298 */ void _delete();
-};
-
-struct cM3dGAab {
-	/* 80D1C0A8 */ ~cM3dGAab();
-};
-
 struct cXyz {
 	/* 80266EF4 */ void normalize();
 	/* 802670AC */ void isZero() const;
@@ -46,37 +28,41 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
+struct daObjTrnd_c {
+	/* 80D1B998 */ void setPntWind();
+	/* 80D1BA0C */ void cutPntWind();
+	/* 80D1BA30 */ void movePntWind();
+	/* 80D1BC40 */ void setCpsInfo();
+	/* 80D1BE04 */ void initBaseMtx();
+	/* 80D1BE24 */ void setBaseMtx();
+	/* 80D1BE6C */ void Create();
+	/* 80D1BFB0 */ void create();
+	/* 80D1C0F0 */ void execute();
+	/* 80D1C290 */ bool draw();
+	/* 80D1C298 */ void _delete();
+};
+
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct WIND_INFLUENCE {
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
 };
 
 struct dCcD_Stts {
 	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
+struct dCcD_SrcCps {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+};
+
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 };
 
-struct dCcD_SrcCps {
-};
-
 struct dCcD_Cps {
 	/* 800847D0 */ void Set(dCcD_SrcCps const&);
-};
-
-struct cCcD_Obj {
-};
-
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
 struct cM3dGCpsS {
@@ -87,6 +73,17 @@ struct cM3dGCps {
 	/* 8026F03C */ void Set(cM3dGCpsS const&);
 };
 
+struct cM3dGAab {
+	/* 80D1C0A8 */ ~cM3dGAab();
+};
+
+struct cCcD_Obj {
+};
+
+struct cCcS {
+	/* 80264BA8 */ void Set(cCcD_Obj*);
+};
+
 struct JAISoundID {
 };
 
@@ -95,6 +92,9 @@ struct Vec {
 
 struct Z2SeMgr {
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct WIND_INFLUENCE {
 };
 
 // 

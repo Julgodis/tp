@@ -11,26 +11,7 @@
 // Types:
 // 
 
-struct daObjIkada_c {
-	/* 80C269B8 */ void RideOn_Angle(s16&, f32, s16, f32);
-	/* 80C26A20 */ void Check_RideOn();
-	/* 80C26C50 */ void initBaseMtx();
-	/* 80C26C7C */ void setBaseMtx();
-	/* 80C27028 */ void CreateHeap();
-	/* 80C270A0 */ void Create();
-	/* 80C270E0 */ void Execute(f32 (** )[3][4]);
-	/* 80C27400 */ void Draw();
-	/* 80C274A4 */ void Delete();
-};
-
-struct dBgW {
-};
-
-struct fopAc_ac_c {
-};
-
-struct dBgS_ObjAcch {
-	/* 80C26FB8 */ ~dBgS_ObjAcch();
+struct request_of_phase_process_class {
 };
 
 struct cXyz {
@@ -44,17 +25,34 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModel {
-};
-
-struct J3DModelData {
+struct fopAc_ac_c {
 };
 
 struct fopAcM_wt_c {
 	/* 8001DD84 */ void waterCheck(cXyz const*);
 };
 
-struct request_of_phase_process_class {
+struct daObjIkada_c {
+	/* 80C269B8 */ void RideOn_Angle(s16&, f32, s16, f32);
+	/* 80C26A20 */ void Check_RideOn();
+	/* 80C26C50 */ void initBaseMtx();
+	/* 80C26C7C */ void setBaseMtx();
+	/* 80C27028 */ void CreateHeap();
+	/* 80C270A0 */ void Create();
+	/* 80C270E0 */ void Execute(f32 (** )[3][4]);
+	/* 80C27400 */ void Draw();
+	/* 80C274A4 */ void Delete();
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -65,7 +63,32 @@ struct dRes_control_c {
 	/* 8003C6B8 */ void getObjectResName2Index(char const*, char const*);
 };
 
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+};
+
+struct dBgW {
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80C26FB8 */ ~dBgS_ObjAcch();
+};
+
 struct cBgS_PolyInfo {
+};
+
+struct dBgS_MoveBgActor {
+	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
+	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
+	/* 800788DC */ void MoveBGDelete();
+	/* 80078950 */ void MoveBGExecute();
 };
 
 struct dBgS_AcchCir {
@@ -83,33 +106,10 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_MoveBgActor {
-	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
-	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
-	/* 800788DC */ void MoveBGDelete();
-	/* 80078950 */ void MoveBGExecute();
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
 struct Vec {
+};
+
+struct J3DModel {
 };
 
 // 

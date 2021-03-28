@@ -11,24 +11,27 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
 struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct csXyz {
 };
 
-struct cM3dGPla {
-	/* 80CD9E3C */ ~cM3dGPla();
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CD9C */ void transM(f32, f32, f32);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
+struct fast_create_request {
 };
 
 struct daKey_c {
@@ -62,83 +65,6 @@ struct daKey_c {
 	/* 80CDB628 */ void _delete();
 };
 
-struct dPa_followEcallBack {
-	/* 80049580 */ dPa_followEcallBack(u8, u8);
-	/* 80CDA404 */ ~dPa_followEcallBack();
-	/* 80CDA48C */ void __defctor();
-};
-
-struct dPa_levelEcallBack {
-	/* 80CDA488 */ void cleanup();
-	/* 80CDB73C */ ~dPa_levelEcallBack();
-};
-
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 80CDA4B4 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80CDA4FC */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80CDA544 */ ~dCcD_GStts();
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 80CDA5A0 */ ~dBgS_AcchCir();
-};
-
-struct dBgS_ObjAcch {
-	/* 80CDA610 */ ~dBgS_ObjAcch();
-};
-
-struct cCcD_GStts {
-	/* 80CDB6F4 */ ~cCcD_GStts();
-};
-
-struct JPABaseEmitter {
-};
-
-struct JPAEmitterCallBack {
-	/* 8027E6A4 */ ~JPAEmitterCallBack();
-	/* 80CDB7B0 */ void execute(JPABaseEmitter*);
-	/* 80CDB7B4 */ void executeAfter(JPABaseEmitter*);
-	/* 80CDB7B8 */ void draw(JPABaseEmitter*);
-	/* 80CDB7BC */ void drawAfter(JPABaseEmitter*);
-};
-
-struct csXyz {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CD9C */ void transM(f32, f32, f32);
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
-};
-
-struct fast_create_request {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_memBit_c {
-	/* 800347A0 */ void onTbox(int);
-	/* 800347C4 */ void offTbox(int);
-	/* 800347E8 */ void isTbox(int) const;
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
 struct daItemBase_c {
 	/* 80037A64 */ void hide();
 	/* 80037A74 */ void show();
@@ -160,13 +86,33 @@ struct daItemBase_c {
 	/* 801451D0 */ void getCollisionR();
 };
 
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
-	/* 800436EC */ void setPtI_Id(unsigned int);
+struct Vec {
 };
 
-struct dEvent_manager_c {
-	/* 80047ADC */ void endCheckOld(char const*);
+struct dTres_c {
+	/* 8009C1F0 */ void offStatus(u8, int, int);
+	/* 8009C3CC */ void setPosition(int, u8, Vec const*, int);
+};
+
+struct dSv_memBit_c {
+	/* 800347A0 */ void onTbox(int);
+	/* 800347C4 */ void offTbox(int);
+	/* 800347E8 */ void isTbox(int) const;
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dPa_levelEcallBack {
+	/* 80CDA488 */ void cleanup();
+	/* 80CDB73C */ ~dPa_levelEcallBack();
+};
+
+struct dPa_followEcallBack {
+	/* 80049580 */ dPa_followEcallBack(u8, u8);
+	/* 80CDA404 */ ~dPa_followEcallBack();
+	/* 80CDA48C */ void __defctor();
 };
 
 struct dKy_tevstr_c {
@@ -179,8 +125,47 @@ struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct cBgS {
-	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
+struct dEvt_control_c {
+	/* 80042468 */ void reset();
+	/* 800436EC */ void setPtI_Id(unsigned int);
+};
+
+struct dEvent_manager_c {
+	/* 80047ADC */ void endCheckOld(char const*);
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80CDA544 */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80CDA610 */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 80CDA5A0 */ ~dBgS_AcchCir();
 };
 
 struct dBgS {
@@ -193,27 +178,23 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct cM3dGPla {
+	/* 80CD9E3C */ ~cM3dGPla();
 };
 
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 80CDA4B4 */ ~cM3dGCyl();
 };
 
-struct dCcD_SrcCyl {
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct Vec {
-};
-
-struct dTres_c {
-	/* 8009C1F0 */ void offStatus(u8, int, int);
-	/* 8009C3CC */ void setPosition(int, u8, Vec const*, int);
+struct cM3dGAab {
+	/* 80CDA4FC */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -223,8 +204,16 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
+struct cCcD_GStts {
+	/* 80CDB6F4 */ ~cCcD_GStts();
+};
+
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
+};
+
+struct cBgS {
+	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
 struct JAISoundID {
@@ -233,6 +222,17 @@ struct JAISoundID {
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct JPABaseEmitter {
+};
+
+struct JPAEmitterCallBack {
+	/* 8027E6A4 */ ~JPAEmitterCallBack();
+	/* 80CDB7B0 */ void execute(JPABaseEmitter*);
+	/* 80CDB7B4 */ void executeAfter(JPABaseEmitter*);
+	/* 80CDB7B8 */ void draw(JPABaseEmitter*);
+	/* 80CDB7BC */ void drawAfter(JPABaseEmitter*);
 };
 
 // 

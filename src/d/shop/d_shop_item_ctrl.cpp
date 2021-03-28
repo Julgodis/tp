@@ -88,7 +88,7 @@ SECTION_DATA static void* __vt__15dShopItemCtrl_c[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80196914-80196958 0044+00 s=0 e=0 z=0  None .text      __ct__15dShopItemCtrl_cFv                                    */
+/* 80196914-80196958 0044+00 s=0 e=0 z=10  None .text      __ct__15dShopItemCtrl_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,7 +118,7 @@ SECTION_SDATA2 static u8 lit_3659[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801969A0-80196A3C 009C+00 s=0 e=3 z=0  None .text      getCurrentPos__15dShopItemCtrl_cFi                           */
+/* 801969A0-80196A3C 009C+00 s=0 e=3 z=3  None .text      getCurrentPos__15dShopItemCtrl_cFi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

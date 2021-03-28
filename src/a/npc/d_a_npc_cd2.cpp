@@ -14,12 +14,12 @@
 struct request_of_phase_process_class {
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
-};
-
 struct cXyz {
 	/* 80009184 */ ~cXyz();
+};
+
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct mDoMtx_stack_c {
@@ -41,19 +41,19 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-struct Z2Creature {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DModelData {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct J3DAnmTransform {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {
@@ -71,13 +71,13 @@ struct daPy_py_c {
 	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
-struct J3DModel {
-};
-
 struct J3DAnmTransformKey {
 };
 
 struct J3DJoint {
+};
+
+struct J3DModel {
 };
 
 struct daNpcCd2_c {
@@ -249,6 +249,7 @@ extern "C" void __dt__14daNpcCd2_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_npc_cd2_cpp(); // 1
 extern "C" extern u8 const m_cylDat__10daNpcCd2_c[68];
 extern "C" extern char const* const a_npc_d_a_npc_cd2__stringBase0;
+extern "C" extern u8 l_Cd2_HIO[16396];
 extern "C" extern u8 data_80451010[8];
 
 // 
@@ -953,7 +954,7 @@ SECTION_RODATA static void* const l_bckTbl_W[108] = {
 	(void*)0x0000000F,
 };
 
-/* 80393950-80393994 0044+00 s=0 e=0 z=0  None .rodata    m_cylDat__10daNpcCd2_c                                       */
+/* 80393950-80393994 0044+00 s=0 e=0 z=4  None .rodata    m_cylDat__10daNpcCd2_c                                       */
 SECTION_RODATA u8 const m_cylDat__10daNpcCd2_c[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x00,
@@ -1082,7 +1083,7 @@ SECTION_DEAD static char const* const pad_80393D84 = "\0\0\0";
 /* 804534E0-804534E4 0004+00 s=3 e=0 z=0  None .sdata2    @4050                                                        */
 SECTION_SDATA2 static u32 lit_4050 = 0x3F800000;
 
-/* 80157D00-80157F28 0228+00 s=0 e=0 z=0  None .text      NpcCreate__10daNpcCd2_cFi                                    */
+/* 80157D00-80157F28 0228+00 s=0 e=0 z=4  None .text      NpcCreate__10daNpcCd2_cFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1093,7 +1094,7 @@ asm void daNpcCd2_c::NpcCreate(int param_0) {
 #pragma pop
 
 
-/* 80157F28-80157F68 0040+00 s=0 e=0 z=0  None .text      ObjCreate__10daNpcCd2_cFi                                    */
+/* 80157F28-80157F68 0040+00 s=0 e=0 z=4  None .text      ObjCreate__10daNpcCd2_cFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1104,7 +1105,7 @@ asm void daNpcCd2_c::ObjCreate(int param_0) {
 #pragma pop
 
 
-/* 80157F68-801580A8 0140+00 s=0 e=0 z=0  None .text      ChairCreate__10daNpcCd2_cFf                                  */
+/* 80157F68-801580A8 0140+00 s=0 e=0 z=1  None .text      ChairCreate__10daNpcCd2_cFf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1115,7 +1116,7 @@ asm void daNpcCd2_c::ChairCreate(f32 param_0) {
 #pragma pop
 
 
-/* 801580A8-801580F0 0048+00 s=4 e=0 z=0  None .text      isM___10daNpcCd2_cFv                                         */
+/* 801580A8-801580F0 0048+00 s=4 e=0 z=5  None .text      isM___10daNpcCd2_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2205,7 +2206,7 @@ SECTION_DATA static void* lit_4284[54 + 3 /* padding */] = {
 	NULL,
 };
 
-/* 801580F0-80158420 0330+00 s=2 e=0 z=0  None .text      getAnmP__10daNpcCd2_cFii                                     */
+/* 801580F0-80158420 0330+00 s=2 e=0 z=93  None .text      getAnmP__10daNpcCd2_cFii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2220,8 +2221,8 @@ asm void daNpcCd2_c::getAnmP(int param_0, int param_1) {
 /* 80428610-8042861C 000C+00 s=2 e=0 z=0  None .bss       @3982                                                        */
 static u8 lit_3982[12];
 
-/* 8042861C-8042C628 400C+00 s=3 e=0 z=0  None .bss       l_Cd2_HIO                                                    */
-static u8 l_Cd2_HIO[16396];
+/* 8042861C-8042C628 400C+00 s=3 e=0 z=20  None .bss       l_Cd2_HIO                                                    */
+u8 l_Cd2_HIO[16396];
 
 /* 8042C628-8042C634 000C+00 s=1 e=0 z=0  None .bss       @4290                                                        */
 static u8 lit_4290[12];
@@ -2336,7 +2337,7 @@ SECTION_SDATA2 static u8 lit_4588[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80158420-80158BB8 0798+00 s=0 e=0 z=0  None .text      setAttention__10daNpcCd2_cFi                                 */
+/* 80158420-80158BB8 0798+00 s=0 e=0 z=5  None .text      setAttention__10daNpcCd2_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2347,7 +2348,7 @@ asm void daNpcCd2_c::setAttention(int param_0) {
 #pragma pop
 
 
-/* 80158BB8-80158CBC 0104+00 s=0 e=0 z=0  None .text      loadResrc__10daNpcCd2_cFii                                   */
+/* 80158BB8-80158CBC 0104+00 s=0 e=0 z=4  None .text      loadResrc__10daNpcCd2_cFii                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2358,7 +2359,7 @@ asm void daNpcCd2_c::loadResrc(int param_0, int param_1) {
 #pragma pop
 
 
-/* 80158CBC-80158D88 00CC+00 s=0 e=0 z=0  None .text      removeResrc__10daNpcCd2_cFii                                 */
+/* 80158CBC-80158D88 00CC+00 s=0 e=0 z=4  None .text      removeResrc__10daNpcCd2_cFii                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2369,7 +2370,7 @@ asm void daNpcCd2_c::removeResrc(int param_0, int param_1) {
 #pragma pop
 
 
-/* 80158D88-80158DE4 005C+00 s=0 e=0 z=0  None .text      setEnvTevCol__10daNpcCd2_cFv                                 */
+/* 80158D88-80158DE4 005C+00 s=0 e=0 z=4  None .text      setEnvTevCol__10daNpcCd2_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2380,7 +2381,7 @@ asm void daNpcCd2_c::setEnvTevCol() {
 #pragma pop
 
 
-/* 80158DE4-80158E28 0044+00 s=0 e=0 z=0  None .text      setRoomNo__10daNpcCd2_cFv                                    */
+/* 80158DE4-80158E28 0044+00 s=0 e=0 z=4  None .text      setRoomNo__10daNpcCd2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2391,7 +2392,7 @@ asm void daNpcCd2_c::setRoomNo() {
 #pragma pop
 
 
-/* 80158E28-80158F00 00D8+00 s=0 e=0 z=0  None .text      animation__10daNpcCd2_cFi                                    */
+/* 80158E28-80158F00 00D8+00 s=0 e=0 z=3  None .text      animation__10daNpcCd2_cFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2402,7 +2403,7 @@ asm void daNpcCd2_c::animation(int param_0) {
 #pragma pop
 
 
-/* 80158F00-80158F6C 006C+00 s=0 e=0 z=0  None .text      setAnm__10daNpcCd2_cFP18J3DAnmTransformKeyffiii              */
+/* 80158F00-80158F6C 006C+00 s=0 e=0 z=92  None .text      setAnm__10daNpcCd2_cFP18J3DAnmTransformKeyffiii              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2413,7 +2414,7 @@ asm void daNpcCd2_c::setAnm(J3DAnmTransformKey* param_0, f32 param_1, f32 param_
 #pragma pop
 
 
-/* 80158F6C-80158FF0 0084+00 s=0 e=0 z=0  None .text      drawShadow__10daNpcCd2_cFf                                   */
+/* 80158F6C-80158FF0 0084+00 s=0 e=0 z=4  None .text      drawShadow__10daNpcCd2_cFf                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2424,7 +2425,7 @@ asm void daNpcCd2_c::drawShadow(f32 param_0) {
 #pragma pop
 
 
-/* 80158FF0-801590FC 010C+00 s=0 e=0 z=0  None .text      drawObj__10daNpcCd2_cFiP8J3DModelf                           */
+/* 80158FF0-801590FC 010C+00 s=0 e=0 z=4  None .text      drawObj__10daNpcCd2_cFiP8J3DModelf                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2435,7 +2436,7 @@ asm void daNpcCd2_c::drawObj(int param_0, J3DModel* param_1, f32 param_2) {
 #pragma pop
 
 
-/* 801590FC-80159258 015C+00 s=0 e=0 z=0  None .text      drawNpc__10daNpcCd2_cFv                                      */
+/* 801590FC-80159258 015C+00 s=0 e=0 z=4  None .text      drawNpc__10daNpcCd2_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2505,7 +2506,7 @@ asm static void s_sub1(void* param_0, void* param_1) {
 #pragma pop
 
 
-/* 801597C0-80159818 0058+00 s=0 e=0 z=0  None .text      getEscapeTag__10daNpcCd2_cFv                                 */
+/* 801597C0-80159818 0058+00 s=0 e=0 z=2  None .text      getEscapeTag__10daNpcCd2_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2534,7 +2535,7 @@ SECTION_SDATA2 static u8 lit_4972[8] = {
 	0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80159818-801598E8 00D0+00 s=0 e=0 z=0  None .text      checkFearSituation__10daNpcCd2_cFv                           */
+/* 80159818-801598E8 00D0+00 s=0 e=0 z=5  None .text      checkFearSituation__10daNpcCd2_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2601,7 +2602,7 @@ SECTION_SDATA2 static u8 lit_5053[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80159A38-80159C14 01DC+00 s=0 e=0 z=0  None .text      setPath__11PathTrace_cFiiiP4cXyzb                            */
+/* 80159A38-80159C14 01DC+00 s=0 e=0 z=9  None .text      setPath__11PathTrace_cFiiiP4cXyzb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2612,7 +2613,7 @@ asm void PathTrace_c::setPath(int param_0, int param_1, int param_2, cXyz* param
 #pragma pop
 
 
-/* 80159C14-80159DC0 01AC+00 s=1 e=0 z=0  None .text      checkPoint__11PathTrace_cF4cXyzf                             */
+/* 80159C14-80159DC0 01AC+00 s=1 e=0 z=6  None .text      checkPoint__11PathTrace_cF4cXyzf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2623,7 +2624,7 @@ asm void PathTrace_c::checkPoint(cXyz param_0, f32 param_1) {
 #pragma pop
 
 
-/* 80159DC0-80159E54 0094+00 s=0 e=0 z=0  None .text      checkPathEnd__11PathTrace_cF4cXyzf                           */
+/* 80159DC0-80159E54 0094+00 s=0 e=0 z=6  None .text      checkPathEnd__11PathTrace_cF4cXyzf                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2634,7 +2635,7 @@ asm void PathTrace_c::checkPathEnd(cXyz param_0, f32 param_1) {
 #pragma pop
 
 
-/* 80159E54-80159ECC 0078+00 s=0 e=0 z=0  None .text      getTargetPoint__11PathTrace_cFP3Vec                          */
+/* 80159E54-80159ECC 0078+00 s=0 e=0 z=10  None .text      getTargetPoint__11PathTrace_cFP3Vec                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2664,7 +2665,7 @@ asm void PathTrace_c::setAvoidPoint() {
 #pragma pop
 
 
-/* 80159F98-8015A0D0 0138+00 s=0 e=0 z=0  None .text      setNextPoint__11PathTrace_cFR4cXyz                           */
+/* 80159F98-8015A0D0 0138+00 s=0 e=0 z=8  None .text      setNextPoint__11PathTrace_cFR4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2719,7 +2720,7 @@ asm static void s_sub(void* param_0, void* param_1) {
 #pragma pop
 
 
-/* 8015A370-8015A3E4 0074+00 s=0 e=0 z=0  None .text      checkObstacle__11PathTrace_cFP10fopAc_ac_c                   */
+/* 8015A370-8015A3E4 0074+00 s=0 e=0 z=4  None .text      checkObstacle__11PathTrace_cFP10fopAc_ac_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

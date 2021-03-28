@@ -11,6 +11,32 @@
 // Types:
 // 
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DAnmTransform {
+};
+
+struct Vec {
+};
+
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfSO {
+	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
+	/* 80011310 */ void stopZelAnime();
+};
+
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 	/* 80018C8C */ ~fopAc_ac_c();
@@ -63,24 +89,11 @@ struct daNpc_seiD_c {
 	/* 80ACB2AC */ daNpc_seiD_c(daNpcT_faceMotionAnmData_c const*, daNpcT_motionAnmData_c const*, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_evtData_c const*, char**);
 };
 
-struct dAttention_c {
-	/* 80AC9E74 */ void getDistTable(int);
+struct daNpc_seiD_Param_c {
+	/* 80ACB2F0 */ ~daNpc_seiD_Param_c();
 };
 
-struct cCcD_GStts {
-	/* 80ACA5CC */ ~cCcD_GStts();
-};
-
-struct J3DAnmTevRegKey {
-};
-
-struct J3DModelData {
-};
-
-struct J3DJoint {
-};
-
-struct J3DAnmTextureSRTKey {
+struct _GXColorS10 {
 };
 
 struct J3DModel {
@@ -91,7 +104,13 @@ struct cXyz {
 	/* 80ACAF18 */ cXyz();
 };
 
-struct _GXColorS10 {
+struct J3DAnmTevRegKey {
+};
+
+struct J3DJoint {
+};
+
+struct J3DAnmTextureSRTKey {
 };
 
 struct daNpcT_c {
@@ -153,9 +172,8 @@ struct daNpcT_c {
 	/* 80ACB240 */ void changeBtk(int*, int*);
 };
 
-struct csXyz {
-	/* 80ACA9D8 */ ~csXyz();
-	/* 80ACAE18 */ csXyz();
+struct daNpcT_MatAnm_c {
+	/* 80145764 */ void initialize();
 };
 
 struct daNpcT_JntAnm_c {
@@ -168,58 +186,16 @@ struct daNpcT_ActorMngr_c {
 	/* 80ACAF1C */ ~daNpcT_ActorMngr_c();
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 80ACAFAC */ ~dBgS_AcchCir();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80ACB01C */ ~dCcD_GStts();
-};
-
-struct dBgS_ObjAcch {
-	/* 80ACB078 */ ~dBgS_ObjAcch();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80ACB0E8 */ ~J3DFrameCtrl();
-};
-
-struct daNpc_seiD_Param_c {
-	/* 80ACB2F0 */ ~daNpc_seiD_Param_c();
-};
-
-struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Vec {
-};
-
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
-
-struct mDoExt_McaMorfSO {
-	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
-	/* 80011310 */ void stopZelAnime();
-};
-
 struct dRes_info_c {
 };
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F48 */ ~dMsgFlow_c();
 };
 
 struct dEvt_control_c {
@@ -233,7 +209,45 @@ struct dEvent_manager_c {
 	/* 800487F0 */ void ChkPresentEnd();
 };
 
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80ACB01C */ ~dCcD_GStts();
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80ACB078 */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+	/* 80077CDC */ ~dBgS_LinChk();
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 80ACAFAC */ ~dBgS_AcchCir();
+};
+
 struct dBgS {
+};
+
+struct csXyz {
+	/* 80ACA9D8 */ ~csXyz();
+	/* 80ACAE18 */ csXyz();
 };
 
 struct dBgS_Acch {
@@ -243,31 +257,20 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
+struct dAttention_c {
+	/* 80AC9E74 */ void getDistTable(int);
 };
 
-struct dBgS_LinChk {
-	/* 80077C68 */ dBgS_LinChk();
-	/* 80077CDC */ ~dBgS_LinChk();
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct cCcD_GStts {
+	/* 80ACA5CC */ ~cCcD_GStts();
 };
 
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct daNpcT_MatAnm_c {
-	/* 80145764 */ void initialize();
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F48 */ ~dMsgFlow_c();
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct cBgS_GndChk {
@@ -275,12 +278,9 @@ struct cBgS_GndChk {
 	/* 80267C94 */ ~cBgS_GndChk();
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
-};
-
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80ACB0E8 */ ~J3DFrameCtrl();
 };
 
 // 

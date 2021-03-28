@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -38,10 +38,10 @@ struct mDoExt_bpkAnm {
 	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -71,18 +71,18 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
 struct cSAngle {
 	/* 80270F68 */ cSAngle(cSAngle const&);
 	/* 80270F98 */ cSAngle(s16);
 	/* 802710E8 */ void Inv() const;
 	/* 80271228 */ void operator-(s16) const;
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
 struct dAttention_c {
@@ -585,7 +585,7 @@ asm dAttention_c::~dAttention_c() {
 #pragma pop
 
 
-/* 80070844-80070880 003C+00 s=2 e=2 z=0  None .text      GetLockonList__12dAttention_cFl                              */
+/* 80070844-80070880 003C+00 s=2 e=2 z=8  None .text      GetLockonList__12dAttention_cFl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -596,7 +596,7 @@ asm void dAttention_c::GetLockonList(s32 param_0) {
 #pragma pop
 
 
-/* 80070880-80070974 00F4+00 s=0 e=5 z=0  None .text      getActionBtnB__12dAttention_cFv                              */
+/* 80070880-80070974 00F4+00 s=0 e=5 z=2  None .text      getActionBtnB__12dAttention_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1102,7 +1102,7 @@ asm void dAttDraw_c::draw(cXyz& param_0, f32 (* param_1)[4]) {
 #pragma pop
 
 
-/* 8007353C-800735DC 00A0+00 s=8 e=13 z=0  None .text      LockonTarget__12dAttention_cFl                               */
+/* 8007353C-800735DC 00A0+00 s=8 e=13 z=21  None .text      LockonTarget__12dAttention_cFl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1135,7 +1135,7 @@ asm void dAttention_c::LockonTargetPId(s32 param_0) {
 #pragma pop
 
 
-/* 80073734-8007378C 0058+00 s=0 e=3 z=0  None .text      ActionTarget__12dAttention_cFl                               */
+/* 80073734-8007378C 0058+00 s=0 e=3 z=2  None .text      ActionTarget__12dAttention_cFl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1157,7 +1157,7 @@ asm void dAttention_c::CheckObjectTarget(s32 param_0) {
 #pragma pop
 
 
-/* 800737E4-80073838 0054+00 s=3 e=53 z=0  None .text      LockonTruth__12dAttention_cFv                                */
+/* 800737E4-80073838 0054+00 s=3 e=53 z=37  None .text      LockonTruth__12dAttention_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1179,7 +1179,7 @@ asm void dAttention_c::checkDistance(cXyz* param_0, s16 param_1, cXyz* param_2, 
 #pragma pop
 
 
-/* 80073864-80073898 0034+00 s=11 e=3 z=0  None .text      getActor__10dAttList_cFv                                     */
+/* 80073864-80073898 0034+00 s=11 e=3 z=8  None .text      getActor__10dAttList_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1223,7 +1223,7 @@ asm void dAttHint_c::convPId(unsigned int param_0) {
 #pragma pop
 
 
-/* 800738FC-80073958 005C+00 s=0 e=0 z=0  None .text      request__10dAttHint_cFP10fopAc_ac_ci                         */
+/* 800738FC-80073958 005C+00 s=0 e=0 z=6  None .text      request__10dAttHint_cFP10fopAc_ac_ci                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1289,7 +1289,7 @@ asm void dAttCatch_c::proc() {
 #pragma pop
 
 
-/* 80073A08-80073CA4 029C+00 s=0 e=0 z=0  None .text      request__11dAttCatch_cFP10fopAc_ac_cUcfffsi                  */
+/* 80073A08-80073CA4 029C+00 s=0 e=0 z=10  None .text      request__11dAttCatch_cFP10fopAc_ac_cUcfffsi                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1333,7 +1333,7 @@ asm void dAttLook_c::proc() {
 #pragma pop
 
 
-/* 80073D08-80073FC4 02BC+00 s=0 e=0 z=0  None .text      request__10dAttLook_cFP10fopAc_ac_cfffsi                     */
+/* 80073D08-80073FC4 02BC+00 s=0 e=0 z=7  None .text      request__10dAttLook_cFP10fopAc_ac_cfffsi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

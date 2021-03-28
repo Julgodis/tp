@@ -15,6 +15,16 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
+struct cXyz {
+};
+
+struct dPath {
+};
+
+struct daTagSppath_c {
+	/* 80D62024 */ void getNearPathPos(cXyz*, dPath*);
+};
+
 struct daTagSpinner_c {
 	/* 80D618A4 */ void initBaseMtx();
 	/* 80D618C4 */ void setBaseMtx();
@@ -28,16 +38,6 @@ struct daTagSpinner_c {
 struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
 	/* 800352B0 */ void offSwitch(int, int);
-};
-
-struct cXyz {
-};
-
-struct dPath {
-};
-
-struct daTagSppath_c {
-	/* 80D62024 */ void getNearPathPos(cXyz*, dPath*);
 };
 
 // 

@@ -11,43 +11,22 @@
 // Types:
 // 
 
-struct obj_wflag_class {
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
 struct wf_tail_s {
 	/* 80D37720 */ ~wf_tail_s();
 	/* 80D377F0 */ wf_tail_s();
 };
 
-struct Vec {
+struct standard_create_request_class {
 };
 
-struct cXyz {
-	/* 80266AE4 */ void operator+(Vec const&) const;
-	/* 80D36F54 */ ~cXyz();
-	/* 80D37880 */ cXyz();
+struct request_of_phase_process_class {
 };
 
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80D375EC */ ~J3DFrameCtrl();
-};
-
-struct csXyz {
-	/* 80D377B4 */ ~csXyz();
-	/* 80D3787C */ csXyz();
+struct obj_wflag_class {
 };
 
 struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
 };
 
 struct J3DMaterialTable {
@@ -69,10 +48,11 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModel {
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTransform {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -81,7 +61,10 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DModelData {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DAnmTransform {
+};
+
+struct Vec {
 };
 
 struct mDoExt_McaMorf {
@@ -94,10 +77,22 @@ struct mDoExt_McaMorf {
 struct layer_class {
 };
 
-struct standard_create_request_class {
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct request_of_phase_process_class {
+struct dKy_tevstr_c {
+};
+
+struct cXyz {
+	/* 80266AE4 */ void operator+(Vec const&) const;
+	/* 80D36F54 */ ~cXyz();
+	/* 80D37880 */ cXyz();
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -107,12 +102,17 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
+	/* 80D377B4 */ ~csXyz();
+	/* 80D3787C */ csXyz();
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80D375EC */ ~J3DFrameCtrl();
 };
 
 // 

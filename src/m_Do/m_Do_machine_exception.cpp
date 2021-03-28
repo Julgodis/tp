@@ -202,9 +202,9 @@ asm void exception_addition(JUTConsole* param_0) {
 
 
 /* ############################################################################################## */
-/* 80450C98-80450C9C 0004+00 s=0 e=0 z=0  None .sbss      None                                                         */
+/* 80450C98-80450C9C 0004+00 s=0 e=0 z=50  None .sbss      None                                                         */
 u8 struct_80450C98[4];
 
-/* 80450C9C-80450CA0 0004+00 s=0 e=0 z=0  None .sbss      None                                                         */
+/* 80450C9C-80450CA0 0004+00 s=0 e=0 z=6  None .sbss      None                                                         */
 u8 struct_80450C9C[4];
 

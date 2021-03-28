@@ -85,16 +85,16 @@ struct J3DTevBlockPatched {
 	/* 803176E0 */ void initialize();
 };
 
-struct J3DIndTevStage {
-	/* 8000E14C */ J3DIndTevStage();
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
 };
 
 struct J3DGXColor {
 	/* 8000E538 */ J3DGXColor();
 };
 
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
+struct J3DIndTevStage {
+	/* 8000E14C */ J3DIndTevStage();
 };
 
 struct J3DTevBlock {

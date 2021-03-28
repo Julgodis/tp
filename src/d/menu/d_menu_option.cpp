@@ -24,6 +24,9 @@ struct dSv_player_config_c {
 	/* 8003469C */ void setVibration(u8);
 };
 
+struct JKRArchive {
+};
+
 struct J2DBasePosition {
 };
 
@@ -31,9 +34,6 @@ struct J2DPane {
 	/* 802F7100 */ void getBounds();
 	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 	/* 802F7FCC */ void animationTransform();
-};
-
-struct JKRArchive {
 };
 
 struct dSelect_cursor_c {
@@ -174,10 +174,10 @@ struct dComIfG_play_c {
 	/* 8002B3B0 */ void getNowVibration();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

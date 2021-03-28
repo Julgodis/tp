@@ -12,3 +12,18 @@
 // 
 
 
+extern u8 const data_8046B5D0[4];
+
+// 
+// External References:
+// 
+
+
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".dtors$10"
+#pragma section ".dtors$15"

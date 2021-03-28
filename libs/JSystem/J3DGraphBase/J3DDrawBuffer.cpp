@@ -211,7 +211,7 @@ asm void J3DDrawBuffer::entryNonSort(J3DMatPacket* param_0) {
 #pragma pop
 
 
-/* 8032548C-803254AC 0020+00 s=0 e=8 z=0  None .text      entryImm__13J3DDrawBufferFP9J3DPacketUs                      */
+/* 8032548C-803254AC 0020+00 s=0 e=8 z=9  None .text      entryImm__13J3DDrawBufferFP9J3DPacketUs                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

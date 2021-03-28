@@ -12,4 +12,17 @@
 // 
 
 
-extern u8 const data_8046DA10[4]
+extern u8 const data_8046DA10[4];
+
+// 
+// External References:
+// 
+
+
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".ctors$10"

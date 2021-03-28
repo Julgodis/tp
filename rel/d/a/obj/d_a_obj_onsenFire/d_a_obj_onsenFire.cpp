@@ -11,27 +11,27 @@
 // Types:
 // 
 
-struct daObjOnsenFire_c {
-	/* 80CA8278 */ void create();
-	/* 80CA82F4 */ void execute();
-};
-
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct daObjOnsenFire_c {
+	/* 80CA8278 */ void create();
+	/* 80CA82F4 */ void execute();
 };
 
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct cXyz {
-};
-
 struct dKy_tevstr_c {
 };
 
 struct _GXColor {
+};
+
+struct cXyz {
 };
 
 struct dPa_control_c {

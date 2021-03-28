@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daTagSetBall_c {
 	/* 80D601F8 */ void initBaseMtx();
 	/* 80D60218 */ void setBaseMtx();
@@ -18,10 +22,6 @@ struct daTagSetBall_c {
 	/* 80D6024C */ void create();
 	/* 80D602B4 */ bool execute();
 	/* 80D602BC */ bool _delete();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
 };
 
 // 

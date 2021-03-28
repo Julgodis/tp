@@ -106,7 +106,7 @@ SECTION_DATA static void* __vt__9dInsect_c[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8015E010-8015E078 0068+00 s=0 e=0 z=0  None .text      __ct__9dInsect_cFv                                           */
+/* 8015E010-8015E078 0068+00 s=0 e=0 z=13  None .text      __ct__9dInsect_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,7 +125,7 @@ asm dInsect_c::dInsect_c() {
 SECTION_DEAD char const* const stringBase_80393D98 = "DEFAULT_GETITEM";
 #pragma pop
 
-/* 8015E078-8015E26C 01F4+00 s=0 e=0 z=0  None .text      Insect_GetDemoMain__9dInsect_cFv                             */
+/* 8015E078-8015E26C 01F4+00 s=0 e=0 z=24  None .text      Insect_GetDemoMain__9dInsect_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -164,7 +164,7 @@ SECTION_SDATA2 static f32 lit_3877[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 8015E26C-8015E3F8 018C+00 s=0 e=0 z=0  None .text      CalcZBuffer__9dInsect_cFf                                    */
+/* 8015E26C-8015E3F8 018C+00 s=0 e=0 z=3  None .text      CalcZBuffer__9dInsect_cFf                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

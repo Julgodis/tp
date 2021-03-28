@@ -49,7 +49,7 @@ extern "C" void asin(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80439A20-80449A20 10000+00 s=1 e=265 z=0  None .bss       sincosTable___5JMath                                         */
+/* 80439A20-80449A20 10000+00 s=1 e=265 z=705  None .bss       sincosTable___5JMath                                         */
 u8 sincosTable___5JMath[65536];
 
 /* 80449A20-8044AA40 1020+00 s=1 e=0 z=0  None .bss       atanTable___5JMath                                           */

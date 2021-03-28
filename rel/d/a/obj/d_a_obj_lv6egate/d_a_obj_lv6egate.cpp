@@ -11,6 +11,13 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct fopAc_ac_c {
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daObjLv6EGate_c {
 	/* 80C82078 */ void create1st();
 	/* 80C82108 */ void setMtx();
@@ -24,51 +31,8 @@ struct daObjLv6EGate_c {
 	/* 80C82A80 */ ~daObjLv6EGate_c();
 };
 
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-	/* 80C82790 */ ~dCcD_Cyl();
-	/* 80C8285C */ dCcD_Cyl();
-};
-
-struct cXyz {
-};
-
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 80C828E0 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80C82928 */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80C82970 */ ~dCcD_GStts();
-};
-
-struct cCcD_GStts {
-	/* 80C82A38 */ ~cCcD_GStts();
-};
-
-struct fopAc_ac_c {
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct request_of_phase_process_class {
-};
-
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
@@ -77,19 +41,44 @@ struct dPa_levelEcallBack {
 struct csXyz {
 };
 
+struct dKy_tevstr_c {
+};
+
+struct _GXColor {
+};
+
+struct cXyz {
+};
+
 struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80C82970 */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 800842C0 */ void ChkAtHit();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+	/* 80C82790 */ ~dCcD_Cyl();
+	/* 80C8285C */ dCcD_Cyl();
+};
+
 struct dBgW_Base {
-};
-
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
-};
-
-struct dBgS {
-	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
 };
 
 struct dBgW {
@@ -108,14 +97,17 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+struct dBgS {
+	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 800842C0 */ void ChkAtHit();
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 80C828E0 */ ~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	/* 80C82928 */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -125,8 +117,16 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
+struct cCcD_GStts {
+	/* 80C82A38 */ ~cCcD_GStts();
+};
+
 struct cBgW_BgId {
 	/* 802681D4 */ void ChkUsed() const;
+};
+
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
 };
 
 struct JAISoundID {

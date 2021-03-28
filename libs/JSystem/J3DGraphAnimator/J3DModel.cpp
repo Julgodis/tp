@@ -14,14 +14,14 @@
 struct Vec {
 };
 
+struct J3DModelData {
+	/* 803260F8 */ void syncJ3DSysFlags() const;
+};
+
 struct J3DModel;
 struct J3DDeformData {
 	/* 8032E230 */ void offAllFlag(u32);
 	/* 8032E274 */ void deform(J3DModel*);
-};
-
-struct J3DModelData {
-	/* 803260F8 */ void syncJ3DSysFlags() const;
 };
 
 struct J3DSkinDeform {
@@ -360,7 +360,7 @@ asm void J3DModel::diff() {
 #pragma pop
 
 
-/* 80327A2C-80327AA0 0074+00 s=0 e=1 z=0  None .text      setDeformData__8J3DModelFP13J3DDeformDataUl                  */
+/* 80327A2C-80327AA0 0074+00 s=0 e=1 z=2  None .text      setDeformData__8J3DModelFP13J3DDeformDataUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -371,7 +371,7 @@ asm void J3DModel::setDeformData(J3DDeformData* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 80327AA0-80327BD4 0134+00 s=0 e=0 z=0  None .text      setSkinDeform__8J3DModelFP13J3DSkinDeformUl                  */
+/* 80327AA0-80327BD4 0134+00 s=0 e=0 z=2  None .text      setSkinDeform__8J3DModelFP13J3DSkinDeformUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -382,7 +382,7 @@ asm void J3DModel::setSkinDeform(J3DSkinDeform* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 80327BD4-80327C58 0084+00 s=1 e=0 z=0  None .text      calcAnmMtx__8J3DModelFv                                      */
+/* 80327BD4-80327C58 0084+00 s=1 e=0 z=2  None .text      calcAnmMtx__8J3DModelFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -393,7 +393,7 @@ asm void J3DModel::calcAnmMtx() {
 #pragma pop
 
 
-/* 80327C58-80327CA4 004C+00 s=1 e=1 z=0  None .text      calcWeightEnvelopeMtx__8J3DModelFv                           */
+/* 80327C58-80327CA4 004C+00 s=1 e=1 z=1  None .text      calcWeightEnvelopeMtx__8J3DModelFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

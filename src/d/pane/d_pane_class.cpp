@@ -242,7 +242,7 @@ asm CPaneMgr::CPaneMgr() {
 #pragma pop
 
 
-/* 80253984-80253A18 0094+00 s=0 e=58 z=0  None .text      __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap                 */
+/* 80253984-80253A18 0094+00 s=0 e=58 z=2  None .text      __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -439,7 +439,7 @@ SECTION_SDATA2 static f32 lit_4046[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 802545B0-80254638 0088+00 s=0 e=51 z=0  None .text      paneTrans__8CPaneMgrFff                                      */
+/* 802545B0-80254638 0088+00 s=0 e=51 z=3  None .text      paneTrans__8CPaneMgrFff                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -513,7 +513,7 @@ asm void CPaneMgr::getGlobalVtx(J2DPane* param_0, f32 (* param_1)[3][4], u8 para
 #pragma pop
 
 
-/* 80254EBC-80254FB8 00FC+00 s=0 e=56 z=0  None .text      getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs                    */
+/* 80254EBC-80254FB8 00FC+00 s=0 e=56 z=1  None .text      getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -539,7 +539,7 @@ asm void CPaneMgr::getBounds(J2DPane* param_0) {
 #pragma pop
 
 
-/* 802550E8-8025512C 0044+00 s=0 e=54 z=0  None .text      dPaneClass_showNullPane__FP9J2DScreen                        */
+/* 802550E8-8025512C 0044+00 s=0 e=54 z=3  None .text      dPaneClass_showNullPane__FP9J2DScreen                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -11,12 +11,33 @@
 // Types:
 // 
 
+struct mDoExt_morf_c {
+	/* 8000FB7C */ void setMorf(f32);
+};
+
+struct mDoExt_McaMorfSO {
+	/* 800111EC */ void modelCalc();
+	/* 80011310 */ void stopZelAnime();
+};
+
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daTagSchedule_c {
+};
+
+struct daPy_py_c {
+	/* 8015F424 */ void checkNowWolfEyeUp();
+};
+
+struct daNpcT_ActorMngr_c {
+	/* 801456D4 */ void initialize();
+	/* 801456E0 */ void entry(fopAc_ac_c*);
+	/* 801456FC */ void remove();
+	/* 80145708 */ void getActorP();
+	/* 8097EFE8 */ ~daNpcT_ActorMngr_c();
 };
 
 struct daNpcCdn3_c {
@@ -93,35 +114,10 @@ struct daNpcCdn3_c {
 	/* 8097DABC */ void checkTimeSchedule();
 };
 
-struct cM3dGPla {
-	/* 809799B0 */ ~cM3dGPla();
-};
-
-struct cXyz {
-	/* 809799F8 */ ~cXyz();
-};
-
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
-	/* 8097D614 */ ~csXyz();
-};
-
-struct cCcD_GStts {
-	/* 8097E008 */ ~cCcD_GStts();
-};
-
-struct daNpcT_ActorMngr_c {
-	/* 801456D4 */ void initialize();
-	/* 801456E0 */ void entry(fopAc_ac_c*);
-	/* 801456FC */ void remove();
-	/* 80145708 */ void getActorP();
-	/* 8097EFE8 */ ~daNpcT_ActorMngr_c();
+struct J3DAnmTransformKey {
 };
 
 struct J3DModel {
-};
-
-struct J3DAnmTransformKey {
 };
 
 struct daNpcCd2_c {
@@ -145,54 +141,6 @@ struct daNpcCd2_c {
 	/* 8097F030 */ ~daNpcCd2_c();
 };
 
-struct dNpcLib_lookat_c {
-	/* 80251314 */ dNpcLib_lookat_c();
-	/* 8025140C */ void init(J3DModel*, int*, csXyz*, csXyz*);
-	/* 80251534 */ void action(cXyz, cXyz, fopAc_ac_c*, f32 (* )[4], int);
-	/* 80251B60 */ void dbView();
-	/* 8097F280 */ ~dNpcLib_lookat_c();
-};
-
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 8097F368 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 8097F3B0 */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 8097F3F8 */ ~dCcD_GStts();
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 8097F454 */ ~dBgS_AcchCir();
-};
-
-struct dBgS_ObjAcch {
-	/* 8097F4C4 */ ~dBgS_ObjAcch();
-};
-
-struct mDoExt_morf_c {
-	/* 8000FB7C */ void setMorf(f32);
-};
-
-struct mDoExt_McaMorfSO {
-	/* 800111EC */ void modelCalc();
-	/* 80011310 */ void stopZelAnime();
-};
-
-struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(int);
-};
-
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
@@ -201,77 +149,31 @@ struct dSv_danBit_c {
 	/* 80034B98 */ void onSwitch(int);
 };
 
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
-	/* 800432EC */ void convPId(unsigned int);
-};
-
-struct dEvent_manager_c {
-	/* 800487F0 */ void ChkPresentEnd();
-};
-
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
-};
-
-struct cBgS {
-	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
-};
-
-struct dBgS {
-};
-
-struct dBgS_Acch {
-	/* 80075F94 */ ~dBgS_Acch();
-	/* 800760A0 */ dBgS_Acch();
-	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
-	/* 80076AAC */ void CrrPos(dBgS&);
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct Vec {
-};
-
-struct PathTrace_c {
-	/* 80159A38 */ void setPath(int, int, int, cXyz*, bool);
-	/* 80159C14 */ void checkPoint(cXyz, f32);
-	/* 80159DC0 */ void checkPathEnd(cXyz, f32);
-	/* 80159E54 */ void getTargetPoint(Vec*);
-	/* 80159F98 */ void setNextPoint(cXyz&);
-	/* 8015A370 */ void checkObstacle(fopAc_ac_c*);
-};
-
-struct daPy_py_c {
-	/* 8015F424 */ void checkNowWolfEyeUp();
+struct J3DModelData {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct J3DModelData {
-};
-
 struct dScnKy_env_light_c {
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+	/* 8097D614 */ ~csXyz();
+};
+
+struct cXyz {
+	/* 809799F8 */ ~cXyz();
+};
+
+struct dNpcLib_lookat_c {
+	/* 80251314 */ dNpcLib_lookat_c();
+	/* 8025140C */ void init(J3DModel*, int*, csXyz*, csXyz*);
+	/* 80251534 */ void action(cXyz, cXyz, fopAc_ac_c*, f32 (* )[4], int);
+	/* 80251B60 */ void dbView();
+	/* 8097F280 */ ~dNpcLib_lookat_c();
 };
 
 struct dMsgObject_c {
@@ -285,6 +187,84 @@ struct dMsgFlow_c {
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
+struct dEvt_control_c {
+	/* 80042468 */ void reset();
+	/* 800432EC */ void convPId(unsigned int);
+};
+
+struct dEvent_manager_c {
+	/* 800487F0 */ void ChkPresentEnd();
+};
+
+struct dComIfG_play_c {
+	/* 8002C97C */ void getLayerNo(int);
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 8097F3F8 */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 8097F4C4 */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 8097F454 */ ~dBgS_AcchCir();
+};
+
+struct dBgS {
+};
+
+struct dBgS_Acch {
+	/* 80075F94 */ ~dBgS_Acch();
+	/* 800760A0 */ dBgS_Acch();
+	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
+	/* 80076AAC */ void CrrPos(dBgS&);
+};
+
+struct cM3dGPla {
+	/* 809799B0 */ ~cM3dGPla();
+};
+
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 8097F368 */ ~cM3dGCyl();
+};
+
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
+};
+
+struct cM3dGAab {
+	/* 8097F3B0 */ ~cM3dGAab();
+};
+
 struct cCcD_Obj {
 };
 
@@ -292,14 +272,34 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
+struct cCcD_GStts {
+	/* 8097E008 */ ~cCcD_GStts();
+};
+
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
+};
+
+struct cBgS {
+	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
 struct Z2CreatureCitizen {
 	/* 802C0C10 */ Z2CreatureCitizen();
 	/* 802C0C6C */ ~Z2CreatureCitizen();
 	/* 802C0E18 */ void playVoice(int);
+};
+
+struct Vec {
+};
+
+struct PathTrace_c {
+	/* 80159A38 */ void setPath(int, int, int, cXyz*, bool);
+	/* 80159C14 */ void checkPoint(cXyz, f32);
+	/* 80159DC0 */ void checkPathEnd(cXyz, f32);
+	/* 80159E54 */ void getTargetPoint(Vec*);
+	/* 80159F98 */ void setNextPoint(cXyz&);
+	/* 8015A370 */ void checkObstacle(fopAc_ac_c*);
 };
 
 struct J3DFrameCtrl {

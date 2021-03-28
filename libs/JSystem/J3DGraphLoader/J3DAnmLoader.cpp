@@ -124,17 +124,17 @@ struct J3DAnmKeyLoader_v15 {
 	/* 80339634 */ void setAnmVtxColor(J3DAnmVtxColorKey*, J3DAnmVtxColorKeyData const*);
 };
 
-struct J3DAnmClusterFullData {
+struct J3DAnmClusterFull {
 };
 
 struct J3DAnmColorFullData {
 };
 
-struct J3DAnmClusterFull {
-};
-
 struct J3DAnmColorFull {
 	/* 8032A93C */ J3DAnmColorFull();
+};
+
+struct J3DAnmClusterFullData {
 };
 
 struct J3DAnmFullLoader_v15 {
@@ -327,7 +327,7 @@ SECTION_SDATA2 static u8 lit_889[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80337B40-80338134 05F4+00 s=0 e=7 z=0  None .text      load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag   */
+/* 80337B40-80338134 05F4+00 s=0 e=7 z=1  None .text      load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

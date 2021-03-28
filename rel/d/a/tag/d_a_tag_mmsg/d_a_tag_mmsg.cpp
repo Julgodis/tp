@@ -11,24 +11,24 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daTagMmsg_c {
 	/* 80D5B918 */ void create();
 	/* 80D5BAB4 */ ~daTagMmsg_c();
 	/* 80D5BB30 */ void execute();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // 

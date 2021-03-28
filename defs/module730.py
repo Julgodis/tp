@@ -32,9 +32,9 @@ SYMBOLS = [
 	{'addr':0x80D5C678,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D5C698,'size':112,'pad':0,'label':"create__12daTagMyna2_cFv",'name':"create__12daTagMyna2_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D5C708,'size':672,'pad':0,'label':"execute__12daTagMyna2_cFv",'name':"execute__12daTagMyna2_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80D5C9A8,'size':32,'pad':0,'label':"daTagMyna2_Create__FP10fopAc_ac_c",'name':"daTagMyna2_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80D5C9C8,'size':32,'pad':0,'label':"daTagMyna2_Execute__FP12daTagMyna2_c",'name':"daTagMyna2_Execute__FP12daTagMyna2_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80D5C9E8,'size':48,'pad':0,'label':"daTagMyna2_Delete__FP12daTagMyna2_c",'name':"daTagMyna2_Delete__FP12daTagMyna2_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80D5C9A8,'size':32,'pad':0,'label':"daTagMyna2_Create__FP10fopAc_ac_c",'name':"daTagMyna2_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80D5C9C8,'size':32,'pad':0,'label':"daTagMyna2_Execute__FP12daTagMyna2_c",'name':"daTagMyna2_Execute__FP12daTagMyna2_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80D5C9E8,'size':48,'pad':0,'label':"daTagMyna2_Delete__FP12daTagMyna2_c",'name':"daTagMyna2_Delete__FP12daTagMyna2_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D5CA18,'size':28,'pad':0,'label':"func_80D5CA18",'name':"cLib_calcTimer<s>__FPs",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D5CA34,'size':4,'pad':0,'label':"data_80D5CA34",'name':None,'lib':-1,'tu':1,'section':1,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80D5CA38,'size':4,'pad':0,'label':"data_80D5CA38",'name':None,'lib':-1,'tu':2,'section':2,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
@@ -44,8 +44,8 @@ SYMBOLS = [
 	{'addr':0x80D5CA54,'size':8,'pad':0,'label':"lit_3746",'name':"@3746",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80D5CA5C,'size':4,'pad':0,'label':"lit_3747",'name':"@3747",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"Integer"},
 	{'addr':0x80D5CA60,'size':4,'pad':0,'label':"lit_3748",'name':"@3748",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"Integer"},
-	{'addr':0x80D5CA64,'size':32,'pad':0,'label':"l_daTagMyna2_Method",'name':"l_daTagMyna2_Method",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x80D5CA84,'size':48,'pad':0,'label':"g_profile_TAG_MYNA2",'name':"g_profile_TAG_MYNA2",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x80D5CA64,'size':32,'pad':0,'label':"l_daTagMyna2_Method",'name':"l_daTagMyna2_Method",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x80D5CA84,'size':48,'pad':0,'label':"g_profile_TAG_MYNA2",'name':"g_profile_TAG_MYNA2",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
 ]
 
 # Names

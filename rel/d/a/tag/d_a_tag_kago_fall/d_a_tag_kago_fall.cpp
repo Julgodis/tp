@@ -11,15 +11,6 @@
 // Types:
 // 
 
-struct daTagKagoFall_c {
-	/* 80D59C58 */ void create();
-	/* 80D59DE0 */ void execute();
-	/* 80D59E18 */ void setActionMode(u8, u8);
-	/* 80D59E24 */ void actionWaitRiver();
-	/* 80D5A218 */ void actionWaitFall();
-	/* 80D5A67C */ bool _delete();
-};
-
 struct _GXColor {
 };
 
@@ -31,31 +22,13 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(int);
-};
-
-struct cBgS_LinChk {
-};
-
-struct cBgS {
-	/* 800743B4 */ void LineCross(cBgS_LinChk*);
-};
-
-struct cXyz {
-};
-
-struct dBgS_LinChk {
-	/* 80077C68 */ dBgS_LinChk();
-	/* 80077CDC */ ~dBgS_LinChk();
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct dCamera_c {
-	/* 801614D0 */ void Stop();
-	/* 8016300C */ void SetTrimSize(s32);
-	/* 80180AA8 */ void Set(cXyz, cXyz);
-	/* 80181E64 */ void Eye();
+struct daTagKagoFall_c {
+	/* 80D59C58 */ void create();
+	/* 80D59DE0 */ void execute();
+	/* 80D59E18 */ void setActionMode(u8, u8);
+	/* 80D59E24 */ void actionWaitRiver();
+	/* 80D5A218 */ void actionWaitFall();
+	/* 80D5A67C */ bool _delete();
 };
 
 struct dMsgObject_c {
@@ -66,6 +39,33 @@ struct dMsgFlow_c {
 	/* 80249F00 */ dMsgFlow_c();
 	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+};
+
+struct dComIfG_play_c {
+	/* 8002C97C */ void getLayerNo(int);
+};
+
+struct cXyz {
+};
+
+struct dCamera_c {
+	/* 801614D0 */ void Stop();
+	/* 8016300C */ void SetTrimSize(s32);
+	/* 80180AA8 */ void Set(cXyz, cXyz);
+	/* 80181E64 */ void Eye();
+};
+
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+	/* 80077CDC */ ~dBgS_LinChk();
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct cBgS_LinChk {
+};
+
+struct cBgS {
+	/* 800743B4 */ void LineCross(cBgS_LinChk*);
 };
 
 struct JAISoundID {

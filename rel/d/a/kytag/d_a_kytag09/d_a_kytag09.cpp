@@ -11,20 +11,7 @@
 // Types:
 // 
 
-struct kytag09_class {
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 8085B9F4 */ ~J3DFrameCtrl();
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
+struct request_of_phase_process_class {
 };
 
 struct J3DMaterialTable {
@@ -38,17 +25,33 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModel {
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+struct kytag09_class {
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct dSv_player_status_b_c {
+	/* 80032BB0 */ void isDarkClearLV(int) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct request_of_phase_process_class {
+struct cXyz {
 };
 
-struct dSv_player_status_b_c {
-	/* 80032BB0 */ void isDarkClearLV(int) const;
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -58,15 +61,12 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct cXyz {
+struct J3DModel {
 };
 
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 8085B9F4 */ ~J3DFrameCtrl();
 };
 
 // 

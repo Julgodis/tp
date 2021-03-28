@@ -11,26 +11,19 @@
 // Types:
 // 
 
-struct daObj_Toby_HIO_c {
-	/* 80D1378C */ daObj_Toby_HIO_c();
-	/* 80D15534 */ ~daObj_Toby_HIO_c();
+struct yuka_s {
+	/* 80D154F4 */ ~yuka_s();
+	/* 80D15530 */ yuka_s();
+};
+
+struct request_of_phase_process_class {
 };
 
 struct obj_toby_class {
 };
 
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266AE4 */ void operator+(Vec const&) const;
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 80D139FC */ ~cXyz();
-};
-
-struct yuka_s {
-	/* 80D154F4 */ ~yuka_s();
-	/* 80D15530 */ yuka_s();
+struct mDoMtx_stack_c {
+	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
 struct fopAc_ac_c {
@@ -42,8 +35,66 @@ struct daPy_py_c {
 	/* 80D155B8 */ void getLeftHandPos() const;
 };
 
-struct mDoMtx_stack_c {
-	/* 8000CE38 */ void scaleM(f32, f32, f32);
+struct daObj_Toby_HIO_c {
+	/* 80D1378C */ daObj_Toby_HIO_c();
+	/* 80D15534 */ ~daObj_Toby_HIO_c();
+};
+
+struct daE_HZ_c {
+	/* 806EB0FC */ void isWait();
+};
+
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+};
+
+struct dKy_tevstr_c {
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266AE4 */ void operator+(Vec const&) const;
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 80D139FC */ ~cXyz();
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct JPAEmitterManager {
+};
+
+struct dPa_simpleEcallBack {
+	/* 8004AF98 */ void create(JPAEmitterManager*, u16, u8);
+};
+
+struct dPa_levelEcallBack {
+};
+
+struct csXyz {
+	/* 8026745C */ void operator+=(csXyz&);
+};
+
+struct _GXColor {
+};
+
+struct dPa_control_c {
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+};
+
+struct dEvt_control_c {
+	/* 80042468 */ void reset();
 };
 
 struct J3DModelData {
@@ -58,54 +109,20 @@ struct dComIfG_play_c {
 	/* 8002CB68 */ void entrySimpleModel(J3DModel*, int);
 };
 
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-};
-
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
-};
-
-struct JPAEmitterManager {
-};
-
-struct dPa_simpleEcallBack {
-	/* 8004AF98 */ void create(JPAEmitterManager*, u16, u8);
-};
-
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
-};
-
-struct csXyz {
-	/* 8026745C */ void operator+=(csXyz&);
-};
-
-struct dPa_control_c {
-	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+struct dCamera_c {
+	/* 801614AC */ void Start();
+	/* 801614D0 */ void Stop();
+	/* 8016300C */ void SetTrimSize(s32);
+	/* 80180AE0 */ void Set(cXyz, cXyz, f32, s16);
+	/* 80180C18 */ void Reset(cXyz, cXyz);
 };
 
 struct dBgW_Base {
 };
 
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
+struct dBgW {
+	/* 8007B970 */ dBgW();
+	/* 8007B9C0 */ void Move();
 };
 
 struct dBgS {
@@ -119,21 +136,8 @@ struct cBgW {
 	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
 };
 
-struct dBgW {
-	/* 8007B970 */ dBgW();
-	/* 8007B9C0 */ void Move();
-};
-
-struct dCamera_c {
-	/* 801614AC */ void Start();
-	/* 801614D0 */ void Stop();
-	/* 8016300C */ void SetTrimSize(s32);
-	/* 80180AE0 */ void Set(cXyz, cXyz, f32, s16);
-	/* 80180C18 */ void Reset(cXyz, cXyz);
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
 };
 
 struct JAISoundID {
@@ -141,10 +145,6 @@ struct JAISoundID {
 
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct daE_HZ_c {
-	/* 806EB0FC */ void isWait();
 };
 
 // 

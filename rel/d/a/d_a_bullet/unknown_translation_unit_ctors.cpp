@@ -12,3 +12,18 @@
 // 
 
 
+extern void* const data_80656700[2];
+
+// 
+// External References:
+// 
+
+
+extern "C" void __sinit_d_a_bullet_cpp(); // 1
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".ctors$10"

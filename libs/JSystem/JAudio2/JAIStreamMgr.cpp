@@ -47,10 +47,10 @@ struct JASGenericMemPool {
 	/* 80290994 */ void free(void*, u32);
 };
 
-struct JAISoundHandle {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct JAISoundHandle {
 };
 
 struct JAIStreamMgr {
@@ -68,13 +68,13 @@ struct JAIStreamMgr {
 struct JAIAudience {
 };
 
+struct JAISoundActivity {
+};
+
 template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAIStream> */
 struct JAISoundStrategyMgr__template2 {
-};
-
-struct JAISoundActivity {
 };
 
 struct JAIStream {

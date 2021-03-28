@@ -11,21 +11,7 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80D50BFC */ ~J3DFrameCtrl();
-};
-
-struct daTagLv7Gate_c {
-	/* 80D50C64 */ void create();
-	/* 80D50D30 */ void create_init();
-	/* 80D511C8 */ void execute();
-	/* 80D51628 */ void calcFly();
+struct request_of_phase_process_class {
 };
 
 struct cXyz {
@@ -40,14 +26,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -55,10 +37,20 @@ struct mDoExt_bckAnm {
 	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
-struct J3DModel {
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
 };
 
-struct request_of_phase_process_class {
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct daTagLv7Gate_c {
+	/* 80D50C64 */ void create();
+	/* 80D50D30 */ void create_init();
+	/* 80D511C8 */ void execute();
+	/* 80D51628 */ void calcFly();
 };
 
 struct dSv_memBit_c {
@@ -70,11 +62,22 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
 struct dRes_info_c {
 };
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dPath {
 };
 
 struct dEvt_control_c {
@@ -91,25 +94,22 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct dPath {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct JAISoundID {
 };
 
 struct Vec {
 };
 
-struct JAISoundID {
-};
-
 struct Z2SeMgr {
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80D50BFC */ ~J3DFrameCtrl();
 };
 
 // 

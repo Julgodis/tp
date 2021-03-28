@@ -11,11 +11,8 @@
 // Types:
 // 
 
-struct daTagRestart_c {
-	/* 80D603F8 */ void Create();
-	/* 80D6048C */ void create();
-	/* 80D60560 */ void execute();
-	/* 80D60744 */ bool _delete();
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct Vec {
@@ -27,12 +24,15 @@ struct cXyz {
 	/* 80D6055C */ cXyz();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
 struct fopAcM_gc_c {
 	/* 8001DCBC */ void gndCheck(cXyz const*);
+};
+
+struct daTagRestart_c {
+	/* 80D603F8 */ void Create();
+	/* 80D6048C */ void create();
+	/* 80D60560 */ void execute();
+	/* 80D60744 */ bool _delete();
 };
 
 struct dSv_restart_c {

@@ -11,6 +11,17 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct mDoExt_3DlineMat0_c {
+	/* 800125E0 */ void init(u16, u16, int);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct e_st_line_class {
 };
 
@@ -19,23 +30,12 @@ struct cXyz {
 	/* 807A7220 */ cXyz();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct mDoExt_3DlineMat0_c {
-	/* 800125E0 */ void init(u16, u16, int);
-};
-
-struct request_of_phase_process_class {
+struct Z2SoundObjSimple {
+	/* 802BE844 */ Z2SoundObjSimple();
 };
 
 struct Z2SoundObjBase {
 	/* 802BDFF8 */ void deleteObject();
-};
-
-struct Z2SoundObjSimple {
-	/* 802BE844 */ Z2SoundObjSimple();
 };
 
 // 

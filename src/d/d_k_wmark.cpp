@@ -28,10 +28,10 @@ struct dkWmark_c {
 	/* 802616C4 */ void setMatrix();
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -315,7 +315,7 @@ SECTION_DATA static void* l_dkWmark_Method[5] = {
 	(void*)dkWmark_Draw__FP9dkWmark_c,
 };
 
-/* 803C3444-803C3470 0028+04 s=0 e=0 z=0  None .data      g_profile_WMARK                                              */
+/* 803C3444-803C3470 0028+04 s=0 e=0 z=1  None .data      g_profile_WMARK                                              */
 SECTION_DATA void* g_profile_WMARK[10 + 1 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0009FFFD,

@@ -16,13 +16,13 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
+struct JKRArchive {
+};
+
 struct JUtility {
 	struct TColor {
 	};
 
-};
-
-struct JKRArchive {
 };
 
 struct dFile_warning_c {
@@ -66,10 +66,10 @@ struct J2DTextBox {
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-struct J2DGrafContext {
+struct J2DAnmTransform {
 };
 
-struct J2DAnmTransform {
+struct J2DGrafContext {
 };
 
 struct J2DScreen {

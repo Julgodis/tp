@@ -15,9 +15,6 @@ struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
-struct Vec {
-};
-
 struct cM3dGCyl;
 struct cM3dGSph {
 	/* 8026F710 */ void cross(cM3dGSph const*, cXyz*) const;
@@ -27,6 +24,9 @@ struct cM3dGSph {
 struct cM3dGCyl {
 	/* 8026F208 */ void cross(cM3dGSph const*, cXyz*) const;
 	/* 8026F22C */ void cross(cM3dGCyl const*, cXyz*) const;
+};
+
+struct Vec {
 };
 
 struct cM3dGTri {
@@ -49,6 +49,7 @@ struct cCcD_AabAttr {
 struct cCcD_PntAttr {
 };
 
+struct cCcD_TriAttr;
 struct cCcD_ShapeAttr {
 	struct Shape {
 	};
@@ -61,27 +62,29 @@ struct cCcD_ShapeAttr {
 	/* 802649E0 */ bool CrossCo(cCcD_ShapeAttr const&, f32*) const;
 };
 
-struct cCcD_TriAttr;
-struct cCcD_CylAttr;
+struct cCcD_CpsAttr;
 struct cCcD_SphAttr;
-struct cCcD_CpsAttr {
-	/* 80263DC0 */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
-	/* 80263E04 */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
-	/* 80084FE4 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
-	/* 80084FDC */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
-	/* 80084FD4 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
-	/* 80263D38 */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
-	/* 80263D7C */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
-	/* 80263F24 */ void CrossCo(cCcD_CylAttr const&, f32*) const;
-	/* 80085024 */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
-	/* 8008502C */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
-	/* 8008501C */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
-	/* 80263ED4 */ void CrossCo(cCcD_CpsAttr const&, f32*) const;
-	/* 80263F74 */ void CrossCo(cCcD_SphAttr const&, f32*) const;
-	/* 80085034 */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
-	/* 80085450 */ ~cCcD_CpsAttr();
-	/* 80263FC4 */ void CalcAabBox();
-	/* 80264014 */ void GetNVec(cXyz const&, cXyz*) const;
+struct cCcD_CylAttr {
+	/* 80084CC0 */ void GetCoCP() const;
+	/* 80037A4C */ void GetCoCP();
+	/* 8026420C */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
+	/* 802641C8 */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
+	/* 80084CC8 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
+	/* 80264250 */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
+	/* 80084CD0 */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
+	/* 80084CD8 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
+	/* 8026417C */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
+	/* 80264288 */ void CrossCo(cCcD_CylAttr const&, f32*) const;
+	/* 80264310 */ void CrossCo(cCcD_CpsAttr const&, f32*) const;
+	/* 80084D10 */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
+	/* 80084D18 */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
+	/* 80084D20 */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
+	/* 80084D28 */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
+	/* 802642CC */ void CrossCo(cCcD_SphAttr const&, f32*) const;
+	/* 800854E0 */ ~cCcD_CylAttr();
+	/* 80264368 */ void CalcAabBox();
+	/* 802643D0 */ void GetNVec(cXyz const&, cXyz*) const;
+	/* 802644B8 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
 };
 
 struct cCcD_SphAttr {
@@ -107,27 +110,24 @@ struct cCcD_SphAttr {
 	/* 80264808 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
 };
 
-struct cCcD_CylAttr {
-	/* 80084CC0 */ void GetCoCP() const;
-	/* 80037A4C */ void GetCoCP();
-	/* 8026420C */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
-	/* 802641C8 */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
-	/* 80084CC8 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
-	/* 80264250 */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
-	/* 80084CD0 */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
-	/* 80084CD8 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
-	/* 8026417C */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
-	/* 80264288 */ void CrossCo(cCcD_CylAttr const&, f32*) const;
-	/* 80264310 */ void CrossCo(cCcD_CpsAttr const&, f32*) const;
-	/* 80084D10 */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
-	/* 80084D18 */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
-	/* 80084D20 */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
-	/* 80084D28 */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
-	/* 802642CC */ void CrossCo(cCcD_SphAttr const&, f32*) const;
-	/* 800854E0 */ ~cCcD_CylAttr();
-	/* 80264368 */ void CalcAabBox();
-	/* 802643D0 */ void GetNVec(cXyz const&, cXyz*) const;
-	/* 802644B8 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
+struct cCcD_CpsAttr {
+	/* 80263DC0 */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
+	/* 80263E04 */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
+	/* 80084FE4 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
+	/* 80084FDC */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
+	/* 80084FD4 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
+	/* 80263D38 */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
+	/* 80263D7C */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
+	/* 80263F24 */ void CrossCo(cCcD_CylAttr const&, f32*) const;
+	/* 80085024 */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
+	/* 8008502C */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
+	/* 8008501C */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
+	/* 80263ED4 */ void CrossCo(cCcD_CpsAttr const&, f32*) const;
+	/* 80263F74 */ void CrossCo(cCcD_SphAttr const&, f32*) const;
+	/* 80085034 */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
+	/* 80085450 */ ~cCcD_CpsAttr();
+	/* 80263FC4 */ void CalcAabBox();
+	/* 80264014 */ void GetNVec(cXyz const&, cXyz*) const;
 };
 
 struct cCcD_TriAttr {
@@ -537,7 +537,7 @@ asm void cCcD_Stts::PlusCcMove(f32 param_0, f32 param_1, f32 param_2) {
 #pragma pop
 
 
-/* 8026395C-80263970 0014+00 s=0 e=10 z=0  None .text      ClrCcMove__9cCcD_SttsFv                                      */
+/* 8026395C-80263970 0014+00 s=0 e=10 z=23  None .text      ClrCcMove__9cCcD_SttsFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -620,7 +620,7 @@ asm void cCcD_Obj::Set(cCcD_SrcObj const& param_0) {
 #pragma pop
 
 
-/* 80263A48-80263A64 001C+00 s=0 e=9 z=0  None .text      GetAc__8cCcD_ObjFv                                           */
+/* 80263A48-80263A64 001C+00 s=0 e=9 z=87  None .text      GetAc__8cCcD_ObjFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1079,7 +1079,7 @@ asm void cCcD_ObjTg::Set(cCcD_SrcObjTg const& param_0) {
 #pragma pop
 
 
-/* 80264894-802648B0 001C+00 s=0 e=0 z=0  None .text      SetGrp__10cCcD_ObjTgFUl                                      */
+/* 80264894-802648B0 001C+00 s=0 e=0 z=2  None .text      SetGrp__10cCcD_ObjTgFUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1134,7 +1134,7 @@ asm void cCcD_ObjCo::ClrHit() {
 #pragma pop
 
 
-/* 80264900-8026491C 001C+00 s=0 e=1 z=0  None .text      SetIGrp__10cCcD_ObjCoFUl                                     */
+/* 80264900-8026491C 001C+00 s=0 e=1 z=1  None .text      SetIGrp__10cCcD_ObjCoFUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1145,7 +1145,7 @@ asm void cCcD_ObjCo::SetIGrp(u32 param_0) {
 #pragma pop
 
 
-/* 8026491C-80264938 001C+00 s=0 e=1 z=0  None .text      SetVsGrp__10cCcD_ObjCoFUl                                    */
+/* 8026491C-80264938 001C+00 s=0 e=1 z=7  None .text      SetVsGrp__10cCcD_ObjCoFUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1157,7 +1157,7 @@ asm void cCcD_ObjCo::SetVsGrp(u32 param_0) {
 
 
 /* ############################################################################################## */
-/* 803C3540-803C35A4 0064+00 s=0 e=5 z=0  None .data      __vt__12cCcD_SphAttr                                         */
+/* 803C3540-803C35A4 0064+00 s=0 e=5 z=332  None .data      __vt__12cCcD_SphAttr                                         */
 SECTION_DATA void* __vt__12cCcD_SphAttr[25] = {
 	(void*)NULL,
 	(void*)NULL,
@@ -1186,7 +1186,7 @@ SECTION_DATA void* __vt__12cCcD_SphAttr[25] = {
 	(void*)func_80264A64,
 };
 
-/* 803C35A4-803C3608 0064+00 s=0 e=9 z=0  None .data      __vt__12cCcD_CylAttr                                         */
+/* 803C35A4-803C3608 0064+00 s=0 e=9 z=448  None .data      __vt__12cCcD_CylAttr                                         */
 SECTION_DATA void* __vt__12cCcD_CylAttr[25] = {
 	(void*)NULL,
 	(void*)NULL,
@@ -1215,7 +1215,7 @@ SECTION_DATA void* __vt__12cCcD_CylAttr[25] = {
 	(void*)func_80264A5C,
 };
 
-/* 803C3608-803C366C 0064+00 s=0 e=9 z=0  None .data      __vt__12cCcD_CpsAttr                                         */
+/* 803C3608-803C366C 0064+00 s=0 e=9 z=26  None .data      __vt__12cCcD_CpsAttr                                         */
 SECTION_DATA void* __vt__12cCcD_CpsAttr[25] = {
 	(void*)NULL,
 	(void*)NULL,
@@ -1244,7 +1244,7 @@ SECTION_DATA void* __vt__12cCcD_CpsAttr[25] = {
 	(void*)func_80264A54,
 };
 
-/* 803C366C-803C36D0 0064+00 s=1 e=1 z=0  None .data      __vt__12cCcD_TriAttr                                         */
+/* 803C366C-803C36D0 0064+00 s=1 e=1 z=5  None .data      __vt__12cCcD_TriAttr                                         */
 SECTION_DATA void* __vt__12cCcD_TriAttr[25] = {
 	(void*)NULL,
 	(void*)NULL,
@@ -1273,7 +1273,7 @@ SECTION_DATA void* __vt__12cCcD_TriAttr[25] = {
 	(void*)func_80264A4C,
 };
 
-/* 803C36D0-803C3728 0058+00 s=1 e=18 z=0  None .data      __vt__14cCcD_ShapeAttr                                       */
+/* 803C36D0-803C3728 0058+00 s=1 e=18 z=761  None .data      __vt__14cCcD_ShapeAttr                                       */
 SECTION_DATA void* __vt__14cCcD_ShapeAttr[22] = {
 	(void*)NULL,
 	(void*)NULL,
@@ -1402,7 +1402,7 @@ extern "C" asm static void func_80264A64() {
 
 
 /* ############################################################################################## */
-/* 803C3728-803C3748 0020+00 s=0 e=9 z=0  None .data      __vt__9cCcD_Stts                                             */
+/* 803C3728-803C3748 0020+00 s=0 e=9 z=611  None .data      __vt__9cCcD_Stts                                             */
 SECTION_DATA void* __vt__9cCcD_Stts[8] = {
 	(void*)NULL,
 	(void*)NULL,

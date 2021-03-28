@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daTagQs_c {
 	/* 80D5DE78 */ ~daTagQs_c();
 	/* 80D5DFB0 */ void create();
@@ -23,17 +28,37 @@ struct daTagQs_c {
 	/* 80D5EBF8 */ bool draw();
 };
 
+struct daItem_c {
+	/* 80037BE0 */ void startCtrl();
+};
+
+struct daItemBase_c {
+	/* 80037A5C */ void getItemNo();
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCyl {
+};
+
 struct dCcD_GStts {
 	/* 80083760 */ dCcD_GStts();
 	/* 80D5E110 */ ~dCcD_GStts();
 };
 
-struct cM3dGCyl {
-	/* 80D5E16C */ ~cM3dGCyl();
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
-struct cM3dGAab {
-	/* 80D5E1B4 */ ~cM3dGAab();
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
 };
 
 struct Vec {
@@ -44,41 +69,16 @@ struct cXyz {
 	/* 80266EF4 */ void normalize();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct cM3dGCyl {
+	/* 80D5E16C */ ~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	/* 80D5E1B4 */ ~cM3dGAab();
 };
 
 struct cCcD_GStts {
 	/* 80D5EC90 */ ~cCcD_GStts();
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct daItemBase_c {
-	/* 80037A5C */ void getItemNo();
-};
-
-struct daItem_c {
-	/* 80037BE0 */ void startCtrl();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
 };
 
 struct JAISoundID {

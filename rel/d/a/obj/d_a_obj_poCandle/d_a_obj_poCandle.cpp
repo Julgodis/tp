@@ -11,13 +11,15 @@
 // Types:
 // 
 
-struct daPoCandle_HIO_c {
-	/* 80CB1A6C */ daPoCandle_HIO_c();
-	/* 80CB2508 */ ~daPoCandle_HIO_c();
+struct request_of_phase_process_class {
 };
 
 struct mDoHIO_entry_c {
 	/* 80CB1A9C */ ~mDoHIO_entry_c();
+};
+
+struct fopAc_ac_c {
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daPoCandle_c {
@@ -42,30 +44,28 @@ struct daPoCandle_c {
 	/* 80CB2610 */ ~daPoCandle_c();
 };
 
-struct fopAc_ac_c {
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct dEvLib_callback_c {
-	/* 8004886C */ void eventUpdate();
-	/* 80CB25B0 */ ~dEvLib_callback_c();
-	/* 80CB25F8 */ bool eventStart();
-	/* 80CB2600 */ bool eventRun();
-	/* 80CB2608 */ bool eventEnd();
-};
-
-struct J3DModel {
-};
-
-struct J3DModelData {
-};
-
-struct request_of_phase_process_class {
+struct daPoCandle_HIO_c {
+	/* 80CB1A6C */ daPoCandle_HIO_c();
+	/* 80CB2508 */ ~daPoCandle_HIO_c();
 };
 
 struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
 	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+};
+
+struct cXyz {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -75,24 +75,26 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct cXyz {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
-};
-
 struct dPa_levelEcallBack {
 };
 
 struct csXyz {
 };
 
+struct _GXColor {
+};
+
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+};
+
+struct dEvLib_callback_c {
+	/* 8004886C */ void eventUpdate();
+	/* 80CB25B0 */ ~dEvLib_callback_c();
+	/* 80CB25F8 */ bool eventStart();
+	/* 80CB2600 */ bool eventRun();
+	/* 80CB2608 */ bool eventEnd();
 };
 
 struct dBgW {
@@ -112,14 +114,6 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct LIGHT_INFLUENCE {
-};
-
 struct JAISoundID {
 };
 
@@ -129,6 +123,12 @@ struct Vec {
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct LIGHT_INFLUENCE {
+};
+
+struct J3DModel {
 };
 
 // 

@@ -11,13 +11,20 @@
 // Types:
 // 
 
-struct daPoFire_HIO_c {
-	/* 80CB294C */ daPoFire_HIO_c();
-	/* 80CB3D24 */ ~daPoFire_HIO_c();
+struct request_of_phase_process_class {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
 struct mDoHIO_entry_c {
 	/* 80CB29C4 */ ~mDoHIO_entry_c();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daPoFire_c {
@@ -52,33 +59,47 @@ struct daPoFire_c {
 	/* 80CB3E58 */ ~daPoFire_c();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct dEvLib_callback_c {
-	/* 8004886C */ void eventUpdate();
-	/* 80048940 */ void orderEvent(int, int, int);
-	/* 80CB3DDC */ ~dEvLib_callback_c();
-	/* 80CB3E24 */ bool eventStart();
-	/* 80CB3E2C */ bool eventRun();
-	/* 80CB3E34 */ bool eventEnd();
+struct daPoFire_HIO_c {
+	/* 80CB294C */ daPoFire_HIO_c();
+	/* 80CB3D24 */ ~daPoFire_HIO_c();
 };
 
 struct daPoCandle_c {
 	/* 80CB3E3C */ void getFirePos();
 };
 
-struct mDoMtx_stack_c {
-	/* 8000CD9C */ void transM(f32, f32, f32);
-};
-
-struct request_of_phase_process_class {
-};
-
 struct dSv_player_get_item_c {
 	/* 80033E94 */ void offFirstBit(u8);
+};
+
+struct dPa_levelEcallBack {
+};
+
+struct csXyz {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct _GXColor {
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266AE4 */ void operator+(Vec const&) const;
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 80266B84 */ void operator*(f32) const;
+};
+
+struct dPa_control_c {
+	struct level_c {
+		/* 8004B8B4 */ void forceOnEventMove(u32);
+		/* 8004B918 */ void getEmitter(u32);
+	};
+
+	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 struct dEvt_control_c {
@@ -91,34 +112,18 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct Vec {
+struct dEvLib_callback_c {
+	/* 8004886C */ void eventUpdate();
+	/* 80048940 */ void orderEvent(int, int, int);
+	/* 80CB3DDC */ ~dEvLib_callback_c();
+	/* 80CB3E24 */ bool eventStart();
+	/* 80CB3E2C */ bool eventRun();
+	/* 80CB3E34 */ bool eventEnd();
 };
 
-struct cXyz {
-	/* 80266AE4 */ void operator+(Vec const&) const;
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 80266B84 */ void operator*(f32) const;
-};
-
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
-};
-
-struct csXyz {
-};
-
-struct dPa_control_c {
-	struct level_c {
-		/* 8004B8B4 */ void forceOnEventMove(u32);
-		/* 8004B918 */ void getEmitter(u32);
-	};
-
-	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
 };
 
 struct dAttCatch_c {
@@ -131,11 +136,6 @@ struct cBgS_GndChk {
 
 struct cBgS {
 	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
-};
-
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
 };
 
 struct JPABaseEmitter {

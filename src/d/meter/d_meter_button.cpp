@@ -50,23 +50,23 @@ struct dMsgObject_c {
 	/* 80238258 */ void getScrnDrawPtr();
 };
 
-struct J2DGrafContext {
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
+struct JKRExpHeap {
 };
 
 struct JKRArchive {
+};
+
+struct J2DGrafContext {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct JKRExpHeap {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
 };
 
 struct CPaneMgr {
@@ -182,17 +182,17 @@ struct dMeter2Info_c {
 	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct CPaneMgrAlpha {
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
 };
 
 struct dMeter2Draw_c {
@@ -205,10 +205,10 @@ struct dComIfG_play_c {
 	/* 8002C97C */ void getLayerNo(int);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -469,7 +469,7 @@ SECTION_DATA static void* __vt__14dMeterButton_c[4] = {
 	(void*)__dt__14dMeterButton_cFv,
 };
 
-/* 80201328-80201370 0048+00 s=0 e=1 z=0  None .text      __ct__14dMeterButton_cFv                                     */
+/* 80201328-80201370 0048+00 s=0 e=1 z=1  None .text      __ct__14dMeterButton_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

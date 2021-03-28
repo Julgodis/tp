@@ -11,25 +11,12 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct request_of_phase_process_class {
 };
 
 struct cXyz {
 	/* 80BD36E4 */ ~cXyz();
 	/* 80BD3FDC */ cXyz();
-};
-
-struct daObjCRVHAHEN_c {
-	/* 80BD342C */ void HahenSet(cXyz, cXyz, cXyz, cXyz, f32);
-	/* 80BD3628 */ void Wall_Check(cXyz, cXyz);
-	/* 80BD3720 */ void Hahen_Hakai(int, int);
-	/* 80BD38DC */ void CheckCull();
-	/* 80BD3A9C */ void checkViewArea(cXyz*);
-	/* 80BD3B20 */ void Execute();
-	/* 80BD3B74 */ void Delete();
-	/* 80BD3C0C */ void setBaseMtx();
-	/* 80BD3DBC */ void create();
 };
 
 struct csXyz {
@@ -44,10 +31,38 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct daObjCRVHAHEN_c {
+	/* 80BD342C */ void HahenSet(cXyz, cXyz, cXyz, cXyz, f32);
+	/* 80BD3628 */ void Wall_Check(cXyz, cXyz);
+	/* 80BD3720 */ void Hahen_Hakai(int, int);
+	/* 80BD38DC */ void CheckCull();
+	/* 80BD3A9C */ void checkViewArea(cXyz*);
+	/* 80BD3B20 */ void Execute();
+	/* 80BD3B74 */ void Delete();
+	/* 80BD3C0C */ void setBaseMtx();
+	/* 80BD3DBC */ void create();
+};
+
+struct dKy_tevstr_c {
+};
+
 struct J3DModelData {
 };
 
-struct Vec {
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
 };
 
 struct J3DModel {
@@ -59,14 +74,10 @@ struct dComIfG_play_c {
 	/* 8002CB68 */ void entrySimpleModel(J3DModel*, int);
 };
 
-struct request_of_phase_process_class {
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+	/* 80077CDC */ ~dBgS_LinChk();
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
 struct cBgS_LinChk {
@@ -76,18 +87,7 @@ struct cBgS {
 	/* 800743B4 */ void LineCross(cBgS_LinChk*);
 };
 
-struct dBgS_LinChk {
-	/* 80077C68 */ dBgS_LinChk();
-	/* 80077CDC */ ~dBgS_LinChk();
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct Vec {
 };
 
 // 

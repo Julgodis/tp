@@ -36,14 +36,14 @@ SYMBOLS = [
 	{'addr':0x80CDCF9C,'size':104,'pad':0,'label':"create__12daObjSmoke_cFv",'name':"create__12daObjSmoke_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80CDD004,'size':180,'pad':0,'label':"execute__12daObjSmoke_cFv",'name':"execute__12daObjSmoke_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80CDD0B8,'size':64,'pad':0,'label':"_delete__12daObjSmoke_cFv",'name':"_delete__12daObjSmoke_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80CDD0F8,'size':32,'pad':0,'label':"daObjSmoke_Execute__FP12daObjSmoke_c",'name':"daObjSmoke_Execute__FP12daObjSmoke_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80CDD118,'size':32,'pad':0,'label':"daObjSmoke_Delete__FP12daObjSmoke_c",'name':"daObjSmoke_Delete__FP12daObjSmoke_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80CDD138,'size':32,'pad':0,'label':"daObjSmoke_Create__FP10fopAc_ac_c",'name':"daObjSmoke_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80CDD0F8,'size':32,'pad':0,'label':"daObjSmoke_Execute__FP12daObjSmoke_c",'name':"daObjSmoke_Execute__FP12daObjSmoke_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80CDD118,'size':32,'pad':0,'label':"daObjSmoke_Delete__FP12daObjSmoke_c",'name':"daObjSmoke_Delete__FP12daObjSmoke_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80CDD138,'size':32,'pad':0,'label':"daObjSmoke_Create__FP10fopAc_ac_c",'name':"daObjSmoke_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80CDD158,'size':4,'pad':0,'label':"data_80CDD158",'name':None,'lib':-1,'tu':1,'section':1,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80CDD15C,'size':4,'pad':0,'label':"data_80CDD15C",'name':None,'lib':-1,'tu':2,'section':2,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80CDD160,'size':4,'pad':0,'label':"lit_3655",'name':"@3655",'lib':-1,'tu':3,'section':3,'r':[2,0,0],'sh':[0,0,0],'type':"Integer"},
-	{'addr':0x80CDD164,'size':32,'pad':0,'label':"l_daObjSmoke_Method",'name':"l_daObjSmoke_Method",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x80CDD184,'size':48,'pad':0,'label':"g_profile_Obj_Smoke",'name':"g_profile_Obj_Smoke",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x80CDD164,'size':32,'pad':0,'label':"l_daObjSmoke_Method",'name':"l_daObjSmoke_Method",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x80CDD184,'size':48,'pad':0,'label':"g_profile_Obj_Smoke",'name':"g_profile_Obj_Smoke",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
 ]
 
 # Names

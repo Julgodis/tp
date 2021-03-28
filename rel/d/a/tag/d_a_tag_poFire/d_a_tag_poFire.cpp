@@ -11,13 +11,12 @@
 // Types:
 // 
 
-struct daTagPoFire_HIO_c {
-	/* 80D5DACC */ daTagPoFire_HIO_c();
-	/* 80D5DCB0 */ ~daTagPoFire_HIO_c();
-};
-
 struct mDoHIO_entry_c {
 	/* 80D5DAF0 */ ~mDoHIO_entry_c();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct daTagPoFire_c {
@@ -28,8 +27,9 @@ struct daTagPoFire_c {
 	/* 80D5DC28 */ bool Delete();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct daTagPoFire_HIO_c {
+	/* 80D5DACC */ daTagPoFire_HIO_c();
+	/* 80D5DCB0 */ ~daTagPoFire_HIO_c();
 };
 
 // 

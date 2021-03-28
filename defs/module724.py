@@ -36,9 +36,9 @@ SYMBOLS = [
 	{'addr':0x80D59E24,'size':1012,'pad':0,'label':"actionWaitRiver__15daTagKagoFall_cFv",'name':"actionWaitRiver__15daTagKagoFall_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D5A218,'size':1124,'pad':0,'label':"actionWaitFall__15daTagKagoFall_cFv",'name':"actionWaitFall__15daTagKagoFall_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D5A67C,'size':8,'pad':0,'label':"_delete__15daTagKagoFall_cFv",'name':"_delete__15daTagKagoFall_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
-	{'addr':0x80D5A684,'size':32,'pad':0,'label':"daTagKagoFall_Execute__FP15daTagKagoFall_c",'name':"daTagKagoFall_Execute__FP15daTagKagoFall_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80D5A6A4,'size':32,'pad':0,'label':"daTagKagoFall_Delete__FP15daTagKagoFall_c",'name':"daTagKagoFall_Delete__FP15daTagKagoFall_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80D5A6C4,'size':32,'pad':0,'label':"daTagKagoFall_Create__FP15daTagKagoFall_c",'name':"daTagKagoFall_Create__FP15daTagKagoFall_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80D5A684,'size':32,'pad':0,'label':"daTagKagoFall_Execute__FP15daTagKagoFall_c",'name':"daTagKagoFall_Execute__FP15daTagKagoFall_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80D5A6A4,'size':32,'pad':0,'label':"daTagKagoFall_Delete__FP15daTagKagoFall_c",'name':"daTagKagoFall_Delete__FP15daTagKagoFall_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80D5A6C4,'size':32,'pad':0,'label':"daTagKagoFall_Create__FP15daTagKagoFall_c",'name':"daTagKagoFall_Create__FP15daTagKagoFall_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D5A6E4,'size':4,'pad':0,'label':"data_80D5A6E4",'name':None,'lib':-1,'tu':1,'section':1,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80D5A6E8,'size':4,'pad':0,'label':"data_80D5A6E8",'name':None,'lib':-1,'tu':2,'section':2,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80D5A6EC,'size':4,'pad':0,'label':"lit_3907",'name':"@3907",'lib':-1,'tu':3,'section':3,'r':[3,0,0],'sh':[0,0,0],'type':"Integer"},
@@ -50,8 +50,8 @@ SYMBOLS = [
 	{'addr':0x80D5A704,'size':4,'pad':0,'label':"lit_4118",'name':"@4118",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"Integer"},
 	{'addr':0x80D5A708,'size':8,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':3,'section':3,'r':[2,0,0],'sh':[0,0,0],'type':"StringBase"},
 	{'addr':0x80D5A710,'size':4,'pad':0,'label':"m_master_id",'name':"m_master_id",'lib':-1,'tu':3,'section':4,'r':[3,0,0],'sh':[0,0,0],'type':"Integer"},
-	{'addr':0x80D5A714,'size':32,'pad':0,'label':"l_daTagKagoFall_Method",'name':"l_daTagKagoFall_Method",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x80D5A734,'size':48,'pad':0,'label':"g_profile_Tag_KagoFall",'name':"g_profile_Tag_KagoFall",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x80D5A714,'size':32,'pad':0,'label':"l_daTagKagoFall_Method",'name':"l_daTagKagoFall_Method",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x80D5A734,'size':48,'pad':0,'label':"g_profile_Tag_KagoFall",'name':"g_profile_Tag_KagoFall",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
 ]
 
 # Names

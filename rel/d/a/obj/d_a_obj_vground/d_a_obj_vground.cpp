@@ -11,24 +11,7 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct daObjVGnd_c {
-	/* 80D213F8 */ void initBaseMtx();
-	/* 80D21448 */ void setBaseMtx();
-	/* 80D214AC */ void Create();
-	/* 80D21500 */ void CreateHeap();
-	/* 80D216F4 */ void create();
-	/* 80D217A8 */ void execute();
-	/* 80D21878 */ void draw();
-	/* 80D2194C */ void _delete();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80D216AC */ ~J3DFrameCtrl();
+struct request_of_phase_process_class {
 };
 
 struct J3DMaterialTable {
@@ -50,21 +33,41 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModel {
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct J3DModelData {
+struct daObjVGnd_c {
+	/* 80D213F8 */ void initBaseMtx();
+	/* 80D21448 */ void setBaseMtx();
+	/* 80D214AC */ void Create();
+	/* 80D21500 */ void CreateHeap();
+	/* 80D216F4 */ void create();
+	/* 80D217A8 */ void execute();
+	/* 80D21878 */ void draw();
+	/* 80D2194C */ void _delete();
 };
 
-struct request_of_phase_process_class {
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+};
+
+struct cXyz {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -74,15 +77,12 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct cXyz {
+struct J3DModel {
 };
 
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80D216AC */ ~J3DFrameCtrl();
 };
 
 // 

@@ -18,27 +18,13 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct cXyz {
-	/* 808589A4 */ ~cXyz();
-};
-
-struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(int);
-};
-
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
 struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
 };
 
 struct dPa_levelEcallBack {
@@ -47,8 +33,22 @@ struct dPa_levelEcallBack {
 struct csXyz {
 };
 
+struct dKy_tevstr_c {
+};
+
+struct _GXColor {
+};
+
+struct cXyz {
+	/* 808589A4 */ ~cXyz();
+};
+
 struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+};
+
+struct dComIfG_play_c {
+	/* 8002C97C */ void getLayerNo(int);
 };
 
 struct Z2EnvSeMgr {

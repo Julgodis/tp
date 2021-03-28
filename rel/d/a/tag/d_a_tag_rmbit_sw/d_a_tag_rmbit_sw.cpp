@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daTagRmbitSw_c {
 	/* 80D5FAF8 */ daTagRmbitSw_c();
 	/* 80D5FB34 */ ~daTagRmbitSw_c();
@@ -22,18 +27,13 @@ struct daTagRmbitSw_c {
 	/* 80D5FDF0 */ void chkPlyrInTag();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct dSv_save_c {
+	/* 800350A8 */ void getSave2(int);
 };
 
 struct dSv_memory2_c {
 	/* 80034AA4 */ void onVisitedRoom(int);
 	/* 80034AC8 */ void offVisitedRoom(int);
-};
-
-struct dSv_save_c {
-	/* 800350A8 */ void getSave2(int);
 };
 
 struct dSv_info_c {

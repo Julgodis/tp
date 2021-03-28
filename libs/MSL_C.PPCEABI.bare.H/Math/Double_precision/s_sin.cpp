@@ -33,7 +33,7 @@ SECTION_SDATA2 static u8 lit_67[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8036C590-8036C668 00D8+00 s=0 e=11 z=0  None .text      sin                                                          */
+/* 8036C590-8036C668 00D8+00 s=0 e=11 z=2  None .text      sin                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

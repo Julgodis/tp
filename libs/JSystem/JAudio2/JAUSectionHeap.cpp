@@ -89,10 +89,10 @@ struct JAUSeqCollection {
 struct JAISeqDataUser {
 };
 
-struct JAISoundID {
+struct JAISeqData {
 };
 
-struct JAISeqData {
+struct JAISoundID {
 };
 
 struct JAUSectionHeap {

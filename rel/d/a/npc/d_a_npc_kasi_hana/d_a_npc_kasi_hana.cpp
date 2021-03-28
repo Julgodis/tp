@@ -11,6 +11,48 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct csXyz {
+	/* 80A208D0 */ csXyz();
+	/* 802673F4 */ csXyz(s16, s16, s16);
+	/* 80A1B3D4 */ ~csXyz();
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CF0C */ void ZXYrotS(csXyz const&);
+};
+
+struct mDoExt_morf_c {
+	/* 8000FB7C */ void setMorf(f32);
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DAnmTransform {
+};
+
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfSO {
+	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
+	/* 80011310 */ void stopZelAnime();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct Vec {
 };
 
@@ -46,27 +88,13 @@ struct daNpcKasi_Mng_c {
 	/* 80A2065C */ void getCenterPos();
 };
 
-struct csXyz {
-	/* 80A208D0 */ csXyz();
-	/* 802673F4 */ csXyz(s16, s16, s16);
-	/* 80A1B3D4 */ ~csXyz();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct J3DAnmTexPattern {
-};
-
-struct J3DModelData {
+struct J3DAnmTransformKey {
 };
 
 struct _GXColorS10 {
 };
 
-struct J3DAnmTransformKey {
+struct J3DAnmTexPattern {
 };
 
 struct daNpcF_c {
@@ -105,10 +133,10 @@ struct daNpcF_c {
 	/* 80A20EB8 */ void drawOtherMdls();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daNpcKasiHana_c {
@@ -171,19 +199,16 @@ struct daNpcKasiHana_c {
 	/* 80A20678 */ void adjustShapeAngle();
 };
 
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 80A205CC */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80A20614 */ ~cM3dGAab();
-};
-
 struct daNpcKasiHana_Param_c {
 	/* 80A2067C */ ~daNpcKasiHana_Param_c();
+};
+
+struct dPath {
+};
+
+struct daNpcF_SPCurve_c {
+	/* 80150870 */ void initialize(dPath*, int);
+	/* 80A20734 */ ~daNpcF_SPCurve_c();
 };
 
 struct daNpcF_Path_c {
@@ -194,12 +219,11 @@ struct daNpcF_Path_c {
 	/* 80A206D4 */ ~daNpcF_Path_c();
 };
 
-struct dPath {
-};
-
-struct daNpcF_SPCurve_c {
-	/* 80150870 */ void initialize(dPath*, int);
-	/* 80A20734 */ ~daNpcF_SPCurve_c();
+struct daNpcF_Lookat_c {
+	/* 80151038 */ void initialize();
+	/* 801510B8 */ void setParam(f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, s16, cXyz*);
+	/* 80151350 */ void calc(fopAc_ac_c*, f32 (* )[4], csXyz**, int, int, int);
+	/* 80A20800 */ ~daNpcF_Lookat_c();
 };
 
 struct daNpcF_ActorMngr_c {
@@ -211,72 +235,13 @@ struct daNpcF_ActorMngr_c {
 	/* 80A207C4 */ daNpcF_ActorMngr_c();
 };
 
-struct daNpcF_Lookat_c {
-	/* 80151038 */ void initialize();
-	/* 801510B8 */ void setParam(f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, s16, cXyz*);
-	/* 80151350 */ void calc(fopAc_ac_c*, f32 (* )[4], csXyz**, int, int, int);
-	/* 80A20800 */ ~daNpcF_Lookat_c();
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 80A20D14 */ ~dBgS_AcchCir();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80A20D84 */ ~dCcD_GStts();
-};
-
-struct dBgS_ObjAcch {
-	/* 80A20DE0 */ ~dBgS_ObjAcch();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80A20E50 */ ~J3DFrameCtrl();
-};
-
-struct cCcD_GStts {
-	/* 80A20EBC */ ~cCcD_GStts();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CF0C */ void ZXYrotS(csXyz const&);
-};
-
-struct mDoExt_morf_c {
-	/* 8000FB7C */ void setMorf(f32);
-};
-
-struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfSO {
-	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
-	/* 80011310 */ void stopZelAnime();
-};
-
-struct request_of_phase_process_class {
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 struct dSv_danBit_c {
 	/* 80034B98 */ void onSwitch(int);
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 struct dRes_info_c {
@@ -284,6 +249,11 @@ struct dRes_info_c {
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F48 */ ~dMsgFlow_c();
 };
 
 struct dEvt_control_c {
@@ -299,6 +269,51 @@ struct dEvent_manager_c {
 	/* 800487F0 */ void ChkPresentEnd();
 };
 
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80A20D84 */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80A20DE0 */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+	/* 80077CDC */ ~dBgS_LinChk();
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 80A20D14 */ ~dBgS_AcchCir();
+};
+
 struct dBgS {
 };
 
@@ -309,39 +324,19 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 80A205CC */ ~cM3dGCyl();
 };
 
-struct dBgS_LinChk {
-	/* 80077C68 */ dBgS_LinChk();
-	/* 80077CDC */ ~dBgS_LinChk();
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F48 */ ~dMsgFlow_c();
+struct cM3dGAab {
+	/* 80A20614 */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -351,17 +346,17 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct cBgS_GndChk {
-	/* 80267C1C */ cBgS_GndChk();
-	/* 80267C94 */ ~cBgS_GndChk();
+struct cCcD_GStts {
+	/* 80A20EBC */ ~cCcD_GStts();
 };
 
 struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
+struct cBgS_GndChk {
+	/* 80267C1C */ cBgS_GndChk();
+	/* 80267C94 */ ~cBgS_GndChk();
 };
 
 struct JAISoundID {
@@ -375,6 +370,11 @@ struct Z2CreatureCitizen {
 	/* 802C0C10 */ Z2CreatureCitizen();
 	/* 802C0C6C */ ~Z2CreatureCitizen();
 	/* 802C0CE4 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80A20E50 */ ~J3DFrameCtrl();
 };
 
 // 

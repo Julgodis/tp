@@ -242,10 +242,10 @@ struct Z2StatusMgr {
 	/* 802B5F70 */ void heartGaugeOn();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -598,7 +598,7 @@ asm void dMeter2_c::emphasisButtonDelete() {
 #pragma pop
 
 
-/* 8021F780-8021F7B0 0030+00 s=0 e=0 z=0  None .text      setLifeZero__9dMeter2_cFv                                    */
+/* 8021F780-8021F7B0 0030+00 s=0 e=0 z=1  None .text      setLifeZero__9dMeter2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1146,7 +1146,7 @@ SECTION_DATA static void* l_dMeter2_Method[5] = {
 	(void*)dMeter2_Draw__FP9dMeter2_c,
 };
 
-/* 803BFA68-803BFA90 0028+00 s=0 e=0 z=0  None .data      g_profile_METER2                                             */
+/* 803BFA68-803BFA90 0028+00 s=0 e=0 z=1  None .data      g_profile_METER2                                             */
 SECTION_DATA void* g_profile_METER2[10] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,

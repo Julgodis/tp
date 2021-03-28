@@ -11,19 +11,14 @@
 // Types:
 // 
 
-struct daNPC_LF_HIO_c {
-	/* 80A69B6C */ daNPC_LF_HIO_c();
-	/* 80A6A8E4 */ ~daNPC_LF_HIO_c();
-};
-
-struct J3DJoint {
+struct request_of_phase_process_class {
 };
 
 struct npc_lf_class {
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct mDoMtx_stack_c {
+	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
 struct lf_s {
@@ -31,24 +26,19 @@ struct lf_s {
 	/* 80A6A8E0 */ lf_s();
 };
 
-struct mDoMtx_stack_c {
-	/* 8000CE38 */ void scaleM(f32, f32, f32);
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct J3DModel {
+struct daNPC_LF_HIO_c {
+	/* 80A69B6C */ daNPC_LF_HIO_c();
+	/* 80A6A8E4 */ ~daNPC_LF_HIO_c();
+};
+
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 struct Vec {
@@ -58,12 +48,22 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-struct dKy_tevstr_c {
-};
-
 struct dScnKy_env_light_c {
 	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 // 

@@ -123,7 +123,7 @@ extern "C" extern u8 mErrorHandler__7JKRHeap[4];
 // Declarations:
 // 
 
-/* 802D0A24-802D0AD0 00AC+00 s=0 e=4 z=0  None .text      create__12JKRSolidHeapFUlP7JKRHeapb                          */
+/* 802D0A24-802D0AD0 00AC+00 s=0 e=4 z=1  None .text      create__12JKRSolidHeapFUlP7JKRHeapb                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,7 +196,7 @@ asm JKRSolidHeap::~JKRSolidHeap() {
 #pragma pop
 
 
-/* 802D0BF4-802D0CB0 00BC+00 s=0 e=5 z=0  None .text      adjustSize__12JKRSolidHeapFv                                 */
+/* 802D0BF4-802D0CB0 00BC+00 s=0 e=5 z=1  None .text      adjustSize__12JKRSolidHeapFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

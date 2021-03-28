@@ -12,3 +12,18 @@
 // 
 
 
+extern void* const data_804FA6A8[2];
+
+// 
+// External References:
+// 
+
+
+extern "C" void __sinit_d_a_e_fm_cpp(); // 1
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".ctors$10"

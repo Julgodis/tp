@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -30,10 +30,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -80,10 +80,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -319,7 +319,7 @@ SECTION_DATA static void* l_dkWpillar_Method[5] = {
 	(void*)dkWpillar_Draw__FP11dkWpillar_c,
 };
 
-/* 803C3484-803C34B0 0028+04 s=0 e=0 z=0  None .data      g_profile_WPILLAR                                            */
+/* 803C3484-803C34B0 0028+04 s=0 e=0 z=1  None .data      g_profile_WPILLAR                                            */
 SECTION_DATA void* g_profile_WPILLAR[10 + 1 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0009FFFD,

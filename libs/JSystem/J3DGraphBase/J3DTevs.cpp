@@ -382,7 +382,7 @@ asm void loadNBTScale(J3DNBTScale& param_0) {
 
 
 /* ############################################################################################## */
-/* 803A1EC8-803A1EFC 0034+00 s=0 e=9 z=0  None .rodata    j3dDefaultLightInfo                                          */
+/* 803A1EC8-803A1EFC 0034+00 s=0 e=9 z=24  None .rodata    j3dDefaultLightInfo                                          */
 SECTION_RODATA u8 const j3dDefaultLightInfo[52] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xBF, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x3F, 0x80, 0x00, 0x00,
@@ -476,7 +476,7 @@ asm void makeAlphaCmpTable() {
 
 
 /* ############################################################################################## */
-/* 80437160-804371C0 0060+00 s=1 e=4 z=0  None .bss       j3dZModeTable                                                */
+/* 80437160-804371C0 0060+00 s=1 e=4 z=5  None .bss       j3dZModeTable                                                */
 u8 j3dZModeTable[96];
 
 /* 803242A8-80324314 006C+00 s=0 e=1 z=0  None .text      makeZModeTable__Fv                                           */

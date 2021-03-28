@@ -84,7 +84,7 @@ extern "C" extern u32 __float_epsilon;
 // Declarations:
 // 
 
-/* 8027EFA4-8027EFEC 0048+00 s=0 e=11 z=0  None .text      __dt__19JPAParticleCallBackFv                                */
+/* 8027EFA4-8027EFEC 0048+00 s=0 e=11 z=1  None .text      __dt__19JPAParticleCallBackFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

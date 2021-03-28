@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct fopAc_ac_c {
+};
+
 struct daObjLv3saka_c {
 	/* 80C5BE58 */ void initBaseMtx();
 	/* 80C5BE78 */ void setBaseMtx();
@@ -22,9 +28,6 @@ struct daObjLv3saka_c {
 	/* 80C5C1F8 */ void setWtrDzb();
 	/* 80C5C274 */ bool Draw();
 	/* 80C5C27C */ void Delete();
-};
-
-struct request_of_phase_process_class {
 };
 
 struct dSv_info_c {
@@ -39,17 +42,6 @@ struct dRes_control_c {
 };
 
 struct dBgW_Base {
-};
-
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
-};
-
-struct fopAc_ac_c {
-};
-
-struct dBgS {
-	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
 };
 
 struct dBgW {
@@ -76,6 +68,14 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
+struct dBgS {
+	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
+};
+
+struct cBgW_BgId {
+	/* 802681D4 */ void ChkUsed() const;
+};
+
 struct cBgD_t {
 };
 
@@ -83,8 +83,8 @@ struct cBgW {
 	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
 };
 
-struct cBgW_BgId {
-	/* 802681D4 */ void ChkUsed() const;
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
 };
 
 // 

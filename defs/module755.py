@@ -34,14 +34,14 @@ SYMBOLS = [
 	{'addr':0x80D668C8,'size':112,'pad':0,'label':"execute__10daTboxSw_cFv",'name':"execute__10daTboxSw_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D66938,'size':8,'pad':0,'label':"draw__10daTboxSw_cFv",'name':"draw__10daTboxSw_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
 	{'addr':0x80D66940,'size':8,'pad':0,'label':"_delete__10daTboxSw_cFv",'name':"_delete__10daTboxSw_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
-	{'addr':0x80D66948,'size':32,'pad':0,'label':"daTboxSw_Draw__FP10daTboxSw_c",'name':"daTboxSw_Draw__FP10daTboxSw_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80D66968,'size':32,'pad':0,'label':"daTboxSw_Execute__FP10daTboxSw_c",'name':"daTboxSw_Execute__FP10daTboxSw_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80D66988,'size':32,'pad':0,'label':"daTboxSw_Delete__FP10daTboxSw_c",'name':"daTboxSw_Delete__FP10daTboxSw_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80D669A8,'size':32,'pad':0,'label':"daTboxSw_Create__FP10fopAc_ac_c",'name':"daTboxSw_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80D66948,'size':32,'pad':0,'label':"daTboxSw_Draw__FP10daTboxSw_c",'name':"daTboxSw_Draw__FP10daTboxSw_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80D66968,'size':32,'pad':0,'label':"daTboxSw_Execute__FP10daTboxSw_c",'name':"daTboxSw_Execute__FP10daTboxSw_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80D66988,'size':32,'pad':0,'label':"daTboxSw_Delete__FP10daTboxSw_c",'name':"daTboxSw_Delete__FP10daTboxSw_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80D669A8,'size':32,'pad':0,'label':"daTboxSw_Create__FP10fopAc_ac_c",'name':"daTboxSw_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D669C8,'size':4,'pad':0,'label':"data_80D669C8",'name':None,'lib':-1,'tu':1,'section':1,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80D669CC,'size':4,'pad':0,'label':"data_80D669CC",'name':None,'lib':-1,'tu':2,'section':2,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
-	{'addr':0x80D669D0,'size':32,'pad':0,'label':"l_daTboxSw_Method",'name':"l_daTboxSw_Method",'lib':-1,'tu':3,'section':3,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x80D669F0,'size':48,'pad':0,'label':"g_profile_TBOX_SW",'name':"g_profile_TBOX_SW",'lib':-1,'tu':3,'section':3,'r':[0,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x80D669D0,'size':32,'pad':0,'label':"l_daTboxSw_Method",'name':"l_daTboxSw_Method",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x80D669F0,'size':48,'pad':0,'label':"g_profile_TBOX_SW",'name':"g_profile_TBOX_SW",'lib':-1,'tu':3,'section':3,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
 ]
 
 # Names

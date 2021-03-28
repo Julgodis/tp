@@ -66,7 +66,7 @@ asm void cM3dGTri::cross(cM3dGCyl const* param_0, Vec* param_1) const {
 #pragma pop
 
 
-/* 8026F7DC-8026F85C 0080+00 s=0 e=0 z=0  None .text      setPos__8cM3dGTriFPC3VecPC3VecPC3Vec                         */
+/* 8026F7DC-8026F85C 0080+00 s=0 e=0 z=6  None .text      setPos__8cM3dGTriFPC3VecPC3VecPC3Vec                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

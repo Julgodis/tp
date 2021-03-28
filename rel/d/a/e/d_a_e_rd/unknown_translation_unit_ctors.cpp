@@ -11,3 +11,19 @@
 // Forward References:
 // 
 
+
+extern void* const data_80518570[2];
+
+// 
+// External References:
+// 
+
+
+extern "C" void __sinit_d_a_e_rd_cpp(); // 1
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".ctors$10"

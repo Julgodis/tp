@@ -47,33 +47,10 @@ struct J2DTextBoxVBinding {
 struct J2DTextBoxHBinding {
 };
 
-struct J2DAnmBase {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DTevStage {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DAnmColor {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DMaterial {
-	/* 802EA38C */ void setGX();
-	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
-	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-};
-
 struct J2DAnmTransform {
+};
+
+struct J2DAnmBase {
 };
 
 struct J2DAnmVisibilityFull {
@@ -104,6 +81,29 @@ struct J2DPane {
 	/* 802F83D0 */ void setAnimationVF(J2DAnmVisibilityFull*);
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8474 */ void update();
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DMaterial {
+	/* 802EA38C */ void setGX();
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
+};
+
+struct J2DTevStage {
 };
 
 struct J2DTextBoxEx {

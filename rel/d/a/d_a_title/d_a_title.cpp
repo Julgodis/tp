@@ -11,9 +11,61 @@
 // Types:
 // 
 
-struct daTit_HIO_c {
-	/* 80D66B0C */ daTit_HIO_c();
-	/* 80D67A08 */ ~daTit_HIO_c();
+struct scene_class {
+};
+
+struct request_of_phase_process_class {
+};
+
+struct J3DMaterialTable {
+};
+
+struct J3DAnmTextureSRTKey {
+};
+
+struct mDoExt_btkAnm {
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
+	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct J3DAnmTevRegKey {
+};
+
+struct mDoExt_brkAnm {
+	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
+	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct J3DAnmColor {
+};
+
+struct mDoExt_bpkAnm {
+	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, int, int, f32, s16, s16);
+	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+struct JKRHeap {
+	/* 802CE438 */ void becomeCurrentHeap();
+	/* 802CE448 */ void destroy();
+};
+
+struct mDoDvdThd_mountArchive_c {
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
 struct fopAc_ac_c {
@@ -43,82 +95,9 @@ struct daTitle_c {
 	/* 80D6786C */ void Delete();
 };
 
-struct dDlst_daTitle_c {
-	/* 80D679C8 */ void draw();
-	/* 80D67B30 */ ~dDlst_daTitle_c();
-};
-
-struct dDlst_base_c {
-	/* 80D67A04 */ void draw();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80D67B78 */ ~J3DFrameCtrl();
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
-};
-
-struct J3DMaterialTable {
-};
-
-struct J3DAnmColor {
-};
-
-struct mDoExt_bpkAnm {
-	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, int, int, f32, s16, s16);
-	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct J3DAnmTextureSRTKey {
-};
-
-struct mDoExt_btkAnm {
-	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
-	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct J3DAnmTevRegKey {
-};
-
-struct mDoExt_brkAnm {
-	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
-	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
-};
-
-struct J3DModel {
-};
-
-struct JKRHeap {
-	/* 802CE438 */ void becomeCurrentHeap();
-	/* 802CE448 */ void destroy();
-};
-
-struct mDoDvdThd_mountArchive_c {
-	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
-};
-
-struct scene_class {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dDemo_object_c {
-	/* 80039088 */ void getActor(u8);
+struct daTit_HIO_c {
+	/* 80D66B0C */ daTit_HIO_c();
+	/* 80D67A08 */ ~daTit_HIO_c();
 };
 
 struct dRes_info_c {
@@ -128,30 +107,31 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct dDlst_base_c {
+	/* 80D67A04 */ void draw();
+};
+
 struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct JKRArchive {
+struct dDlst_daTitle_c {
+	/* 80D679C8 */ void draw();
+	/* 80D67B30 */ ~dDlst_daTitle_c();
 };
 
-struct J2DGrafContext {
+struct dDemo_object_c {
+	/* 80039088 */ void getActor(u8);
 };
 
-struct J2DScreen {
-	/* 802F8498 */ J2DScreen();
-	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+struct JAISoundID {
 };
 
-struct JKRExpHeap {
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+struct Vec {
 };
 
-struct CPaneMgrAlpha {
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
-	/* 80255964 */ void alphaAnimeLoop(s16, u8, u8, u8);
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 namespace JStudio {
@@ -170,19 +150,39 @@ namespace JStudio {
 
 };
 
-struct JAISoundID {
+struct JKRExpHeap {
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-struct Vec {
+struct JKRArchive {
 };
 
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80D67B78 */ ~J3DFrameCtrl();
 };
 
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 	/* 8030074C */ void setString(s16, char const*, ...);
+};
+
+struct J2DGrafContext {
+};
+
+struct J2DScreen {
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct CPaneMgrAlpha {
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
+	/* 80255964 */ void alphaAnimeLoop(s16, u8, u8, u8);
 };
 
 // 

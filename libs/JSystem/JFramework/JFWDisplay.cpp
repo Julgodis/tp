@@ -358,7 +358,7 @@ asm JFWDisplay::~JFWDisplay() {
 
 
 /* ############################################################################################## */
-/* 804511C0-804511C4 0004+00 s=2 e=40 z=0  None .sbss      sManager__10JFWDisplay                                       */
+/* 804511C0-804511C4 0004+00 s=2 e=40 z=1  None .sbss      sManager__10JFWDisplay                                       */
 u8 sManager__10JFWDisplay[4];
 
 /* 802721DC-80272260 0084+00 s=0 e=1 z=0  None .text      createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb */

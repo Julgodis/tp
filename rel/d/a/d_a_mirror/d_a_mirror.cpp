@@ -11,23 +11,7 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct J3DModel {
-};
-
-struct dMirror_packet_c {
-	/* 80870BD8 */ dMirror_packet_c();
-	/* 80870C94 */ void reset();
-	/* 80870CA0 */ void calcMinMax();
-	/* 80870D58 */ void entryModel(J3DModel*);
-	/* 80870D88 */ void mirrorZdraw(f32*, f32*, f32, f32, f32, f32, f32, f32);
-	/* 80871268 */ void modelDraw(J3DModel*, f32 (* )[4]);
-	/* 8087146C */ void mainDraw();
-	/* 80871D84 */ void draw();
-	/* 80871E84 */ ~dMirror_packet_c();
+struct request_of_phase_process_class {
 };
 
 struct Vec {
@@ -43,6 +27,22 @@ struct cXyz {
 	/* 80870C90 */ cXyz();
 };
 
+struct mDoMtx_stack_c {
+	/* 8000CE00 */ void scaleS(cXyz const&);
+	/* 8000CE38 */ void scaleM(f32, f32, f32);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct daPy_py_c {
+	/* 8015F4F0 */ void setLookPos(cXyz*);
+};
+
+struct J3DModel {
+};
+
 struct daMirror_c {
 	/* 80871E24 */ daMirror_c();
 	/* 80871F08 */ void createHeap();
@@ -52,28 +52,19 @@ struct daMirror_c {
 	/* 80872560 */ void entryModel(J3DModel*);
 };
 
-struct mDoMtx_stack_c {
-	/* 8000CE00 */ void scaleS(cXyz const&);
-	/* 8000CE38 */ void scaleM(f32, f32, f32);
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct ResTIMG {
-};
-
-struct _GXTexObj {
-};
-
-struct _GXTlutObj {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A441C */ void setLightTevColorType(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -83,16 +74,34 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct daPy_py_c {
-	/* 8015F4F0 */ void setLookPos(cXyz*);
+struct dMirror_packet_c {
+	/* 80870BD8 */ dMirror_packet_c();
+	/* 80870C94 */ void reset();
+	/* 80870CA0 */ void calcMinMax();
+	/* 80870D58 */ void entryModel(J3DModel*);
+	/* 80870D88 */ void mirrorZdraw(f32*, f32*, f32, f32, f32, f32, f32, f32);
+	/* 80871268 */ void modelDraw(J3DModel*, f32 (* )[4]);
+	/* 8087146C */ void mainDraw();
+	/* 80871D84 */ void draw();
+	/* 80871E84 */ ~dMirror_packet_c();
 };
 
-struct dKy_tevstr_c {
+struct _GXTlutObj {
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A441C */ void setLightTevColorType(J3DModelData*, dKy_tevstr_c*);
+struct _GXTexObj {
+};
+
+struct _GXCullMode {
+};
+
+struct _GXColor {
+};
+
+struct _GXChannelID {
+};
+
+struct ResTIMG {
 };
 
 struct J3DUClipper {
@@ -100,21 +109,16 @@ struct J3DUClipper {
 	/* 80273A44 */ void clip(f32 const (* )[4], Vec*, Vec*) const;
 };
 
-struct _GXCullMode {
-};
-
-struct _GXChannelID {
-};
-
-struct _GXColor {
-};
-
 struct J3DSys {
 	/* 8031073C */ void reinitGX();
 };
 
-struct J3DDisplayListObj {
-	/* 80312618 */ void callDL() const;
+struct J3DShapePacket {
+	/* 80312FBC */ void drawFast();
+};
+
+struct J3DShape {
+	/* 80315300 */ void loadPreDrawSetting() const;
 };
 
 struct J3DPacket;
@@ -126,12 +130,8 @@ struct J3DPacket {
 	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
-struct J3DShapePacket {
-	/* 80312FBC */ void drawFast();
-};
-
-struct J3DShape {
-	/* 80315300 */ void loadPreDrawSetting() const;
+struct J3DDisplayListObj {
+	/* 80312618 */ void callDL() const;
 };
 
 // 

@@ -11,9 +11,12 @@
 // Types:
 // 
 
-struct daTagWaterFall_HIO_c {
-	/* 80D6462C */ daTagWaterFall_HIO_c();
-	/* 80D64CDC */ ~daTagWaterFall_HIO_c();
+struct mDoMtx_stack_c {
+	/* 8000CD9C */ void transM(f32, f32, f32);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct cXyz {
@@ -29,12 +32,9 @@ struct daTagWaterFall_c {
 	/* 80D64B20 */ void create();
 };
 
-struct mDoMtx_stack_c {
-	/* 8000CD9C */ void transM(f32, f32, f32);
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct daTagWaterFall_HIO_c {
+	/* 80D6462C */ daTagWaterFall_HIO_c();
+	/* 80D64CDC */ ~daTagWaterFall_HIO_c();
 };
 
 // 

@@ -268,7 +268,7 @@ SECTION_SDATA2 static u8 lit_853[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803283FC-8032842C 0030+00 s=0 e=25 z=0  None .text      init__12J3DFrameCtrlFs                                       */
+/* 803283FC-8032842C 0030+00 s=0 e=25 z=285  None .text      init__12J3DFrameCtrlFs                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -292,7 +292,7 @@ SECTION_SDATA2 static u8 lit_975[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 8032842C-803289CC 05A0+00 s=0 e=92 z=0  None .text      checkPass__12J3DFrameCtrlFf                                  */
+/* 8032842C-803289CC 05A0+00 s=0 e=92 z=382  None .text      checkPass__12J3DFrameCtrlFf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -669,7 +669,7 @@ asm J3DAnmTexPattern::J3DAnmTexPattern() {
 #pragma pop
 
 
-/* 8032AF50-8032B004 00B4+00 s=0 e=1 z=0  None .text      getTexNo__16J3DAnmTexPatternCFUsPUs                          */
+/* 8032AF50-8032B004 00B4+00 s=0 e=1 z=72  None .text      getTexNo__16J3DAnmTexPatternCFUsPUs                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -691,7 +691,7 @@ asm void J3DAnmTexPattern::searchUpdateMaterialID(J3DMaterialTable* param_0) {
 #pragma pop
 
 
-/* 8032B09C-8032B0C0 0024+00 s=0 e=4 z=0  None .text      searchUpdateMaterialID__16J3DAnmTexPatternFP12J3DModelData   */
+/* 8032B09C-8032B0C0 0024+00 s=0 e=4 z=1  None .text      searchUpdateMaterialID__16J3DAnmTexPatternFP12J3DModelData   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -713,7 +713,7 @@ asm void J3DAnmTextureSRTKey::searchUpdateMaterialID(J3DMaterialTable* param_0) 
 #pragma pop
 
 
-/* 8032B1D4-8032B1F8 0024+00 s=0 e=8 z=0  None .text      searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP12J3DModelData */
+/* 8032B1D4-8032B1F8 0024+00 s=0 e=8 z=6  None .text      searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP12J3DModelData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -735,7 +735,7 @@ SECTION_SDATA2 static f32 lit_1818[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 8032B1F8-8032B4BC 02C4+00 s=0 e=2 z=0  None .text      getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10          */
+/* 8032B1F8-8032B4BC 02C4+00 s=0 e=2 z=1  None .text      getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -746,7 +746,7 @@ asm void J3DAnmTevRegKey::getTevColorReg(u16 param_0, _GXColorS10* param_1) cons
 #pragma pop
 
 
-/* 8032B4BC-8032B780 02C4+00 s=0 e=1 z=0  None .text      getTevKonstReg__15J3DAnmTevRegKeyCFUsP8_GXColor              */
+/* 8032B4BC-8032B780 02C4+00 s=0 e=1 z=1  None .text      getTevKonstReg__15J3DAnmTevRegKeyCFUsP8_GXColor              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -768,7 +768,7 @@ asm void J3DAnmTevRegKey::searchUpdateMaterialID(J3DMaterialTable* param_0) {
 #pragma pop
 
 
-/* 8032B87C-8032B8A0 0024+00 s=0 e=9 z=0  None .text      searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData    */
+/* 8032B87C-8032B8A0 0024+00 s=0 e=9 z=4  None .text      searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

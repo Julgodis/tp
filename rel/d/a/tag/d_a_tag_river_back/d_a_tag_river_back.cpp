@@ -11,6 +11,13 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daTagRiverBack_c {
 	/* 80D5F2F8 */ void Create();
 	/* 80D5F360 */ void create();
@@ -22,13 +29,6 @@ struct daTagRiverBack_c {
 	/* 80D5F70C */ void actionDead();
 	/* 80D5F710 */ void demoProc();
 	/* 80D5F88C */ void _delete();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct request_of_phase_process_class {
 };
 
 struct dSv_info_c {

@@ -66,28 +66,25 @@ struct J2DTextBoxVBinding {
 struct J2DTextBoxHBinding {
 };
 
-struct J2DMaterial {
+struct J2DAnmTevRegKey {
 };
 
-struct J2DAnmBase {
+struct J2DAnmTextureSRTKey {
 };
 
 struct J2DAnmTexPattern {
 };
 
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmVisibilityFull {
-};
-
 struct J2DAnmTransform {
+};
+
+struct J2DAnmBase {
 };
 
 struct J2DAnmColor {
 };
 
-struct J2DAnmTextureSRTKey {
+struct J2DAnmVisibilityFull {
 };
 
 struct J2DAnmVtxColor {
@@ -129,6 +126,9 @@ struct J2DPane {
 	/* 802F83D0 */ void setAnimationVF(J2DAnmVisibilityFull*);
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8474 */ void update();
+};
+
+struct J2DMaterial {
 };
 
 struct J2DTextBox {
@@ -481,7 +481,7 @@ asm void J2DTextBox::draw(f32 param_0, f32 param_1, f32 param_2, J2DTextBoxHBind
 #pragma pop
 
 
-/* 80300658-80300660 0008+00 s=0 e=62 z=0  None .text      getStringPtr__10J2DTextBoxCFv                                */
+/* 80300658-80300660 0008+00 s=0 e=62 z=2  None .text      getStringPtr__10J2DTextBoxCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -503,7 +503,7 @@ asm void J2DTextBox::setString(char const* param_0, ...) {
 #pragma pop
 
 
-/* 8030074C-80300870 0124+00 s=0 e=41 z=0  None .text      setString__10J2DTextBoxFsPCce                                */
+/* 8030074C-80300870 0124+00 s=0 e=41 z=2  None .text      setString__10J2DTextBoxFsPCce                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

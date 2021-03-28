@@ -11,6 +11,50 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 809DE81C */ ~cXyz();
+	/* 809DE858 */ cXyz();
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CE70 */ void scaleM(cXyz const&);
+};
+
+struct J3DAnmTransform {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfSO {
+	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
+	/* 80011310 */ void stopZelAnime();
+};
+
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 	/* 80018C8C */ ~fopAc_ac_c();
@@ -67,71 +111,22 @@ struct daNpc_grO_c {
 	/* 809DEF0C */ void adjustShapeAngle();
 };
 
-struct Vec {
+struct daNpc_grO_Param_c {
+	/* 809DEF10 */ ~daNpc_grO_Param_c();
 };
 
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 809DE81C */ ~cXyz();
-	/* 809DE858 */ cXyz();
+struct daNpc_Maro_c {
+	/* 80562CA4 */ void choccai(void*);
 };
 
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 809DA6F0 */ ~cM3dGCyl();
+struct _GXColorS10 {
 };
 
-struct cM3dGAab {
-	/* 809DA738 */ ~cM3dGAab();
+struct J3DAnmTransformKey {
 };
 
-struct J3DTevKColorAnm {
-	/* 809DAF74 */ ~J3DTevKColorAnm();
-	/* 809DAFB0 */ J3DTevKColorAnm();
-};
-
-struct J3DTevColorAnm {
-	/* 809DAFC8 */ ~J3DTevColorAnm();
-	/* 809DB004 */ J3DTevColorAnm();
-};
-
-struct J3DTexNoAnm {
-	/* 809DB01C */ ~J3DTexNoAnm();
-	/* 809DB064 */ J3DTexNoAnm();
-	/* 809DE658 */ void calc(u16*) const;
-};
-
-struct J3DTexMtxAnm {
-	/* 809DB088 */ ~J3DTexMtxAnm();
-	/* 809DB0C4 */ J3DTexMtxAnm();
-};
-
-struct J3DMatColorAnm {
-	/* 809DB0DC */ ~J3DMatColorAnm();
-	/* 809DB118 */ J3DMatColorAnm();
-};
-
-struct daNpcF_ActorMngr_c {
-	/* 801506B0 */ void initialize();
-	/* 801506BC */ void entry(fopAc_ac_c*);
-	/* 801506E0 */ void remove();
-	/* 801506EC */ void getActorP();
-	/* 809DE688 */ ~daNpcF_ActorMngr_c();
-	/* 809DE6D0 */ daNpcF_ActorMngr_c();
-};
-
-struct csXyz {
-	/* 809DE7DC */ ~csXyz();
-	/* 809DE818 */ csXyz();
-};
-
-struct daNpcF_Lookat_c {
-	/* 80151038 */ void initialize();
-	/* 801510B8 */ void setParam(f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, s16, cXyz*);
-	/* 80151350 */ void calc(fopAc_ac_c*, f32 (* )[4], csXyz**, int, int, int);
-	/* 809DE70C */ ~daNpcF_Lookat_c();
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
 struct dCcD_SrcCyl {
@@ -141,28 +136,12 @@ struct dCcD_Cyl {
 	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
 };
 
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
-};
-
-struct J3DModelData {
-};
-
-struct J3DAnmTextureSRTKey {
-};
-
-struct J3DAnmTransformKey {
-};
-
-struct J3DAnmTransform {
-};
-
-struct _GXColorS10 {
-};
-
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct J3DAnmTextureSRTKey {
 };
 
 struct daNpcF_c {
@@ -205,62 +184,36 @@ struct daNpcF_c {
 	/* 809DEE1C */ void setCollisions();
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 809DEC98 */ ~dBgS_AcchCir();
+struct daNpcF_MatAnm_c {
+	/* 80150738 */ void initialize();
 };
 
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 809DED08 */ ~dCcD_GStts();
+struct csXyz {
+	/* 809DE7DC */ ~csXyz();
+	/* 809DE818 */ csXyz();
 };
 
-struct dBgS_ObjAcch {
-	/* 809DED64 */ ~dBgS_ObjAcch();
+struct daNpcF_Lookat_c {
+	/* 80151038 */ void initialize();
+	/* 801510B8 */ void setParam(f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, s16, cXyz*);
+	/* 80151350 */ void calc(fopAc_ac_c*, f32 (* )[4], csXyz**, int, int, int);
+	/* 809DE70C */ ~daNpcF_Lookat_c();
 };
 
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 809DEDD4 */ ~J3DFrameCtrl();
+struct daNpcF_ActorMngr_c {
+	/* 801506B0 */ void initialize();
+	/* 801506BC */ void entry(fopAc_ac_c*);
+	/* 801506E0 */ void remove();
+	/* 801506EC */ void getActorP();
+	/* 809DE688 */ ~daNpcF_ActorMngr_c();
+	/* 809DE6D0 */ daNpcF_ActorMngr_c();
 };
 
-struct cCcD_GStts {
-	/* 809DEE20 */ ~cCcD_GStts();
+struct dKy_tevstr_c {
 };
 
-struct daNpc_grO_Param_c {
-	/* 809DEF10 */ ~daNpc_grO_Param_c();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CE70 */ void scaleM(cXyz const&);
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
-
-struct mDoExt_McaMorfSO {
-	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
-	/* 80011310 */ void stopZelAnime();
-};
-
-struct request_of_phase_process_class {
+struct dScnKy_env_light_c {
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -268,6 +221,12 @@ struct dRes_info_c {
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F48 */ ~dMsgFlow_c();
+	/* 8024A528 */ void getEventId(int*);
 };
 
 struct dEvt_control_c {
@@ -291,6 +250,40 @@ struct dDlst_shadowControl_c {
 	/* 80055F1C */ void addReal(u32, J3DModel*);
 };
 
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 809DED08 */ ~dCcD_GStts();
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 809DED64 */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+	/* 80077CDC */ ~dBgS_LinChk();
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 809DEC98 */ ~dBgS_AcchCir();
+};
+
 struct dBgS {
 };
 
@@ -301,39 +294,19 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 809DA6F0 */ ~cM3dGCyl();
 };
 
-struct dBgS_LinChk {
-	/* 80077C68 */ dBgS_LinChk();
-	/* 80077CDC */ ~dBgS_LinChk();
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct daNpcF_MatAnm_c {
-	/* 80150738 */ void initialize();
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F48 */ ~dMsgFlow_c();
-	/* 8024A528 */ void getEventId(int*);
+struct cM3dGAab {
+	/* 809DA738 */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -343,25 +316,52 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct cBgS_GndChk {
-	/* 80267C1C */ cBgS_GndChk();
-	/* 80267C94 */ ~cBgS_GndChk();
+struct cCcD_GStts {
+	/* 809DEE20 */ ~cCcD_GStts();
 };
 
 struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
+struct cBgS_GndChk {
+	/* 80267C1C */ cBgS_GndChk();
+	/* 80267C94 */ ~cBgS_GndChk();
+};
+
+struct J3DTexNoAnm {
+	/* 809DB01C */ ~J3DTexNoAnm();
+	/* 809DB064 */ J3DTexNoAnm();
+	/* 809DE658 */ void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	/* 809DB088 */ ~J3DTexMtxAnm();
+	/* 809DB0C4 */ J3DTexMtxAnm();
+};
+
+struct J3DTevKColorAnm {
+	/* 809DAF74 */ ~J3DTevKColorAnm();
+	/* 809DAFB0 */ J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	/* 809DAFC8 */ ~J3DTevColorAnm();
+	/* 809DB004 */ J3DTevColorAnm();
 };
 
 struct J3DMaterialAnm {
 	/* 8032C320 */ void initialize();
 };
 
-struct daNpc_Maro_c {
-	/* 80562CA4 */ void choccai(void*);
+struct J3DMatColorAnm {
+	/* 809DB0DC */ ~J3DMatColorAnm();
+	/* 809DB118 */ J3DMatColorAnm();
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 809DEDD4 */ ~J3DFrameCtrl();
 };
 
 // 

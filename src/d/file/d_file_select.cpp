@@ -21,14 +21,14 @@ struct mDoMemCd_Ctrl_c {
 	/* 80016F2C */ void FormatSync();
 };
 
+struct J3DMaterialTable {
+};
+
 struct J3DModelData {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
-struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -70,6 +70,9 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
+struct JKRArchive {
+};
+
 struct J2DAnmTextureSRTKey {
 	/* 80184274 */ ~J2DAnmTextureSRTKey();
 };
@@ -90,9 +93,6 @@ struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
-struct JKRArchive {
-};
-
 struct dSelect_cursor_c {
 	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
@@ -100,10 +100,10 @@ struct dSelect_cursor_c {
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -390,10 +390,10 @@ struct dComIfG_play_c {
 	/* 8002B2C8 */ void itemInit();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

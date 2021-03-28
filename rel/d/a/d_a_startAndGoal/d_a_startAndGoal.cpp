@@ -11,12 +11,8 @@
 // Types:
 // 
 
-struct cXyz {
-};
-
-struct daStartAndGoal_Path_c {
-	/* 80D4D7B8 */ void chkPassed2(cXyz);
-	/* 80D4D928 */ ~daStartAndGoal_Path_c();
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct daStartAndGoal_c {
@@ -32,8 +28,20 @@ struct daStartAndGoal_c {
 	/* 80D4DCFC */ void Delete();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct cXyz {
+};
+
+struct daStartAndGoal_Path_c {
+	/* 80D4D7B8 */ void chkPassed2(cXyz);
+	/* 80D4D928 */ ~daStartAndGoal_Path_c();
+};
+
+struct dPath {
+};
+
+struct daNpcF_SPCurve_c {
+	/* 80150870 */ void initialize(dPath*, int);
+	/* 80D4DE68 */ ~daNpcF_SPCurve_c();
 };
 
 struct daNpcF_Path_c {
@@ -43,14 +51,6 @@ struct daNpcF_Path_c {
 	/* 80150BE0 */ void setNextIdx();
 	/* 80150C18 */ void getNextIdx();
 	/* 80D4DE08 */ ~daNpcF_Path_c();
-};
-
-struct dPath {
-};
-
-struct daNpcF_SPCurve_c {
-	/* 80150870 */ void initialize(dPath*, int);
-	/* 80D4DE68 */ ~daNpcF_SPCurve_c();
 };
 
 struct dComIfG_play_c {

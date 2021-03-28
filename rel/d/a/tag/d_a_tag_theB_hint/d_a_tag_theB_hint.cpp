@@ -19,12 +19,12 @@ struct fopAc_ac_c {
 struct daTagTheBHint_c {
 };
 
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
 struct daNpcTheB_c {
 	/* 80AFD6D8 */ void setHintEvent(s32, u16, int);
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // 

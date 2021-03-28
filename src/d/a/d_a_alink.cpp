@@ -17,15 +17,6 @@ struct stage_stag_info_class {
 struct request_of_phase_process_class {
 };
 
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 80112C80 */ csXyz();
-	/* 802673F4 */ csXyz(s16, s16, s16);
-};
-
-struct Quaternion {
-};
-
 struct Vec {
 };
 
@@ -48,6 +39,15 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
+struct Quaternion {
+};
+
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 80112C80 */ csXyz();
+	/* 802673F4 */ csXyz(s16, s16, s16);
+};
+
 struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
 	/* 8000CDD4 */ void transM(cXyz const&);
@@ -58,20 +58,20 @@ struct mDoMtx_stack_c {
 	/* 8000CF7C */ void quatM(Quaternion const*);
 };
 
-struct J3DDeformData {
+struct J3DAnmCluster {
 };
 
-struct J3DAnmCluster {
+struct J3DDeformData {
 };
 
 struct mDoExt_blkAnm {
 	/* 8000DA08 */ void init(J3DDeformData*, J3DAnmCluster*, int, int, f32, s16, s16);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -512,13 +512,8 @@ struct daAlink_footData_c {
 	/* 800CFCF4 */ daAlink_footData_c();
 };
 
-struct JPABaseEmitter {
-};
-
-struct dBgW_Base {
-	struct PushPullLabel {
-	};
-
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
 struct JKRHeap {
@@ -527,32 +522,6 @@ struct JKRHeap {
 
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
-};
-
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct cM3dGPla {
-	/* 8001DB90 */ ~cM3dGPla();
-	/* 801411F0 */ cM3dGPla();
-	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
-	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
-};
-
-struct dDemo_actor_c {
-	/* 8003819C */ void getPrm_Morf();
-	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
-};
-
-struct daAlinkHIO_anm_c {
-};
-
-struct J3DAnmBase {
 };
 
 struct dCcD_GObjInf {
@@ -570,7 +539,16 @@ struct dCcD_GObjInf {
 	/* 800846B0 */ void ResetCoHit();
 };
 
-struct dCcG_At_Spl {
+struct JPABaseEmitter {
+};
+
+struct dBgW_Base {
+	struct PushPullLabel {
+	};
+
+};
+
+struct daAlinkHIO_anm_c {
 };
 
 struct _GXColorS10 {
@@ -581,8 +559,30 @@ struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
+struct dDemo_actor_c {
+	/* 8003819C */ void getPrm_Morf();
+	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
+};
+
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
+};
+
+struct cM3dGPla {
+	/* 8001DB90 */ ~cM3dGPla();
+	/* 801411F0 */ cM3dGPla();
+	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
+	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
+};
+
 struct dAttList_c {
 	/* 80073864 */ void getActor();
+};
+
+struct J3DAnmBase {
+};
+
+struct dCcG_At_Spl {
 };
 
 struct daAlink_c {
@@ -2749,13 +2749,13 @@ struct dDlst_peekZ_c {
 	/* 80056018 */ void newData(s16, s16, u32*);
 };
 
-struct J3DDrawBuffer;
-struct J3DPacket {
-	/* 80312750 */ bool entry(J3DDrawBuffer*);
-};
-
+struct J3DPacket;
 struct J3DDrawBuffer {
 	/* 8032548C */ void entryImm(J3DPacket*, u16);
+};
+
+struct J3DPacket {
+	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
 struct dDlst_list_c {
@@ -3145,12 +3145,12 @@ struct J3DShape {
 	/* 80315300 */ void loadPreDrawSetting() const;
 };
 
-struct J3DAnmTextureSRTKey {
-	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
-};
-
 struct J3DAnmTexPattern {
 	/* 8032B09C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DAnmTextureSRTKey {
+	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
 };
 
 struct J3DMaterialTable {
@@ -5478,6 +5478,8 @@ extern "C" extern u8 const m__20daAlinkHIO_wlBall_c0[56];
 extern "C" extern u8 const l_worldChangeEventName[16];
 extern "C" extern u8 const l_wolfWorldChangeEventName[21 + 3 /* padding */];
 extern "C" extern u8 const l_crawlStartFrontOffset[12];
+extern "C" extern u8 const m_handLeftInSidePos__9daAlink_c[12];
+extern "C" extern u8 const m_handRightInSidePos__9daAlink_c[12];
 extern "C" extern u8 const data_80391FBC[12];
 extern "C" extern char const* const d_a_d_a_alink__stringBase0;
 extern "C" extern void* g_profile_ALINK[12 + 9 /* padding */];
@@ -6424,7 +6426,7 @@ SECTION_SDATA2 static u8 l_arcName[6 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 8009D884-8009D88C 0008+00 s=0 e=0 z=0  None .text      getAlinkArcName__9daAlink_cFv                                */
+/* 8009D884-8009D88C 0008+00 s=0 e=0 z=13  None .text      getAlinkArcName__9daAlink_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -6523,7 +6525,7 @@ asm void daAlink_matAnm_c::calc(J3DMaterial* param_0) const {
 #pragma pop
 
 
-/* 8009DA60-8009DA98 0038+00 s=48 e=0 z=0  None .text      checkStageName__9daAlink_cFPCc                               */
+/* 8009DA60-8009DA98 0038+00 s=48 e=0 z=5  None .text      checkStageName__9daAlink_cFPCc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -8928,7 +8930,7 @@ asm void daAlink_c::commonLineCheck(cXyz* param_0, cXyz* param_1) {
 #pragma pop
 
 
-/* 800A21E0-800A2280 00A0+00 s=18 e=0 z=0  None .text      getMoveBGActorName__9daAlink_cFR13cBgS_PolyInfoi             */
+/* 800A21E0-800A2280 00A0+00 s=18 e=0 z=2  None .text      getMoveBGActorName__9daAlink_cFR13cBgS_PolyInfoi             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -9913,13 +9915,13 @@ SECTION_RODATA static u8 const m_handRightOutSidePos__9daAlink_c[12] = {
 	0x41, 0x10, 0x00, 0x00, 0xC0, 0xA0, 0x00, 0x00, 0xC0, 0x40, 0x00, 0x00,
 };
 
-/* 80391900-8039190C 000C+00 s=1 e=0 z=0  None .rodata    m_handLeftInSidePos__9daAlink_c                              */
-SECTION_RODATA static u8 const m_handLeftInSidePos__9daAlink_c[12] = {
+/* 80391900-8039190C 000C+00 s=1 e=0 z=1  None .rodata    m_handLeftInSidePos__9daAlink_c                              */
+SECTION_RODATA u8 const m_handLeftInSidePos__9daAlink_c[12] = {
 	0x41, 0x10, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00, 0x40, 0x40, 0x00, 0x00,
 };
 
-/* 8039190C-80391918 000C+00 s=1 e=0 z=0  None .rodata    m_handRightInSidePos__9daAlink_c                             */
-SECTION_RODATA static u8 const m_handRightInSidePos__9daAlink_c[12] = {
+/* 8039190C-80391918 000C+00 s=1 e=0 z=1  None .rodata    m_handRightInSidePos__9daAlink_c                             */
+SECTION_RODATA u8 const m_handRightInSidePos__9daAlink_c[12] = {
 	0x41, 0x10, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00, 0xC0, 0x40, 0x00, 0x00,
 };
 
@@ -10532,7 +10534,7 @@ asm void daAlink_c::initDemoModel(J3DModel** param_0, char const* param_1, u32 p
 #pragma pop
 
 
-/* 800A3F98-800A4068 00D0+00 s=1 e=0 z=0  None .text      initDemoBck__9daAlink_cFPP13mDoExt_bckAnmPCc                 */
+/* 800A3F98-800A4068 00D0+00 s=1 e=0 z=1  None .text      initDemoBck__9daAlink_cFPP13mDoExt_bckAnmPCc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -14562,7 +14564,7 @@ SECTION_DATA static void* l_daAlink_Method[8] = {
 	(void*)NULL,
 };
 
-/* 803B2DCC-803B2E20 0030+24 s=0 e=0 z=0  None .data      g_profile_ALINK                                              */
+/* 803B2DCC-803B2E20 0030+24 s=0 e=0 z=1  None .data      g_profile_ALINK                                              */
 SECTION_DATA void* g_profile_ALINK[12 + 9 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0005FFFD,
@@ -15475,7 +15477,7 @@ asm void daAlink_c::setMatrix() {
 #pragma pop
 
 
-/* 800A9248-800A92F0 00A8+00 s=15 e=0 z=0  None .text      simpleAnmPlay__9daAlink_cFP10J3DAnmBase                      */
+/* 800A9248-800A92F0 00A8+00 s=15 e=0 z=5  None .text      simpleAnmPlay__9daAlink_cFP10J3DAnmBase                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -15750,7 +15752,7 @@ asm void daAlink_c::getMainBckData(daAlink_c::daAlink_ANM param_0) const {
 #pragma pop
 
 
-/* 800AC558-800AC5B4 005C+00 s=51 e=0 z=0  None .text      checkUnderMove0BckNoArc__9daAlink_cCFQ29daAlink_c11daAlink_ANM */
+/* 800AC558-800AC5B4 005C+00 s=51 e=0 z=2  None .text      checkUnderMove0BckNoArc__9daAlink_cCFQ29daAlink_c11daAlink_ANM */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -16594,7 +16596,7 @@ asm void daAlink_c::setItemActionButtonStatus(u8 param_0) {
 #pragma pop
 
 
-/* 800B26FC-800B271C 0020+00 s=2 e=0 z=0  None .text      itemActionTrigger__9daAlink_cFv                              */
+/* 800B26FC-800B271C 0020+00 s=2 e=0 z=1  None .text      itemActionTrigger__9daAlink_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -16869,7 +16871,7 @@ asm void daAlink_c::setJumpMode() {
 #pragma pop
 
 
-/* 800B4908-800B4918 0010+00 s=0 e=0 z=0  None .text      getMetamorphoseNearDis__9daAlink_cCFv                        */
+/* 800B4908-800B4918 0010+00 s=0 e=0 z=1  None .text      getMetamorphoseNearDis__9daAlink_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -16880,7 +16882,7 @@ asm void daAlink_c::getMetamorphoseNearDis() const {
 #pragma pop
 
 
-/* 800B4918-800B4928 0010+00 s=0 e=0 z=0  None .text      getMetamorphoseFarDis__9daAlink_cCFv                         */
+/* 800B4918-800B4928 0010+00 s=0 e=0 z=1  None .text      getMetamorphoseFarDis__9daAlink_cCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -16891,7 +16893,7 @@ asm void daAlink_c::getMetamorphoseFarDis() const {
 #pragma pop
 
 
-/* 800B4928-800B4938 0010+00 s=0 e=0 z=0  None .text      getMetamorphoseFarAngle__9daAlink_cCFv                       */
+/* 800B4928-800B4938 0010+00 s=0 e=0 z=1  None .text      getMetamorphoseFarAngle__9daAlink_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -17340,7 +17342,7 @@ asm void daAlink_c::checkItemEquipAnime() const {
 #pragma pop
 
 
-/* 800B9340-800B9398 0058+00 s=30 e=0 z=0  None .text      checkEquipAnime__9daAlink_cCFv                               */
+/* 800B9340-800B9398 0058+00 s=30 e=0 z=1  None .text      checkEquipAnime__9daAlink_cCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -18159,7 +18161,7 @@ asm void daAlink_c::checkCastleTown() {
 #pragma pop
 
 
-/* 800C03A0-800C03E8 0048+00 s=6 e=0 z=0  None .text      checkCloudSea__9daAlink_cFv                                  */
+/* 800C03A0-800C03E8 0048+00 s=6 e=0 z=1  None .text      checkCloudSea__9daAlink_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -19268,7 +19270,7 @@ asm void daAlink_c::checkItemDraw() {
 #pragma pop
 
 
-/* 800CB694-800CBA38 03A4+00 s=0 e=0 z=0  None .text      initShadowScaleLight__9daAlink_cFv                           */
+/* 800CB694-800CBA38 03A4+00 s=0 e=0 z=1  None .text      initShadowScaleLight__9daAlink_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -19283,7 +19285,7 @@ asm void daAlink_c::initShadowScaleLight() {
 /* 80453338-8045333C 0004+00 s=1 e=0 z=0  None .sdata2    @75939                                                       */
 SECTION_SDATA2 static u32 lit_75939 = 0x47435000;
 
-/* 800CBA38-800CBC18 01E0+00 s=0 e=0 z=0  None .text      moveShadowScaleLight__9daAlink_cFv                           */
+/* 800CBA38-800CBC18 01E0+00 s=0 e=0 z=1  None .text      moveShadowScaleLight__9daAlink_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -21433,7 +21435,7 @@ asm void daAlink_c::setSwordAtParam(dCcG_At_Spl param_0, u8 param_1, u8 param_2,
 #pragma pop
 
 
-/* 800D1788-800D17EC 0064+00 s=1 e=0 z=0  None .text      notSwordHitVibActor__9daAlink_cFP10fopAc_ac_c                */
+/* 800D1788-800D17EC 0064+00 s=1 e=0 z=1  None .text      notSwordHitVibActor__9daAlink_cFP10fopAc_ac_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22126,7 +22128,7 @@ asm void daAlink_c::procSwordUnequipSp() {
 #pragma pop
 
 
-/* 800D6D94-800D6DA4 0010+00 s=0 e=0 z=0  None .text      getFreezeR__9daAlink_cCFv                                    */
+/* 800D6D94-800D6DA4 0010+00 s=0 e=0 z=2  None .text      getFreezeR__9daAlink_cCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22137,7 +22139,7 @@ asm void daAlink_c::getFreezeR() const {
 #pragma pop
 
 
-/* 800D6DA4-800D6DB4 0010+00 s=0 e=0 z=0  None .text      getFreezeG__9daAlink_cCFv                                    */
+/* 800D6DA4-800D6DB4 0010+00 s=0 e=0 z=2  None .text      getFreezeG__9daAlink_cCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22148,7 +22150,7 @@ asm void daAlink_c::getFreezeG() const {
 #pragma pop
 
 
-/* 800D6DB4-800D6DC4 0010+00 s=0 e=0 z=0  None .text      getFreezeB__9daAlink_cCFv                                    */
+/* 800D6DB4-800D6DC4 0010+00 s=0 e=0 z=2  None .text      getFreezeB__9daAlink_cCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22313,7 +22315,7 @@ asm void daAlink_c::setDashDamage() {
 #pragma pop
 
 
-/* 800D7768-800D77C8 0060+00 s=2 e=0 z=0  None .text      checkIcePolygonDamage__9daAlink_cFP13cBgS_PolyInfo           */
+/* 800D7768-800D77C8 0060+00 s=2 e=0 z=3  None .text      checkIcePolygonDamage__9daAlink_cFP13cBgS_PolyInfo           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22753,7 +22755,7 @@ asm void daAlink_c::stickArrowIncrement(int param_0) {
 #pragma pop
 
 
-/* 800DC8C4-800DCA2C 0168+00 s=0 e=0 z=0  None .text      setArrowShieldActor__9daAlink_cFP10fopAc_ac_ci               */
+/* 800DC8C4-800DCA2C 0168+00 s=0 e=0 z=1  None .text      setArrowShieldActor__9daAlink_cFP10fopAc_ac_ci               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22764,7 +22766,7 @@ asm void daAlink_c::setArrowShieldActor(fopAc_ac_c* param_0, int param_1) {
 #pragma pop
 
 
-/* 800DCA2C-800DCA80 0054+00 s=1 e=0 z=0  None .text      checkWoodShieldEquipNotIronBall__9daAlink_cCFv               */
+/* 800DCA2C-800DCA80 0054+00 s=1 e=0 z=2  None .text      checkWoodShieldEquipNotIronBall__9daAlink_cCFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22775,7 +22777,7 @@ asm void daAlink_c::checkWoodShieldEquipNotIronBall() const {
 #pragma pop
 
 
-/* 800DCA80-800DCD74 02F4+00 s=0 e=0 z=0  None .text      getArrowShieldOffset__9daAlink_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz */
+/* 800DCA80-800DCD74 02F4+00 s=0 e=0 z=1  None .text      getArrowShieldOffset__9daAlink_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22786,7 +22788,7 @@ asm void daAlink_c::getArrowShieldOffset(cXyz const* param_0, csXyz const* param
 #pragma pop
 
 
-/* 800DCD74-800DCDF0 007C+00 s=0 e=0 z=0  None .text      setArrowShieldPos__9daAlink_cCFP4cXyzP5csXyzPC4cXyzPC4cXyz   */
+/* 800DCD74-800DCDF0 007C+00 s=0 e=0 z=2  None .text      setArrowShieldPos__9daAlink_cCFP4cXyzP5csXyzPC4cXyzPC4cXyz   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22973,7 +22975,7 @@ asm void daAlink_c::procTurnMove() {
 #pragma pop
 
 
-/* 800DE64C-800DE740 00F4+00 s=1 e=0 z=0  None .text      getArrowFlyData__9daAlink_cCFPfPfi                           */
+/* 800DE64C-800DE740 00F4+00 s=1 e=0 z=2  None .text      getArrowFlyData__9daAlink_cCFPfPfi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22984,7 +22986,7 @@ asm void daAlink_c::getArrowFlyData(f32* param_0, f32* param_1, int param_2) con
 #pragma pop
 
 
-/* 800DE740-800DE750 0010+00 s=0 e=0 z=0  None .text      getArrowIncAtR__9daAlink_cCFv                                */
+/* 800DE740-800DE750 0010+00 s=0 e=0 z=1  None .text      getArrowIncAtR__9daAlink_cCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22995,7 +22997,7 @@ asm void daAlink_c::getArrowIncAtR() const {
 #pragma pop
 
 
-/* 800DE750-800DE760 0010+00 s=0 e=0 z=0  None .text      getBombArrowFlyExplodeTime__9daAlink_cCFv                    */
+/* 800DE750-800DE760 0010+00 s=0 e=0 z=1  None .text      getBombArrowFlyExplodeTime__9daAlink_cCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23006,7 +23008,7 @@ asm void daAlink_c::getBombArrowFlyExplodeTime() const {
 #pragma pop
 
 
-/* 800DE760-800DE770 0010+00 s=0 e=0 z=0  None .text      getArrowIncAtMaxStart__9daAlink_cCFv                         */
+/* 800DE760-800DE770 0010+00 s=0 e=0 z=1  None .text      getArrowIncAtMaxStart__9daAlink_cCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23017,7 +23019,7 @@ asm void daAlink_c::getArrowIncAtMaxStart() const {
 #pragma pop
 
 
-/* 800DE770-800DE780 0010+00 s=0 e=0 z=0  None .text      getArrowIncAtMax__9daAlink_cCFv                              */
+/* 800DE770-800DE780 0010+00 s=0 e=0 z=1  None .text      getArrowIncAtMax__9daAlink_cCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23050,7 +23052,7 @@ asm void daAlink_c::setSlingModel() {
 #pragma pop
 
 
-/* 800DE884-800DE990 010C+00 s=0 e=1 z=0  None .text      checkBowCameraArrowPosP__9daAlink_cFPsPs                     */
+/* 800DE884-800DE990 010C+00 s=0 e=1 z=1  None .text      checkBowCameraArrowPosP__9daAlink_cFPsPs                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23314,7 +23316,7 @@ asm void daAlink_c::procBowMove() {
 #pragma pop
 
 
-/* 800DFFE0-800E0010 0030+00 s=0 e=0 z=0  None .text      checkBoomerangLockAccept__9daAlink_cFv                       */
+/* 800DFFE0-800E0010 0030+00 s=0 e=0 z=1  None .text      checkBoomerangLockAccept__9daAlink_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23325,7 +23327,7 @@ asm void daAlink_c::checkBoomerangLockAccept() {
 #pragma pop
 
 
-/* 800E0010-800E00B0 00A0+00 s=0 e=0 z=0  None .text      getBoomSpeed__9daAlink_cFv                                   */
+/* 800E0010-800E00B0 00A0+00 s=0 e=0 z=1  None .text      getBoomSpeed__9daAlink_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23336,7 +23338,7 @@ asm void daAlink_c::getBoomSpeed() {
 #pragma pop
 
 
-/* 800E00B0-800E00C0 0010+00 s=0 e=0 z=0  None .text      getBoomCatchSpeed__9daAlink_cCFv                             */
+/* 800E00B0-800E00C0 0010+00 s=0 e=0 z=1  None .text      getBoomCatchSpeed__9daAlink_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23347,7 +23349,7 @@ asm void daAlink_c::getBoomCatchSpeed() const {
 #pragma pop
 
 
-/* 800E00C0-800E011C 005C+00 s=1 e=0 z=0  None .text      getBoomFlyMax__9daAlink_cCFv                                 */
+/* 800E00C0-800E011C 005C+00 s=1 e=0 z=1  None .text      getBoomFlyMax__9daAlink_cCFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23358,7 +23360,7 @@ asm void daAlink_c::getBoomFlyMax() const {
 #pragma pop
 
 
-/* 800E011C-800E0190 0074+00 s=1 e=0 z=0  None .text      getBoomLockMax__9daAlink_cFv                                 */
+/* 800E011C-800E0190 0074+00 s=1 e=0 z=2  None .text      getBoomLockMax__9daAlink_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23369,7 +23371,7 @@ asm void daAlink_c::getBoomLockMax() {
 #pragma pop
 
 
-/* 800E0190-800E01A0 0010+00 s=0 e=0 z=0  None .text      getBoomBgThroughTime__9daAlink_cCFv                          */
+/* 800E0190-800E01A0 0010+00 s=0 e=0 z=1  None .text      getBoomBgThroughTime__9daAlink_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23523,7 +23525,7 @@ asm void daAlink_c::throwBoomerang() {
 #pragma pop
 
 
-/* 800E08C4-800E0A9C 01D8+00 s=0 e=0 z=0  None .text      returnBoomerang__9daAlink_cFi                                */
+/* 800E08C4-800E0A9C 01D8+00 s=0 e=0 z=1  None .text      returnBoomerang__9daAlink_cFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23666,7 +23668,7 @@ asm void daAlink_c::checkLv6BossRoom() {
 #pragma pop
 
 
-/* 800E1310-800E1320 0010+00 s=0 e=0 z=0  None .text      getCopyRodBallSpeed__9daAlink_cCFv                           */
+/* 800E1310-800E1320 0010+00 s=0 e=0 z=1  None .text      getCopyRodBallSpeed__9daAlink_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23677,7 +23679,7 @@ asm void daAlink_c::getCopyRodBallSpeed() const {
 #pragma pop
 
 
-/* 800E1320-800E1330 0010+00 s=0 e=0 z=0  None .text      getCopyRodBallReturnSpeed__9daAlink_cCFv                     */
+/* 800E1320-800E1330 0010+00 s=0 e=0 z=1  None .text      getCopyRodBallReturnSpeed__9daAlink_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23688,7 +23690,7 @@ asm void daAlink_c::getCopyRodBallReturnSpeed() const {
 #pragma pop
 
 
-/* 800E1330-800E1374 0044+00 s=3 e=0 z=0  None .text      getCopyRodBallDisMax__9daAlink_cCFv                          */
+/* 800E1330-800E1374 0044+00 s=3 e=0 z=2  None .text      getCopyRodBallDisMax__9daAlink_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23699,7 +23701,7 @@ asm void daAlink_c::getCopyRodBallDisMax() const {
 #pragma pop
 
 
-/* 800E1374-800E1390 001C+00 s=6 e=0 z=0  None .text      getCopyRodControllActor__9daAlink_cFv                        */
+/* 800E1374-800E1390 001C+00 s=6 e=0 z=7  None .text      getCopyRodControllActor__9daAlink_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23710,7 +23712,7 @@ asm void daAlink_c::getCopyRodControllActor() {
 #pragma pop
 
 
-/* 800E1390-800E13AC 001C+00 s=0 e=4 z=0  None .text      getCopyRodCameraActor__9daAlink_cFv                          */
+/* 800E1390-800E13AC 001C+00 s=0 e=4 z=1  None .text      getCopyRodCameraActor__9daAlink_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23820,7 +23822,7 @@ asm void daAlink_c::throwCopyRod() {
 #pragma pop
 
 
-/* 800E1A30-800E1ADC 00AC+00 s=0 e=0 z=0  None .text      returnCopyRod__9daAlink_cFv                                  */
+/* 800E1A30-800E1ADC 00AC+00 s=0 e=0 z=1  None .text      returnCopyRod__9daAlink_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24117,7 +24119,7 @@ asm void daAlink_c::procMagneBootsFly() {
 #pragma pop
 
 
-/* 800E3760-800E3770 0010+00 s=0 e=0 z=0  None .text      getBombExplodeTime__9daAlink_cCFv                            */
+/* 800E3760-800E3770 0010+00 s=0 e=0 z=7  None .text      getBombExplodeTime__9daAlink_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24128,7 +24130,7 @@ asm void daAlink_c::getBombExplodeTime() const {
 #pragma pop
 
 
-/* 800E3770-800E3780 0010+00 s=0 e=0 z=0  None .text      getBombGravity__9daAlink_cCFv                                */
+/* 800E3770-800E3780 0010+00 s=0 e=0 z=2  None .text      getBombGravity__9daAlink_cCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24139,7 +24141,7 @@ asm void daAlink_c::getBombGravity() const {
 #pragma pop
 
 
-/* 800E3780-800E3790 0010+00 s=0 e=0 z=0  None .text      getBombMaxFallSpeed__9daAlink_cCFv                           */
+/* 800E3780-800E3790 0010+00 s=0 e=0 z=2  None .text      getBombMaxFallSpeed__9daAlink_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24150,7 +24152,7 @@ asm void daAlink_c::getBombMaxFallSpeed() const {
 #pragma pop
 
 
-/* 800E3790-800E37A0 0010+00 s=0 e=0 z=0  None .text      getBombBoundRate__9daAlink_cCFv                              */
+/* 800E3790-800E37A0 0010+00 s=0 e=0 z=1  None .text      getBombBoundRate__9daAlink_cCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24161,7 +24163,7 @@ asm void daAlink_c::getBombBoundRate() const {
 #pragma pop
 
 
-/* 800E37A0-800E37B0 0010+00 s=0 e=0 z=0  None .text      getBombStopSpeedY__9daAlink_cCFv                             */
+/* 800E37A0-800E37B0 0010+00 s=0 e=0 z=1  None .text      getBombStopSpeedY__9daAlink_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24172,7 +24174,7 @@ asm void daAlink_c::getBombStopSpeedY() const {
 #pragma pop
 
 
-/* 800E37B0-800E37C0 0010+00 s=0 e=0 z=0  None .text      getBombMaxSpeedY__9daAlink_cCFv                              */
+/* 800E37B0-800E37C0 0010+00 s=0 e=0 z=1  None .text      getBombMaxSpeedY__9daAlink_cCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24183,7 +24185,7 @@ asm void daAlink_c::getBombMaxSpeedY() const {
 #pragma pop
 
 
-/* 800E37C0-800E37D0 0010+00 s=0 e=0 z=0  None .text      getBombEffScale__9daAlink_cCFv                               */
+/* 800E37C0-800E37D0 0010+00 s=0 e=0 z=1  None .text      getBombEffScale__9daAlink_cCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24194,7 +24196,7 @@ asm void daAlink_c::getBombEffScale() const {
 #pragma pop
 
 
-/* 800E37D0-800E37E0 0010+00 s=0 e=0 z=0  None .text      getBombAtR__9daAlink_cCFv                                    */
+/* 800E37D0-800E37E0 0010+00 s=0 e=0 z=1  None .text      getBombAtR__9daAlink_cCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24205,7 +24207,7 @@ asm void daAlink_c::getBombAtR() const {
 #pragma pop
 
 
-/* 800E37E0-800E37F0 0010+00 s=0 e=0 z=0  None .text      getEnemyBombColorR__9daAlink_cCFv                            */
+/* 800E37E0-800E37F0 0010+00 s=0 e=0 z=1  None .text      getEnemyBombColorR__9daAlink_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24216,7 +24218,7 @@ asm void daAlink_c::getEnemyBombColorR() const {
 #pragma pop
 
 
-/* 800E37F0-800E3800 0010+00 s=0 e=0 z=0  None .text      getBombWaterGravity__9daAlink_cCFv                           */
+/* 800E37F0-800E3800 0010+00 s=0 e=0 z=2  None .text      getBombWaterGravity__9daAlink_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24227,7 +24229,7 @@ asm void daAlink_c::getBombWaterGravity() const {
 #pragma pop
 
 
-/* 800E3800-800E3810 0010+00 s=0 e=0 z=0  None .text      getBombWaterMaxFallSpeed__9daAlink_cCFv                      */
+/* 800E3800-800E3810 0010+00 s=0 e=0 z=2  None .text      getBombWaterMaxFallSpeed__9daAlink_cCFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24238,7 +24240,7 @@ asm void daAlink_c::getBombWaterMaxFallSpeed() const {
 #pragma pop
 
 
-/* 800E3810-800E3820 0010+00 s=0 e=0 z=0  None .text      getBombExplodeWaterEffectLimit__9daAlink_cCFv                */
+/* 800E3810-800E3820 0010+00 s=0 e=0 z=1  None .text      getBombExplodeWaterEffectLimit__9daAlink_cCFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24249,7 +24251,7 @@ asm void daAlink_c::getBombExplodeWaterEffectLimit() const {
 #pragma pop
 
 
-/* 800E3820-800E3830 0010+00 s=0 e=0 z=0  None .text      getBombInsectLimitAngle__9daAlink_cCFv                       */
+/* 800E3820-800E3830 0010+00 s=0 e=0 z=1  None .text      getBombInsectLimitAngle__9daAlink_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -25622,7 +25624,7 @@ asm void daAlink_c::checkHorseNotDamageReaction() const {
 #pragma pop
 
 
-/* 800ECDC4-800ECDEC 0028+00 s=1 e=0 z=0  None .text      checkHorseWaitLashAnime__9daAlink_cCFv                       */
+/* 800ECDC4-800ECDEC 0028+00 s=1 e=0 z=2  None .text      checkHorseWaitLashAnime__9daAlink_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -25655,7 +25657,7 @@ asm void daAlink_c::getReinHandType() const {
 #pragma pop
 
 
-/* 800ECF04-800ECF5C 0058+00 s=5 e=0 z=0  None .text      checkHorseLieAnime__9daAlink_cCFv                            */
+/* 800ECF04-800ECF5C 0058+00 s=5 e=0 z=1  None .text      checkHorseLieAnime__9daAlink_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -25666,7 +25668,7 @@ asm void daAlink_c::checkHorseLieAnime() const {
 #pragma pop
 
 
-/* 800ECF5C-800ECF9C 0040+00 s=0 e=0 z=0  None .text      checkHorseSubjectivity__9daAlink_cCFv                        */
+/* 800ECF5C-800ECF9C 0040+00 s=0 e=0 z=3  None .text      checkHorseSubjectivity__9daAlink_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -25710,7 +25712,7 @@ asm void daAlink_c::checkHorseNoUpperAnime() const {
 #pragma pop
 
 
-/* 800ED0D4-800ED1F0 011C+00 s=0 e=0 z=0  None .text      getHorseReinHandPos__9daAlink_cFP4cXyzP4cXyz                 */
+/* 800ED0D4-800ED1F0 011C+00 s=0 e=0 z=2  None .text      getHorseReinHandPos__9daAlink_cFP4cXyzP4cXyz                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -25721,7 +25723,7 @@ asm void daAlink_c::getHorseReinHandPos(cXyz* param_0, cXyz* param_1) {
 #pragma pop
 
 
-/* 800ED1F0-800ED310 0120+00 s=1 e=0 z=0  None .text      checkHorseNotGrab__9daAlink_cCFv                             */
+/* 800ED1F0-800ED310 0120+00 s=1 e=0 z=1  None .text      checkHorseNotGrab__9daAlink_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26612,7 +26614,7 @@ asm void daAlink_c::procBoarRun() {
 #pragma pop
 
 
-/* 800F3BB0-800F3BDC 002C+00 s=1 e=0 z=0  None .text      getCanoeMaxSpeed__9daAlink_cCFv                              */
+/* 800F3BB0-800F3BDC 002C+00 s=1 e=0 z=2  None .text      getCanoeMaxSpeed__9daAlink_cCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26623,7 +26625,7 @@ asm void daAlink_c::getCanoeMaxSpeed() const {
 #pragma pop
 
 
-/* 800F3BDC-800F3BEC 0010+00 s=0 e=0 z=0  None .text      getCanoeBackMaxSpeed__9daAlink_cCFv                          */
+/* 800F3BDC-800F3BEC 0010+00 s=0 e=0 z=1  None .text      getCanoeBackMaxSpeed__9daAlink_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26634,7 +26636,7 @@ asm void daAlink_c::getCanoeBackMaxSpeed() const {
 #pragma pop
 
 
-/* 800F3BEC-800F3C18 002C+00 s=0 e=0 z=0  None .text      getCanoeCres__9daAlink_cCFv                                  */
+/* 800F3BEC-800F3C18 002C+00 s=0 e=0 z=1  None .text      getCanoeCres__9daAlink_cCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26656,7 +26658,7 @@ asm void daAlink_c::getCanoeSpeedRate() const {
 #pragma pop
 
 
-/* 800F3C44-800F3CCC 0088+00 s=0 e=0 z=0  None .text      getCanoeMaxRotSpeed__9daAlink_cCFv                           */
+/* 800F3C44-800F3CCC 0088+00 s=0 e=0 z=1  None .text      getCanoeMaxRotSpeed__9daAlink_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26667,7 +26669,7 @@ asm void daAlink_c::getCanoeMaxRotSpeed() const {
 #pragma pop
 
 
-/* 800F3CCC-800F3CD8 000C+00 s=1 e=0 z=0  None .text      getCanoeLocalPaddleTop__9daAlink_cFv                         */
+/* 800F3CCC-800F3CD8 000C+00 s=1 e=0 z=1  None .text      getCanoeLocalPaddleTop__9daAlink_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26722,7 +26724,7 @@ asm void daAlink_c::initFishingRodHand() {
 #pragma pop
 
 
-/* 800F3DFC-800F3E4C 0050+00 s=1 e=0 z=0  None .text      getCanoePaddleMatrix__9daAlink_cFv                           */
+/* 800F3DFC-800F3E4C 0050+00 s=1 e=0 z=1  None .text      getCanoePaddleMatrix__9daAlink_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26733,7 +26735,7 @@ asm void daAlink_c::getCanoePaddleMatrix() {
 #pragma pop
 
 
-/* 800F3E4C-800F3EB8 006C+00 s=0 e=0 z=0  None .text      checkFishingRodGrab__9daAlink_cCFP10fopAc_ac_c               */
+/* 800F3E4C-800F3EB8 006C+00 s=0 e=0 z=4  None .text      checkFishingRodGrab__9daAlink_cCFP10fopAc_ac_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26744,7 +26746,7 @@ asm void daAlink_c::checkFishingRodGrab(fopAc_ac_c* param_0) const {
 #pragma pop
 
 
-/* 800F3EB8-800F3F38 0080+00 s=0 e=0 z=0  None .text      checkCanoePaddleGrab__9daAlink_cCFP10fopAc_ac_c              */
+/* 800F3EB8-800F3F38 0080+00 s=0 e=0 z=2  None .text      checkCanoePaddleGrab__9daAlink_cCFP10fopAc_ac_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26755,7 +26757,7 @@ asm void daAlink_c::checkCanoePaddleGrab(fopAc_ac_c* param_0) const {
 #pragma pop
 
 
-/* 800F3F38-800F3FC4 008C+00 s=0 e=0 z=0  None .text      checkCanoeFishingRodGrabOrPut__9daAlink_cCFv                 */
+/* 800F3F38-800F3FC4 008C+00 s=0 e=0 z=1  None .text      checkCanoeFishingRodGrabOrPut__9daAlink_cCFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -29197,7 +29199,7 @@ asm void daAlink_c::checkSnowCode() const {
 #pragma pop
 
 
-/* 80105ABC-80105B10 0054+00 s=1 e=0 z=0  None .text      checkSnowCodePolygon__9daAlink_cFR13cBgS_PolyInfo            */
+/* 80105ABC-80105B10 0054+00 s=1 e=0 z=1  None .text      checkSnowCodePolygon__9daAlink_cFR13cBgS_PolyInfo            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -29549,7 +29551,7 @@ asm void daAlink_c::resetHookshotMode() {
 #pragma pop
 
 
-/* 8010871C-80108784 0068+00 s=0 e=0 z=0  None .text      setEnemyBombHookshot__9daAlink_cFP10fopAc_ac_c               */
+/* 8010871C-80108784 0068+00 s=0 e=0 z=1  None .text      setEnemyBombHookshot__9daAlink_cFP10fopAc_ac_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30117,7 +30119,7 @@ asm void daAlink_c::procHookshotWallShoot() {
 #pragma pop
 
 
-/* 8010D93C-8010D94C 0010+00 s=0 e=0 z=0  None .text      getSpinnerGravity__9daAlink_cCFv                             */
+/* 8010D93C-8010D94C 0010+00 s=0 e=0 z=1  None .text      getSpinnerGravity__9daAlink_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30128,7 +30130,7 @@ asm void daAlink_c::getSpinnerGravity() const {
 #pragma pop
 
 
-/* 8010D94C-8010D95C 0010+00 s=0 e=0 z=0  None .text      getSpinnerMaxFallSpeed__9daAlink_cCFv                        */
+/* 8010D94C-8010D95C 0010+00 s=0 e=0 z=1  None .text      getSpinnerMaxFallSpeed__9daAlink_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30139,7 +30141,7 @@ asm void daAlink_c::getSpinnerMaxFallSpeed() const {
 #pragma pop
 
 
-/* 8010D95C-8010D96C 0010+00 s=0 e=0 z=0  None .text      getSpinnerJumpRate__9daAlink_cCFv                            */
+/* 8010D95C-8010D96C 0010+00 s=0 e=0 z=1  None .text      getSpinnerJumpRate__9daAlink_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30150,7 +30152,7 @@ asm void daAlink_c::getSpinnerJumpRate() const {
 #pragma pop
 
 
-/* 8010D96C-8010D9B0 0044+00 s=1 e=0 z=0  None .text      getSpinnerRideMoveTime__9daAlink_cFv                         */
+/* 8010D96C-8010D9B0 0044+00 s=1 e=0 z=2  None .text      getSpinnerRideMoveTime__9daAlink_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30161,7 +30163,7 @@ asm void daAlink_c::getSpinnerRideMoveTime() {
 #pragma pop
 
 
-/* 8010D9B0-8010D9F4 0044+00 s=1 e=0 z=0  None .text      getSpinnerRideSpeedF__9daAlink_cFv                           */
+/* 8010D9B0-8010D9F4 0044+00 s=1 e=0 z=3  None .text      getSpinnerRideSpeedF__9daAlink_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30172,7 +30174,7 @@ asm void daAlink_c::getSpinnerRideSpeedF() {
 #pragma pop
 
 
-/* 8010D9F4-8010DA04 0010+00 s=0 e=0 z=0  None .text      getSpinnerRideDecSpeedMax__9daAlink_cCFv                     */
+/* 8010D9F4-8010DA04 0010+00 s=0 e=0 z=1  None .text      getSpinnerRideDecSpeedMax__9daAlink_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30183,7 +30185,7 @@ asm void daAlink_c::getSpinnerRideDecSpeedMax() const {
 #pragma pop
 
 
-/* 8010DA04-8010DA14 0010+00 s=0 e=0 z=0  None .text      getSpinnerRideDecSpeedMin__9daAlink_cCFv                     */
+/* 8010DA04-8010DA14 0010+00 s=0 e=0 z=1  None .text      getSpinnerRideDecSpeedMin__9daAlink_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30194,7 +30196,7 @@ asm void daAlink_c::getSpinnerRideDecSpeedMin() const {
 #pragma pop
 
 
-/* 8010DA14-8010DA24 0010+00 s=0 e=0 z=0  None .text      getSpinnerRideDecSpeedRate__9daAlink_cCFv                    */
+/* 8010DA14-8010DA24 0010+00 s=0 e=0 z=1  None .text      getSpinnerRideDecSpeedRate__9daAlink_cCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30205,7 +30207,7 @@ asm void daAlink_c::getSpinnerRideDecSpeedRate() const {
 #pragma pop
 
 
-/* 8010DA24-8010DA34 0010+00 s=0 e=0 z=0  None .text      getSpinnerRideRotAngleMax__9daAlink_cCFv                     */
+/* 8010DA24-8010DA34 0010+00 s=0 e=0 z=1  None .text      getSpinnerRideRotAngleMax__9daAlink_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30216,7 +30218,7 @@ asm void daAlink_c::getSpinnerRideRotAngleMax() const {
 #pragma pop
 
 
-/* 8010DA34-8010DA44 0010+00 s=0 e=0 z=0  None .text      getSpinnerRideRotAngleMin__9daAlink_cCFv                     */
+/* 8010DA34-8010DA44 0010+00 s=0 e=0 z=1  None .text      getSpinnerRideRotAngleMin__9daAlink_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30944,7 +30946,7 @@ asm void daAlink_c::getIronBallBgHit() const {
 #pragma pop
 
 
-/* 80112474-801124B4 0040+00 s=0 e=2 z=0  None .text      checkIronBallThrowMode__9daAlink_cCFv                        */
+/* 80112474-801124B4 0040+00 s=0 e=2 z=1  None .text      checkIronBallThrowMode__9daAlink_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30955,7 +30957,7 @@ asm void daAlink_c::checkIronBallThrowMode() const {
 #pragma pop
 
 
-/* 801124B4-801124FC 0048+00 s=0 e=1 z=0  None .text      checkIronBallThrowReturnMode__9daAlink_cCFv                  */
+/* 801124B4-801124FC 0048+00 s=0 e=1 z=1  None .text      checkIronBallThrowReturnMode__9daAlink_cCFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -33698,7 +33700,7 @@ asm void daAlink_c::checkWolfLandAction(int param_0) {
 #pragma pop
 
 
-/* 80129958-801299A8 0050+00 s=1 e=0 z=0  None .text      checkMidnaUseAbility__9daAlink_cCFv                          */
+/* 80129958-801299A8 0050+00 s=1 e=0 z=1  None .text      checkMidnaUseAbility__9daAlink_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -34749,7 +34751,7 @@ asm void daAlink_c::procWolfRopeSubjectivity() {
 #pragma pop
 
 
-/* 80133D6C-80133EF0 0184+00 s=0 e=0 z=0  None .text      getWolfTagJumpTime__9daAlink_cCFv                            */
+/* 80133D6C-80133EF0 0184+00 s=0 e=0 z=1  None .text      getWolfTagJumpTime__9daAlink_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -34760,7 +34762,7 @@ asm void daAlink_c::getWolfTagJumpTime() const {
 #pragma pop
 
 
-/* 80133EF0-80134000 0110+00 s=3 e=1 z=0  None .text      checkMidnaLockJumpPoint__9daAlink_cCFv                       */
+/* 80133EF0-80134000 0110+00 s=3 e=1 z=1  None .text      checkMidnaLockJumpPoint__9daAlink_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -35079,7 +35081,7 @@ asm void daAlink_c::getWolfLieMoveSpeed() {
 #pragma pop
 
 
-/* 801371A0-801371FC 005C+00 s=0 e=0 z=0  None .text      checkMidnaDisappearMode__9daAlink_cCFv                       */
+/* 801371A0-801371FC 005C+00 s=0 e=0 z=2  None .text      checkMidnaDisappearMode__9daAlink_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -35420,7 +35422,7 @@ asm void daAlink_c::cancelWolfLock(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 801391DC-801391E4 0008+00 s=0 e=0 z=0  None .text      getWolfLockActorEnd__9daAlink_cFv                            */
+/* 801391DC-801391E4 0008+00 s=0 e=0 z=1  None .text      getWolfLockActorEnd__9daAlink_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

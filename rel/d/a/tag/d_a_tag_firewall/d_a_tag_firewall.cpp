@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daTag_FWall_c {
 	/* 80D58940 */ void execute();
 	/* 80D59078 */ bool _delete();
@@ -26,27 +30,11 @@ struct cXyz {
 	/* 80D594B0 */ cXyz();
 };
 
-struct dCcD_SrcSph {
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct dCcD_Sph {
-	/* 80084A34 */ void Set(dCcD_SrcSph const&);
-	/* 80D592D0 */ ~dCcD_Sph();
-	/* 80D5939C */ dCcD_Sph();
-};
-
-struct cM3dGSph {
-	/* 8026F648 */ void SetC(cXyz const&);
-	/* 8026F708 */ void SetR(f32);
-	/* 80D59420 */ ~cM3dGSph();
-};
-
-struct cM3dGAab {
-	/* 80D59468 */ ~cM3dGAab();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -58,9 +46,6 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
-};
-
 struct dPa_control_c {
 	struct level_c {
 		/* 8004B918 */ void getEmitter(u32);
@@ -69,16 +54,21 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcSph {
+};
+
+struct dCcD_Sph {
+	/* 80084A34 */ void Set(dCcD_SrcSph const&);
+	/* 80D592D0 */ ~dCcD_Sph();
+	/* 80D5939C */ dCcD_Sph();
 };
 
 struct dCcD_GStts {
 	/* 80083760 */ dCcD_GStts();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
 struct dCcD_GObjInf {
@@ -88,6 +78,16 @@ struct dCcD_GObjInf {
 
 struct dCamera_c {
 	/* 80181E64 */ void Eye();
+};
+
+struct cM3dGSph {
+	/* 8026F648 */ void SetC(cXyz const&);
+	/* 8026F708 */ void SetR(f32);
+	/* 80D59420 */ ~cM3dGSph();
+};
+
+struct cM3dGAab {
+	/* 80D59468 */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {

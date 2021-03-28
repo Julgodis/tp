@@ -11,28 +11,27 @@
 // Types:
 // 
 
-struct obj_lp_class {
-};
-
 struct wd_ss {
 	/* 80C559C8 */ ~wd_ss();
 	/* 80C55A04 */ wd_ss();
 };
 
-struct Vec {
+struct request_of_phase_process_class {
 };
 
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct obj_lp_class {
 };
 
 struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
+};
+
+struct mDoExt_3DlineMat_c {
+};
+
+struct mDoExt_3DlineMatSortPacket {
+	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
 struct _GXColor {
@@ -46,21 +45,25 @@ struct mDoExt_3DlineMat0_c {
 	/* 80012E3C */ void update(int, _GXColor&, dKy_tevstr_c*);
 };
 
-struct mDoExt_3DlineMat_c {
-};
-
-struct mDoExt_3DlineMatSortPacket {
-	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
-};
-
-struct J3DModelData {
-};
-
 struct line_tag {
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct dStage_roomControl_c {
 	/* 8002490C */ void setArcBank(int, char const*);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct J3DModelData {
 };
 
 struct J3DModel {
@@ -72,14 +75,21 @@ struct dComIfG_play_c {
 	/* 8002CB68 */ void entrySimpleModel(J3DModel*, int);
 };
 
-struct request_of_phase_process_class {
+struct dBgS_ObjGndChk_Spl {
+	/* 800777B0 */ dBgS_ObjGndChk_Spl();
+	/* 80077848 */ ~dBgS_ObjGndChk_Spl();
 };
 
-struct dRes_info_c {
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
 };
 
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
 struct cBgS_GndChk {
@@ -88,16 +98,6 @@ struct cBgS_GndChk {
 
 struct cBgS {
 	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
-};
-
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
-};
-
-struct dBgS_ObjGndChk_Spl {
-	/* 800777B0 */ dBgS_ObjGndChk_Spl();
-	/* 80077848 */ ~dBgS_ObjGndChk_Spl();
 };
 
 // 

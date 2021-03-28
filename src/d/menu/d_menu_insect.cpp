@@ -28,10 +28,10 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct J2DPane {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
 struct dSelect_cursor_c {
@@ -62,6 +62,9 @@ struct dMsgScrn3Select_c {
 	/* 8023A97C */ void getCharSpace();
 };
 
+struct JMSMesgEntry_c {
+};
+
 struct JUTFont {
 };
 
@@ -72,9 +75,6 @@ struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-struct JMSMesgEntry_c {
-};
-
 struct dMeter2Info_c {
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
@@ -82,10 +82,10 @@ struct dMeter2Info_c {
 	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
-struct CSTControl {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct CSTControl {
 };
 
 struct STControl {
@@ -135,10 +135,10 @@ struct dMenu_Insect_c {
 	/* 801DA630 */ void draw();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -862,7 +862,7 @@ asm void dMenu_Insect_c::isGiveInsect(u8 param_0) {
 #pragma pop
 
 
-/* 801D9F3C-801D9F8C 0050+00 s=0 e=1 z=0  None .text      isCatchNotGiveInsect__14dMenu_Insect_cFUc                    */
+/* 801D9F3C-801D9F8C 0050+00 s=0 e=1 z=12  None .text      isCatchNotGiveInsect__14dMenu_Insect_cFUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

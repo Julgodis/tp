@@ -650,7 +650,7 @@ asm void dMpath_c::isExistMapPathData() {
 
 
 /* ############################################################################################## */
-/* 80450630-80450634 0004+00 s=0 e=1 z=0  None .sdata     mNextRoomNo__10dMapInfo_c                                    */
+/* 80450630-80450634 0004+00 s=0 e=1 z=2  None .sdata     mNextRoomNo__10dMapInfo_c                                    */
 SECTION_SDATA u32 mNextRoomNo__10dMapInfo_c = 0xFFFFFFFF;
 
 /* 80450634-80450638 0004+00 s=4 e=0 z=0  None .sdata     None                                                         */

@@ -123,10 +123,10 @@ struct cDylPhs {
 	/* 8001884C */ void Link(request_of_phase_process_class*, s16);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -473,7 +473,7 @@ SECTION_DATA static void* l_dScnLogo_Method[5] = {
 	(void*)dScnLogo_Draw__FP10dScnLogo_c,
 };
 
-/* 803C2FE4-803C300C 0028+00 s=0 e=0 z=0  None .data      g_profile_LOGO_SCENE                                         */
+/* 803C2FE4-803C300C 0028+00 s=0 e=0 z=1  None .data      g_profile_LOGO_SCENE                                         */
 SECTION_DATA void* g_profile_LOGO_SCENE[10] = {
 	(void*)NULL,
 	(void*)0x0001FFFD,

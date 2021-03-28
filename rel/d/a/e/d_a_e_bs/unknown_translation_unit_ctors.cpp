@@ -12,4 +12,18 @@
 // 
 
 
-extern void* const data_80690DC4[2]
+extern void* const data_80690DC4[2];
+
+// 
+// External References:
+// 
+
+
+extern "C" void __sinit_d_a_e_bs_cpp(); // 1
+
+// 
+// Declarations:
+// 
+
+/* ############################################################################################## */
+#pragma section ".ctors$10"

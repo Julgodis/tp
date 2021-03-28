@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daTagLightBall_c {
 	/* 80D5A7F8 */ void initBaseMtx();
 	/* 80D5A818 */ void setBaseMtx();
@@ -19,10 +23,6 @@ struct daTagLightBall_c {
 	/* 80D5AA20 */ void execute();
 	/* 80D5ABA0 */ bool draw();
 	/* 80D5ABA8 */ void _delete();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct dSv_info_c {

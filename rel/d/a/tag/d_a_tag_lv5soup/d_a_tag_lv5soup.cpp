@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daTag_Lv5Soup_c {
 	/* 80D5AD58 */ void create();
 	/* 80D5ADEC */ bool Delete();
@@ -18,11 +23,6 @@ struct daTag_Lv5Soup_c {
 	/* 80D5AE9C */ bool Draw();
 	/* 80D5AEA4 */ void isAreaCheck();
 	/* 80D5B0F4 */ ~daTag_Lv5Soup_c();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct dSv_event_c {

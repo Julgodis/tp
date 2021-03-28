@@ -193,6 +193,17 @@ struct dCcMassS_Mng {
 	/* 80085EB8 */ void GetCamTopPos(Vec*);
 };
 
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct dCamMapToolData {
+	/* 8015FEB8 */ void Set(s32, s32, fopAc_ac_c*, u16, u8);
+};
+
+struct camera_class {
+};
+
 struct cSAngle {
 	/* 80030510 */ ~cSAngle();
 	/* 80271004 */ void Val(s16);
@@ -223,17 +234,6 @@ struct cSAngle {
 	/* 802711E8 */ void operator-=(cSAngle const&);
 	/* 80271264 */ void operator*(f32) const;
 	/* 802712B4 */ void operator*=(f32);
-};
-
-struct camera_class {
-};
-
-struct dCamMapToolData {
-	/* 8015FEB8 */ void Set(s32, s32, fopAc_ac_c*, u16, u8);
-};
-
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
 struct dCamera_c {
@@ -2059,7 +2059,7 @@ SECTION_DATA static void* method[5] = {
 	(void*)camera_draw__FP20camera_process_class,
 };
 
-/* 803BA6F8-803BA73C 0044+00 s=0 e=0 z=0  None .data      g_profile_CAMERA                                             */
+/* 803BA6F8-803BA73C 0044+00 s=0 e=0 z=1  None .data      g_profile_CAMERA                                             */
 SECTION_DATA void* g_profile_CAMERA[17] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000BFFFD,
@@ -2080,7 +2080,7 @@ SECTION_DATA void* g_profile_CAMERA[17] = {
 	(void*)NULL,
 };
 
-/* 803BA73C-803BA798 0044+18 s=0 e=0 z=0  None .data      g_profile_CAMERA2                                            */
+/* 803BA73C-803BA798 0044+18 s=0 e=0 z=1  None .data      g_profile_CAMERA2                                            */
 SECTION_DATA void* g_profile_CAMERA2[17 + 6 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000BFFFD,
@@ -2229,7 +2229,7 @@ asm void dCamera_c::initialize(camera_class* param_0, fopAc_ac_c* param_1, u32 p
 #pragma pop
 
 
-/* 801614AC-801614C4 0018+00 s=0 e=1 z=0  None .text      Start__9dCamera_cFv                                          */
+/* 801614AC-801614C4 0018+00 s=0 e=1 z=106  None .text      Start__9dCamera_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2251,7 +2251,7 @@ asm void dCamera_c::QuickStart() {
 #pragma pop
 
 
-/* 801614D0-801614E8 0018+00 s=0 e=2 z=0  None .text      Stop__9dCamera_cFv                                           */
+/* 801614D0-801614E8 0018+00 s=0 e=2 z=98  None .text      Stop__9dCamera_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2423,7 +2423,7 @@ asm void dCamera_c::U() {
 #pragma pop
 
 
-/* 8016300C-80163028 001C+00 s=1 e=1 z=0  None .text      SetTrimSize__9dCamera_cFl                                    */
+/* 8016300C-80163028 001C+00 s=1 e=1 z=135  None .text      SetTrimSize__9dCamera_cFl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2434,7 +2434,7 @@ asm void dCamera_c::SetTrimSize(s32 param_0) {
 #pragma pop
 
 
-/* 80163028-80163034 000C+00 s=1 e=2 z=0  None .text      SetTrimTypeForce__9dCamera_cFl                               */
+/* 80163028-80163034 000C+00 s=1 e=2 z=4  None .text      SetTrimTypeForce__9dCamera_cFl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2493,7 +2493,7 @@ asm void dCamera_c::setMapToolData() {
 #pragma pop
 
 
-/* 80163558-801635AC 0054+00 s=0 e=0 z=0  None .text      SetTagData__9dCamera_cFP10fopAc_ac_clUsUc                    */
+/* 80163558-801635AC 0054+00 s=0 e=0 z=1  None .text      SetTagData__9dCamera_cFP10fopAc_ac_clUsUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2537,7 +2537,7 @@ asm void dCamera_c::onModeChange(s32 param_0, s32 param_1) {
 #pragma pop
 
 
-/* 80163D50-80163D5C 000C+00 s=0 e=0 z=0  None .text      ModeFix__9dCamera_cFl                                        */
+/* 80163D50-80163D5C 000C+00 s=0 e=0 z=4  None .text      ModeFix__9dCamera_cFl                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3496,7 +3496,7 @@ bool dCamera_c::CalcSubjectAngle(s16* param_0, s16* param_1) {
 }
 
 
-/* 80174EAC-80174ED4 0028+00 s=0 e=0 z=0  None .text      SaveZoomRatio__9dCamera_cFv                                  */
+/* 80174EAC-80174ED4 0028+00 s=0 e=0 z=1  None .text      SaveZoomRatio__9dCamera_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3855,7 +3855,7 @@ asm void dCamera_c::EventRecoverNotime() {
 #pragma pop
 
 
-/* 80180AA8-80180AE0 0038+00 s=0 e=0 z=0  None .text      Set__9dCamera_cF4cXyz4cXyz                                   */
+/* 80180AA8-80180AE0 0038+00 s=0 e=0 z=24  None .text      Set__9dCamera_cF4cXyz4cXyz                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3866,7 +3866,7 @@ asm void dCamera_c::Set(cXyz param_0, cXyz param_1) {
 #pragma pop
 
 
-/* 80180AE0-80180B40 0060+00 s=0 e=2 z=0  None .text      Set__9dCamera_cF4cXyz4cXyzfs                                 */
+/* 80180AE0-80180B40 0060+00 s=0 e=2 z=93  None .text      Set__9dCamera_cF4cXyz4cXyzfs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3877,7 +3877,7 @@ asm void dCamera_c::Set(cXyz param_0, cXyz param_1, f32 param_2, s16 param_3) {
 #pragma pop
 
 
-/* 80180B40-80180BA0 0060+00 s=0 e=0 z=0  None .text      Set__9dCamera_cF4cXyz4cXyzsf                                 */
+/* 80180B40-80180BA0 0060+00 s=0 e=0 z=11  None .text      Set__9dCamera_cF4cXyz4cXyzsf                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3888,7 +3888,7 @@ asm void dCamera_c::Set(cXyz param_0, cXyz param_1, s16 param_2, f32 param_3) {
 #pragma pop
 
 
-/* 80180BA0-80180C18 0078+00 s=1 e=1 z=0  None .text      Reset__9dCamera_cF4cXyz4cXyzfs                               */
+/* 80180BA0-80180C18 0078+00 s=1 e=1 z=18  None .text      Reset__9dCamera_cF4cXyz4cXyzfs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3899,7 +3899,7 @@ asm void dCamera_c::Reset(cXyz param_0, cXyz param_1, f32 param_2, s16 param_3) 
 #pragma pop
 
 
-/* 80180C18-80180C68 0050+00 s=0 e=0 z=0  None .text      Reset__9dCamera_cF4cXyz4cXyz                                 */
+/* 80180C18-80180C68 0050+00 s=0 e=0 z=64  None .text      Reset__9dCamera_cF4cXyz4cXyz                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3910,7 +3910,7 @@ asm void dCamera_c::Reset(cXyz param_0, cXyz param_1) {
 #pragma pop
 
 
-/* 80180C68-80180D24 00BC+00 s=2 e=1 z=0  None .text      Reset__9dCamera_cFv                                          */
+/* 80180C68-80180D24 00BC+00 s=2 e=1 z=3  None .text      Reset__9dCamera_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3970,7 +3970,7 @@ asm void dCamera_c::StopShake() {
 #pragma pop
 
 
-/* 80181170-801811B8 0048+00 s=1 e=2 z=0  None .text      StartBlure__9dCamera_cFiP10fopAc_ac_cff                      */
+/* 80181170-801811B8 0048+00 s=1 e=2 z=10  None .text      StartBlure__9dCamera_cFiP10fopAc_ac_cff                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3981,7 +3981,7 @@ asm void dCamera_c::StartBlure(int param_0, fopAc_ac_c* param_1, f32 param_2, f3
 #pragma pop
 
 
-/* 801811B8-80181208 0050+00 s=0 e=0 z=0  None .text      ResetBlure__9dCamera_cFv                                     */
+/* 801811B8-80181208 0050+00 s=0 e=0 z=1  None .text      ResetBlure__9dCamera_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4062,7 +4062,7 @@ asm void dCamera_c::onHorseDush() {
 #pragma pop
 
 
-/* 80181500-80181534 0034+00 s=1 e=1 z=0  None .text      GetForceLockOnActor__9dCamera_cFv                            */
+/* 80181500-80181534 0034+00 s=1 e=1 z=5  None .text      GetForceLockOnActor__9dCamera_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4073,7 +4073,7 @@ asm void dCamera_c::GetForceLockOnActor() {
 #pragma pop
 
 
-/* 80181534-80181560 002C+00 s=0 e=0 z=0  None .text      ForceLockOn__9dCamera_cFP10fopAc_ac_c                        */
+/* 80181534-80181560 002C+00 s=0 e=0 z=9  None .text      ForceLockOn__9dCamera_cFP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4095,7 +4095,7 @@ asm void dCamera_c::ForceLockOff(unsigned int param_0) {
 #pragma pop
 
 
-/* 8018159C-801815CC 0030+00 s=0 e=0 z=0  None .text      ForceLockOff__9dCamera_cFP10fopAc_ac_c                       */
+/* 8018159C-801815CC 0030+00 s=0 e=0 z=7  None .text      ForceLockOff__9dCamera_cFP10fopAc_ac_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4106,7 +4106,7 @@ asm void dCamera_c::ForceLockOff(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 801815CC-801815F0 0024+00 s=0 e=0 z=0  None .text      dCam_getAngleY__FP12camera_class                             */
+/* 801815CC-801815F0 0024+00 s=0 e=0 z=5  None .text      dCam_getAngleY__FP12camera_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4117,7 +4117,7 @@ asm void dCam_getAngleY(camera_class* param_0) {
 #pragma pop
 
 
-/* 801815F0-80181614 0024+00 s=0 e=0 z=0  None .text      dCam_getAngleX__FP12camera_class                             */
+/* 801815F0-80181614 0024+00 s=0 e=0 z=5  None .text      dCam_getAngleX__FP12camera_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4128,7 +4128,7 @@ asm void dCam_getAngleX(camera_class* param_0) {
 #pragma pop
 
 
-/* 80181614-80181630 001C+00 s=0 e=2 z=0  None .text      dCam_getControledAngleY__FP12camera_class                    */
+/* 80181614-80181630 001C+00 s=0 e=2 z=4  None .text      dCam_getControledAngleY__FP12camera_class                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4150,7 +4150,7 @@ asm void dCam_getCamera() {
 #pragma pop
 
 
-/* 80181640-80181664 0024+00 s=0 e=43 z=0  None .text      dCam_getBody__Fv                                             */
+/* 80181640-80181664 0024+00 s=0 e=43 z=91  None .text      dCam_getBody__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4209,7 +4209,7 @@ asm void dCamera_c::Up() {
 #pragma pop
 
 
-/* 80181E64-80181E98 0034+00 s=1 e=1 z=0  None .text      Eye__9dCamera_cFv                                            */
+/* 80181E64-80181E98 0034+00 s=1 e=1 z=30  None .text      Eye__9dCamera_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4220,7 +4220,7 @@ asm void dCamera_c::Eye() {
 #pragma pop
 
 
-/* 80181E98-80181ECC 0034+00 s=1 e=1 z=0  None .text      Center__9dCamera_cFv                                         */
+/* 80181E98-80181ECC 0034+00 s=1 e=1 z=25  None .text      Center__9dCamera_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

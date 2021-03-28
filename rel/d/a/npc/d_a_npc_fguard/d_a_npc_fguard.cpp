@@ -11,6 +11,15 @@
 // Types:
 // 
 
+struct mDoExt_morf_c {
+	/* 8000FB7C */ void setMorf(f32);
+};
+
+struct mDoExt_McaMorfSO {
+	/* 800111EC */ void modelCalc();
+	/* 80011310 */ void stopZelAnime();
+};
+
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 	/* 80018C8C */ ~fopAc_ac_c();
@@ -26,18 +35,10 @@ struct daNpcFgd_c {
 	/* 809BAA80 */ ~daNpcFgd_c();
 };
 
-struct cM3dGPla {
-	/* 809BAD3C */ ~cM3dGPla();
-};
-
-struct cCcD_GStts {
-	/* 809BAE28 */ ~cCcD_GStts();
+struct J3DAnmTransformKey {
 };
 
 struct J3DModel {
-};
-
-struct J3DAnmTransformKey {
 };
 
 struct daNpcCd2_c {
@@ -57,33 +58,38 @@ struct daNpcCd2_c {
 	/* 809BAE80 */ ~daNpcCd2_c();
 };
 
-struct csXyz {
-	/* 809BB0D0 */ ~csXyz();
-};
-
 struct dNpcLib_lookat_c {
 	/* 80251314 */ dNpcLib_lookat_c();
 	/* 809BB10C */ ~dNpcLib_lookat_c();
 };
 
-struct cXyz {
-	/* 809BB2E0 */ ~cXyz();
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 809BB1F4 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 809BB23C */ ~cM3dGAab();
+struct dCcD_SrcCyl {
 };
 
 struct dCcD_GStts {
 	/* 80083760 */ dCcD_GStts();
 	/* 809BB284 */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 809BB38C */ ~dBgS_ObjAcch();
 };
 
 struct dBgS_AcchCir {
@@ -93,28 +99,15 @@ struct dBgS_AcchCir {
 	/* 809BB31C */ ~dBgS_AcchCir();
 };
 
-struct dBgS_ObjAcch {
-	/* 809BB38C */ ~dBgS_ObjAcch();
-};
-
-struct mDoExt_morf_c {
-	/* 8000FB7C */ void setMorf(f32);
-};
-
-struct mDoExt_McaMorfSO {
-	/* 800111EC */ void modelCalc();
-	/* 80011310 */ void stopZelAnime();
-};
-
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
-};
-
-struct cBgS {
-	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
-};
-
 struct dBgS {
+};
+
+struct csXyz {
+	/* 809BB0D0 */ ~csXyz();
+};
+
+struct cXyz {
+	/* 809BB2E0 */ ~cXyz();
 };
 
 struct dBgS_Acch {
@@ -124,24 +117,23 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct cM3dGPla {
+	/* 809BAD3C */ ~cM3dGPla();
 };
 
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 809BB1F4 */ ~cM3dGCyl();
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+struct cM3dGAab {
+	/* 809BB23C */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -151,8 +143,16 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
+struct cCcD_GStts {
+	/* 809BAE28 */ ~cCcD_GStts();
+};
+
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
+};
+
+struct cBgS {
+	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
 struct Z2CreatureCitizen {

@@ -36,20 +36,20 @@ struct cCcD_Obj {
 	/* 80263A48 */ void GetAc();
 };
 
+struct cCcD_GObjInf {
+};
+
 struct cCcD_ShapeAttr {
 	struct Shape {
 	};
 
 };
 
+struct cCcD_GStts {
+};
+
 struct dCcD_GObjInf {
 	/* 800843DC */ void ChkAtNoGuard();
-};
-
-struct cCcD_GObjInf {
-};
-
-struct dCcD_GStts {
 };
 
 struct cCcD_Stts {
@@ -57,7 +57,7 @@ struct cCcD_Stts {
 	/* 80263970 */ void PlusDmg(int);
 };
 
-struct cCcD_GStts {
+struct dCcD_GStts {
 };
 
 struct dCcS {
@@ -486,7 +486,7 @@ asm void dCcS::Draw() {
 #pragma pop
 
 
-/* 8008730C-80087330 0024+00 s=0 e=0 z=0  None .text      MassClear__4dCcSFv                                           */
+/* 8008730C-80087330 0024+00 s=0 e=0 z=1  None .text      MassClear__4dCcSFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

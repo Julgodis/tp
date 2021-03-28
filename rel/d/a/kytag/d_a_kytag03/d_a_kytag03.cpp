@@ -11,25 +11,11 @@
 // Types:
 // 
 
-struct cXyz {
-};
-
-struct dPath {
-};
-
-struct Vec {
-};
-
-struct cM3dGLin {
-	/* 8026F31C */ void SetStartEnd(Vec const&, Vec const&);
-	/* 808560DC */ ~cM3dGLin();
+struct kytag03_class {
 };
 
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct kytag03_class {
 };
 
 struct fast_create_request {
@@ -39,16 +25,22 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
+struct dPath {
 };
 
 struct dPa_levelEcallBack {
 };
 
 struct csXyz {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct _GXColor {
+};
+
+struct cXyz {
 };
 
 struct dPa_control_c {
@@ -59,12 +51,20 @@ struct dCamera_c {
 	/* 80181E64 */ void Eye();
 };
 
-struct JPABaseEmitter {
-	/* 8027EC60 */ void deleteAllParticle();
+struct Vec {
+};
+
+struct cM3dGLin {
+	/* 8026F31C */ void SetStartEnd(Vec const&, Vec const&);
+	/* 808560DC */ ~cM3dGLin();
 };
 
 struct Z2EnvSeMgr {
 	/* 802C92C8 */ void registWolfSmellSePos(Vec*);
+};
+
+struct JPABaseEmitter {
+	/* 8027EC60 */ void deleteAllParticle();
 };
 
 // 

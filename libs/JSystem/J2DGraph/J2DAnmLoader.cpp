@@ -292,7 +292,7 @@ SECTION_SDATA2 static u8 lit_1581[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80308A6C-80309290 0824+00 s=0 e=26 z=0  None .text      load__20J2DAnmLoaderDataBaseFPCv                             */
+/* 80308A6C-80309290 0824+00 s=0 e=26 z=2  None .text      load__20J2DAnmLoaderDataBaseFPCv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

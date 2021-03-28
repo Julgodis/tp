@@ -21,10 +21,6 @@ struct cM3dGAab {
 	/* 8026EE24 */ void CalcCenter(cXyz*) const;
 };
 
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
-};
-
 struct cCcD_Stts {
 	/* 80263934 */ void PlusCcMove(f32, f32, f32);
 	/* 8026395C */ void ClrCcMove();
@@ -32,10 +28,14 @@ struct cCcD_Stts {
 	/* 80263984 */ void GetWeightF() const;
 };
 
-struct cCcD_GStts {
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
 };
 
 struct cCcD_GObjInf {
+};
+
+struct cCcD_GStts {
 };
 
 struct cCcS {
@@ -232,7 +232,7 @@ asm void cCcS::GetWt(u8 param_0) const {
 #pragma pop
 
 
-/* 80264BA8-80264C5C 00B4+00 s=0 e=7 z=0  None .text      Set__4cCcSFP8cCcD_Obj                                        */
+/* 80264BA8-80264C5C 00B4+00 s=0 e=7 z=454  None .text      Set__4cCcSFP8cCcD_Obj                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

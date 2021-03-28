@@ -14,6 +14,10 @@
 struct kytag12_class {
 };
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct Vec {
 };
 
@@ -21,10 +25,6 @@ struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 8085BCD0 */ ~cXyz();
 	/* 8085EEF4 */ cXyz();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct JAISoundID {

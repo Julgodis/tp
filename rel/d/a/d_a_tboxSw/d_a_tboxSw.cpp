@@ -11,16 +11,16 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daTboxSw_c {
 	/* 80D66858 */ bool Create();
 	/* 80D66860 */ void create();
 	/* 80D668C8 */ void execute();
 	/* 80D66938 */ bool draw();
 	/* 80D66940 */ bool _delete();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct dSv_memBit_c {

@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct fopAc_ac_c {
+};
+
 struct daObjL4DigSand_c {
 	/* 80C66B18 */ void initBaseMtx();
 	/* 80C66B54 */ void setBaseMtx();
@@ -29,51 +35,23 @@ struct daObjL4DigSand_c {
 	/* 80C671A8 */ void Delete();
 };
 
-struct dBgS_ObjGndChk {
-	/* 80C66F84 */ ~dBgS_ObjGndChk();
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct cM3dGCyl {
-	/* 80C67308 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80C67350 */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80C67398 */ ~dCcD_GStts();
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80C673F4 */ ~dBgS_AcchCir();
-};
-
-struct dBgS_ObjAcch {
-	/* 80C67464 */ ~dBgS_ObjAcch();
-};
-
-struct cCcD_GStts {
-	/* 80C67540 */ ~cCcD_GStts();
-};
-
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct fopAc_ac_c {
+struct cXyz {
 };
 
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -83,25 +61,28 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct cXyz {
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80C67398 */ ~dCcD_GStts();
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
 };
 
-struct cBgS {
-	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
+struct dBgW {
 };
 
-struct dBgS_Acch {
-	/* 80075F94 */ ~dBgS_Acch();
-	/* 800760A0 */ dBgS_Acch();
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
 };
 
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
+struct dBgS_ObjGndChk {
+	/* 80C66F84 */ ~dBgS_ObjGndChk();
+};
+
+struct dBgS_ObjAcch {
+	/* 80C67464 */ ~dBgS_ObjAcch();
 };
 
 struct cBgS_PolyInfo {
@@ -109,9 +90,6 @@ struct cBgS_PolyInfo {
 };
 
 struct csXyz {
-};
-
-struct dBgW {
 };
 
 struct dBgS_MoveBgActor {
@@ -124,24 +102,46 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80C673F4 */ ~dBgS_AcchCir();
 };
 
-struct dKy_tevstr_c {
+struct dBgS_Acch {
+	/* 80075F94 */ ~dBgS_Acch();
+	/* 800760A0 */ dBgS_Acch();
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct cM3dGCyl {
+	/* 80C67308 */ ~cM3dGCyl();
 };
 
 struct cM3dGCir {
 	/* 8026EF18 */ ~cM3dGCir();
+};
+
+struct cM3dGAab {
+	/* 80C67350 */ ~cM3dGAab();
+};
+
+struct cCcD_GStts {
+	/* 80C67540 */ ~cCcD_GStts();
+};
+
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cBgS {
+	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
+};
+
+struct J3DModel {
 };
 
 // 

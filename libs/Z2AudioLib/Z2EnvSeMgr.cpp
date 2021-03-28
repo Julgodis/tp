@@ -36,10 +36,10 @@ struct Z2SoundMgr {
 	/* 802AA270 */ void setIIR(JAISound*, s16 const*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -803,7 +803,7 @@ asm void Z2EnvSeMgr::startFarThunderSe(Vec* param_0, s8 param_1) {
 #pragma pop
 
 
-/* 802C7FB4-802C7FBC 0008+00 s=0 e=0 z=0  None .text      setSnowPower__10Z2EnvSeMgrFSc                                */
+/* 802C7FB4-802C7FBC 0008+00 s=0 e=0 z=3  None .text      setSnowPower__10Z2EnvSeMgrFSc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -814,7 +814,7 @@ asm void Z2EnvSeMgr::setSnowPower(s8 param_0) {
 #pragma pop
 
 
-/* 802C7FBC-802C7FC8 000C+00 s=0 e=1 z=0  None .text      initStrongWindSe__10Z2EnvSeMgrFv                             */
+/* 802C7FBC-802C7FC8 000C+00 s=0 e=1 z=1  None .text      initStrongWindSe__10Z2EnvSeMgrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -825,7 +825,7 @@ asm void Z2EnvSeMgr::initStrongWindSe() {
 #pragma pop
 
 
-/* 802C7FC8-802C800C 0044+00 s=0 e=1 z=0  None .text      setWindDirection__10Z2EnvSeMgrFP3Vec                         */
+/* 802C7FC8-802C800C 0044+00 s=0 e=1 z=1  None .text      setWindDirection__10Z2EnvSeMgrFP3Vec                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -836,7 +836,7 @@ asm void Z2EnvSeMgr::setWindDirection(Vec* param_0) {
 #pragma pop
 
 
-/* 802C800C-802C80F8 00EC+00 s=0 e=1 z=0  None .text      startStrongWindSe__10Z2EnvSeMgrFSc                           */
+/* 802C800C-802C80F8 00EC+00 s=0 e=1 z=1  None .text      startStrongWindSe__10Z2EnvSeMgrFSc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -876,7 +876,7 @@ asm void Z2EnvSeMgr::registRiverSePos(Vec* param_0) {
 #pragma pop
 
 
-/* 802C8258-802C8300 00A8+00 s=0 e=0 z=0  None .text      setHyrulSewerOpen__10Z2EnvSeMgrFb                            */
+/* 802C8258-802C8300 00A8+00 s=0 e=0 z=1  None .text      setHyrulSewerOpen__10Z2EnvSeMgrFb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1093,7 +1093,7 @@ asm void Z2EnvSeMgr::startEtcSe(s8 param_0) {
 #pragma pop
 
 
-/* 802C92C8-802C92EC 0024+00 s=0 e=0 z=0  None .text      registWolfSmellSePos__10Z2EnvSeMgrFP3Vec                     */
+/* 802C92C8-802C92EC 0024+00 s=0 e=0 z=1  None .text      registWolfSmellSePos__10Z2EnvSeMgrFP3Vec                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1108,7 +1108,7 @@ asm void Z2EnvSeMgr::registWolfSmellSePos(Vec* param_0) {
 /* 80455E58-80455E5C 0004+00 s=1 e=0 z=0  None .sdata2    @4856                                                        */
 SECTION_SDATA2 static u32 lit_4856 = 0x43AA0000;
 
-/* 802C92EC-802C93A0 00B4+00 s=0 e=0 z=0  None .text      startFogWipeTrigger__10Z2EnvSeMgrFP3Vec                      */
+/* 802C92EC-802C93A0 00B4+00 s=0 e=0 z=1  None .text      startFogWipeTrigger__10Z2EnvSeMgrFP3Vec                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1119,7 +1119,7 @@ asm void Z2EnvSeMgr::startFogWipeTrigger(Vec* param_0) {
 #pragma pop
 
 
-/* 802C93A0-802C93E4 0044+00 s=0 e=0 z=0  None .text      setFogWipeWidth__10Z2EnvSeMgrFf                              */
+/* 802C93A0-802C93E4 0044+00 s=0 e=0 z=1  None .text      setFogWipeWidth__10Z2EnvSeMgrFf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1145,7 +1145,7 @@ asm void Z2EnvSeMgr::getFogDensity() {
 /* 80455E5C-80455E60 0004+00 s=1 e=0 z=0  None .sdata2    @4879                                                        */
 SECTION_SDATA2 static u32 lit_4879 = 0x41A00000;
 
-/* 802C9400-802C950C 010C+00 s=0 e=0 z=0  None .text      startFogSe__10Z2EnvSeMgrFv                                   */
+/* 802C9400-802C950C 010C+00 s=0 e=0 z=1  None .text      startFogSe__10Z2EnvSeMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

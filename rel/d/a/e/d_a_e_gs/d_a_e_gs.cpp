@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daE_GS_HIO_c {
-	/* 806DF46C */ daE_GS_HIO_c();
-	/* 806DFD5C */ ~daE_GS_HIO_c();
-};
-
-struct e_gs_class {
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct request_of_phase_process_class {
 };
 
 struct mDoMtx_stack_c {
@@ -38,16 +29,16 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DModelData {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -61,18 +52,20 @@ struct mDoExt_McaMorfSO {
 	/* 80011310 */ void stopZelAnime();
 };
 
-struct request_of_phase_process_class {
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+struct e_gs_class {
 };
 
 struct daPy_py_c {
 	/* 8015F424 */ void checkNowWolfEyeUp();
+};
+
+struct daE_GS_HIO_c {
+	/* 806DF46C */ daE_GS_HIO_c();
+	/* 806DFD5C */ ~daE_GS_HIO_c();
 };
 
 struct dKy_tevstr_c {
@@ -81,6 +74,13 @@ struct dKy_tevstr_c {
 struct dScnKy_env_light_c {
 	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 struct Vec {

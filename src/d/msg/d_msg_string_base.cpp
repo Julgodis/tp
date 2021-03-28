@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct jmessage_string_tControl {
+	/* 8022FB5C */ jmessage_string_tControl();
+};
+
 struct COutFont_c {
 };
 
@@ -24,10 +28,6 @@ struct jmessage_string_tReference {
 	/* 8022F8C0 */ jmessage_string_tReference();
 	/* 8022F9AC */ void init(J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
 	/* 8022FA38 */ void getLineLength(int);
-};
-
-struct jmessage_string_tControl {
-	/* 8022FB5C */ jmessage_string_tControl();
 };
 
 struct jmessage_string_tSequenceProcessor {

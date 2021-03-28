@@ -14,9 +14,6 @@
 struct request_of_phase_process_class {
 };
 
-struct csXyz {
-};
-
 struct Vec {
 };
 
@@ -26,6 +23,9 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 8026702C */ bool operator==(Vec const&) const;
 	/* 8026706C */ bool operator!=(Vec const&) const;
+};
+
+struct csXyz {
 };
 
 struct mDoMtx_stack_c {
@@ -140,10 +140,10 @@ struct dSv_info_c {
 	/* 80035590 */ void isItem(int, int) const;
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -530,7 +530,7 @@ asm static void Reflect(cXyz* param_0, cBgS_PolyInfo const& param_1, f32 param_2
 #pragma pop
 
 
-/* 8015B0B8-8015B0C4 000C+00 s=10 e=1 z=0  None .text      getData__12daItemBase_cFv                                    */
+/* 8015B0B8-8015B0C4 000C+00 s=10 e=1 z=1  None .text      getData__12daItemBase_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -805,7 +805,7 @@ SECTION_DATA static void* l_daItem_Method[8] = {
 	(void*)NULL,
 };
 
-/* 803B9F74-803B9FA4 0030+00 s=0 e=0 z=0  None .data      g_profile_ITEM                                               */
+/* 803B9F74-803B9FA4 0030+00 s=0 e=0 z=1  None .data      g_profile_ITEM                                               */
 SECTION_DATA void* g_profile_ITEM[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,

@@ -42,10 +42,10 @@ struct dCamParam_c {
 	/* 80088620 */ void SearchStyle(u32);
 };
 
-struct cXyz {
+struct cSAngle {
 };
 
-struct cSAngle {
+struct cXyz {
 };
 
 struct dCamMath {

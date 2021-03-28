@@ -11,42 +11,11 @@
 // Types:
 // 
 
-struct daPoTbox_HIO_c {
-	/* 80CB424C */ daPoTbox_HIO_c();
-	/* 80CB4F14 */ ~daPoTbox_HIO_c();
+struct request_of_phase_process_class {
 };
 
 struct mDoHIO_entry_c {
 	/* 80CB4280 */ ~mDoHIO_entry_c();
-};
-
-struct daPoTbox_c {
-	/* 80CB42C8 */ void setBaseMtx();
-	/* 80CB43D0 */ void CreateHeap();
-	/* 80CB46C4 */ void create();
-	/* 80CB499C */ void Execute(f32 (** )[3][4]);
-	/* 80CB4AA8 */ void init_modeWait();
-	/* 80CB4AB4 */ void modeWait();
-	/* 80CB4B10 */ void init_modeOpen();
-	/* 80CB4BF8 */ void modeOpen();
-	/* 80CB4C54 */ void init_modeOpenEnd();
-	/* 80CB4C60 */ void modeOpenEnd();
-	/* 80CB4C84 */ void init_modeEnd();
-	/* 80CB4C90 */ void modeEnd();
-	/* 80CB4C94 */ void Draw();
-	/* 80CB4E14 */ void Delete();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80CB4954 */ ~J3DFrameCtrl();
-};
-
-struct fopAc_ac_c {
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
 };
 
 struct J3DMaterialTable {
@@ -68,10 +37,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -79,14 +48,48 @@ struct mDoExt_bckAnm {
 	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
-struct J3DModel {
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
 };
 
-struct request_of_phase_process_class {
+struct fopAc_ac_c {
+};
+
+struct daPoTbox_c {
+	/* 80CB42C8 */ void setBaseMtx();
+	/* 80CB43D0 */ void CreateHeap();
+	/* 80CB46C4 */ void create();
+	/* 80CB499C */ void Execute(f32 (** )[3][4]);
+	/* 80CB4AA8 */ void init_modeWait();
+	/* 80CB4AB4 */ void modeWait();
+	/* 80CB4B10 */ void init_modeOpen();
+	/* 80CB4BF8 */ void modeOpen();
+	/* 80CB4C54 */ void init_modeOpenEnd();
+	/* 80CB4C60 */ void modeOpenEnd();
+	/* 80CB4C84 */ void init_modeEnd();
+	/* 80CB4C90 */ void modeEnd();
+	/* 80CB4C94 */ void Draw();
+	/* 80CB4E14 */ void Delete();
+};
+
+struct daPoTbox_HIO_c {
+	/* 80CB424C */ daPoTbox_HIO_c();
+	/* 80CB4F14 */ ~daPoTbox_HIO_c();
 };
 
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct cXyz {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -99,23 +102,12 @@ struct dRes_control_c {
 struct dBgW_Base {
 };
 
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
-};
-
-struct dBgS {
-	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
-};
-
 struct dBgW {
 	/* 8007B970 */ dBgW();
 	/* 8007B9C0 */ void Move();
 };
 
 struct cBgS_PolyInfo {
-};
-
-struct cXyz {
 };
 
 struct csXyz {
@@ -132,6 +124,14 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
+struct dBgS {
+	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
+};
+
+struct cBgW_BgId {
+	/* 802681D4 */ void ChkUsed() const;
+};
+
 struct cBgD_t {
 };
 
@@ -139,16 +139,8 @@ struct cBgW {
 	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
 };
 
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct cBgW_BgId {
-	/* 802681D4 */ void ChkUsed() const;
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
 };
 
 struct JAISoundID {
@@ -159,6 +151,14 @@ struct Vec {
 
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80CB4954 */ ~J3DFrameCtrl();
 };
 
 // 

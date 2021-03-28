@@ -11,20 +11,7 @@
 // Types:
 // 
 
-struct daObj_Suisya_c {
-	/* 80CF0078 */ void draw();
-	/* 80CF0168 */ void execute();
-	/* 80CF0234 */ void _delete();
-	/* 80CF0284 */ void CreateHeap();
-	/* 80CF0310 */ void create();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct dBgS_ObjAcch {
-	/* 80CF0478 */ ~dBgS_ObjAcch();
+struct request_of_phase_process_class {
 };
 
 struct cXyz {
@@ -38,22 +25,27 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModel {
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct J3DModelData {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct cBgS_PolyInfo {
+struct daObj_Suisya_c {
+	/* 80CF0078 */ void draw();
+	/* 80CF0168 */ void execute();
+	/* 80CF0234 */ void _delete();
+	/* 80CF0284 */ void CreateHeap();
+	/* 80CF0310 */ void create();
 };
 
 struct dKy_tevstr_c {
 };
 
-struct _GXTexObj {
+struct J3DModelData {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -61,6 +53,14 @@ struct dRes_info_c {
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80CF0478 */ ~dBgS_ObjAcch();
 };
 
 struct dBgS_AcchCir {
@@ -74,13 +74,10 @@ struct dBgS_Acch {
 	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct cBgS_PolyInfo {
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct _GXTexObj {
 };
 
 struct JAISoundID {
@@ -91,6 +88,9 @@ struct Vec {
 
 struct Z2SeMgr {
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DModel {
 };
 
 // 

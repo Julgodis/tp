@@ -11,6 +11,18 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct cXyz {
+};
+
+struct daPy_py_c {
+	/* 8015F4F0 */ void setLookPos(cXyz*);
+};
+
 struct daObjDigholl_c {
 	/* 80BDC618 */ void create();
 	/* 80BDC75C */ ~daObjDigholl_c();
@@ -18,17 +30,9 @@ struct daObjDigholl_c {
 	/* 80BDCB0C */ bool draw();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
 struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
 	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct cXyz {
 };
 
 struct dKy_tevstr_c {
@@ -39,10 +43,6 @@ struct _GXColor {
 
 struct dPa_control_c {
 	/* 8004D1B8 */ void setSimple(u16, cXyz const*, dKy_tevstr_c const*, u8, _GXColor const&, _GXColor const&, int, f32);
-};
-
-struct daPy_py_c {
-	/* 8015F4F0 */ void setLookPos(cXyz*);
 };
 
 // 

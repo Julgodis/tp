@@ -11,22 +11,14 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
 struct kytag08_class {
 };
 
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 8085B23C */ ~J3DFrameCtrl();
-};
-
-struct J3DModelData {
-};
-
-struct request_of_phase_process_class {
 };
 
 struct dRes_info_c {
@@ -36,7 +28,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct cXyz {
+struct dPa_levelEcallBack {
+};
+
+struct csXyz {
 };
 
 struct dKy_tevstr_c {
@@ -45,18 +40,11 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
-};
-
-struct csXyz {
+struct cXyz {
 };
 
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
-struct JPABaseEmitter {
-	/* 8027EC60 */ void deleteAllParticle();
 };
 
 struct Vec {
@@ -65,6 +53,18 @@ struct Vec {
 struct Z2EnvSeMgr {
 	/* 802C92EC */ void startFogWipeTrigger(Vec*);
 	/* 802C93A0 */ void setFogWipeWidth(f32);
+};
+
+struct JPABaseEmitter {
+	/* 8027EC60 */ void deleteAllParticle();
+};
+
+struct J3DModelData {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 8085B23C */ ~J3DFrameCtrl();
 };
 
 // 

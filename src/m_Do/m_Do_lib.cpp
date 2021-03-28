@@ -87,7 +87,7 @@ SECTION_SDATA2 static u8 lit_3638[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 8001513C-8001528C 0150+00 s=0 e=3 z=0  None .text      mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj  */
+/* 8001513C-8001528C 0150+00 s=0 e=3 z=2  None .text      mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -102,10 +102,10 @@ asm void mDoLib_setResTimgObj(ResTIMG const* param_0, _GXTexObj* param_1, u32 pa
 /* 803DD8D8-803DD8E4 000C+00 s=1 e=0 z=0  None .bss       @3727                                                        */
 static u8 lit_3727[12];
 
-/* 803DD8E4-803DD940 005C+00 s=2 e=5 z=0  None .bss       mClipper__14mDoLib_clipper                                   */
+/* 803DD8E4-803DD940 005C+00 s=2 e=5 z=5  None .bss       mClipper__14mDoLib_clipper                                   */
 u8 mClipper__14mDoLib_clipper[92];
 
-/* 80450C70-80450C74 0004+00 s=1 e=2 z=0  None .sbss      mSystemFar__14mDoLib_clipper                                 */
+/* 80450C70-80450C74 0004+00 s=1 e=2 z=4  None .sbss      mSystemFar__14mDoLib_clipper                                 */
 f32 mSystemFar__14mDoLib_clipper;
 
 /* 80450C74-80450C78 0004+00 s=1 e=1 z=0  None .sbss      mFovyRate__14mDoLib_clipper                                  */
@@ -156,7 +156,7 @@ SECTION_SDATA2 static f32 lit_3791[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 80015310-800154EC 01DC+00 s=0 e=21 z=0  None .text      mDoLib_project__FP3VecP3Vec                                  */
+/* 80015310-800154EC 01DC+00 s=0 e=21 z=23  None .text      mDoLib_project__FP3VecP3Vec                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,7 +167,7 @@ asm void mDoLib_project(Vec* param_0, Vec* param_1) {
 #pragma pop
 
 
-/* 800154EC-80015544 0058+00 s=0 e=2 z=0  None .text      mDoLib_pos2camera__FP3VecP3Vec                               */
+/* 800154EC-80015544 0058+00 s=0 e=2 z=9  None .text      mDoLib_pos2camera__FP3VecP3Vec                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

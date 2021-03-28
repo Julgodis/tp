@@ -52,11 +52,11 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct J2DPane {
-	/* 802F7FCC */ void animationTransform();
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DPane {
+	/* 802F7FCC */ void animationTransform();
 };
 
 struct dSelect_cursor_c {
@@ -261,10 +261,10 @@ struct Z2SeqMgr {
 	/* 802B3EAC */ void checkBgmIDPlaying(u32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

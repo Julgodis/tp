@@ -11,9 +11,7 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct request_of_phase_process_class {
 };
 
 struct Vec {
@@ -29,18 +27,17 @@ struct cXyz {
 	/* 80BEDB70 */ cXyz();
 };
 
-struct FlagCloth_c {
-	/* 80BEC658 */ void initFlagPos(cXyz*, fopAc_ac_c*);
-	/* 80BEC7CC */ void calcFlagFactor(cXyz*, cXyz*, cXyz*, int);
-	/* 80BEC928 */ void calcFlagFactorSub(cXyz*, cXyz*, cXyz*, f32);
-	/* 80BECAE0 */ void calcFlagNormal(cXyz*, int);
-	/* 80BECC34 */ void calcFlagNormalBack();
-	/* 80BECC78 */ void initCcSphere(fopAc_ac_c*);
-	/* 80BECCE4 */ void setCcSphere();
-	/* 80BECD98 */ void execute();
-	/* 80BECF30 */ void draw();
-	/* 80BED9C4 */ ~FlagCloth_c();
-	/* 80BEE0B8 */ void getTargetPos();
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct daSetBgObj_c {
+	/* 80031870 */ void getArcName(fopAc_ac_c*);
 };
 
 struct daObjFlag2_c {
@@ -55,50 +52,15 @@ struct daObjFlag2_c {
 	/* 80BEDEE0 */ ~daObjFlag2_c();
 };
 
-struct cM3dGSph {
-	/* 8026F648 */ void SetC(cXyz const&);
-	/* 80BEDB74 */ ~cM3dGSph();
-};
-
-struct J3DLightObj {
-	/* 80BEDBBC */ J3DLightObj();
-};
-
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 80BEDBF4 */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80BEDC3C */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80BEDC84 */ ~dCcD_GStts();
-};
-
-struct cCcD_GStts {
-	/* 80BEE070 */ ~cCcD_GStts();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-};
-
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct request_of_phase_process_class {
-};
-
-struct daSetBgObj_c {
-	/* 80031870 */ void getArcName(fopAc_ac_c*);
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -112,6 +74,21 @@ struct dCcD_Stts {
 	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
+struct dCcD_SrcSph {
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_Sph {
+	/* 80084A34 */ void Set(dCcD_SrcSph const&);
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80BEDC84 */ ~dCcD_GStts();
+};
+
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
@@ -119,26 +96,24 @@ struct dCcD_GObjInf {
 	/* 800844F8 */ void GetTgHitObj();
 };
 
-struct dCcD_SrcCyl {
-};
-
 struct dCcD_Cyl {
 	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
 };
 
-struct dCcD_SrcSph {
+struct cM3dGSph {
+	/* 8026F648 */ void SetC(cXyz const&);
+	/* 80BEDB74 */ ~cM3dGSph();
 };
 
-struct dCcD_Sph {
-	/* 80084A34 */ void Set(dCcD_SrcSph const&);
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 80BEDBF4 */ ~cM3dGCyl();
 };
 
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct cM3dGAab {
+	/* 80BEDC3C */ ~cM3dGAab();
 };
 
 struct cCcD_Obj {
@@ -146,6 +121,10 @@ struct cCcD_Obj {
 
 struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
+};
+
+struct cCcD_GStts {
+	/* 80BEE070 */ ~cCcD_GStts();
 };
 
 struct JAISoundID {
@@ -168,8 +147,29 @@ struct J3DPacket {
 	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
+struct J3DModel {
+};
+
+struct J3DLightObj {
+	/* 80BEDBBC */ J3DLightObj();
+};
+
 struct J3DLightInfo {
 	/* 803256C4 */ void operator=(J3DLightInfo const&);
+};
+
+struct FlagCloth_c {
+	/* 80BEC658 */ void initFlagPos(cXyz*, fopAc_ac_c*);
+	/* 80BEC7CC */ void calcFlagFactor(cXyz*, cXyz*, cXyz*, int);
+	/* 80BEC928 */ void calcFlagFactorSub(cXyz*, cXyz*, cXyz*, f32);
+	/* 80BECAE0 */ void calcFlagNormal(cXyz*, int);
+	/* 80BECC34 */ void calcFlagNormalBack();
+	/* 80BECC78 */ void initCcSphere(fopAc_ac_c*);
+	/* 80BECCE4 */ void setCcSphere();
+	/* 80BECD98 */ void execute();
+	/* 80BECF30 */ void draw();
+	/* 80BED9C4 */ ~FlagCloth_c();
+	/* 80BEE0B8 */ void getTargetPos();
 };
 
 // 

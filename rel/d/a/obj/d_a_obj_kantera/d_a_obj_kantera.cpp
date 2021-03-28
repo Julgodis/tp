@@ -11,16 +11,11 @@
 // Types:
 // 
 
-struct cXyz {
-	/* 80266B84 */ void operator*(f32) const;
+struct request_of_phase_process_class {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
-};
-
-struct cM3dGPla {
-	/* 80C38974 */ ~cM3dGPla();
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct daItemKantera_c {
@@ -39,45 +34,6 @@ struct daItemKantera_c {
 	/* 80C393B0 */ void execute();
 	/* 80C394DC */ void draw();
 	/* 80C39530 */ void _delete();
-};
-
-struct cM3dGCyl {
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-	/* 80C38DAC */ ~cM3dGCyl();
-};
-
-struct cM3dGAab {
-	/* 80C38DF4 */ ~cM3dGAab();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80C38E3C */ ~dCcD_GStts();
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 80C38E98 */ ~dBgS_AcchCir();
-};
-
-struct dBgS_ObjAcch {
-	/* 80C38F08 */ ~dBgS_ObjAcch();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct cCcD_GStts {
-	/* 80C395E8 */ ~cCcD_GStts();
-};
-
-struct csXyz {
-};
-
-struct request_of_phase_process_class {
 };
 
 struct daItemBase_c {
@@ -110,11 +66,48 @@ struct dEvent_manager_c {
 	/* 80047ADC */ void endCheckOld(char const*);
 };
 
-struct cBgS {
-	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80C38E3C */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80C38F08 */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 80C38E98 */ ~dBgS_AcchCir();
 };
 
 struct dBgS {
+};
+
+struct csXyz {
+};
+
+struct cXyz {
+	/* 80266B84 */ void operator*(f32) const;
 };
 
 struct dBgS_Acch {
@@ -124,27 +117,34 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct cM3dGPla {
+	/* 80C38974 */ ~cM3dGPla();
 };
 
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+struct cM3dGCyl {
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 80C38DAC */ ~cM3dGCyl();
 };
 
 struct cM3dGCir {
 	/* 8026EF18 */ ~cM3dGCir();
+};
+
+struct cM3dGAab {
+	/* 80C38DF4 */ ~cM3dGAab();
+};
+
+struct cCcD_GStts {
+	/* 80C395E8 */ ~cCcD_GStts();
+};
+
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
+};
+
+struct cBgS {
+	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
 // 

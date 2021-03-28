@@ -200,7 +200,7 @@ SECTION_DATA static void* __vt__13J3DSkinDeform[4] = {
 	(void*)__dt__13J3DSkinDeformFv,
 };
 
-/* 8032C96C-8032C9B0 0044+00 s=0 e=0 z=0  None .text      __ct__13J3DSkinDeformFv                                      */
+/* 8032C96C-8032C9B0 0044+00 s=0 e=0 z=2  None .text      __ct__13J3DSkinDeformFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

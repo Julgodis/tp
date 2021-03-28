@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
 struct daTagChgRestart_c {
 	/* 80D56758 */ void Create();
 	/* 80D567E4 */ void create();
@@ -23,14 +27,6 @@ struct cXyz {
 	/* 80D568B4 */ cXyz();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(int);
-};
-
 struct dSv_restart_c {
 	/* 80034F80 */ void setRoom(cXyz const&, s16, s8);
 };
@@ -38,6 +34,10 @@ struct dSv_restart_c {
 struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
 	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dStage_roomControl_c {
+	/* 80024384 */ void getStatusRoomDt(int);
 };
 
 // 

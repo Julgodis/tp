@@ -1,10 +1,13 @@
-
 import struct
+
+from capstone import *
+from capstone.ppc import *
 
 from ..disassemble import *
 from ..data.function import *
 from ..context import Context
 from ..builder import AsyncBuilder
+
 
 class CPPDisassembler(Disassembler):
     def __init__(self, builder: AsyncBuilder, function: Function, block_map, symbol_table, relocations, context: Context):
@@ -81,7 +84,7 @@ class CPPDisassembler(Disassembler):
         if id in {PPC_INS_B, PPC_INS_BL, PPC_INS_BDZ, PPC_INS_BDNZ}:
             label = self.addr_to_label(insn.operands[0].imm)
             if not label:
-                k = " ".join([ f"{x:02X}" for x in insn.bytes ])
+                k = " ".join([f"{x:02X}" for x in insn.bytes])
                 self.context.warning(
                     f"{k}| '{label}' {addr:08X} to {insn.operands[0].imm:08X}, branch to unknown addr: {insn}")
                 sys.exit(1)
@@ -180,22 +183,28 @@ class CPPDisassembler(Disassembler):
         # Sign-extend immediate values because Capstone is an idiot and doesn't do that automatically
         if id in {PPC_INS_ADDI, PPC_INS_ADDIC, PPC_INS_SUBFIC, PPC_INS_MULLI} and (insn.operands[2].imm & 0x8000):
             return "%s %s, %s, %i" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.reg_name(insn.operands[1].value.reg), insn.operands[2].imm - 0x10000)
+
         elif id in {PPC_INS_LI, PPC_INS_CMPWI} and (insn.operands[1].imm & 0x8000):
             return "%s %s, %i" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.operands[1].imm - 0x10000)
+
         elif id == PPC_INS_CNTLZW:
             return f"cntlzw {insn.op_str}"
+
         elif id == PPC_INS_MTICCR:
             A = 0x3fb
             rB = insn.reg_name(insn.operands[0].reg)
             return f"mtspr 0x{A:X}, {rB}"
+
         elif id == PPC_INS_SYNC:
             assert insn.operands[0].value.imm == 0
             return 'sync'
+
         elif id == PPC_INS_LWZ and insn.operands[0].type == PPC_OP_REG and insn.operands[0].reg == PPC_REG_R4 and insn.operands[1].type == PPC_OP_MEM and insn.operands[1].value.mem.base == PPC_REG_R0:
             value = insn.operands[1].value.mem.disp
             insn_str = 'lwz %s, %s0x%x(r0)' % (insn.reg_name(insn.operands[0].reg), '-' if (
                 value < 0) else '', ((-value) & 0xFFFF) if value < 0 else (value & 0xFFFF))
             return insn_str
+
         # "twui X" is shorthand for "twi 31, X"
         elif id == PPC_INS_TWUI:
             assert insn.operands[0].type == PPC_OP_REG
@@ -204,8 +213,8 @@ class CPPDisassembler(Disassembler):
             S = insn.operands[1].value.imm
             insn_str = 'twi %i, %s, 0x%x' % (31, rA, S)
             return insn_str
+
         else:
             if addr in self.registerLoads:
                 return f"{insn.mnemonic} {insn.op_str}\t/* effective address: {self.registerLoads[addr]:08X} */"
             return f"{insn.mnemonic} {insn.op_str}"
-

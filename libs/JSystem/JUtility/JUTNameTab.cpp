@@ -82,7 +82,7 @@ asm void JUTNameTab::setResource(ResNTAB const* param_0) {
 #pragma pop
 
 
-/* 802DEA58-802DEAF8 00A0+00 s=0 e=9 z=0  None .text      getIndex__10JUTNameTabCFPCc                                  */
+/* 802DEA58-802DEAF8 00A0+00 s=0 e=9 z=2  None .text      getIndex__10JUTNameTabCFPCc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,7 +93,7 @@ asm void JUTNameTab::getIndex(char const* param_0) const {
 #pragma pop
 
 
-/* 802DEAF8-802DEB28 0030+00 s=0 e=14 z=0  None .text      getName__10JUTNameTabCFUs                                    */
+/* 802DEAF8-802DEB28 0030+00 s=0 e=14 z=23  None .text      getName__10JUTNameTabCFUs                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

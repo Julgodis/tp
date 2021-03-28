@@ -181,7 +181,7 @@ asm void JKRExpHeap::createRoot(int param_0, bool param_1) {
 #pragma pop
 
 
-/* 802CEE2C-802CEF00 00D4+00 s=0 e=19 z=0  None .text      create__10JKRExpHeapFUlP7JKRHeapb                            */
+/* 802CEE2C-802CEF00 00D4+00 s=0 e=19 z=1  None .text      create__10JKRExpHeapFUlP7JKRHeapb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

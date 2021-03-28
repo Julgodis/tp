@@ -32,7 +32,7 @@ SECTION_SDATA2 static u8 lit_58[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8036C668-8036C6E0 0078+00 s=0 e=7 z=0  None .text      tan                                                          */
+/* 8036C668-8036C6E0 0078+00 s=0 e=7 z=4  None .text      tan                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

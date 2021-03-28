@@ -11,7 +11,7 @@
 // Types:
 // 
 
-struct dBgW {
+struct request_of_phase_process_class {
 };
 
 struct fopAc_ac_c {
@@ -31,16 +31,7 @@ struct daObjSZbridge_c {
 	/* 80D04B90 */ ~daObjSZbridge_c();
 };
 
-struct dBgS_WtrChk {
-	/* 80079164 */ dBgS_WtrChk();
-	/* 80D047D4 */ ~dBgS_WtrChk();
-};
-
-struct dBgS_ObjGndChk {
-	/* 80D0484C */ ~dBgS_ObjGndChk();
-};
-
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
@@ -49,7 +40,9 @@ struct J3DModelData {
 struct cXyz {
 };
 
-struct request_of_phase_process_class {
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -59,12 +52,12 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct dBgW {
 };
 
-struct cBgS {
-	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
+struct dBgS_WtrChk {
+	/* 80079164 */ dBgS_WtrChk();
+	/* 80D047D4 */ ~dBgS_WtrChk();
 };
 
 struct dBgS_SplGrpChk {
@@ -72,19 +65,18 @@ struct dBgS_SplGrpChk {
 	/* 80078C78 */ ~dBgS_SplGrpChk();
 };
 
-struct dBgS {
-	/* 80075564 */ void SplGrpChk(dBgS_SplGrpChk*);
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjGndChk {
+	/* 80D0484C */ ~dBgS_ObjGndChk();
 };
 
 struct cBgS_PolyInfo {
 };
 
 struct csXyz {
-};
-
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
 };
 
 struct dBgS_MoveBgActor {
@@ -97,16 +89,24 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
 };
 
-struct dKy_tevstr_c {
+struct dBgS {
+	/* 80075564 */ void SplGrpChk(dBgS_SplGrpChk*);
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cBgS {
+	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
+};
+
+struct J3DModel {
 };
 
 // 

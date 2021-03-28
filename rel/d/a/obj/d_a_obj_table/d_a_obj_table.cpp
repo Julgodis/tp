@@ -11,15 +11,7 @@
 // Types:
 // 
 
-struct daObjTable_c {
-	/* 80D06560 */ void CreateHeap();
-	/* 80D065D0 */ void Create();
-	/* 80D0695C */ void Execute(f32 (** )[3][4]);
-	/* 80D06AD8 */ void Draw();
-	/* 80D06BC8 */ void Delete();
-};
-
-struct fopAc_ac_c {
+struct request_of_phase_process_class {
 };
 
 struct cXyz {
@@ -29,21 +21,30 @@ struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
 };
 
-struct J3DModel {
+struct fopAc_ac_c {
+};
+
+struct daObjTable_c {
+	/* 80D06560 */ void CreateHeap();
+	/* 80D065D0 */ void Create();
+	/* 80D0695C */ void Execute(f32 (** )[3][4]);
+	/* 80D06AD8 */ void Draw();
+	/* 80D06BC8 */ void Delete();
+};
+
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 };
 
-struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(int);
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -51,6 +52,16 @@ struct dRes_info_c {
 
 struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dMsgObject_c {
+	/* 80238098 */ void endFlowGroup();
+};
+
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
 struct dEvt_control_c {
@@ -64,20 +75,24 @@ struct dEvent_manager_c {
 	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct J3DModel {
 };
 
 struct dDlst_shadowControl_c {
 	/* 80055C74 */ void setReal(u32, s8, J3DModel*, cXyz*, f32, f32, dKy_tevstr_c*);
 };
 
+struct dComIfG_play_c {
+	/* 8002C97C */ void getLayerNo(int);
+};
+
+struct dBgW {
+};
+
 struct cBgS_PolyInfo {
 };
 
 struct csXyz {
-};
-
-struct dBgW {
 };
 
 struct dBgS_MoveBgActor {
@@ -88,21 +103,6 @@ struct dBgS_MoveBgActor {
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct dMsgObject_c {
-	/* 80238098 */ void endFlowGroup();
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
 // 

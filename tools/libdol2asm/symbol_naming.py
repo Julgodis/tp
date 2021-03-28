@@ -151,10 +151,10 @@ def nameFix(context, label_collisions, reference_collisions, symbol):
                         return_type = special_func_return_types[symbol.special_func_name]
                         if symbol.return_type:
                             if return_type:
-                                context.warning(
+                                context.debug(
                                     f"overriding function '{symbol.label}' return type from: '{symbol.return_type.type()}', to: {return_type.type()}")
                             else:
-                                context.warning(
+                                context.debug(
                                     f"discarding function '{symbol.label}' return type: '{symbol.return_type.type()}'")
                             symbol.return_type = return_type
                         else:

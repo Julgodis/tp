@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct Vec {
 };
 
@@ -19,18 +24,13 @@ struct daTagGuard_c {
 	/* 80D5985C */ void createGuard(u32);
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct cXyz {
+struct dPath {
 };
 
 struct csXyz {
 };
 
-struct dPath {
+struct cXyz {
 };
 
 // 

@@ -11,37 +11,7 @@
 // Types:
 // 
 
-struct daObjDust_c {
-	/* 80BE22B8 */ void Search_Ymb();
-	/* 80BE2490 */ void RideOn_Angle(s16&, f32, s16, f32);
-	/* 80BE24F8 */ void Check_RideOn();
-	/* 80BE2708 */ void initBaseMtx();
-	/* 80BE2734 */ void setBaseMtx();
-	/* 80BE2A70 */ void CreateHeap();
-	/* 80BE2AE8 */ void Create();
-	/* 80BE2B30 */ void Execute(f32 (** )[3][4]);
-	/* 80BE2E9C */ void Draw();
-	/* 80BE2F40 */ void Delete();
-};
-
-struct dBgW {
-};
-
-struct fopAc_ac_c {
-};
-
-struct dBgS_ObjAcch {
-	/* 80BE2A00 */ ~dBgS_ObjAcch();
-};
-
-struct JMath {
-	template <typename A1, typename B1>
-	struct TSinCosTable { };
-	/* TSinCosTable<13, f32> */
-	struct TSinCosTable__template0 {
-		/* 80BE2F74 */ void sinShort(s16) const;
-	};
-
+struct request_of_phase_process_class {
 };
 
 struct cXyz {
@@ -55,17 +25,35 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModel {
-};
-
-struct J3DModelData {
+struct fopAc_ac_c {
 };
 
 struct fopAcM_wt_c {
 	/* 8001DD84 */ void waterCheck(cXyz const*);
 };
 
-struct request_of_phase_process_class {
+struct daObjDust_c {
+	/* 80BE22B8 */ void Search_Ymb();
+	/* 80BE2490 */ void RideOn_Angle(s16&, f32, s16, f32);
+	/* 80BE24F8 */ void Check_RideOn();
+	/* 80BE2708 */ void initBaseMtx();
+	/* 80BE2734 */ void setBaseMtx();
+	/* 80BE2A70 */ void CreateHeap();
+	/* 80BE2AE8 */ void Create();
+	/* 80BE2B30 */ void Execute(f32 (** )[3][4]);
+	/* 80BE2E9C */ void Draw();
+	/* 80BE2F40 */ void Delete();
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -76,7 +64,32 @@ struct dRes_control_c {
 	/* 8003C6B8 */ void getObjectResName2Index(char const*, char const*);
 };
 
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+};
+
+struct dBgW {
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjAcch {
+	/* 80BE2A00 */ ~dBgS_ObjAcch();
+};
+
 struct cBgS_PolyInfo {
+};
+
+struct dBgS_MoveBgActor {
+	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
+	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
+	/* 800788DC */ void MoveBGDelete();
+	/* 80078950 */ void MoveBGExecute();
 };
 
 struct dBgS_AcchCir {
@@ -94,32 +107,6 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct dBgS_MoveBgActor {
-	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
-	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
-	/* 800788DC */ void MoveBGDelete();
-	/* 80078950 */ void MoveBGExecute();
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
 struct JAISoundID {
 };
 
@@ -129,6 +116,19 @@ struct Vec {
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct JMath {
+	template <typename A1, typename B1>
+	struct TSinCosTable { };
+	/* TSinCosTable<13, f32> */
+	struct TSinCosTable__template0 {
+		/* 80BE2F74 */ void sinShort(s16) const;
+	};
+
+};
+
+struct J3DModel {
 };
 
 // 

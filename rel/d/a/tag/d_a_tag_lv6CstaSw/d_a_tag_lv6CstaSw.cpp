@@ -11,13 +11,12 @@
 // Types:
 // 
 
-struct daLv6CstaSw_HIO_c {
-	/* 80D5B2EC */ daLv6CstaSw_HIO_c();
-	/* 80D5B740 */ ~daLv6CstaSw_HIO_c();
-};
-
 struct mDoHIO_entry_c {
 	/* 80D5B310 */ ~mDoHIO_entry_c();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct daLv6CstaSw_c {
@@ -30,8 +29,9 @@ struct daLv6CstaSw_c {
 	/* 80D5B6B8 */ bool Delete();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct daLv6CstaSw_HIO_c {
+	/* 80D5B2EC */ daLv6CstaSw_HIO_c();
+	/* 80D5B740 */ ~daLv6CstaSw_HIO_c();
 };
 
 struct dSv_info_c {

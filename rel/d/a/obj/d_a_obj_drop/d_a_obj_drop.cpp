@@ -11,6 +11,20 @@
 // Types:
 // 
 
+struct _GXColor {
+};
+
+struct mDoGph_gInf_c {
+	/* 80008028 */ void fadeOut_f(f32, _GXColor&);
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct fast_create_request {
+};
+
 struct daObjDrop_c {
 	/* 80BDFD8C */ void Create();
 	/* 80BDFE58 */ void create();
@@ -34,25 +48,97 @@ struct daObjDrop_c {
 	/* 80BE1DCC */ void _delete();
 };
 
+struct Vec {
+};
+
+struct dTres_c {
+	/* 8009C3CC */ void setPosition(int, u8, Vec const*, int);
+};
+
+struct dSv_memBit_c {
+	/* 800347A0 */ void onTbox(int);
+	/* 800347E8 */ void isTbox(int) const;
+	/* 80034810 */ void onSwitch(int);
+};
+
+struct dSv_light_drop_c {
+	/* 80034320 */ void setLightDropNum(u8, u8);
+	/* 80034340 */ void getLightDropNum(u8) const;
+	/* 8003439C */ void isLightDropGetFlag(u8) const;
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dSv_event_c {
+	/* 8003498C */ void onEventBit(u16);
+};
+
+struct dPa_levelEcallBack {
+	/* 80BE02AC */ void cleanup();
+	/* 80BE1E6C */ ~dPa_levelEcallBack();
+};
+
+struct dPa_followEcallBack {
+	/* 80049580 */ dPa_followEcallBack(u8, u8);
+	/* 80BE0228 */ ~dPa_followEcallBack();
+	/* 80BE02B0 */ void __defctor();
+};
+
+struct csXyz {
+	/* 80BE02D8 */ ~csXyz();
+	/* 80BE0314 */ csXyz();
+};
+
+struct dKy_tevstr_c {
+};
+
 struct cXyz {
 	/* 802670AC */ void isZero() const;
 	/* 80BE0318 */ ~cXyz();
 	/* 80BE0354 */ cXyz();
 };
 
-struct cM3dGSph {
-	/* 8026F648 */ void SetC(cXyz const&);
-	/* 8026F664 */ void Set(cXyz const&, f32);
-	/* 80BE005C */ ~cM3dGSph();
+struct dPa_control_c {
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct cM3dGAab {
-	/* 80BE00A4 */ ~cM3dGAab();
+struct dEvt_control_c {
+	/* 80042468 */ void reset();
+	/* 800436EC */ void setPtI_Id(unsigned int);
+};
+
+struct dEvent_manager_c {
+	/* 80047ADC */ void endCheckOld(char const*);
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcSph {
+};
+
+struct dCcD_Sph {
+	/* 80084A34 */ void Set(dCcD_SrcSph const&);
 };
 
 struct dCcD_GStts {
 	/* 80083760 */ dCcD_GStts();
 	/* 80BE00EC */ ~dCcD_GStts();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+};
+
+struct dCamera_c {
+	/* 80163028 */ void SetTrimTypeForce(s32);
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
 };
 
 struct dBgS_ObjAcch {
@@ -65,20 +151,16 @@ struct dBgS_AcchCir {
 	/* 80BE01B8 */ ~dBgS_AcchCir();
 };
 
-struct dPa_followEcallBack {
-	/* 80049580 */ dPa_followEcallBack(u8, u8);
-	/* 80BE0228 */ ~dPa_followEcallBack();
-	/* 80BE02B0 */ void __defctor();
+struct dBgS_Acch {
+	/* 80075F94 */ ~dBgS_Acch();
+	/* 800760A0 */ dBgS_Acch();
+	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
 };
 
-struct dPa_levelEcallBack {
-	/* 80BE02AC */ void cleanup();
-	/* 80BE1E6C */ ~dPa_levelEcallBack();
-};
-
-struct csXyz {
-	/* 80BE02D8 */ ~csXyz();
-	/* 80BE0314 */ csXyz();
+struct cM3dGSph {
+	/* 8026F648 */ void SetC(cXyz const&);
+	/* 8026F664 */ void Set(cXyz const&, f32);
+	/* 80BE005C */ ~cM3dGSph();
 };
 
 struct cM3dGLin {
@@ -86,8 +168,35 @@ struct cM3dGLin {
 	/* 80BE18E0 */ ~cM3dGLin();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct cM3dGCir {
+	/* 8026EF18 */ ~cM3dGCir();
+};
+
+struct cM3dGAab {
+	/* 80BE00A4 */ ~cM3dGAab();
+};
+
+struct cCcD_Obj {
+};
+
+struct cCcS {
+	/* 80264BA8 */ void Set(cCcD_Obj*);
+};
+
+struct cCcD_GStts {
+	/* 80BE1EF0 */ ~cCcD_GStts();
+};
+
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
+};
+
+struct Z2SoundObjSimple {
+	/* 802BE844 */ Z2SoundObjSimple();
+};
+
+struct Z2SoundObjBase {
+	/* 802BDFF8 */ void deleteObject();
 };
 
 struct JPABaseEmitter {
@@ -99,115 +208,6 @@ struct JPAEmitterCallBack {
 	/* 80BE1EE4 */ void executeAfter(JPABaseEmitter*);
 	/* 80BE1EE8 */ void draw(JPABaseEmitter*);
 	/* 80BE1EEC */ void drawAfter(JPABaseEmitter*);
-};
-
-struct cCcD_GStts {
-	/* 80BE1EF0 */ ~cCcD_GStts();
-};
-
-struct _GXColor {
-};
-
-struct mDoGph_gInf_c {
-	/* 80008028 */ void fadeOut_f(f32, _GXColor&);
-};
-
-struct fast_create_request {
-};
-
-struct dSv_light_drop_c {
-	/* 80034320 */ void setLightDropNum(u8, u8);
-	/* 80034340 */ void getLightDropNum(u8) const;
-	/* 8003439C */ void isLightDropGetFlag(u8) const;
-};
-
-struct dSv_memBit_c {
-	/* 800347A0 */ void onTbox(int);
-	/* 800347E8 */ void isTbox(int) const;
-	/* 80034810 */ void onSwitch(int);
-};
-
-struct dSv_event_c {
-	/* 8003498C */ void onEventBit(u16);
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
-	/* 800436EC */ void setPtI_Id(unsigned int);
-};
-
-struct dEvent_manager_c {
-	/* 80047ADC */ void endCheckOld(char const*);
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dPa_control_c {
-	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
-struct dBgS_Acch {
-	/* 80075F94 */ ~dBgS_Acch();
-	/* 800760A0 */ dBgS_Acch();
-	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-};
-
-struct dCcD_SrcSph {
-};
-
-struct dCcD_Sph {
-	/* 80084A34 */ void Set(dCcD_SrcSph const&);
-};
-
-struct Vec {
-};
-
-struct dTres_c {
-	/* 8009C3CC */ void setPosition(int, u8, Vec const*, int);
-};
-
-struct dCamera_c {
-	/* 80163028 */ void SetTrimTypeForce(s32);
-};
-
-struct cCcD_Obj {
-};
-
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
-};
-
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
-};
-
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
-};
-
-struct Z2SoundObjBase {
-	/* 802BDFF8 */ void deleteObject();
-};
-
-struct Z2SoundObjSimple {
-	/* 802BE844 */ Z2SoundObjSimple();
 };
 
 // 
