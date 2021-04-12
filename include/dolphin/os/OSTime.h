@@ -3,4 +3,10 @@
 
 #include "dolphin/types.h"
 
+typedef u32 OSTick;
+
+extern "C" {
+OSTick OSGetTick();
+}
+
 #endif /* OSTIME_H */

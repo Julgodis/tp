@@ -532,7 +532,12 @@ def search_map_file(fn_name: str, mapfile: Optional[str] = None, build_dir: Opti
             return cands[0]
     elif map_format == 'mw':
         #                                         ram   elf rom                                                       object name
-        find = re.findall(re.compile(r'  \S+ \S+ (\S+) (\S+)  . ' + fn_name + r'(?: \(entry of \.(?:init|text)\))? \t(\S+)'), contents)
+        find = re.findall(re.compile(r'  \S+ \S+ (\S+) (\S+)  . ' + fn_name + r'(?: \(entry of \.(?:init|text)\))? \t(\S+)\s*(\S+)?'), contents)
+        find = [
+            (f[0], f[1], f[2] if len(f[3]) == 0 else f[3])
+            for f in find
+        ]
+
         if len(find) > 1:
             if args.select_occurence > 0:
                 find = [find[args.select_occurence - 1]]

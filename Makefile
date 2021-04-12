@@ -128,7 +128,7 @@ $(BUILD_DIR)/%.o: %.cpp
 	@mkdir -p $(@D)
 	@echo building... $<
 	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
-	@$(CC) $(CFLAGS) -c -o $@ $@.iconv.cpp
+	@$(CC) $(CFLAGS) -g -c -o $@ $@.iconv.cpp
 
 # shared cpp files for RELs
 $(BUILD_DIR)/rel/%.o: rel/%.cpp

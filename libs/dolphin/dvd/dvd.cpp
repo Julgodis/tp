@@ -47,7 +47,6 @@ extern "C" void DVDReadDiskID();
 extern "C" void DVDCancelStreamAsync();
 extern "C" void DVDInquiryAsync();
 extern "C" void DVDReset();
-extern "C" void DVDGetCommandBlockStatus();
 extern "C" void DVDGetDriveStatus();
 extern "C" void DVDSetAutoInvalidation();
 extern "C" void DVDResume();
@@ -689,7 +688,7 @@ asm void DVDReset() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void DVDGetCommandBlockStatus() {
+asm int DVDGetCommandBlockStatus(DVDCommandBlock*) {
     nofralloc
 #include "asm/dolphin/dvd/dvd/DVDGetCommandBlockStatus.s"
 }

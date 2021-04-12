@@ -11,14 +11,7 @@
 // Forward References:
 //
 
-extern "C" void OSInitMutex();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
 extern "C" void __OSUnlockAllMutex();
-extern "C" void OSTryLockMutex();
-extern "C" void OSInitCond();
-extern "C" void OSWaitCond();
-extern "C" void OSSignalCond();
 extern "C" void __OSCheckMutex();
 extern "C" void __OSCheckDeadLock();
 extern "C" void __OSCheckMutexes();
@@ -46,7 +39,7 @@ extern "C" void OSWakeupThread();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void OSInitMutex() {
+asm void OSInitMutex(OSMutex* mutex) {
     nofralloc
 #include "asm/dolphin/os/OSMutex/OSInitMutex.s"
 }
@@ -56,7 +49,7 @@ asm void OSInitMutex() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void OSLockMutex() {
+asm void OSLockMutex(OSMutex* mutex) {
     nofralloc
 #include "asm/dolphin/os/OSMutex/OSLockMutex.s"
 }
@@ -66,7 +59,7 @@ asm void OSLockMutex() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void OSUnlockMutex() {
+asm void OSUnlockMutex(OSMutex* mutex) {
     nofralloc
 #include "asm/dolphin/os/OSMutex/OSUnlockMutex.s"
 }
@@ -86,7 +79,7 @@ asm void __OSUnlockAllMutex() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void OSTryLockMutex() {
+asm void OSTryLockMutex(OSMutex* mutex) {
     nofralloc
 #include "asm/dolphin/os/OSMutex/OSTryLockMutex.s"
 }

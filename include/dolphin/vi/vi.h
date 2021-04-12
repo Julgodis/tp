@@ -3,4 +3,8 @@
 
 #include "dolphin/types.h"
 
+extern "C" {
+void VIWaitForRetrace();
+}
+
 #endif /* VI_H */

@@ -269,7 +269,6 @@ def get_symbols_from_object_file(obj):
 def load_archive(ar_path):
     symbols = []
 
-    print(ar_path)
     archive = libar.read(ar_path)
     for path, data in archive.files:
         obj = libelf.load_object_from_file(None, path, io.BytesIO(data))

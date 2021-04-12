@@ -11,10 +11,7 @@
 // Forward References:
 //
 
-extern "C" void OSInitMessageQueue();
-extern "C" void OSSendMessage();
-extern "C" void OSReceiveMessage();
-extern "C" void OSJamMessage();
+
 
 //
 // External References:
@@ -34,7 +31,7 @@ extern "C" void OSWakeupThread();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void OSInitMessageQueue() {
+asm void OSInitMessageQueue(OSMessageQueue* queue, OSMessage* messages, int message_count) {
     nofralloc
 #include "asm/dolphin/os/OSMessage/OSInitMessageQueue.s"
 }
@@ -44,7 +41,7 @@ asm void OSInitMessageQueue() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void OSSendMessage() {
+asm BOOL OSSendMessage(OSMessageQueue* queue, OSMessage message, int flags) {
     nofralloc
 #include "asm/dolphin/os/OSMessage/OSSendMessage.s"
 }
@@ -54,7 +51,7 @@ asm void OSSendMessage() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void OSReceiveMessage() {
+asm BOOL OSReceiveMessage(OSMessageQueue* queue, OSMessage message, int flags) {
     nofralloc
 #include "asm/dolphin/os/OSMessage/OSReceiveMessage.s"
 }
@@ -64,7 +61,7 @@ asm void OSReceiveMessage() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void OSJamMessage() {
+asm BOOL OSJamMessage(OSMessageQueue* queue, OSMessage* message, int flags) {
     nofralloc
 #include "asm/dolphin/os/OSMessage/OSJamMessage.s"
 }

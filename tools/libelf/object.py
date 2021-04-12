@@ -189,7 +189,8 @@ def load_object_from_file(path, name, file) -> Object:
             type  = elf.R_TYPE(rela.r_info)
             sym_id = elf.R_SYM(rela.r_info)
             if not type in RELOCATION_NAMES:
-                raise ElfException("unsupported relocation type: 0x%02X (in '%s')" % (type, path))
+                continue
+                #raise ElfException("unsupported relocation type: 0x%02X (in '%s')" % (type, path))
 
             if sym_id < 0 or sym_id >= len(symtab.symbols):
                 # report warning? 
@@ -215,6 +216,8 @@ def load_object_from_file(path, name, file) -> Object:
                 relocation = R_PPC_REL14(type, symbol, modify, rela.r_offset, rela.r_addend)
             elif type == 109:
                 relocation = R_PPC_EMB_SDA21(type, symbol, modify, rela.r_offset, rela.r_addend)
+            else:
+                continue
 
             assert relocation
             section_relocations.append(relocation)

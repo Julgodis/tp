@@ -12,7 +12,6 @@
 //
 
 extern "C" void OSGetTime();
-extern "C" void OSGetTick();
 extern "C" void __OSGetSystemTime();
 extern "C" void __OSTimeToSystemTime();
 extern "C" static void GetDates();
@@ -42,7 +41,7 @@ asm void OSGetTime() {
 #pragma pop
 
 /* 80342714-8034271C -00001 0008+00 0/0 0/0 0/0 .text            OSGetTick */
-asm void OSGetTick() {
+asm OSTick OSGetTick() {
     // clang-format off
 	nofralloc
 	mftb r3, 0x10c

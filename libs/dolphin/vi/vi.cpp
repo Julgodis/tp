@@ -17,7 +17,6 @@ extern "C" void VISetPostRetraceCallback();
 extern "C" static void getTiming();
 extern "C" void __VIInit();
 extern "C" void VIInit();
-extern "C" void VIWaitForRetrace();
 extern "C" static void setFbbRegs();
 extern "C" static void setVerticalRegs();
 extern "C" void VIConfigure();

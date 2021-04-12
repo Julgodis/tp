@@ -12,15 +12,10 @@
 //
 
 extern "C" void __DVDFSInit();
-extern "C" void DVDConvertPathToEntrynum();
-extern "C" void DVDFastOpen();
-extern "C" void DVDOpen();
-extern "C" void DVDClose();
 extern "C" static void entryToPath();
 extern "C" static void DVDConvertEntrynumToPath();
 extern "C" static void DVDGetCurrentDir();
 extern "C" void DVDChangeDir();
-extern "C" void DVDReadAsyncPrio();
 extern "C" static void cbForReadAsync();
 extern "C" void DVDReadPrio();
 extern "C" static void cbForReadSync();
@@ -103,7 +98,7 @@ u8 __DVDLongFileNameFlag[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void DVDConvertPathToEntrynum() {
+asm s32 DVDConvertPathToEntrynum(char* path) {
     nofralloc
 #include "asm/dolphin/dvd/dvdfs/DVDConvertPathToEntrynum.s"
 }
@@ -113,7 +108,7 @@ asm void DVDConvertPathToEntrynum() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void DVDFastOpen() {
+asm BOOL DVDFastOpen(s32 entryNum, DVDFileInfo* fileInfo) {
     nofralloc
 #include "asm/dolphin/dvd/dvdfs/DVDFastOpen.s"
 }
@@ -185,7 +180,7 @@ SECTION_DATA static u8 lit_140[55 + 1 /* padding */] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void DVDOpen() {
+asm BOOL DVDOpen(const char* fileName, DVDFileInfo* fileInfo) {
     nofralloc
 #include "asm/dolphin/dvd/dvdfs/DVDOpen.s"
 }
@@ -195,7 +190,7 @@ asm void DVDOpen() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void DVDClose() {
+asm BOOL DVDClose(DVDFileInfo*) {
     nofralloc
 #include "asm/dolphin/dvd/dvdfs/DVDClose.s"
 }
@@ -254,7 +249,7 @@ SECTION_DATA static u8 lit_239[52] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void DVDReadAsyncPrio() {
+asm BOOL DVDReadAsyncPrio(DVDFileInfo* fileInfo, void* data, s32 length, s32 offset, DVDCallback callback, s32 priority) {
     nofralloc
 #include "asm/dolphin/dvd/dvdfs/DVDReadAsyncPrio.s"
 }
