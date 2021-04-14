@@ -34,4 +34,10 @@ typedef int BOOL;
 #define INT32_MAX (0x7fffffff)
 #define UINT32_MAX (0xffffffff)
 
+#define ALIGN_PREV(VALUE, ALIGNMENT) ((VALUE) & ~((ALIGNMENT) - 1))
+#define ALIGN_NEXT(VALUE, ALIGNMENT) ALIGN_PREV(((VALUE) + (ALIGNMENT) - 1), (ALIGNMENT))
+
+#define ALIGN_PREV_PTR(VALUE, ALIGNMENT) ((void*)(ALIGN_PREV(((u32)(VALUE)), ALIGNMENT)))
+#define ALIGN_NEXT_PTR(VALUE, ALIGNMENT) ((void*)(ALIGN_NEXT(((u32)(VALUE)), ALIGNMENT)))
+
 #endif

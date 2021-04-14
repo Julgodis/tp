@@ -5,6 +5,10 @@
 
 #include "JSystem/JKernel/JKRHeap.h"
 #include "dol2asm.h"
+#include "dolphin/memory_layout.h"
+#include "dolphin/os/OSAddress.h"
+#include "dolphin/os/OSAlloc.h"
+#include "dolphin/os/OSArena.h"
 #include "dolphin/types.h"
 
 //
@@ -91,11 +95,6 @@ extern "C" void initiate__10JSUPtrListFv();
 extern "C" void append__10JSUPtrListFP10JSUPtrLink();
 extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
 extern "C" void panic_f__12JUTExceptionFPCciPCce();
-extern "C" void OSInitAlloc();
-extern "C" void OSGetArenaHi();
-extern "C" void OSGetArenaLo();
-extern "C" void OSSetArenaHi();
-extern "C" void OSSetArenaLo();
 extern "C" void _savegpr_26();
 extern "C" void _savegpr_27();
 extern "C" void _savegpr_28();
@@ -154,6 +153,21 @@ JKRErrorHandler JKRHeap::mErrorHandler;
 /* 80451380-80451384 000880 0004+00 1/1 0/0 0/0 .sbss            None */
 static bool debugCheckMemoryFilled;
 
+/* 80451384-80451388 000884 0004+00 1/1 1/1 0/0 .sbss            mCodeStart__7JKRHeap */
+void* JKRHeap::mCodeStart;
+
+/* 80451388-8045138C 000888 0004+00 1/1 1/1 0/0 .sbss            mCodeEnd__7JKRHeap */
+void* JKRHeap::mCodeEnd;
+
+/* 8045138C-80451390 00088C 0004+00 1/1 1/1 0/0 .sbss            mUserRamStart__7JKRHeap */
+void* JKRHeap::mUserRamStart;
+
+/* 80451390-80451394 000890 0004+00 1/1 1/1 0/0 .sbss            mUserRamEnd__7JKRHeap */
+void* JKRHeap::mUserRamEnd;
+
+/* 80451394-80451398 000894 0004+00 1/1 2/2 0/0 .sbss            mMemorySize__7JKRHeap */
+u32 JKRHeap::mMemorySize;
+
 /* 802CE138-802CE264 2C8A78 012C+00 0/0 3/3 0/0 .text            __ct__7JKRHeapFPvUlP7JKRHeapb */
 JKRHeap::JKRHeap(void* data, u32 size, JKRHeap* parent, bool errorFlag)
     : JKRDisposer(), mChildTree(this), mDisposerList() {
@@ -188,36 +202,72 @@ JKRHeap::JKRHeap(void* data, u32 size, JKRHeap* parent, bool errorFlag)
 }
 
 /* 802CE264-802CE378 2C8BA4 0114+00 1/0 3/3 0/0 .text            __dt__7JKRHeapFv */
+#ifndef NON_MATCHING
 asm JKRHeap::~JKRHeap() {
     nofralloc
 #include "asm/JSystem/JKernel/JKRHeap/__dt__7JKRHeapFv.s"
 }
+#else
+// PROBLEMS:
+//      realloc
+//      JSUTree destructor missing add instruction
+JKRHeap::~JKRHeap() {
+    JSUTree<JKRHeap>* tree = getHeapTree().getParent();
+    tree->removeChild(&mChildTree);
 
-/* ############################################################################################## */
-/* 80451384-80451388 000884 0004+00 1/1 1/1 0/0 .sbss            mCodeStart__7JKRHeap */
-void* JKRHeap::mCodeStart;
+    JSUTree<JKRHeap>* firstRootChild = getRootHeap()->getHeapTree().getFirstChild();
+    JKRHeap* newCurrentHeap = getCurrentHeap();
+    if (getCurrentHeap() == this) {
+        if (!firstRootChild) {
+            newCurrentHeap = getRootHeap();
+        } else {
+            newCurrentHeap = firstRootChild->getObject();
+        }
+    }
 
-/* 80451388-8045138C 000888 0004+00 1/1 1/1 0/0 .sbss            mCodeEnd__7JKRHeap */
-void* JKRHeap::mCodeEnd;
+    setCurrentHeap(newCurrentHeap);
 
-/* 8045138C-80451390 00088C 0004+00 1/1 1/1 0/0 .sbss            mUserRamStart__7JKRHeap */
-void* JKRHeap::mUserRamStart;
-
-/* 80451390-80451394 000890 0004+00 1/1 1/1 0/0 .sbss            mUserRamEnd__7JKRHeap */
-void* JKRHeap::mUserRamEnd;
-
-/* 80451394-80451398 000894 0004+00 1/1 2/2 0/0 .sbss            mMemorySize__7JKRHeap */
-u32 JKRHeap::mMemorySize;
+    JKRHeap* newSystemHeap = getSystemHeap();
+    if (getSystemHeap() == this) {
+        if (!firstRootChild) {
+            newSystemHeap = getRootHeap();
+        } else {
+            newSystemHeap = firstRootChild->getObject();
+        }
+    }
+    setSystemHeap(newSystemHeap);
+}
+#endif
 
 /* 802CE378-802CE428 2C8CB8 00B0+00 0/0 1/1 0/0 .text            initArena__7JKRHeapFPPcPUli */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm bool JKRHeap::initArena(char** param_0, u32* param_1, int param_2) {
-    nofralloc
-#include "asm/JSystem/JKernel/JKRHeap/initArena__7JKRHeapFPPcPUli.s"
+bool JKRHeap::initArena(char** outData, u32* outSize, int maxHeaps) {
+    // CODE: must be declared first
+    void* ram_start;
+    void* ram_end;
+    void* ram;
+
+    void* low = OSGetArenaLo();
+    void* high = OSGetArenaHi();
+    if (low == high)
+        return false;
+
+    ram = OSInitAlloc(low, high, maxHeaps);
+    ram_start = ALIGN_NEXT_PTR(ram, 0x20);
+    ram_end = ALIGN_PREV_PTR(high, 0x20);
+
+    DolphinMemoryLayout* memory = (DolphinMemoryLayout*)OSPhysicalToCached(0);
+    mCodeStart = (void*)memory;
+    mCodeEnd = (void*)ram_start;
+    mUserRamStart = (void*)ram_start;
+    mUserRamEnd = (void*)ram_end;
+    mMemorySize = memory->memorySize;
+    OSSetArenaLo(ram_end);
+    OSSetArenaHi(ram_end);
+
+    *outData = (char*)ram_start;
+    *outSize = (u32)ram_end - (u32)ram_start;
+    return true;
 }
-#pragma pop
 
 /* 802CE428-802CE438 2C8D68 0010+00 1/1 0/0 0/0 .text            becomeSystemHeap__7JKRHeapFv */
 JKRHeap* JKRHeap::becomeSystemHeap() {
@@ -273,14 +323,13 @@ void JKRHeap::free(void* ptr) {
 }
 
 /* 802CE574-802CE5CC 2C8EB4 0058+00 1/0 5/2 0/0 .text            callAllDisposer__7JKRHeapFv */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JKRHeap::callAllDisposer() {
-    nofralloc
-#include "asm/JSystem/JKernel/JKRHeap/callAllDisposer__7JKRHeapFv.s"
+void JKRHeap::callAllDisposer() {
+    // CODE: matches only with assignment in while loop condition (identical to JKRHeap::dispose)
+    JSUListIterator<JKRDisposer> iterator;
+    while ((iterator = mDisposerList.getFirst()) != mDisposerList.getEnd()) {
+        iterator->~JKRDisposer();
+    }
 }
-#pragma pop
 
 /* 802CE5CC-802CE5F8 2C8F0C 002C+00 0/0 12/12 0/0 .text            freeAll__7JKRHeapFv */
 void JKRHeap::freeAll() {
@@ -346,14 +395,11 @@ u8 JKRHeap::changeGroupID(u8 id) {
 
 /* 802CE7DC-802CE83C 2C911C 0060+00 0/0 2/2 0/0 .text            getMaxAllocatableSize__7JKRHeapFi
  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm u32 JKRHeap::getMaxAllocatableSize(int param_0) {
-    nofralloc
-#include "asm/JSystem/JKernel/JKRHeap/getMaxAllocatableSize__7JKRHeapFi.s"
+u32 JKRHeap::getMaxAllocatableSize(int alignment) {
+    // CODE: using ALIGN_PREV will not work, because moving ~(alignment - 1) to the otherside
+    // generates 'andc' instead of 'not + and'
+    return (~(alignment - 1)) & getMaxUnalignedAllocatableSize(alignment);
 }
-#pragma pop
 
 /* 802CE83C-802CE894 2C917C 0058+00 3/3 8/8 0/0 .text            findFromRoot__7JKRHeapFPv */
 JKRHeap* JKRHeap::findFromRoot(void* ptr) {
@@ -453,14 +499,13 @@ void JKRHeap::dispose(void* begin, void* end) {
 }
 
 /* 802CEAC0-802CEB18 2C9400 0058+00 0/0 3/3 0/0 .text            dispose__7JKRHeapFv */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JKRHeap::dispose() {
-    nofralloc
-#include "asm/JSystem/JKernel/JKRHeap/dispose__7JKRHeapFv.s"
+void JKRHeap::dispose() {
+    // CODE: matches only with assignment in while loop condition
+    JSUListIterator<JKRDisposer> iterator;
+    while ((iterator = mDisposerList.getFirst()) != mDisposerList.getEnd()) {
+        iterator->~JKRDisposer();
+    }
 }
-#pragma pop
 
 /* 802CEB18-802CEB40 2C9458 0028+00 0/0 4/4 0/0 .text            copyMemory__7JKRHeapFPvPvUl */
 void JKRHeap::copyMemory(void* dst, void* src, u32 size) {
@@ -503,7 +548,7 @@ JKRErrorHandler JKRHeap::setErrorHandler(JKRErrorHandler errorHandler) {
 
 /* 802CEBA8-802CEC4C 2C94E8 00A4+00 0/0 1/1 0/0 .text            isSubHeap__7JKRHeapCFP7JKRHeap */
 bool JKRHeap::isSubHeap(JKRHeap* heap) const {
-   if (!heap)
+    if (!heap)
         return false;
 
     const JSUTree<JKRHeap>& tree = mChildTree;
@@ -568,24 +613,47 @@ void operator delete[](void* ptr) {
 /* 802CED84-802CED88 2C96C4 0004+00 1/0 1/0 0/0 .text
  * state_register__7JKRHeapCFPQ27JKRHeap6TStateUl               */
 void JKRHeap::state_register(JKRHeap::TState* p, u32 id) const {
-    // DEBUG: ASSERT(p != 0);
-    // DEBUG: ASSERT(p->getHeap() == this);
+#ifdef DEBUG
+    // TODO: assert macro
+    if (!(p == 0)) {
+        JUTAssertion::showAssert(JUTAssertion::getSDevice(), "JKRHeap.cpp", 0x4bd, "p != 0");
+        OSPanic("JKRHeap.cpp", 0x4bd, "Halt");
+    }
+    
+    // TODO: assert macro
+    if (!(p->getHeap() == this)) {
+        JUTAssertion::showAssert(JUTAssertion::getSDevice(), "JKRHeap.cpp", 0x4be,
+                                 "p->getHeap() == this");
+        OSPanic("JKRHeap.cpp", 0x4be, "Halt");
+    }
+#endif
 }
 
 /* 802CED88-802CEDA0 2C96C8 0018+00 1/0 1/0 0/0 .text
  * state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState */
-bool JKRHeap::state_compare(JKRHeap::TState const& r1,
-                                JKRHeap::TState const& r2) const {
-    // DEBUG: ASSERT(r1.getHeap() == r2.getHeap());
+bool JKRHeap::state_compare(JKRHeap::TState const& r1, JKRHeap::TState const& r2) const {
+#ifdef DEBUG
+    // TODO: assert macro
+    if (!(r1.getHeap() == r2.getHeap())) {
+        JUTAssertion::showAssert(JUTAssertion::getSDevice(), "JKRHeap.cpp", 0x4c6,
+                                 "r1.getHeap() == r2.getHeap()");
+        OSPanic("JKRHeap.cpp", 0x4c6, "Halt");
+    }
+#endif
     return r1.getCheckCode() == r2.getCheckCode();
 }
 
-
 /* 802CEDA0-802CEDA4 2C96E0 0004+00 1/0 3/0 0/0 .text state_dump__7JKRHeapCFRCQ27JKRHeap6TState */
 void JKRHeap::state_dump(JKRHeap::TState const& p) const {
-    // DEBUG: PRINT?("check-code : 0x%08x", p.getCheckCode());
-    // DEBUG: PRINT?("id         : 0x%08x", p.getId());
-    // DEBUG: PRINT?("used size  : %u", p.getUsedSize());
+#ifdef DEBUG
+    // TODO: log macro
+    JUTAssertion::setLogMessage_f(JUTAssertion::getSDevice(), "JKRHeap.cpp", 0x4de,
+                                  "check-code : 0x%08x", p.getCheckCode());
+    JUTAssertion::setLogMessage_f(JUTAssertion::getSDevice(), "JKRHeap.cpp", 0x4df,
+                                  "id         : 0x%08x", p.getId());
+    JUTAssertion::setLogMessage_f(JUTAssertion::getSDevice(), "JKRHeap.cpp", 0x4e0,
+                                  "used size  : %u", p.getUsedSize());
+#endif
 }
 
 /* 802CEDA4-802CEDAC 2C96E4 0008+00 1/0 1/0 0/0 .text            do_changeGroupID__7JKRHeapFUc */

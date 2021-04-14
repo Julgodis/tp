@@ -96,6 +96,39 @@ public:
         return parent->getObject();
     }
 
+    // CODE: used in JKRHeap::getMaxAllocatableSize to get order of operation correct.
+    s32 getMaxUnalignedAllocatableSize(int alignment) {
+        s32 maxFreeBlock = (u32)getMaxFreeBlock();
+        s32 freeSize = getFreeSize();
+        s32 alignedFreeBlock = (alignment - (maxFreeBlock & 0xF)) & (alignment - 1);
+        s32 allocatableSize = (freeSize - alignedFreeBlock);
+        return allocatableSize;
+    }
+
+    inline void testxxx() {
+        JSUTree<JKRHeap>* firstRootChild = getRootHeap()->mChildTree.getFirstChild();
+        JKRHeap* newCurrentHeap = getCurrentHeap();
+        if (getCurrentHeap() == this) {
+            if (!firstRootChild) {
+                newCurrentHeap = getRootHeap();
+            } else {
+                newCurrentHeap = firstRootChild->getObject();
+            }
+        }
+
+        setCurrentHeap(newCurrentHeap);
+
+        JKRHeap* newSystemHeap = getSystemHeap();
+        if (getSystemHeap() == this) {
+            if (!firstRootChild) {
+                newSystemHeap = getRootHeap();
+            } else {
+                newSystemHeap = firstRootChild->getObject();
+            }
+        }
+        setSystemHeap(newSystemHeap);
+    }
+
     JSUTree<JKRHeap>& getHeapTree() { return mChildTree; }
     void appendDisposer(JKRDisposer* disposer) { mDisposerList.append(&disposer->mLink); }
     void removeDisposer(JKRDisposer* disposer) { mDisposerList.remove(&disposer->mLink); }

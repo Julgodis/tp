@@ -3,7 +3,6 @@
 
 #include "dolphin/types.h"
 
-
 template <typename T>
 class JSUList;
 

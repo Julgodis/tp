@@ -14,7 +14,6 @@
 extern "C" static void DLInsert();
 extern "C" void OSFreeToHeap();
 extern "C" void OSSetCurrentHeap();
-extern "C" void OSInitAlloc();
 extern "C" void OSCreateHeap();
 
 //
@@ -81,7 +80,7 @@ static u8 ArenaEnd[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void OSInitAlloc() {
+asm void* OSInitAlloc(void* startAddr, void* endAddr, int maxHeaps) {
     nofralloc
 #include "asm/dolphin/os/OSAlloc/OSInitAlloc.s"
 }
